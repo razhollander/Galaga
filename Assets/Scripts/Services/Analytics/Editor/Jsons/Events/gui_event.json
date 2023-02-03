@@ -1,0 +1,12 @@
+{   
+    "name": "gui_event",
+    "parameters":
+    [
+        {
+            "name": "gui_type",
+            "type": "string",
+            "default": null,
+            "constructor_property" : true
+        }
+    ]
+}

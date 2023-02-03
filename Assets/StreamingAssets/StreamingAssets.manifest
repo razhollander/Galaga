@@ -1,0 +1,19 @@
+ManifestFileVersion: 0
+CRC: 163284138
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: player
+      Dependencies: {}
+    Info_1:
+      Name: startscreencanvas
+      Dependencies: {}
+    Info_2:
+      Name: enemy
+      Dependencies: {}
+    Info_3:
+      Name: winpopup
+      Dependencies: {}
+    Info_4:
+      Name: defeatpopup
+      Dependencies: {}

@@ -1,0 +1,96 @@
+{
+    "name": "match_finish",
+    "parameters":
+    [
+        {
+            "name": "wallet_id",
+            "type": "string",
+            "default": "",
+            "constructor_property" : false
+        },
+        {
+            "name": "game_id",
+            "type": "string",
+            "default": "",
+            "constructor_property" : false
+        },
+        {
+            "name": "game_mode",
+            "type": "string",
+            "default": "",
+            "constructor_property" : false
+        },
+        {
+            "name": "oponenet_id",
+            "type": "string",
+            "default": "",
+            "constructor_property" : false
+        },
+        {
+            "name": "oponenet_rank",
+            "type": "int",
+            "default": 0,
+            "constructor_property" : false
+        },
+        {
+            "name": "myteam_id",
+            "type": "string",
+            "default": "",
+            "constructor_property" : false
+        },
+        {
+            "name": "myteam_rank",
+            "type": "int",
+            "default": 0,
+            "constructor_property" : false
+        },
+        {
+            "name": "score",
+            "type": "int",
+            "default": 0,
+            "constructor_property" : false
+        },
+        {
+            "name": "game_duration_sec",
+            "type": "float",
+            "default": null,
+            "constructor_property" : false
+        },
+        {
+            "name": "player_shoots",
+            "type": "int",
+            "default": null,
+            "constructor_property" : false
+        },
+        {
+            "name": "player_goals",
+            "type": "int",
+            "default": null,
+            "constructor_property" : false
+        },
+        {
+            "name": "fouls_commited_by_player",
+            "type": "int",
+            "default": null,
+            "constructor_property" : false
+        },
+        {
+            "name": "oponenet_shoots",
+            "type": "int",
+            "default": null,
+            "constructor_property" : false
+        },
+        {
+            "name": "oponenet_goals",
+            "type": "int",
+            "default": null,
+            "constructor_property" : false
+        },
+        {
+            "name": "fouls_commited_by_oponenet",
+            "type": "int",
+            "default": null,
+            "constructor_property" : false
+        }
+    ]
+}

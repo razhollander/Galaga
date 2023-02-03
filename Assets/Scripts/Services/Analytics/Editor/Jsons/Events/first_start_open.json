@@ -1,0 +1,30 @@
+{
+    "name": "first_start_open",
+    "parameters":
+    [
+        {
+            "name": "wallet_id",
+            "type": "string",
+            "default": "",
+            "constructor_property" : false
+        },
+        {
+            "name": "hc_balance",
+            "type": "int",
+            "default": 0,
+            "constructor_property" : false
+        },
+        {
+            "name": "hc_paid_balance",
+            "type": "int",
+            "default": 0,
+            "constructor_property" : false
+        },
+        {
+            "name": "loading_time_sec",
+            "type": "float",
+            "default": 0,
+            "constructor_property" : false
+        }
+    ]
+}

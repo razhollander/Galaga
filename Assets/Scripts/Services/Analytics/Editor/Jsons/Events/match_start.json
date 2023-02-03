@@ -1,0 +1,54 @@
+{
+    "name": "match_start",
+    "parameters":
+    [
+        {
+            "name": "wallet_id",
+            "type": "string",
+            "default": "",
+            "constructor_property" : false
+        },
+        {
+            "name": "game_id",
+            "type": "string",
+            "default": "",
+            "constructor_property" : false
+        },
+        {
+            "name": "game_mode",
+            "type": "string",
+            "default": "",
+            "constructor_property" : false
+        },
+        {
+            "name": "total_turns",
+            "type": "int",
+            "default": 0,
+            "constructor_property" : false
+        },
+        {
+            "name": "oponenet_id",
+            "type": "string",
+            "default": "",
+            "constructor_property" : false
+        },
+        {
+            "name": "oponenet_rank",
+            "type": "int",
+            "default": 0,
+            "constructor_property" : false
+        },
+        {
+            "name": "myteam_id",
+            "type": "string",
+            "default": "",
+            "constructor_property" : false
+        },
+        {
+            "name": "myteam_rank",
+            "type": "int",
+            "default": 0,
+            "constructor_property" : false
+        }
+    ] 
+}

@@ -1,0 +1,12 @@
+{
+    "name": "session_start",
+    "parameters":
+    [
+        {
+            "name": "wallet_id",
+            "type": "string",
+            "default": "",            
+            "constructor_property" : false
+        }
+    ]
+}
