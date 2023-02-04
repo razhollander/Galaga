@@ -1,15 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
+using CoreDomain.Scripts.Services.CameraService;
+using Services.Logs.Base;
 using UnityEngine;
 using Zenject;
-
-public class CoreInstaller : Installer
+namespace CoreDomain.Scripts.ZenjectInstallers
 {
-    public override void InstallBindings()
+    public class CoreInstaller : Installer
     {
-        // Container.BindInterfacesTo<PopupService>().AsSingle().NonLazy();
-        // Container.Bind<UrlsMockDataConfiguration>().FromScriptableObject(urlsMockDataConfiguration).AsSingle().NonLazy();
-        // Container.BindInstance(environmentType);
-        // Container.Bind<IBackendEnvironmentSet>().To<BackendEvironmentSet>().AsSingle().NonLazy();
+        public override void InstallBindings()
+        {
+            Container.BindInterfacesTo<CameraService>().AsSingle().NonLazy();
+            Debug.Log("Injected");
+            // Container.Bind<UrlsMockDataConfiguration>().FromScriptableObject(urlsMockDataConfiguration).AsSingle().NonLazy();
+            // Container.BindInstance(environmentType);
+            // Container.Bind<IBackendEnvironmentSet>().To<BackendEvironmentSet>().AsSingle().NonLazy();
+        }
     }
 }

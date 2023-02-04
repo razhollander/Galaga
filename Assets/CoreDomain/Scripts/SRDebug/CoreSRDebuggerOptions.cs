@@ -3,13 +3,13 @@ using Services.Logs.Base;
 using SRDebugger;
 using UnityEngine;
 
-namespace CoreDomain.Scripts.Debug
+namespace CoreDomain.Scripts.SRDebug
 {
-    public class CoreSRDebuggerOptions
+    public class CoreSrDebuggerOptions
     {
         private float _gameSpeed = 1f;
 
-        public CoreSRDebuggerOptions()
+        public CoreSrDebuggerOptions()
         {
 #if DEBUG_ENABLED || UNITY_EDITOR
             CreateCheats();
@@ -37,7 +37,7 @@ namespace CoreDomain.Scripts.Debug
 
         private void CreateCheats()
         {
-            SRDebug.Instance.AddOptionContainer(this);
+            global::SRDebug.Instance.AddOptionContainer(this);
         }
     }
 }

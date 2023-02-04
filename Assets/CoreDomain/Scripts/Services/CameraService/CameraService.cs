@@ -32,7 +32,7 @@ namespace CoreDomain.Scripts.Services.CameraService
             }
             else
             {
-                LogService.LogError("Camera not subscribed MOTHER FUCKER!!!!");
+                LogService.LogError("Camera not subscribed");
             }
         }
 
