@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Services.Logs.Base;
+using UnityEngine;
 using Random = UnityEngine.Random;
 
 namespace CoreDomain.Scripts.Extensions
@@ -21,6 +25,28 @@ namespace CoreDomain.Scripts.Extensions
         public static float RandomFloatFromRange(this Vector2 valueRange)
         {
             return Random.Range(valueRange.x, valueRange.y);
+        }
+        
+        public static T GetRandomItem<T>(this IEnumerable<T> itemsEnumerable, Func<T, int> weightKey)
+        {
+            var items = itemsEnumerable.ToList();
+
+            var totalWeight = items.Sum(x => weightKey(x));
+            var randomWeightedIndex = Random.Range(0, totalWeight);
+            var itemWeightedIndex = 0;
+            
+            foreach(var item in items)
+            {
+                itemWeightedIndex += weightKey(item);
+
+                if (randomWeightedIndex < itemWeightedIndex)
+                {
+                    return item;
+                }
+            }
+            
+            LogService.LogError("Collection count and weights must be greater than 0");
+            return default;
         }
     }
 }

@@ -1,8 +1,10 @@
 using System.Collections.Generic;
+using Core.Extensions;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
+using Utils.Animation;
 
-namespace MonkeyCore.Scripts.View.Animations.Extensions
+namespace CoreDomain.Scripts.Extensions
 {
     public static class AnimatorExtensions
     {
@@ -136,7 +138,16 @@ namespace MonkeyCore.Scripts.View.Animations.Extensions
             self.SetBool(boolHash, value);
             return true;
         }
-
-       
+        
+        public static async UniTask WaitForAnimationEnd(this Animator animator, string animationTag, bool shouldWaitForTransitionEnd = true, int layer = 0)
+        {
+            await new WaitForAnimationStart(animator, animationTag, layer);
+            await new WaitForAnimationEnd(animator, animationTag, layer);
+            
+            if (shouldWaitForTransitionEnd)
+            {
+                await new WaitForAnimationTransitionEnd(animator, layerIndex: layer);
+            }
+        }
     }
 }
