@@ -49,7 +49,7 @@ namespace GameStates
         {
             if (_isFromLastSave)
             {
-                _client.GameSaverManager.LoadGameData();
+                _client.GameSaverService.LoadGameData();
             }
 
             _playerController.Setup();

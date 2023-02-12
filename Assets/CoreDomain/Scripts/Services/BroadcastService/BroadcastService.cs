@@ -1,29 +1,17 @@
 using System;
 using System.Collections.Generic;
 
-namespace Systems
+namespace CoreDomain.Services
 {
-    public class BroadcastSystem
+    public class BroadcastService : IBroadcastService
     {
-        #region --- Members ---
-
         private readonly Dictionary<Type, List<Delegate>> _typeDelegatesDictionary;
-
-        #endregion
-
-
-        #region --- Construction ---
-
-        public BroadcastSystem()
+        
+        public BroadcastService()
         {
             _typeDelegatesDictionary = new Dictionary<Type, List<Delegate>>();
         }
-
-        #endregion
-
-
-        #region --- Public Methods ---
-
+        
         public void Add<T>(Action<T> receiver)
         {
             var broadcastType = typeof(T);
@@ -72,7 +60,5 @@ namespace Systems
                 }
             }
         }
-
-        #endregion
     }
 }

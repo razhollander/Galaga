@@ -57,12 +57,12 @@ namespace Features.StartScreen
 
         private void StartGameFromLastSave()
         {
-            _client.StateMachine.SwitchState(new MainGameState(true));
+            _client.StateMachineService.SwitchState(new MainGameState(true));
         }
 
         private void StartNewGame()
         {
-            _client.StateMachine.SwitchState(new MainGameState());
+            _client.StateMachineService.SwitchState(new MainGameState());
         }
 
         #endregion

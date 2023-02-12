@@ -2,7 +2,7 @@ using System;
 using Client;
 using Features.MainGameScreen.GameLogicManager;
 using Handlers;
-using Managers;
+using CoreDomain;
 using UnityEngine;
 
 namespace Features.MainGameScreen.Player
@@ -79,14 +79,14 @@ namespace Features.MainGameScreen.Player
 
         private void AddListeners()
         {
-            _client.GameSaverManager.RegisterSavedObject(this);
+            _client.GameSaverService.RegisterSavedObject(this);
             _client.Broadcaster.Add<PlayerLoseEvent>(OnPlayerLose);
             _client.Broadcaster.Add<PlayerWinEvent>(OnPlayerWin);
         }
 
         private void RemoveListeners()
         {
-            _client.GameSaverManager.UnregisterSavedObject(this);
+            _client.GameSaverService.UnregisterSavedObject(this);
             _client.Broadcaster.Remove<PlayerLoseEvent>(OnPlayerLose);
             _client.Broadcaster.Remove<PlayerWinEvent>(OnPlayerWin);
         }

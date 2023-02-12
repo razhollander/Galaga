@@ -1,4 +1,5 @@
-using Managers;
+using CoreDomain;
+using CoreDomain.Services;
 using GameStates;
 using UnityEngine;
 
@@ -44,7 +45,7 @@ namespace Popups.WinPopup
         private void OnBackToStartScreenClicked()
         {
             DestroyPopup();
-            _client.StateMachine.SwitchState(new StartScreenState());
+            _client.StateMachineService.SwitchState(new StartScreenState());
         }
 
         #endregion

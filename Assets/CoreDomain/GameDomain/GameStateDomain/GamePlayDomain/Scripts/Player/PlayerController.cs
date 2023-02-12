@@ -1,6 +1,7 @@
 using System;
 using Systems;
 using Client;
+using CoreDomain.GameDomain.GameStateDomain.GamePlayDomain.Scripts.Bullet;
 using Features.MainGameScreen.Bullet;
 using Features.MainGameScreen.GameLogicManager;
 using UnityEngine;

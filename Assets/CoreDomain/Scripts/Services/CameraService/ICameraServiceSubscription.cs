@@ -1,10 +1,10 @@
 using UnityEngine;
 
-namespace CoreDomain.Scripts.Services.CameraService
+namespace CoreDomain.Services
 {
     public interface ICameraServiceSubscription
     {
-        void SubscribeCamera(CameraType type, Camera camera);
-        void UnsubscribeCamera(CameraType type);
+        void SubscribeCamera(GameCameraType type, Camera camera);
+        void UnsubscribeCamera(GameCameraType type);
     }
 }

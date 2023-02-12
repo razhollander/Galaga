@@ -38,7 +38,7 @@ namespace Features.MainGameScreen.GameLogicManager
         {
             if (_isGameEnabled)
             {
-                _client.GameSaverManager.SaveGameData();
+                _client.GameSaverService.SaveGameData();
             }
         }
 

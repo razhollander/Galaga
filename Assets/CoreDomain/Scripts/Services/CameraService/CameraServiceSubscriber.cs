@@ -1,12 +1,12 @@
 using UnityEngine;
 using Zenject;
 
-namespace CoreDomain.Scripts.Services.CameraService
+namespace CoreDomain.Services
 {
     [RequireComponent(typeof(Camera))]
     public class CameraServiceSubscriber : MonoBehaviour
     {
-        [SerializeField] private CameraType _cameraType;
+        [SerializeField] private GameCameraType gameCameraType;
         private ICameraServiceSubscription _cameraServiceSubscription;
 
         [Inject]
@@ -18,12 +18,12 @@ namespace CoreDomain.Scripts.Services.CameraService
         private void Start()
         {
             var thisCamera = GetComponent<Camera>();
-            _cameraServiceSubscription.SubscribeCamera(_cameraType, thisCamera);
+            _cameraServiceSubscription.SubscribeCamera(gameCameraType, thisCamera);
         }
 
         private void OnDestroy()
         {
-            _cameraServiceSubscription?.UnsubscribeCamera(_cameraType);
+            _cameraServiceSubscription?.UnsubscribeCamera(gameCameraType);
         }
     }
 }

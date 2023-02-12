@@ -5,9 +5,9 @@ using GameStates;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace Managers
+namespace CoreDomain
 {
-    public class PopupsManager
+    public class PopupsManager : IPopupsManager
     {
         #region --- Members ---
 

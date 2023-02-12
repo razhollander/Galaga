@@ -1,11 +1,11 @@
 using System;
 using Client;
-using Managers;
+using CoreDomain;
 using UnityEngine.InputSystem;
 
 namespace Systems
 {
-    public class PlayerInputs : IDisposable, UpdateManager.IUpdatable
+    public class PlayerInputs : IDisposable, IUpdatable
     {
         #region --- Events ---
 
@@ -63,13 +63,13 @@ namespace Systems
         private void AddListeners()
         {
             _gameInputActions.BaseSpace.Shoot.started += OnPlayerShoot;
-            _client.UpdateManager.RegisterUpdatable(this);
+            _client.UpdateSubscriptionService.RegisterUpdatable(this);
         }
 
         private void RemoveListeners()
         {
             _gameInputActions.BaseSpace.Shoot.started -= OnPlayerShoot;
-            _client.UpdateManager.UnregisterUpdatable(this);
+            _client.UpdateSubscriptionService.UnregisterUpdatable(this);
         }
 
         #endregion

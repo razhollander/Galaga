@@ -2,13 +2,13 @@
 using Services.Logs.Base;
 using UnityEngine;
 
-namespace CoreDomain.Scripts.Services.CameraService
+namespace CoreDomain.Services
 {
     public class CameraService : ICameraServiceSubscription, ICameraService
     {
-        private readonly Dictionary<CameraType, Camera> _cameras = new();
+        private readonly Dictionary<GameCameraType, Camera> _cameras = new();
 
-        public void SubscribeCamera(CameraType type, Camera camera)
+        public void SubscribeCamera(GameCameraType type, Camera camera)
         {
             var cameraSubscribed = _cameras.ContainsKey(type);
 
@@ -22,7 +22,7 @@ namespace CoreDomain.Scripts.Services.CameraService
             }
         }
 
-        public void UnsubscribeCamera(CameraType type)
+        public void UnsubscribeCamera(GameCameraType type)
         {
             var cameraSubscribed = _cameras.ContainsKey(type);
 
@@ -36,7 +36,7 @@ namespace CoreDomain.Scripts.Services.CameraService
             }
         }
 
-        public Vector3 WorldToScreenPoint(CameraType type, Vector3 worldPoint)
+        public Vector3 WorldToScreenPoint(GameCameraType type, Vector3 worldPoint)
         {
             if (!_cameras.ContainsKey(type))
             {
@@ -47,7 +47,7 @@ namespace CoreDomain.Scripts.Services.CameraService
             return _cameras[type].WorldToScreenPoint(worldPoint);
         }
 
-        public Vector3 WorldToViewPortPoint(CameraType type, Vector3 worldPoint)
+        public Vector3 WorldToViewPortPoint(GameCameraType type, Vector3 worldPoint)
         {
             if (!_cameras.ContainsKey(type))
             {
@@ -58,7 +58,7 @@ namespace CoreDomain.Scripts.Services.CameraService
             return _cameras[type].WorldToViewportPoint(worldPoint);
         }
 
-        public Vector3 ScreenToWorldPoint(CameraType type, Vector3 screenPoint)
+        public Vector3 ScreenToWorldPoint(GameCameraType type, Vector3 screenPoint)
         {
             if (!_cameras.ContainsKey(type))
             {
@@ -69,7 +69,7 @@ namespace CoreDomain.Scripts.Services.CameraService
             return _cameras[type].ScreenToWorldPoint(screenPoint);
         }
 
-        public Vector3 ScreenToViewPort(CameraType type, Vector3 screenPoint)
+        public Vector3 ScreenToViewPort(GameCameraType type, Vector3 screenPoint)
         {
             if (_cameras.TryGetValue(type, out var camera))
             {
@@ -80,7 +80,7 @@ namespace CoreDomain.Scripts.Services.CameraService
             return Vector3.zero;
         }
 
-        public bool ScreenPointToRay(CameraType type, LayerMask layerMask, out RaycastHit hit)
+        public bool ScreenPointToRay(GameCameraType type, LayerMask layerMask, out RaycastHit hit)
         {
             if (_cameras.TryGetValue(type, out var camera))
             {
@@ -92,7 +92,7 @@ namespace CoreDomain.Scripts.Services.CameraService
             return false;
         }
 
-        public bool ScreenPointToRay(CameraType type, out RaycastHit hit)
+        public bool ScreenPointToRay(GameCameraType type, out RaycastHit hit)
         {
             if (!_cameras.ContainsKey(type))
             {
@@ -104,7 +104,7 @@ namespace CoreDomain.Scripts.Services.CameraService
             return Physics.Raycast(_cameras[type].ScreenPointToRay(Input.mousePosition), out hit, Mathf.Infinity);
         }
 
-        public bool ScreenCenterToRay(CameraType type, out RaycastHit hit)
+        public bool ScreenCenterToRay(GameCameraType type, out RaycastHit hit)
         {
             if (!_cameras.ContainsKey(type))
             {
@@ -117,7 +117,7 @@ namespace CoreDomain.Scripts.Services.CameraService
                 out hit, Mathf.Infinity);
         }
 
-        public void SetCanvasCamera(CameraType type, Canvas canvas)
+        public void SetCanvasCamera(GameCameraType type, Canvas canvas)
         {
             if (!_cameras.ContainsKey(type))
             {
@@ -128,10 +128,10 @@ namespace CoreDomain.Scripts.Services.CameraService
             canvas.worldCamera = _cameras[type];
         }
 
-        public Vector2 ScreenPointToCanvasInCameraSpacePoint(RectTransform rect, Vector2 screenPoint, CameraType cameraType)
+        public Vector2 ScreenPointToCanvasInCameraSpacePoint(GameCameraType gameCameraType, RectTransform rect, Vector2 screenPoint)
         {
             var wasSuccess =
-                RectTransformUtility.ScreenPointToLocalPointInRectangle(rect, screenPoint, _cameras[cameraType], out var localPoint);
+                RectTransformUtility.ScreenPointToLocalPointInRectangle(rect, screenPoint, _cameras[gameCameraType], out var localPoint);
 
             if (wasSuccess)
             {
@@ -141,7 +141,7 @@ namespace CoreDomain.Scripts.Services.CameraService
             return Vector2.zero;
         }
 
-        public float GetAspectRatio(CameraType type)
+        public float GetAspectRatio(GameCameraType type)
         {
             if (!_cameras.ContainsKey(type))
             {
@@ -150,7 +150,7 @@ namespace CoreDomain.Scripts.Services.CameraService
 
             return _cameras[type].aspect;
         } 
-        public Vector3 GetCameraPosition(CameraType type)
+        public Vector3 GetCameraPosition(GameCameraType type)
         {
             if (!_cameras.ContainsKey(type))
             {
@@ -161,7 +161,7 @@ namespace CoreDomain.Scripts.Services.CameraService
             return _cameras[type].transform.position;
         }
 
-        public Vector3 GetCameraForward(CameraType type)
+        public Vector3 GetCameraForward(GameCameraType type)
         {
             if (!_cameras.ContainsKey(type))
             {
@@ -172,7 +172,7 @@ namespace CoreDomain.Scripts.Services.CameraService
             return _cameras[type].transform.forward;
         }
 
-        public Vector3 GetCameraRight(CameraType type)
+        public Vector3 GetCameraRight(GameCameraType type)
         {
             if (!_cameras.ContainsKey(type))
             {
@@ -183,7 +183,7 @@ namespace CoreDomain.Scripts.Services.CameraService
             return _cameras[type].transform.right;
         }
 
-        public bool IsPointOnScreen(CameraType type, Vector3 point)
+        public bool IsPointOnScreen(GameCameraType type, Vector3 point)
         {
             if (!_cameras.ContainsKey(type))
             {

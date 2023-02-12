@@ -29,7 +29,7 @@ namespace Features.StartScreen
             _onNewGame = onNewGame;
             _onContinueFromLastSave = onContinueFromLastSave;
 
-            _continueFromLastSaveButton.interactable = client.GameSaverManager.DoesHaveLastSave;
+            _continueFromLastSaveButton.interactable = client.GameSaverService.DoesHaveLastSave;
         }
 
         #endregion

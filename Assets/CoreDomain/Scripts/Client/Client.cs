@@ -1,7 +1,8 @@
 using Systems;
 using GameStates;
 using Handlers;
-using Managers;
+using CoreDomain;
+using CoreDomain.Services;
 using GameStates;
 using UnityEngine;
 
@@ -13,30 +14,30 @@ namespace Client
 
         public static IClient Instance { get; private set; }
         public PopupsManager PopupsManager { get; }
-        public StateMachine StateMachine { get; }
-        public UpdateManager UpdateManager { get; }
+        public StateMachine StateMachineService { get; }
+        public UpdateSubscriptionService UpdateSubscriptionService { get; }
         public AssetBundleSystem AssetBundleSystem { get; private set; }
 
-        public BroadcastSystem Broadcaster { get; private set; }
+        public BroadcastService Broadcaster { get; private set; }
         public CameraManager CameraManager { get; private set; }
         public GameInputActions GameInputActions { get; private set; }
-        public ISaverManager GameSaverManager { get; private set; }
+        public IGameSaverService GameSaverService { get; private set; }
 
         #endregion
 
 
         #region --- Construction ---
 
-        public Client(UpdateManager updateManager)
+        public Client(UpdateSubscriptionService updateSubscriptionService)
         {
             SetupSingleton(this);
-            UpdateManager = updateManager;
+            UpdateSubscriptionService = updateSubscriptionService;
             
             UpdateApplicationSettings();
             SetupSystems();
 
             PopupsManager = new PopupsManager(this);
-            StateMachine = new StateMachine(this, new StartScreenState());
+            //StateMachine = new StateMachine(this, new StartScreenState());
         }
 
         #endregion
@@ -60,9 +61,9 @@ namespace Client
         private void SetupSystems()
         {
             CameraManager = new CameraManager();
-            GameSaverManager = new GameSaverManager();
+            GameSaverService = new GameSaverService();
 
-            Broadcaster = new BroadcastSystem();
+            Broadcaster = new BroadcastService();
             AssetBundleSystem = new AssetBundleSystem();
 
             GameInputActions = new GameInputActions();
@@ -77,13 +78,13 @@ namespace Client
         #region --- Properties ---
 
         AssetBundleSystem AssetBundleSystem { get; }
-        BroadcastSystem Broadcaster { get; }
+        BroadcastService Broadcaster { get; }
         CameraManager CameraManager { get; }
         GameInputActions GameInputActions { get; }
-        ISaverManager GameSaverManager { get; }
+        IGameSaverService GameSaverService { get; }
         PopupsManager PopupsManager { get; }
-        StateMachine StateMachine { get; }
-        UpdateManager UpdateManager { get; }
+        StateMachine StateMachineService { get; }
+        UpdateSubscriptionService UpdateSubscriptionService { get; }
 
         #endregion
     }

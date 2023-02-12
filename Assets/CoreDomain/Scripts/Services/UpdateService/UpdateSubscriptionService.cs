@@ -1,24 +1,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Managers
+namespace CoreDomain.Services
 {
-    public class UpdateManager : MonoBehaviour
+    public class UpdateSubscriptionService : MonoBehaviour, IUpdateSubscriptionService
     {
-        #region --- Members ---
-
-        private List<IUpdatable> _updatablesList = new List<IUpdatable>();
-
-        #endregion
-
-
-        #region --- Mono Override ---
-
-        private void Awake()
-        {
-            _updatablesList = new List<IUpdatable>();
-        }
-
+        private List<IUpdatable> _updatablesList = new ();
+        
         private void Update()
         {
             var numValues = _updatablesList.Count;
@@ -34,12 +22,7 @@ namespace Managers
                 updated?.ManagedUpdate();
             }
         }
-
-        #endregion
-
-
-        #region --- Public Methods ---
-
+        
         public void RegisterUpdatable(IUpdatable updatable)
         {
             if (_updatablesList == null || _updatablesList.Contains(updatable))
@@ -59,21 +42,5 @@ namespace Managers
 
             _updatablesList.Remove(updatable);
         }
-
-        #endregion
-
-
-        #region --- Inner Classes ---
-
-        public interface IUpdatable
-        {
-            #region --- Public Methods ---
-
-            void ManagedUpdate();
-
-            #endregion
-        }
-
-        #endregion
     }
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Systems
 {
-    public class AssetBundleSystem
+    public class AssetBundleSystem : IAssetBundleSystem
     {
         #region --- Public Methods ---
 

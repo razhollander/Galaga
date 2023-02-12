@@ -1,11 +1,12 @@
 using System;
 using Client;
-using Managers;
+using Features.MainGameScreen.Bullet;
+using CoreDomain;
 using UnityEngine;
 
-namespace Features.MainGameScreen.Bullet
+namespace CoreDomain.GameDomain.GameStateDomain.GamePlayDomain.Scripts.Bullet
 {
-    public class BulletView : MonoBehaviour, UpdateManager.IUpdatable
+    public class BulletView : MonoBehaviour, IUpdatable
     {
         #region --- Members ---
 
@@ -91,12 +92,12 @@ namespace Features.MainGameScreen.Bullet
 
         private void AddListeners()
         {
-            _client.UpdateManager.RegisterUpdatable(this);
+            _client.UpdateSubscriptionService.RegisterUpdatable(this);
         }
 
         private void RemoveListeners()
         {
-            _client.UpdateManager.UnregisterUpdatable(this);
+            _client.UpdateSubscriptionService.UnregisterUpdatable(this);
         }
 
         #endregion
