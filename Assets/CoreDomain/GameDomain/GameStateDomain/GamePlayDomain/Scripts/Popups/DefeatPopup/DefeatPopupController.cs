@@ -1,6 +1,6 @@
 using CoreDomain;
 using CoreDomain.Services;
-using GameStates;
+using CoreDomain.Services.GameStates;
 using UnityEngine;
 
 namespace Popups.DefeatPopup
@@ -21,7 +21,7 @@ namespace Popups.DefeatPopup
         public DefeatBasePopupController()
         {
             PopupGO = Object.Instantiate(
-                _client.AssetBundleSystem.LoadAssetFromBundle<GameObject>(DEFEAT_POPUP_BUNDLE_PATH,
+                _client.AssetBundleLoaderService.LoadAssetFromBundle<GameObject>(DEFEAT_POPUP_BUNDLE_PATH,
                     DEFEAT_POPUP_ASSET_NAME));
 
             _popupView = PopupGO.GetComponent<DefeatPopupView>();
@@ -46,7 +46,7 @@ namespace Popups.DefeatPopup
         private void OnBackToStartScreenClicked()
         {
             DestroyPopup();
-            _client.StateMachineService.SwitchState(new StartScreenState());
+            _client.StateMachineService.SwitchState(new LobbyGameState());
         }
 
         #endregion

@@ -1,6 +1,6 @@
 using CoreDomain;
 using CoreDomain.Services;
-using GameStates;
+using CoreDomain.Services.GameStates;
 using UnityEngine;
 
 namespace Popups.WinPopup
@@ -21,7 +21,7 @@ namespace Popups.WinPopup
         public WinPopupController()
         {
             PopupGO = Object.Instantiate(
-                _client.AssetBundleSystem.LoadAssetFromBundle<GameObject>(WIN_POPUP_BUNDLE_PATH, WIN_POPUP_ASSET_NAME));
+                _client.AssetBundleLoaderService.LoadAssetFromBundle<GameObject>(WIN_POPUP_BUNDLE_PATH, WIN_POPUP_ASSET_NAME));
 
             _popupView = PopupGO.GetComponent<WinPopupView>();
             _popupView.Setup(OnBackToStartScreenClicked);
@@ -45,7 +45,7 @@ namespace Popups.WinPopup
         private void OnBackToStartScreenClicked()
         {
             DestroyPopup();
-            _client.StateMachineService.SwitchState(new StartScreenState());
+            _client.StateMachineService.SwitchState(new LobbyGameState());
         }
 
         #endregion

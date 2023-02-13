@@ -1,73 +1,36 @@
-using System;
-using Client;
-using Features.MainGameScreen.Enemy;
-using Features.MainGameScreen.GameLogicManager;
-using Features.MainGameScreen.Player;
+using Cysharp.Threading.Tasks;
 
-namespace GameStates
+namespace CoreDomain.Services.GameStates
 {
     public class MainGameState : IGameState
     {
-        #region --- Members ---
+        //private readonly EnemiesController _enemiesController;
+        //private readonly GameLogicController _gameLogicController;
+        //private readonly IClient _client;
+        //private readonly PlayerController _playerController;
 
-        private readonly bool _isFromLastSave;
-        private readonly EnemiesController _enemiesController;
-        private readonly GameLogicController _gameLogicController;
-        private readonly IClient _client;
-        private readonly PlayerController _playerController;
+        public GameStateType GameState => GameStateType.MainGame;
 
-        #endregion
-
-
-        #region --- Properties ---
-
-        public eGameState StateType
+        public MainGameState()
         {
-            get { return eGameState.MainGameState; }
+            //_client = Client.Client.Instance;
+            //_isFromLastSave = isFromLastSave;
+            //_gameLogicController = new GameLogicController(_client);
+            //_playerController = new PlayerController(_client);
+            //_enemiesController = new EnemiesController(_client);
+        }
+        
+        public async UniTask EnterState()
+        {
+            //_playerController.Setup();
+            //_enemiesController.Setup();
         }
 
-        #endregion
-
-
-        #region --- Construction ---
-
-        public MainGameState(bool isFromLastSave = false)
+        public async UniTask ExitState()
         {
-            _client = Client.Client.Instance;
-            _isFromLastSave = isFromLastSave;
-            _gameLogicController = new GameLogicController(_client);
-            _playerController = new PlayerController(_client);
-            _enemiesController = new EnemiesController(_client);
+            //_gameLogicController.Dispose();
+            //_playerController.Dispose();
+            //_enemiesController.Dispose();
         }
-
-        #endregion
-
-
-        #region --- Public Methods ---
-
-        public void EnterState()
-        {
-            if (_isFromLastSave)
-            {
-                _client.GameSaverService.LoadGameData();
-            }
-
-            _playerController.Setup();
-            _enemiesController.Setup();
-        }
-
-        public void ExitState(Action<IGameState> onExitDone)
-        {
-            _gameLogicController.Dispose();
-            _playerController.Dispose();
-            _enemiesController.Dispose();
-            onExitDone(this);
-        }
-
-        public void IdleState()
-        {
-        }
-
-        #endregion
     }
 }

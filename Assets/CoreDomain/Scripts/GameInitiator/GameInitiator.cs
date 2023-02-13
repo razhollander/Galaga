@@ -1,33 +1,33 @@
 using CoreDomain.Services;
-using GameStates;
+using CoreDomain.Services.GameStates;
 using Services.Logs.Base;
 using UnityEngine;
 using Zenject;
 
-namespace CoreDomain.Scripts.GameInitiator
+namespace CoreDomain.GameInitiator
 {
     public class GameInitiator : MonoBehaviour
     {
-        private IStateMachine _stateMachine;
+        private IStateMachineService _stateMachine;
         private GameInputActions _gameInputActions;
         
         [Inject]
-        private void Setup(IStateMachine stateMachine, GameInputActions gameInputActions)
+        private void Setup(IStateMachineService stateMachine, GameInputActions gameInputActions)
         {
             _stateMachine = stateMachine;
             _gameInputActions = gameInputActions;
         }
         
-        private void Awake()
+        private void Start()
         {
             InitializeServices();
             UpdateApplicationSettings();
-            LoadState();
+            EnterLobbyState();
         }
 
-        private void LoadState()
+        private void EnterLobbyState()
         {
-            _stateMachine.SetupInitialGameState(new StartScreenState());
+            _stateMachine.EnterInitialGameState(new LobbyGameState());
         }
 
         private void UpdateApplicationSettings()

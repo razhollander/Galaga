@@ -1,6 +1,7 @@
-using GameStates;
 using CoreDomain;
+using CoreDomain.Scripts.Services.SceneService;
 using CoreDomain.Services;
+using CoreDomain.Services.GameStates;
 using Services.Logs;
 using Services.Logs.Base;
 using Systems;
@@ -16,18 +17,12 @@ namespace CoreDomain
         public override void InstallBindings()
         {
             Container.BindInterfacesTo<CameraService>().AsSingle().NonLazy();
-            //Container.BindInterfacesTo<GameSaverService>().AsSingle().NonLazy();
-            //Container.BindInterfacesTo<BroadcastService>().AsSingle().NonLazy();
-            Container.BindInterfacesTo<AssetBundleSystem>().AsSingle().NonLazy();
-            //Container.BindInterfacesTo<PopupsManager>().AsSingle().NonLazy();
-            //Container.BindInterfacesTo<StateMachine>().AsSingle().NonLazy();
+            Container.BindInterfacesTo<ScenesLoaderService>().AsSingle().NonLazy();
+            Container.BindInterfacesTo<AssetBundleLoaderService>().AsSingle().NonLazy();
+            Container.BindInterfacesTo<StateMachineService>().AsSingle().NonLazy();
             Container.BindInterfacesTo<UnityLogger>().AsSingle().NonLazy();
             Container.BindInterfacesTo<UpdateSubscriptionService>().FromInstance(_updateSubscriptionService).AsSingle().NonLazy();
             Container.Bind<GameInputActions>().AsSingle().NonLazy();
-
-            // Container.Bind<UrlsMockDataConfiguration>().FromScriptableObject(urlsMockDataConfiguration).AsSingle().NonLazy();
-            // Container.BindInstance(environmentType);
-            // Container.Bind<IBackendEnvironmentSet>().To<BackendEvironmentSet>().AsSingle().NonLazy();
         }
     }
 }

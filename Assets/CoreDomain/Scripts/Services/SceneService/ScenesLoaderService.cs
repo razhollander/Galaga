@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using CoreDomain.Scripts.Extensions;
 using Cysharp.Threading.Tasks;
 using Services.Logs.Base;
 using UnityEngine.SceneManagement;
@@ -13,29 +14,30 @@ namespace CoreDomain.Scripts.Services.SceneService
 
         public ScenesLoaderService()
         {
+            AddOpenedScenesToLoadedHashset();
+        }
+
+        private void AddOpenedScenesToLoadedHashset()
+        {
             var countLoaded = SceneManager.sceneCount;
 
             for (var i = 0; i < countLoaded; i++)
             {
                 var sceneName = SceneManager.GetSceneAt(i).name;
-                var sceneType = Enum.Parse<SceneType>(sceneName);
-                var isSceneNotInHashSet = !_loadedScenes.Contains(sceneType);
 
-                if (isSceneNotInHashSet)
+                if (sceneName.TryToEnum<SceneType>(out var sceneType) &&
+                    !_loadedScenes.Contains(sceneType))
                 {
                     _loadedScenes.Add(sceneType);
                 }
             }
         }
 
-        [Obsolete]
-        public async UniTask<bool> LoadScene(SceneType sceneType)
+        public async UniTask<bool> TryLoadScene(SceneType sceneType)
         {
-            LogService.LogWarning("Obsolete, please not call it");
-            return true;
-            var canLoadScene = !_loadedScenes.Contains(sceneType) && !_loadingScenes.Contains(sceneType);
+            var isSceneNotAlreadyLoaded = !_loadedScenes.Contains(sceneType) && !_loadingScenes.Contains(sceneType);
 
-            if (canLoadScene)
+            if (isSceneNotAlreadyLoaded)
             {
                 var sceneName = sceneType.ToString();
                 _loadingScenes.Add(sceneType);
@@ -78,7 +80,7 @@ namespace CoreDomain.Scripts.Services.SceneService
             LogService.LogWarning("Obsolete, please not call it");
             return true;
             return await UnloadScene(sceneType) &&
-                   await LoadScene(sceneType);
+                   await TryLoadScene(sceneType);
         }
 
         [Obsolete]
@@ -97,9 +99,9 @@ namespace CoreDomain.Scripts.Services.SceneService
             switch (scenesSetupOrderType)
             {
                 case ScenesSetupOrderType.FirstUnload:
-                    return await UnloadScene(unloadScenesTypes) && await LoadScene(loadScenesTypes);
+                    return await UnloadScene(unloadScenesTypes) && await TryLoadScene(loadScenesTypes);
                 case ScenesSetupOrderType.FirstLoad:
-                    return await LoadScene(loadScenesTypes) && await UnloadScene(unloadScenesTypes);
+                    return await TryLoadScene(loadScenesTypes) && await UnloadScene(unloadScenesTypes);
                 default:
                     throw new ArgumentOutOfRangeException(nameof(scenesSetupOrderType), scenesSetupOrderType, null);
             }
@@ -133,7 +135,7 @@ namespace CoreDomain.Scripts.Services.SceneService
 
             foreach (var scene in scenesTypes)
             {
-                result &= await LoadScene(scene);
+                result &= await TryLoadScene(scene);
             }
 
             return result;
@@ -149,7 +151,7 @@ namespace CoreDomain.Scripts.Services.SceneService
 
             foreach (var scene in scenesTypes)
             {
-                result &= await LoadScene(scene);
+                result &= await TryLoadScene(scene);
             }
 
             return result;

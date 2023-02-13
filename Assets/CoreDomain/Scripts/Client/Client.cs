@@ -1,9 +1,8 @@
 using Systems;
-using GameStates;
 using Handlers;
 using CoreDomain;
 using CoreDomain.Services;
-using GameStates;
+using CoreDomain.Services.GameStates;
 using UnityEngine;
 
 namespace Client
@@ -14,9 +13,9 @@ namespace Client
 
         public static IClient Instance { get; private set; }
         public PopupsManager PopupsManager { get; }
-        public StateMachine StateMachineService { get; }
+        public IStateMachineService StateMachineService { get; }
         public UpdateSubscriptionService UpdateSubscriptionService { get; }
-        public AssetBundleSystem AssetBundleSystem { get; private set; }
+        public AssetBundleLoaderService AssetBundleLoaderService { get; private set; }
 
         public BroadcastService Broadcaster { get; private set; }
         public CameraManager CameraManager { get; private set; }
@@ -64,7 +63,7 @@ namespace Client
             GameSaverService = new GameSaverService();
 
             Broadcaster = new BroadcastService();
-            AssetBundleSystem = new AssetBundleSystem();
+            AssetBundleLoaderService = new AssetBundleLoaderService();
 
             GameInputActions = new GameInputActions();
             GameInputActions.Enable();
@@ -77,13 +76,13 @@ namespace Client
     {
         #region --- Properties ---
 
-        AssetBundleSystem AssetBundleSystem { get; }
+        AssetBundleLoaderService AssetBundleLoaderService { get; }
         BroadcastService Broadcaster { get; }
         CameraManager CameraManager { get; }
         GameInputActions GameInputActions { get; }
         IGameSaverService GameSaverService { get; }
         PopupsManager PopupsManager { get; }
-        StateMachine StateMachineService { get; }
+        IStateMachineService StateMachineService { get; }
         UpdateSubscriptionService UpdateSubscriptionService { get; }
 
         #endregion

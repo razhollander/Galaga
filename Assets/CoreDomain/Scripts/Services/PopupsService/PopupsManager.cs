@@ -1,7 +1,8 @@
 using System;
 using System.Collections.Generic;
 using Client;
-using GameStates;
+using CoreDomain.Services;
+using CoreDomain.Services.GameStates;
 using UnityEngine;
 using Object = UnityEngine.Object;
 

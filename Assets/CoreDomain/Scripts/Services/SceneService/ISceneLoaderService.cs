@@ -4,7 +4,7 @@ namespace CoreDomain.Scripts.Services.SceneService
 {
     public interface ISceneLoaderService
     {
-        UniTask<bool> LoadScene(SceneType sceneType);
+        UniTask<bool> TryLoadScene(SceneType sceneType);
         UniTask<bool> UnloadScene(SceneType sceneType);
         UniTask<bool> ReloadScene(SceneType sceneType);
         UniTask<bool> ReloadScenes(SceneType[] scenesTypes);

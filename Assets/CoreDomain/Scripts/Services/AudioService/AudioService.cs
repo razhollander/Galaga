@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using Untils;
 using CoreDomain.Scripts.Extensions;
+using CoreDomain.Services;
 using Systems;
 
 namespace CoreDomain.Scripts.Services.AudioService
@@ -37,8 +38,8 @@ namespace CoreDomain.Scripts.Services.AudioService
         private Dictionary<AudioChannelType, AudioSource> _channelsByType = new();
         private Dictionary<string, AudioClip> _audioClipsByName = new();
 
-        private AssetBundleSystem _assetsService;
-        public AudioService(AssetBundleSystem assetsService)
+        private IAssetBundleLoaderService _assetsService;
+        public AudioService(IAssetBundleLoaderService assetsService)
         {
             _assetsService = assetsService;
         }

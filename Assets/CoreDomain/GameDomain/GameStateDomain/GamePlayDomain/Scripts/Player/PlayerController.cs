@@ -64,12 +64,12 @@ namespace Features.MainGameScreen.Player
 
         public void Setup()
         {
-            var playerBundle = _client.AssetBundleSystem.LoadBundle(PLAYER_BUNDLE_PATH);
+            var playerBundle = _client.AssetBundleLoaderService.LoadBundle(PLAYER_BUNDLE_PATH);
 
             CreatePlayer(playerBundle);
             CreateBullet(playerBundle);
 
-            _client.AssetBundleSystem.UnloadAssetBundle(playerBundle);
+            _client.AssetBundleLoaderService.UnloadAssetBundle(playerBundle);
         }
 
         #endregion
@@ -92,7 +92,7 @@ namespace Features.MainGameScreen.Player
 
             var bulletGO =
                 Object.Instantiate(
-                    _client.AssetBundleSystem.LoadAssetFromBundle<GameObject>(playerBundle, BULLET_ASSET_NAME));
+                    _client.AssetBundleLoaderService.LoadAssetFromBundle<GameObject>(playerBundle, BULLET_ASSET_NAME));
 
             _bulletController.Setup(bulletGO.GetComponent<BulletView>());
         }
@@ -101,7 +101,7 @@ namespace Features.MainGameScreen.Player
         {
             var playerGO =
                 Object.Instantiate(
-                    _client.AssetBundleSystem.LoadAssetFromBundle<GameObject>(playerBundle, PLAYER_ASSET_NAME));
+                    _client.AssetBundleLoaderService.LoadAssetFromBundle<GameObject>(playerBundle, PLAYER_ASSET_NAME));
 
             _playerView = playerGO.GetComponent<PlayerView>();
             _playerView.Setup(_model, OnPlayerCollision, OnDieAnimationEnd);
