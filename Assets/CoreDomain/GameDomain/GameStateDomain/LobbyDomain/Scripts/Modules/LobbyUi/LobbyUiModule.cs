@@ -30,7 +30,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.LobbyDomain.Modules.LobbyUi
 
         private void SwitchToQuickGameState()
         {
-            _stateMachineService.SwitchState(new MainGameState());
+            _stateMachineService.SwitchState(new MainGameState(new MainGameStateEnterData("")));
         }
     }
 }

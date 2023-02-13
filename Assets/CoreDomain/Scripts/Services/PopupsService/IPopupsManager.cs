@@ -1,7 +1,7 @@
 namespace CoreDomain
 {
-    public interface IPopupsManager
-    {
-        void QueuePopup(BasePopupController basePopup);
-    }
+    // public interface IPopupsManager
+    // {
+    //     void QueuePopup(BasePopupController basePopup);
+    // }
 }

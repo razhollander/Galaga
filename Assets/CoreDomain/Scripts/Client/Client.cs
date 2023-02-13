@@ -12,7 +12,7 @@ namespace Client
         #region --- Properties ---
 
         public static IClient Instance { get; private set; }
-        public PopupsManager PopupsManager { get; }
+        //public PopupsManager PopupsManager { get; }
         public IStateMachineService StateMachineService { get; }
         public UpdateSubscriptionService UpdateSubscriptionService { get; }
         public AssetBundleLoaderService AssetBundleLoaderService { get; private set; }
@@ -35,7 +35,7 @@ namespace Client
             UpdateApplicationSettings();
             SetupSystems();
 
-            PopupsManager = new PopupsManager(this);
+            //PopupsManager = new PopupsManager(this);
             //StateMachine = new StateMachine(this, new StartScreenState());
         }
 
@@ -81,7 +81,7 @@ namespace Client
         CameraManager CameraManager { get; }
         GameInputActions GameInputActions { get; }
         IGameSaverService GameSaverService { get; }
-        PopupsManager PopupsManager { get; }
+        //PopupsManager PopupsManager { get; }
         IStateMachineService StateMachineService { get; }
         UpdateSubscriptionService UpdateSubscriptionService { get; }
 

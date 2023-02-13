@@ -4,22 +4,12 @@ namespace CoreDomain.Scripts.Services.SceneService
 {
     public interface ISceneLoaderService
     {
-        UniTask<bool> TryLoadScene(SceneType sceneType);
-        UniTask<bool> UnloadScene(SceneType sceneType);
-        UniTask<bool> ReloadScene(SceneType sceneType);
-        UniTask<bool> ReloadScenes(SceneType[] scenesTypes);
-
-        UniTask<bool> SetupScenes(
-            SceneType[] unloadScenesTypes,
-            SceneType[] loadScenesTypes,
-            ScenesSetupOrderType scenesSetupOrderType = ScenesSetupOrderType.FirstUnload);
-
-        UniTask<bool> SetupScenes(
-            SceneType unloadSceneType,
-            SceneType loadSceneType,
-            ScenesSetupOrderType scenesSetupOrderType = ScenesSetupOrderType.FirstUnload);
-
-        UniTask<bool> LoadScenes(SceneType[] scenesTypes);
-        UniTask<bool> UnloadScenes(SceneType[] scenesTypes);
+        UniTask<bool> TryLoadScene(string sceneName);
+        UniTask<bool> TryUnloadScene(string sceneName);
+        UniTask<bool> TryReloadScene(string sceneName);
+        UniTask<bool> TryReloadScenes(string[] scenesNames);
+        UniTask<bool> TryLoadScenes(string[] scenesNames);
+        UniTask<bool> TryUnloadScenes(string[] scenesNames);
+        UniTask<bool> TrySwitchScenes(string unloadSceneName, string loadSceneName);
     }
 }

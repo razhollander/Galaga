@@ -79,7 +79,7 @@ namespace Features.MainGameScreen.GameLogicManager
 
         private void OnPlayerDieEnd(PlayerDieEndEvent obj)
         {
-            _client.PopupsManager.QueuePopup(new DefeatBasePopupController());
+            //_client.PopupsManager.QueuePopup(new DefeatBasePopupController());
         }
 
         private void OnPlayerLose(PlayerLoseEvent obj)
@@ -89,7 +89,7 @@ namespace Features.MainGameScreen.GameLogicManager
 
         private void OnPlayerWin(PlayerWinEvent obj)
         {
-            _client.PopupsManager.QueuePopup(new WinPopupController());
+            //_client.PopupsManager.QueuePopup(new WinPopupController());
             _isGameEnabled = false;
         }
 
