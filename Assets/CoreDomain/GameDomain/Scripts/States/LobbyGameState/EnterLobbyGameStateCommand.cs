@@ -1,26 +1,27 @@
 using CoreDomain.GameDomain.GameStateDomain.LobbyDomain.Modules.LobbyUi;
 using CoreDomain.Scripts.Services.SceneService;
 using CoreDomain.Scripts.Utils.Command;
-using CoreDomain.Services.GameStates;
 using Cysharp.Threading.Tasks;
 
-public class EnterLobbyGameStateCommand : CommandOneParameter<LobbyGameStateEnterData, EnterLobbyGameStateCommand>
+namespace CoreDomain.Services.GameStates
 {
-    private readonly ILobbyUiModule _lobbyUiModule;
-    private readonly LobbyGameStateEnterData _lobbyGameStateEnterData;
-    private readonly ISceneLoaderService _sceneLoaderService;
-
-    public EnterLobbyGameStateCommand(LobbyGameStateEnterData lobbyGameStateEnterData, ISceneLoaderService sceneLoaderService, ILobbyUiModule lobbyUiModule)
+    public class EnterLobbyGameStateCommand : CommandOneParameter<LobbyGameStateEnterData, EnterLobbyGameStateCommand>
     {
-        _lobbyGameStateEnterData = lobbyGameStateEnterData;
-        _sceneLoaderService = sceneLoaderService;
-        _lobbyUiModule = lobbyUiModule;
-    }
+        private readonly ILobbyUiModule _lobbyUiModule;
+        private readonly LobbyGameStateEnterData _lobbyGameStateEnterData;
+        private readonly ISceneLoaderService _sceneLoaderService;
 
-    public override async UniTask Execute()
-    {
-        await _sceneLoaderService.TryLoadScene(SceneName.Lobby);
+        public EnterLobbyGameStateCommand(LobbyGameStateEnterData lobbyGameStateEnterData, ISceneLoaderService sceneLoaderService, ILobbyUiModule lobbyUiModule)
+        {
+            _lobbyGameStateEnterData = lobbyGameStateEnterData;
+            _sceneLoaderService = sceneLoaderService;
+            _lobbyUiModule = lobbyUiModule;
+        }
 
-        //await _lobbyUiModule.CreateLobbyUi();
+        public override async UniTask Execute()
+        {
+            await _sceneLoaderService.TryLoadScene(SceneName.Lobby);
+            _lobbyUiModule.CreateLobbyUi();
+        }
     }
 }

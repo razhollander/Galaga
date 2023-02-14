@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DefaultContracts:
   - ContractName: CoreScene
-    Scene: {fileID: 102900000, guid: cc1bfc1cbc8904ed599c39d4980add61, type: 3}
+    Scene: {fileID: 102900000, guid: 423c20e2ae4cf49248dd68c173c1251f, type: 3}
   - ContractName: GameScene
-    Scene: {fileID: 102900000, guid: 754f49bb16d0e4510b4f4c2801e8f00a, type: 3}
+    Scene: {fileID: 102900000, guid: ed4bfee96956647359ad4b14e4658de8, type: 3}

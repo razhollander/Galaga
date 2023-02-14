@@ -18,15 +18,5 @@ namespace CoreDomain.Services.GameStates
             _currentGameState = newState;
             await _currentGameState.EnterState();
         }
-
-        // public class OnStateChangedCommand : Command<OnStateChangedCommand>
-        // {
-        //     public IGameState State;
-        //     
-        //     public override UniTask Execute()
-        //     {
-        //         
-        //     }
-        // }
     }
 }
