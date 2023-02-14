@@ -1,5 +1,4 @@
 using System.IO;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace CoreDomain.Services
@@ -8,7 +7,7 @@ namespace CoreDomain.Services
     {
         public T InstantiateAssetFromBundle<T>(string bundlePathName, string assetName) where T : Object
         {
-            return GameObject.Instantiate(LoadAssetFromBundle<T>(bundlePathName, assetName)).GetComponent<T>();
+            return GameObject.Instantiate(LoadGameObjectFromBundle(bundlePathName, assetName)).GetComponent<T>();
         }
         
         public T LoadAssetFromBundle<T>(string bundlePathName, string assetName) where T : Object
@@ -22,10 +21,10 @@ namespace CoreDomain.Services
                 return null;
             }
 
-            var asset = assetBundle.LoadAsset<T>(assetName);
+            var asset = assetBundle.LoadAsset<GameObject>(assetName);
             UnloadAssetBundle(assetBundle);
 
-            return asset;
+            return asset.GetComponent<T>();
         }
 
         public T LoadAssetFromBundle<T>(AssetBundle assetbundle, string assetName) where T : Object
@@ -50,6 +49,23 @@ namespace CoreDomain.Services
         public void UnloadAssetBundle(AssetBundle assetBundle)
         {
             assetBundle.Unload(false);
+        }
+        
+        private GameObject LoadGameObjectFromBundle(string bundlePathName, string assetName)
+        {
+            var assetBundle = AssetBundle.LoadFromFile(Path.Combine(Application.streamingAssetsPath, bundlePathName));
+
+            if (assetBundle == null)
+            {
+                Debug.LogWarning("Failed to load AssetBundle at path " + bundlePathName);
+
+                return null;
+            }
+
+            var asset = assetBundle.LoadAsset<GameObject>(assetName);
+            UnloadAssetBundle(assetBundle);
+
+            return asset;
         }
     }
 }

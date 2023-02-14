@@ -19,7 +19,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.LobbyDomain.Modules.LobbyUi
         public void CreateLobbyUi()
         {
             var lobbyUiView = _creator.CreateLobbyUi();
-            lobbyUiView.Setup(SwitchToQuickGameState);
+            lobbyUiView.SetCallbacks(SwitchToQuickGameState);
             _viewModule.SetupLobbyUiView(lobbyUiView);
         }
 
@@ -30,7 +30,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.LobbyDomain.Modules.LobbyUi
 
         private void SwitchToQuickGameState()
         {
-            _stateMachineService.SwitchState(new MainGameState(new MainGameStateEnterData("")));
+            _stateMachineService.SwitchState(new MainGameState(new MainGameStateEnterData(_viewModule.GetPlayerName())));
         }
     }
 }

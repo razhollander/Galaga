@@ -1,0 +1,42 @@
+ManifestFileVersion: 0
+CRC: 542366241
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 32a0f75f69053df2129b90f8dd60ed9d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4a3ecb8c646c926fff2c0b85ed6ff335
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 50
+  Script: {instanceID: 0}
+- Class: 58
+  Script: {instanceID: 0}
+- Class: 61
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8ecae57dcd391470da88933391e12542, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: d4e9a230541dd4e73a9074d9d9de33f0, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/AssetBundles/MainGameState/PlayerBullet.prefab
+- Assets/AssetBundles/MainGameState/PlayerSpaceship.prefab
+Dependencies: []

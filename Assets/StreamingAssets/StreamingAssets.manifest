@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 837182643
+CRC: 2874257967
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -15,5 +15,5 @@ AssetBundleManifest:
       Name: defeatpopup
       Dependencies: {}
     Info_4:
-      Name: lobby/lobbyui
+      Name: coredomain/gamedomain/gamestatedomain/lobbydomain/lobbyui
       Dependencies: {}

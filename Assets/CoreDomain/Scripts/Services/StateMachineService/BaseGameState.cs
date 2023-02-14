@@ -3,7 +3,7 @@ using Cysharp.Threading.Tasks;
 
 public abstract class BaseGameState<T> : IGameState where T: IGameStateEnterData
 {
-    protected T EnterData { get; }
+    public T EnterData { get; }
     
     protected BaseGameState(T enterData)
     {

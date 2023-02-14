@@ -13,7 +13,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.LobbyDomain.Modules.LobbyUi
         private Action _quickGameButtonClickedCallback;
         public string PlayerNameText => _playerNameInputField.text;
 
-        public void Setup(Action quickGameButtonClickedCallback)
+        public void SetCallbacks(Action quickGameButtonClickedCallback)
         {
             _quickGameButtonClickedCallback = quickGameButtonClickedCallback;
 

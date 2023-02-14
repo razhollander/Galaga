@@ -1,43 +1,35 @@
+using CoreDomain.Scripts.Services.SceneService;
 using Cysharp.Threading.Tasks;
-using Services.Logs.Base;
 using Zenject;
 
 namespace CoreDomain.Services.GameStates
 {
-    [ZenjectAllowDuringValidation]
     public class LobbyGameState : BaseGameState<LobbyGameStateEnterData>
     {
         private EnterLobbyGameStateCommand.Factory _enterLobbyGameStateCommand;
+        private ISceneLoaderService _sceneLoaderService;
         public override GameStateType GameState => GameStateType.Lobby;
-        
-        public LobbyGameState(LobbyGameStateEnterData data = null) :base(data)
+
+        public LobbyGameState(LobbyGameStateEnterData data = null) : base(data)
         {
-            LogService.Log("Constructor");
         }
 
-        [Inject]
-        private void Construct(EnterLobbyGameStateCommand.Factory enterLobbyGameStateCommand)
-        {
-            LogService.Log("Inject");
-            _enterLobbyGameStateCommand = enterLobbyGameStateCommand;
-        }
-        
         public override async UniTask EnterState()
         {
-            LogService.Log("EnterState");
-            
-            if (_enterLobbyGameStateCommand == null)
-            {
-                LogService.Log("null");
-            }
-            await _enterLobbyGameStateCommand.Create(EnterData).Execute();
+            await _sceneLoaderService.TryLoadScene(SceneName.Lobby);
         }
 
         public override async UniTask ExitState()
         {
-            //await _startScreenController.DestroyStartScreen();
+            await _sceneLoaderService.TryUnloadScene(SceneName.Lobby);
         }
-        
+
+        [Inject]
+        private void Construct(ISceneLoaderService sceneLoaderService)
+        {
+            _sceneLoaderService = sceneLoaderService;
+        }
+
         public class Factory : PlaceholderFactory<LobbyGameState>
         {
         }

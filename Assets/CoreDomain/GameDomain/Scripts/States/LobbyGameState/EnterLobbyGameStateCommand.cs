@@ -2,6 +2,8 @@ using CoreDomain.GameDomain.GameStateDomain.LobbyDomain.Modules.LobbyUi;
 using CoreDomain.Scripts.Services.SceneService;
 using CoreDomain.Scripts.Utils.Command;
 using Cysharp.Threading.Tasks;
+using Services.Logs.Base;
+using Zenject;
 
 namespace CoreDomain.Services.GameStates
 {
@@ -9,18 +11,16 @@ namespace CoreDomain.Services.GameStates
     {
         private readonly ILobbyUiModule _lobbyUiModule;
         private readonly LobbyGameStateEnterData _lobbyGameStateEnterData;
-        private readonly ISceneLoaderService _sceneLoaderService;
 
-        public EnterLobbyGameStateCommand(LobbyGameStateEnterData lobbyGameStateEnterData, ISceneLoaderService sceneLoaderService, ILobbyUiModule lobbyUiModule)
+        public EnterLobbyGameStateCommand(LobbyGameStateEnterData lobbyGameStateEnterData, ILobbyUiModule lobbyUiModule)
         {
             _lobbyGameStateEnterData = lobbyGameStateEnterData;
-            _sceneLoaderService = sceneLoaderService;
             _lobbyUiModule = lobbyUiModule;
         }
 
         public override async UniTask Execute()
         {
-            await _sceneLoaderService.TryLoadScene(SceneName.Lobby);
+            LogService.Log("CreateLobby");
             _lobbyUiModule.CreateLobbyUi();
         }
     }

@@ -227,7 +227,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _parentNewObjectsUnderSceneContext: 0
-  _contractNames: []
+  _contractNames:
+  - GameScene
   _parentContractNames:
   - CoreScene
 --- !u!4 &1769745278
