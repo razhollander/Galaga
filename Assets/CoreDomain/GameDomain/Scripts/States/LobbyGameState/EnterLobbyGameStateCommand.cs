@@ -16,7 +16,6 @@ namespace CoreDomain.Services.GameStates
             _lobbyGameStateEnterData = lobbyGameStateEnterData;
             _lobbyUiModule = lobbyUiModule;
             _levelsService = levelsService;
-
         }
 
         public override async UniTask Execute()
