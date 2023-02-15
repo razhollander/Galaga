@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Services.Logs.Base;
+using CoreDomain.Services;
 using UnityEngine;
 using Random = UnityEngine.Random;
 

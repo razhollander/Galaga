@@ -1,6 +1,6 @@
 using System;
 
-namespace Services.Logs.Base
+namespace CoreDomain.Services
 {
     public abstract class LoggerBase : ILogger
     {
@@ -13,6 +13,6 @@ namespace Services.Logs.Base
         public abstract void LogWarning(string message);
         public abstract void LogError(string message);
         public abstract void LogException(Exception exception);
-        public abstract void LogTag(string message, LogTagType logTagType = global::Services.Logs.Base.LogTagType.Temp, string callerFilePath = "", string callerFileName ="");
+        public abstract void LogTag(string message, LogTagType logTagType = global::CoreDomain.Services.LogTagType.Temp, string callerFilePath = "", string callerFileName = "");
     }
 }

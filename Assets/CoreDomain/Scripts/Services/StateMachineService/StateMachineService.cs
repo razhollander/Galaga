@@ -6,6 +6,11 @@ namespace CoreDomain.Services.GameStates
     {
         private IGameState _currentGameState;
 
+        public IGameState CurrentState()
+        {
+            return _currentGameState;
+        }
+
         public void EnterInitialGameState(IGameState initialState)
         {
             _currentGameState = initialState;

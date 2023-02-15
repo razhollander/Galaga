@@ -1,5 +1,5 @@
 using System.ComponentModel;
-using Services.Logs.Base;
+using CoreDomain.Services;
 using SRDebugger;
 using UnityEngine;
 

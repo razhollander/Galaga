@@ -1,5 +1,5 @@
 using CoreDomain.GameDomain.GameStateDomain.LobbyDomain.Modules.LobbyUi;
-using Services.Logs.Base;
+using CoreDomain.Services;
 using Zenject;
 
 namespace CoreDomain.GameDomain.GameStateDomain.LobbyDomain

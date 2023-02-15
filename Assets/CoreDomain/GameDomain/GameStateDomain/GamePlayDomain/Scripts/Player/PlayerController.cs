@@ -62,15 +62,15 @@ namespace Features.MainGameScreen.Player
             DestroyAssets();
         }
 
-        public void Setup()
-        {
-            var playerBundle = _client.AssetBundleLoaderService.LoadBundle(PLAYER_BUNDLE_PATH);
-
-            CreatePlayer(playerBundle);
-            CreateBullet(playerBundle);
-
-            _client.AssetBundleLoaderService.UnloadAssetBundle(playerBundle);
-        }
+       // public void Setup()
+       // {
+       //     var playerBundle = _client.AssetBundleLoaderService.LoadBundle(PLAYER_BUNDLE_PATH);
+       //
+       //     CreatePlayer(playerBundle);
+       //     CreateBullet(playerBundle);
+       //
+       //     _client.AssetBundleLoaderService.UnloadAssetBundle(playerBundle);
+       // }
 
         #endregion
 
@@ -83,35 +83,35 @@ namespace Features.MainGameScreen.Player
             _playerInputs.ShootEvent += DoShoot;
         }
 
-        private void CreateBullet(AssetBundle playerBundle)
-        {
-            if (!_model.IsPlayerEnabled)
-            {
-                return;
-            }
+        //private void CreateBullet(AssetBundle playerBundle)
+        //{
+        //    if (!_model.IsPlayerEnabled)
+        //    {
+        //        return;
+        //    }
 
-            var bulletGO =
-                Object.Instantiate(
-                    _client.AssetBundleLoaderService.LoadAssetFromBundle<GameObject>(playerBundle, BULLET_ASSET_NAME));
+        //    var bulletGO =
+        //        Object.Instantiate(
+        //            _client.AssetBundleLoaderService.TryLoadAssetFromBundle<GameObject>(playerBundle, BULLET_ASSET_NAME));
 
-            _bulletController.Setup(bulletGO.GetComponent<BulletView>());
-        }
+        //    _bulletController.Setup(bulletGO.GetComponent<BulletView>());
+        //}
 
-        private void CreatePlayer(AssetBundle playerBundle)
-        {
-            var playerGO =
-                Object.Instantiate(
-                    _client.AssetBundleLoaderService.LoadAssetFromBundle<GameObject>(playerBundle, PLAYER_ASSET_NAME));
+        //private void CreatePlayer(AssetBundle playerBundle)
+        //{
+        //    var playerGO =
+        //        Object.Instantiate(
+        //            _client.AssetBundleLoaderService.TryLoadAssetFromBundle<GameObject>(playerBundle, PLAYER_ASSET_NAME));
 
-            _playerView = playerGO.GetComponent<PlayerView>();
-            _playerView.Setup(_model, OnPlayerCollision, OnDieAnimationEnd);
-            _playerTransform = _playerView.transform;
-            _model.PlayerTransform = _playerTransform;
-            _playerSpaceFromBounds = _playerView.PlayerSpriteRenderer.bounds.size.x / 2;
+        //    _playerView = playerGO.GetComponent<PlayerView>();
+        //    _playerView.Setup(_model, OnPlayerCollision, OnDieAnimationEnd);
+        //    _playerTransform = _playerView.transform;
+        //    _model.PlayerTransform = _playerTransform;
+        //    _playerSpaceFromBounds = _playerView.PlayerSpriteRenderer.bounds.size.x / 2;
 
-            var playerYPos = _model.PlayerYPosRelativeToScreen;
-            _playerTransform.position = new Vector3(_model.PlayerStartXPosition, playerYPos, 0);
-        }
+        //    var playerYPos = _model.PlayerYPosRelativeToScreen;
+        //    _playerTransform.position = new Vector3(_model.PlayerStartXPosition, playerYPos, 0);
+        //}
 
         private void DestroyAssets()
         {

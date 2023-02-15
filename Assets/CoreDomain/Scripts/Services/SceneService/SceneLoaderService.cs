@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using CoreDomain.Services;
 using Cysharp.Threading.Tasks;
-using Services.Logs.Base;
 using UnityEngine.SceneManagement;
 
 namespace CoreDomain.Scripts.Services.SceneService
 {
     public class SceneLoaderService : ISceneLoaderService
     {
-        private readonly HashSet<string> _loadedScenes = new();
-        private readonly HashSet<string> _loadingScenes = new();
+        private readonly HashSet<string> _loadedScenes = new HashSet<string>();
+        private readonly HashSet<string> _loadingScenes = new HashSet<string>();
 
         public SceneLoaderService()
         {

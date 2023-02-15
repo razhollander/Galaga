@@ -56,7 +56,7 @@ namespace Features.MainGameScreen.Enemy
 
         private void CreateEnemiesParent()
         {
-            var enemyGO = _client.AssetBundleLoaderService.LoadAssetFromBundle<GameObject>(_model.ENEMY_BUNDLE_PATH, _model.ENEMY_ASSET_NAME);
+            var enemyGO = _client.AssetBundleLoaderService.LoadGameObjectAssetFromBundle(_model.ENEMY_BUNDLE_PATH, _model.ENEMY_ASSET_NAME);
 
             var enemyView = enemyGO.GetComponent<EnemyView>();
 

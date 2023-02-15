@@ -5,6 +5,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using Core.Services;
+using CoreDomain.Services;
 using Handlers.Serializers.Serializer;
 using Newtonsoft.Json.Linq;
 using Services.SerializerService;
@@ -44,7 +45,7 @@ namespace Services.LocalStorageService
             if (DoesFileExists(GENERAL_FILE_NAME, FileType.Unique))
             {
                 ReadBinaryFileFromStorage(GENERAL_FILE_NAME, _ => OnGeneralFileLoad(_, onComplete),
-                    Logs.Base.LogService.LogException, FileType.Unique);
+                    LogService.LogException, FileType.Unique);
             }
             // Otherwise initialize dictionary
             else
@@ -70,13 +71,13 @@ namespace Services.LocalStorageService
                     string path = Path.Combine(_dataPath, fileName); // TODO : Jenya it looks like we need to send path inside of WriteUniqueBinaryFile
                     // TODO : Jenya WriteUniqueBinaryFile may not call to onComplete ...
                     WriteUniqueBinaryFile(GENERAL_FILE_NAME, _serializerService.SerializeJson(_generalSharedData),
-                        OnGeneralFileSaveCompleted, Logs.Base.LogService.LogException);
+                        OnGeneralFileSaveCompleted, LogService.LogException);
                     break;
                 case FileType.Unique:
                     WriteUniqueBinaryFile(fileName, data, onComplete, onFail,append,binary);
                     break;
                 default:
-                    Logs.Base.LogService.LogError("File type is not implemented!");
+                    LogService.LogError("File type is not implemented!");
                     break;
             }
         }
@@ -86,7 +87,7 @@ namespace Services.LocalStorageService
             if (_shouldSaveGenericFile)
             {
                 WriteUniqueBinaryFile(GENERAL_FILE_NAME, _serializerService.SerializeJson(_generalSharedData),
-                    OnGeneralFileSaveCompleted, Logs.Base.LogService.LogException);
+                    OnGeneralFileSaveCompleted, LogService.LogException);
                 _shouldSaveGenericFile = false;
             }
         }
@@ -104,7 +105,7 @@ namespace Services.LocalStorageService
             }
             catch (Exception e)
             {
-                Logs.Base.LogService.LogException(e);
+                LogService.LogException(e);
                 return string.Empty;
             }
         }
@@ -129,7 +130,7 @@ namespace Services.LocalStorageService
                     ReadUniqueBinaryFile(fileName, onComplete, onFail);
                     break;
                 default:
-                    Logs.Base.LogService.LogError("File type is not implemented!");
+                    LogService.LogError("File type is not implemented!");
                     break;
             }
         }
@@ -146,7 +147,7 @@ namespace Services.LocalStorageService
                     string path = Path.Combine(_dataPath, ReplaceFileExtension(fileName));
                     return File.Exists(path);
                 default:
-                    Logs.Base.LogService.LogError("File type is not supported!");
+                    LogService.LogError("File type is not supported!");
                     return false;
             }
         }
@@ -156,7 +157,7 @@ namespace Services.LocalStorageService
         {
             fileName = ReplaceFileExtension(fileName);
             string path = Path.Combine(_dataPath, fileName);
-            Logs.Base.LogService.Log(
+            LogService.Log(
                 $"Saving Path: {Path.GetDirectoryName(path)}\nFile Name: {Path.GetFileName(path)}\n");
 
 
@@ -221,7 +222,7 @@ namespace Services.LocalStorageService
                 data = task.Result;
             }
 
-            Logs.Base.LogService.Log(
+            LogService.Log(
                 $"File Loaded - Path: {Path.GetDirectoryName(path)}\nFile Name: {Path.GetFileName(path)}");
             onComplete?.Invoke(data);
         }

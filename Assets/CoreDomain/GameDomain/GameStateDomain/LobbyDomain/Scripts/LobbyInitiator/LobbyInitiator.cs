@@ -1,4 +1,6 @@
 using CoreDomain.GameDomain.GameStateDomain.LobbyDomain.Modules.LobbyUi;
+using CoreDomain.Scripts.Utils.Command;
+using CoreDomain.Services.GameStates;
 using UnityEngine;
 using Zenject;
 
@@ -6,17 +8,20 @@ namespace CoreDomain.GameDomain.GameStateDomain.LobbyDomain
 {
     public class LobbyInitiator : MonoBehaviour
     {
-        private ILobbyUiModule _lobbyUiModule;
+        private CommandOneParameter<LobbyGameStateEnterData, EnterLobbyGameStateCommand>.Factory _enterLobbyGameStateCommand;
+        private IStateMachineService _stateMachineService;
 
         [Inject]
-        private void Setup(ILobbyUiModule lobbyUiModule)
+        private void Setup(EnterLobbyGameStateCommand.Factory enterLobbyGameStateCommand, IStateMachineService stateMachineService)
         {
-            _lobbyUiModule = lobbyUiModule;
+            _enterLobbyGameStateCommand = enterLobbyGameStateCommand;
+            _stateMachineService = stateMachineService;
         }
 
         private void Start()
         {
-            _lobbyUiModule.CreateLobbyUi();
+            _stateMachineService.
+            _enterLobbyGameStateCommand.Create().Execute();
         }
     }
 }

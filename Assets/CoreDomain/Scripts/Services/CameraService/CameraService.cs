@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Services.Logs.Base;
+using CoreDomain.Services;
 using UnityEngine;
 
 namespace CoreDomain.Services

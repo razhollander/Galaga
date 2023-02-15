@@ -1,5 +1,5 @@
 using CoreDomain.Services.GameStates;
-using Services.Logs.Base;
+using CoreDomain.Services;
 using Zenject;
 
 namespace CoreDomain.GameDomain
@@ -11,7 +11,7 @@ namespace CoreDomain.GameDomain
             LogService.Log("InstallBindings");
             Container.BindFactory<LobbyGameStateEnterData, EnterLobbyGameStateCommand, EnterLobbyGameStateCommand.Factory>();
             Container.BindFactory<LobbyGameState, LobbyGameState.Factory>();
-            Container.BindInterfacesTo<LevelsService>();
+            Container.BindInterfacesTo<LevelsService>().AsSingle().NonLazy();
         }
     }
 }

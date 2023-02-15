@@ -1,0 +1,23 @@
+ManifestFileVersion: 0
+CRC: 2172564641
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 0eaacbeb5508d4578e4d68d47d46018c
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 91591903883211fa08043aaf545e365c
+HashAppended: 0
+ClassTypes:
+- Class: 114
+  Script: {fileID: 11500000, guid: 30cccab2f0c8c44c491045fb4cf14b1e, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f18db1941066b4ce2b5cb1f62c2810d6, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/AssetBundles/CoreDomain/GameDomain/Levels/LevelsSettings.asset
+- Assets/AssetBundles/CoreDomain/GameDomain/Levels/Level2.asset
+- Assets/AssetBundles/CoreDomain/GameDomain/Levels/Level1.asset
+Dependencies: []

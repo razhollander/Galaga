@@ -7,65 +7,121 @@ namespace CoreDomain.Services
     {
         public T InstantiateAssetFromBundle<T>(string bundlePathName, string assetName) where T : Object
         {
-            return GameObject.Instantiate(LoadGameObjectFromBundle(bundlePathName, assetName)).GetComponent<T>();
+            return GameObject.Instantiate(LoadGameObjectAssetFromBundle(bundlePathName, assetName)).GetComponent<T>();
         }
-        
-        public T LoadAssetFromBundle<T>(string bundlePathName, string assetName) where T : Object
+
+        public GameObject LoadGameObjectAssetFromBundle(string bundlePathName, string assetName)
         {
-            var assetBundle = AssetBundle.LoadFromFile(Path.Combine(Application.streamingAssetsPath, bundlePathName));
-
-            if (assetBundle == null)
-            {
-                Debug.LogWarning("Failed to load AssetBundle at path " + bundlePathName);
-
-                return null;
-            }
-
-            var asset = assetBundle.LoadAsset<GameObject>(assetName);
+            var assetBundle = LoadAssetBundle(bundlePathName);
+            var asset = LoadAssetFromBundle<GameObject>(assetBundle, assetName);
+            
             UnloadAssetBundle(assetBundle);
-
-            return asset.GetComponent<T>();
-        }
-
-        public T LoadAssetFromBundle<T>(AssetBundle assetbundle, string assetName) where T : Object
-        {
-            var asset = assetbundle.LoadAsset<T>(assetName);
-
             return asset;
         }
 
-        public AssetBundle LoadBundle(string bundlePathName)
+        public T LoadScriptableObjectAssetFromBundle<T>(string bundlePathName, string assetName) where T : ScriptableObject
         {
-            var assetBundle = AssetBundle.LoadFromFile(Path.Combine(Application.streamingAssetsPath, bundlePathName));
+            var assetBundle = LoadAssetBundle(bundlePathName);
+            var asset = LoadAssetFromBundle<T>(assetBundle, assetName);
+
+            UnloadAssetBundle(assetBundle);
+            return asset;
+        }
+
+        public bool A()
+        {
+            return true;
+        }
+
+        public bool TryInstantiateAssetFromBundle<T>(string bundlePathName, string assetName, out T asset) where T : Object
+        {
+            if (TryLoadGameObjectAssetFromBundle(bundlePathName, assetName, out var gameObject))
+            {
+                asset = GameObject.Instantiate(gameObject).GetComponent<T>();
+                return true;
+            }
+
+            asset = null;
+            return false;
+        }
+
+        public bool TryLoadGameObjectAssetFromBundle(string bundlePathName, string assetName, out GameObject asset)
+        {
+            if (TryLoadAssetBundle(bundlePathName, out var assetBundle) && TryLoadAssetFromBundle(assetBundle, assetName, out asset))
+            {              
+                UnloadAssetBundle(assetBundle);
+                return true;
+            }   
+           
+            asset = null;
+            return false;
+        }
+
+        public bool TryLoadScriptableObjectAssetFromBundle<T>(string bundlePathName, string assetName, out T asset) where T : ScriptableObject
+        {
+            if (TryLoadAssetBundle(bundlePathName, out var assetBundle) && TryLoadAssetFromBundle(assetBundle, assetName, out asset))
+            {
+                UnloadAssetBundle(assetBundle);
+                return true;
+            }
+
+            asset = null;
+            return false;
+        }
+
+        private bool TryLoadAssetBundle(string assetBundlePathName, out AssetBundle assetBundle)
+        {
+            assetBundle = AssetBundle.LoadFromFile(Path.Combine(Application.streamingAssetsPath, assetBundlePathName));
 
             if (assetBundle == null)
             {
-                Debug.LogWarning("Failed to load AssetBundle at path " + bundlePathName);
+                LogService.LogWarning("Failed to load AssetBundle at path " + assetBundlePathName);
+                return false;
+            }
+
+            return true;
+        }
+
+        private bool TryLoadAssetFromBundle<T>(AssetBundle assetbundle, string assetName, out T asset) where T : Object
+        {
+            asset = assetbundle.LoadAsset<T>(assetName);
+
+            if (asset == null)
+            {
+                LogService.LogWarning("Failed to load Asset " + assetName);
+                return false;
+            }
+
+            return true;
+        }
+
+        private AssetBundle LoadAssetBundle(string assetBundlePathName)
+        {
+            var assetBundle =  AssetBundle.LoadFromFile(Path.Combine(Application.streamingAssetsPath, assetBundlePathName));
+
+            if (assetBundle == null)
+            {
+                LogService.LogWarning("Failed to load AssetBundle at path " + assetBundlePathName);
             }
 
             return assetBundle;
         }
 
-        public void UnloadAssetBundle(AssetBundle assetBundle)
+        private T LoadAssetFromBundle<T>(AssetBundle assetbundle, string assetName) where T : Object
         {
-            assetBundle.Unload(false);
-        }
-        
-        private GameObject LoadGameObjectFromBundle(string bundlePathName, string assetName)
-        {
-            var assetBundle = AssetBundle.LoadFromFile(Path.Combine(Application.streamingAssetsPath, bundlePathName));
+            var asset = assetbundle.LoadAsset<T>(assetName);
 
-            if (assetBundle == null)
+            if (asset == null)
             {
-                Debug.LogWarning("Failed to load AssetBundle at path " + bundlePathName);
-
-                return null;
+                LogService.LogWarning("Failed to load Asset " + assetName);
             }
 
-            var asset = assetBundle.LoadAsset<GameObject>(assetName);
-            UnloadAssetBundle(assetBundle);
-
             return asset;
+        }
+
+        private void UnloadAssetBundle(AssetBundle assetBundle)
+        {
+            assetBundle.Unload(false);
         }
     }
 }

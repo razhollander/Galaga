@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using CoreDomain.Scripts.Services.RestService;
 using Cysharp.Threading.Tasks;
 using Handlers.Serializers.Serializer;
-using Services.Logs.Base;
+using CoreDomain.Services;
 
 namespace CoreDomain.Scripts.Services.ServerService.Rest
 {

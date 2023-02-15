@@ -3,7 +3,7 @@ using CoreDomain.Scripts.Services.SceneService;
 using CoreDomain.Services;
 using CoreDomain.Services.GameStates;
 using Services.Logs;
-using Services.Logs.Base;
+using CoreDomain.Services;
 using Systems;
 using UnityEngine;
 using Zenject;

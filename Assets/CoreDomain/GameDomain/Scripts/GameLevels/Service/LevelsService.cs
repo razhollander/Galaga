@@ -2,7 +2,7 @@ using CoreDomain.Services;
 
 namespace CoreDomain.GameDomain
 {
-    public class LevelsService : ILevelsService
+    public class LevelsService : ILevelsModule
     {
         private const string LevelsAssetBundlePath = "coredomain/gamedomain/levels";
         private const string LevelsSettingsAssetName = "LevelsSettings";
@@ -17,7 +17,7 @@ namespace CoreDomain.GameDomain
 
         public void LoadLevels()
         {
-            _levelsSettings = _assetBundleLoaderService.LoadAssetFromBundle<LevelsScriptableObject>(LevelsAssetBundlePath, LevelsSettingsAssetName);
+            _levelsSettings = _assetBundleLoaderService.LoadScriptableObjectAssetFromBundle<LevelsScriptableObject>(LevelsAssetBundlePath, LevelsSettingsAssetName);
         }
 
         public int GetLevelsAmount()

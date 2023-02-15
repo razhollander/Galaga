@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
-using Services.Logs.Base;
+using CoreDomain.Services;
 using UnityEngine;
 using UnityEngine.Audio;
 using Untils;
@@ -46,12 +46,15 @@ namespace CoreDomain.Scripts.Services.AudioService
         
         public async UniTask SetupAsync()
         {
-            _audioMixer = _assetsService.LoadAssetFromBundle<AudioMixer>(Mixer, Mixer);
-            var rootGameObject = new GameObject("AudioRoot");
+            if(!(_assetsService.TryInstantiateAssetFromBundle<AudioMixer>(Mixer, Mixer, out _audioMixer) &&
+            _assetsService.TryInstantiateAssetFromBundle<AudioSource>(MasterSource, MasterSource, out var masterSource) &&
+            _assetsService.TryInstantiateAssetFromBundle<AudioSource>(FXSource, FXSource, out var fxSource) &&
+            _assetsService.TryInstantiateAssetFromBundle<AudioSource>(MusicSource, FXSource, out var musicSource)))
+            {
+                return;
+            }
 
-            var masterSource = _assetsService.LoadAssetFromBundle<AudioSource>(MasterSource, MasterSource);
-            var fxSource = _assetsService.LoadAssetFromBundle<AudioSource>(FXSource, FXSource);
-            var musicSource = _assetsService.LoadAssetFromBundle<AudioSource>(MusicSource, FXSource);
+            var rootGameObject = new GameObject("AudioRoot");
 
             // for clear order, set parent all GameObjects (masterSource, fxSource, musicSource) under rootGameObject
             var tracksToLoad = new List<Task>();
@@ -168,7 +171,7 @@ namespace CoreDomain.Scripts.Services.AudioService
         
         private async Task AddAudioClip(string name)
         {
-            var clip = _assetsService.LoadAssetFromBundle<AudioClip>(name, FXSource);
+            var clip = _assetsService.InstantiateAssetFromBundle<AudioClip>(name, FXSource);
             _audioClipsByName.Add(name.ToLower(), clip);
         }
 

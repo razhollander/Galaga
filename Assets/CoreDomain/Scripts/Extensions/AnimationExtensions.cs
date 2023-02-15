@@ -1,6 +1,6 @@
 ﻿using System;
 using Cysharp.Threading.Tasks;
-using Services.Logs.Base;
+using CoreDomain.Services;
 using UnityEngine;
 
 namespace CoreDomain.Scripts.Extensions

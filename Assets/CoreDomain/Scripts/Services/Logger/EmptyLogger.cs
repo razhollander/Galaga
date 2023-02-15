@@ -1,5 +1,5 @@
 using System;
-using Services.Logs.Base;
+using CoreDomain.Services;
 
 namespace Services.Logs
 {

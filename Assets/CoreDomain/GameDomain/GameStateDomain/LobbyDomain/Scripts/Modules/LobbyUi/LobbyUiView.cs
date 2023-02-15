@@ -39,5 +39,10 @@ namespace CoreDomain.GameDomain.GameStateDomain.LobbyDomain.Modules.LobbyUi
         {
             _quickGameButtonClickedCallback?.Invoke();
         }
+
+        public void SetLevelsDropBox(int levels)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 1728
-    y: -302
-    width: 1920
-    height: 932
+    x: 0
+    y: 43.2
+    width: 1536
+    height: 780.8
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
-  m_Maximized: 0
+  m_Maximized: 1
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -44,8 +44,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1920
-    height: 932
+    width: 1536
+    height: 780.8
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -69,7 +69,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1920
+    width: 1536
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -90,8 +90,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 912
-    width: 1920
+    y: 760.8
+    width: 1536
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -114,12 +114,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 1920
-    height: 882
+    width: 1536
+    height: 730.8
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 124
+  controlID: 77
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,12 +139,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1238.5
-    height: 882
+    width: 990.4
+    height: 730.8
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 125
+  controlID: 82
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,12 +164,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1238.5
-    height: 524
+    width: 990.4
+    height: 561.6
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 126
+  controlID: 83
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -187,13 +187,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 307.5
-    height: 524
+    width: 244.8
+    height: 561.6
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 13}
+  m_ActualView: {fileID: 14}
   m_Panes:
-  - {fileID: 13}
+  - {fileID: 14}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &9
@@ -211,16 +211,16 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 307.5
+    x: 244.8
     y: 0
-    width: 931
-    height: 524
+    width: 745.60004
+    height: 561.6
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 14}
+  m_ActualView: {fileID: 15}
   m_Panes:
-  - {fileID: 14}
   - {fileID: 15}
+  - {fileID: 16}
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &10
@@ -239,15 +239,15 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 524
-    width: 1238.5
-    height: 358
+    y: 561.6
+    width: 990.4
+    height: 169.20001
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 13}
   m_Panes:
+  - {fileID: 13}
   - {fileID: 12}
-  - {fileID: 16}
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &11
@@ -265,18 +265,5253 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1238.5
+    x: 990.4
     y: 0
-    width: 681.5
-    height: 882
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+    width: 545.6
+    height: 730.8
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &12
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1586788657, guid: a2284c517ee274c19a6ba4c1a8c96fb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 200, y: 120}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Console Pro
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 635.2
+    width: 989.4
+    height: 148.20001
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  logPanelScroll: {x: 0, y: 0}
+  logPanelSelectedIndex: -1
+  logPanelAutoScroll: 1
+  currentFrame: 34463
+  logs:
+    lastGrabbedIndex: 3
+    lastGrabbedCount: 4
+    proEntries:
+    - logType: 1
+      ignore: 0
+      processed: 1
+      tempFilterProcessed: 1
+      remoteEndPoint: Local
+      logPanelVisible: 1
+      logPanelIndex: 0
+      logOutputHeight: -1
+      listIndex: 0
+      nativeIndex: 0
+      nativeIdentifier: 0
+      originalLog: '[21:37:42:02] InstallBindings'
+      originalStackTrace: '[21:37:42:02] InstallBindings
+
+        UnityEngine.Debug:Log
+        (object)
+
+        Services.Logs.UnityLogger:Log (string) (at Assets/CoreDomain/Scripts/Services/Logger/UnityLogger.cs:17)
+
+        CoreDomain.Services.LogService:Log
+        (string) (at Assets/CoreDomain/Scripts/Services/Logger/Base/LogService.cs:17)
+
+        CoreDomain.GameDomain.GameInstaller:InstallBindings
+        () (at Assets/CoreDomain/GameDomain/Scripts/ZenjectInstallers/GameInstaller.cs:11)
+
+        Zenject.Context:InstallInstallers
+        (System.Collections.Generic.List`1<Zenject.InstallerBase>,System.Collections.Generic.List`1<System.Type>,System.Collections.Generic.List`1<Zenject.ScriptableObjectInstaller>,System.Collections.Generic.List`1<Zenject.MonoInstaller>,System.Collections.Generic.List`1<Zenject.MonoInstaller>)
+        (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs:218)
+
+        Zenject.Context:InstallInstallers
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs:139)
+
+        Zenject.SceneContext:InstallBindings
+        (System.Collections.Generic.List`1<UnityEngine.MonoBehaviour>) (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:346)
+
+        Zenject.SceneContext:Install
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:265)
+
+        Zenject.SceneContext:RunInternal
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:134)
+
+        Zenject.RunnableContext:Run
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:36)
+
+        Zenject.RunnableContext:Initialize
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:22)
+
+        Zenject.SceneContext:Awake
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:113)
+
+'
+      nativeFileName: Assets/CoreDomain/Scripts/Services/Logger/Base/LogService.cs
+      nativeFileNamePretty: 
+      nativeLineNumber: 17
+      watchName: 
+      logText: '[21:37:42:02] InstallBindings'
+      logTruncatedText: '[21:37:42:02] InstallBindings'
+      logColumnText: 
+      fileName: 
+      className: 
+      namespaceName: 
+      lineCount: 1
+      hasSourceCode: 0
+      timeStamp: 21:37:42
+      timeFrame: -1
+      timeStampDateTimeNow: 
+      instanceID: 0
+      collapsedCount: 0
+      cachedHeight: -1
+      cachedHeightLogWidth: 0
+      stackEntries:
+      - fileName: Assets/CoreDomain/Scripts/Services/Logger/UnityLogger.cs
+        fileNameWithoutAssets: CoreDomain/Scripts/Services/Logger/UnityLogger.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Scripts/Services/Logger/UnityLogger.cs:17
+        fileNameWithoutPath: UnityLogger.cs
+        fileNameWithoutPathPlusLineNumber: UnityLogger.cs:17
+        fileNamePretty: UnityLogger
+        instanceID: -1
+        className: UnityLogger
+        methodName: Log
+        namespaceName: Services.Logs
+        lineNumberString: 17
+        charNumber: 0
+        stackLabel: UnityLogger.Log()
+        stackLabel2: ' at /CoreDomain/Scripts/Services/Logger/UnityLogger.cs:17'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Scripts/Services/Logger/Base/LogService.cs
+        fileNameWithoutAssets: CoreDomain/Scripts/Services/Logger/Base/LogService.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Scripts/Services/Logger/Base/LogService.cs:17
+        fileNameWithoutPath: LogService.cs
+        fileNameWithoutPathPlusLineNumber: LogService.cs:17
+        fileNamePretty: LogService
+        instanceID: -1
+        className: LogService
+        methodName: Log
+        namespaceName: CoreDomain.Services
+        lineNumberString: 17
+        charNumber: 0
+        stackLabel: LogService.Log()
+        stackLabel2: ' at /CoreDomain/Scripts/Services/Logger/Base/LogService.cs:17'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/GameDomain/Scripts/ZenjectInstallers/GameInstaller.cs
+        fileNameWithoutAssets: CoreDomain/GameDomain/Scripts/ZenjectInstallers/GameInstaller.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/GameDomain/Scripts/ZenjectInstallers/GameInstaller.cs:11
+        fileNameWithoutPath: GameInstaller.cs
+        fileNameWithoutPathPlusLineNumber: GameInstaller.cs:11
+        fileNamePretty: GameInstaller
+        instanceID: -1
+        className: GameInstaller
+        methodName: InstallBindings
+        namespaceName: CoreDomain.GameDomain
+        lineNumberString: 11
+        charNumber: 0
+        stackLabel: GameInstaller.InstallBindings()
+        stackLabel2: ' at /CoreDomain/GameDomain/Scripts/ZenjectInstallers/GameInstaller.cs:11'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs:218
+        fileNameWithoutPath: Context.cs
+        fileNameWithoutPathPlusLineNumber: Context.cs:218
+        fileNamePretty: Context
+        instanceID: -1
+        className: Context
+        methodName: InstallInstallers
+        namespaceName: Zenject
+        lineNumberString: 218
+        charNumber: 0
+        stackLabel: Context.InstallInstallers()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs:218'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs:139
+        fileNameWithoutPath: Context.cs
+        fileNameWithoutPathPlusLineNumber: Context.cs:139
+        fileNamePretty: Context
+        instanceID: -1
+        className: Context
+        methodName: InstallInstallers
+        namespaceName: Zenject
+        lineNumberString: 139
+        charNumber: 0
+        stackLabel: Context.InstallInstallers()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs:139'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:346
+        fileNameWithoutPath: SceneContext.cs
+        fileNameWithoutPathPlusLineNumber: SceneContext.cs:346
+        fileNamePretty: SceneContext
+        instanceID: -1
+        className: SceneContext
+        methodName: InstallBindings
+        namespaceName: Zenject
+        lineNumberString: 346
+        charNumber: 0
+        stackLabel: SceneContext.InstallBindings()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:346'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:265
+        fileNameWithoutPath: SceneContext.cs
+        fileNameWithoutPathPlusLineNumber: SceneContext.cs:265
+        fileNamePretty: SceneContext
+        instanceID: -1
+        className: SceneContext
+        methodName: Install
+        namespaceName: Zenject
+        lineNumberString: 265
+        charNumber: 0
+        stackLabel: SceneContext.Install()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:265'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:134
+        fileNameWithoutPath: SceneContext.cs
+        fileNameWithoutPathPlusLineNumber: SceneContext.cs:134
+        fileNamePretty: SceneContext
+        instanceID: -1
+        className: SceneContext
+        methodName: RunInternal
+        namespaceName: Zenject
+        lineNumberString: 134
+        charNumber: 0
+        stackLabel: SceneContext.RunInternal()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:134'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:36
+        fileNameWithoutPath: RunnableContext.cs
+        fileNameWithoutPathPlusLineNumber: RunnableContext.cs:36
+        fileNamePretty: RunnableContext
+        instanceID: -1
+        className: RunnableContext
+        methodName: Run
+        namespaceName: Zenject
+        lineNumberString: 36
+        charNumber: 0
+        stackLabel: RunnableContext.Run()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:36'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:22
+        fileNameWithoutPath: RunnableContext.cs
+        fileNameWithoutPathPlusLineNumber: RunnableContext.cs:22
+        fileNamePretty: RunnableContext
+        instanceID: -1
+        className: RunnableContext
+        methodName: Initialize
+        namespaceName: Zenject
+        lineNumberString: 22
+        charNumber: 0
+        stackLabel: RunnableContext.Initialize()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:22'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:113
+        fileNameWithoutPath: SceneContext.cs
+        fileNameWithoutPathPlusLineNumber: SceneContext.cs:113
+        fileNamePretty: SceneContext
+        instanceID: -1
+        className: SceneContext
+        methodName: Awake
+        namespaceName: Zenject
+        lineNumberString: 113
+        charNumber: 0
+        stackLabel: SceneContext.Awake()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:113'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      ignoredStackEntries: []
+      lastMatchedCount: 1
+      belongsToFilters:
+      - name: Log
+        isEnabled: 1
+        collapsed: 1
+        itemGUID: 04d924a4-6a02-4bc7-bcbd-d04d4c79aa3b
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 1
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: 1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list:
+          - name: 
+            isEnabled: 1
+            collapsed: 0
+            itemGUID: 59fe93aa-9d96-4c8d-b9a8-e6a62d42f739
+            searchString: <Any>
+            searchType: 1
+            removeSearchStringFromLog: 0
+            logTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 08291a90-003e-4ad7-a975-d67b2b85bb53
+                logType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            columnTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 42c1635c-ced9-4b27-89f0-a1828e38da6b
+                columnType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            sourceCodeList:
+              list: []
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPLOGICON
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+      belongsToStandardFilters:
+      - name: Log
+        isEnabled: 1
+        collapsed: 1
+        itemGUID: 04d924a4-6a02-4bc7-bcbd-d04d4c79aa3b
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 1
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: 1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list:
+          - name: 
+            isEnabled: 1
+            collapsed: 0
+            itemGUID: 59fe93aa-9d96-4c8d-b9a8-e6a62d42f739
+            searchString: <Any>
+            searchType: 1
+            removeSearchStringFromLog: 0
+            logTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 08291a90-003e-4ad7-a975-d67b2b85bb53
+                logType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            columnTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 42c1635c-ced9-4b27-89f0-a1828e38da6b
+                columnType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            sourceCodeList:
+              list: []
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPLOGICON
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+      assignedTempFilter:
+        name: 
+        isEnabled: 1
+        collapsed: 0
+        itemGUID: 
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 0
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: -1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list: []
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+    - logType: 1
+      ignore: 0
+      processed: 1
+      tempFilterProcessed: 1
+      remoteEndPoint: Local
+      logPanelVisible: 1
+      logPanelIndex: 1
+      logOutputHeight: -1
+      listIndex: 1
+      nativeIndex: 1
+      nativeIdentifier: 0
+      originalLog: '[21:37:42:40] Install lobby'
+      originalStackTrace: '[21:37:42:40] Install lobby
+
+        UnityEngine.Debug:Log
+        (object)
+
+        Services.Logs.UnityLogger:Log (string) (at Assets/CoreDomain/Scripts/Services/Logger/UnityLogger.cs:17)
+
+        CoreDomain.Services.LogService:Log
+        (string) (at Assets/CoreDomain/Scripts/Services/Logger/Base/LogService.cs:17)
+
+        CoreDomain.GameDomain.GameStateDomain.LobbyDomain.LobbyInstaller:InstallBindings
+        () (at Assets/CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/ZenjectInstallers/LobbyInstaller.cs:11)
+
+        Zenject.Context:InstallInstallers
+        (System.Collections.Generic.List`1<Zenject.InstallerBase>,System.Collections.Generic.List`1<System.Type>,System.Collections.Generic.List`1<Zenject.ScriptableObjectInstaller>,System.Collections.Generic.List`1<Zenject.MonoInstaller>,System.Collections.Generic.List`1<Zenject.MonoInstaller>)
+        (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs:218)
+
+        Zenject.Context:InstallInstallers
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs:139)
+
+        Zenject.SceneContext:InstallBindings
+        (System.Collections.Generic.List`1<UnityEngine.MonoBehaviour>) (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:346)
+
+        Zenject.SceneContext:Install
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:265)
+
+        Zenject.SceneContext:RunInternal
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:134)
+
+        Zenject.RunnableContext:Run
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:36)
+
+        Zenject.RunnableContext:Initialize
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:22)
+
+        Zenject.SceneContext:Awake
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:113)
+
+'
+      nativeFileName: Assets/CoreDomain/Scripts/Services/Logger/Base/LogService.cs
+      nativeFileNamePretty: 
+      nativeLineNumber: 17
+      watchName: 
+      logText: '[21:37:42:40] Install lobby'
+      logTruncatedText: '[21:37:42:40] Install lobby'
+      logColumnText: 
+      fileName: 
+      className: 
+      namespaceName: 
+      lineCount: 1
+      hasSourceCode: 0
+      timeStamp: 21:37:42
+      timeFrame: -1
+      timeStampDateTimeNow: 
+      instanceID: 0
+      collapsedCount: 0
+      cachedHeight: -1
+      cachedHeightLogWidth: 0
+      stackEntries:
+      - fileName: Assets/CoreDomain/Scripts/Services/Logger/UnityLogger.cs
+        fileNameWithoutAssets: CoreDomain/Scripts/Services/Logger/UnityLogger.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Scripts/Services/Logger/UnityLogger.cs:17
+        fileNameWithoutPath: UnityLogger.cs
+        fileNameWithoutPathPlusLineNumber: UnityLogger.cs:17
+        fileNamePretty: UnityLogger
+        instanceID: -1
+        className: UnityLogger
+        methodName: Log
+        namespaceName: Services.Logs
+        lineNumberString: 17
+        charNumber: 0
+        stackLabel: UnityLogger.Log()
+        stackLabel2: ' at /CoreDomain/Scripts/Services/Logger/UnityLogger.cs:17'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Scripts/Services/Logger/Base/LogService.cs
+        fileNameWithoutAssets: CoreDomain/Scripts/Services/Logger/Base/LogService.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Scripts/Services/Logger/Base/LogService.cs:17
+        fileNameWithoutPath: LogService.cs
+        fileNameWithoutPathPlusLineNumber: LogService.cs:17
+        fileNamePretty: LogService
+        instanceID: -1
+        className: LogService
+        methodName: Log
+        namespaceName: CoreDomain.Services
+        lineNumberString: 17
+        charNumber: 0
+        stackLabel: LogService.Log()
+        stackLabel2: ' at /CoreDomain/Scripts/Services/Logger/Base/LogService.cs:17'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/ZenjectInstallers/LobbyInstaller.cs
+        fileNameWithoutAssets: CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/ZenjectInstallers/LobbyInstaller.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/ZenjectInstallers/LobbyInstaller.cs:11
+        fileNameWithoutPath: LobbyInstaller.cs
+        fileNameWithoutPathPlusLineNumber: LobbyInstaller.cs:11
+        fileNamePretty: LobbyInstaller
+        instanceID: -1
+        className: LobbyInstaller
+        methodName: InstallBindings
+        namespaceName: CoreDomain.GameDomain.GameStateDomain.LobbyDomain
+        lineNumberString: 11
+        charNumber: 0
+        stackLabel: LobbyInstaller.InstallBindings()
+        stackLabel2: ' at /CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/ZenjectInstallers/LobbyInstaller.cs:11'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs:218
+        fileNameWithoutPath: Context.cs
+        fileNameWithoutPathPlusLineNumber: Context.cs:218
+        fileNamePretty: Context
+        instanceID: -1
+        className: Context
+        methodName: InstallInstallers
+        namespaceName: Zenject
+        lineNumberString: 218
+        charNumber: 0
+        stackLabel: Context.InstallInstallers()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs:218'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs:139
+        fileNameWithoutPath: Context.cs
+        fileNameWithoutPathPlusLineNumber: Context.cs:139
+        fileNamePretty: Context
+        instanceID: -1
+        className: Context
+        methodName: InstallInstallers
+        namespaceName: Zenject
+        lineNumberString: 139
+        charNumber: 0
+        stackLabel: Context.InstallInstallers()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs:139'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:346
+        fileNameWithoutPath: SceneContext.cs
+        fileNameWithoutPathPlusLineNumber: SceneContext.cs:346
+        fileNamePretty: SceneContext
+        instanceID: -1
+        className: SceneContext
+        methodName: InstallBindings
+        namespaceName: Zenject
+        lineNumberString: 346
+        charNumber: 0
+        stackLabel: SceneContext.InstallBindings()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:346'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:265
+        fileNameWithoutPath: SceneContext.cs
+        fileNameWithoutPathPlusLineNumber: SceneContext.cs:265
+        fileNamePretty: SceneContext
+        instanceID: -1
+        className: SceneContext
+        methodName: Install
+        namespaceName: Zenject
+        lineNumberString: 265
+        charNumber: 0
+        stackLabel: SceneContext.Install()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:265'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:134
+        fileNameWithoutPath: SceneContext.cs
+        fileNameWithoutPathPlusLineNumber: SceneContext.cs:134
+        fileNamePretty: SceneContext
+        instanceID: -1
+        className: SceneContext
+        methodName: RunInternal
+        namespaceName: Zenject
+        lineNumberString: 134
+        charNumber: 0
+        stackLabel: SceneContext.RunInternal()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:134'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:36
+        fileNameWithoutPath: RunnableContext.cs
+        fileNameWithoutPathPlusLineNumber: RunnableContext.cs:36
+        fileNamePretty: RunnableContext
+        instanceID: -1
+        className: RunnableContext
+        methodName: Run
+        namespaceName: Zenject
+        lineNumberString: 36
+        charNumber: 0
+        stackLabel: RunnableContext.Run()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:36'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:22
+        fileNameWithoutPath: RunnableContext.cs
+        fileNameWithoutPathPlusLineNumber: RunnableContext.cs:22
+        fileNamePretty: RunnableContext
+        instanceID: -1
+        className: RunnableContext
+        methodName: Initialize
+        namespaceName: Zenject
+        lineNumberString: 22
+        charNumber: 0
+        stackLabel: RunnableContext.Initialize()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:22'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:113
+        fileNameWithoutPath: SceneContext.cs
+        fileNameWithoutPathPlusLineNumber: SceneContext.cs:113
+        fileNamePretty: SceneContext
+        instanceID: -1
+        className: SceneContext
+        methodName: Awake
+        namespaceName: Zenject
+        lineNumberString: 113
+        charNumber: 0
+        stackLabel: SceneContext.Awake()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:113'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      ignoredStackEntries: []
+      lastMatchedCount: 1
+      belongsToFilters:
+      - name: Log
+        isEnabled: 1
+        collapsed: 1
+        itemGUID: 04d924a4-6a02-4bc7-bcbd-d04d4c79aa3b
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 1
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: 1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list:
+          - name: 
+            isEnabled: 1
+            collapsed: 0
+            itemGUID: 59fe93aa-9d96-4c8d-b9a8-e6a62d42f739
+            searchString: <Any>
+            searchType: 1
+            removeSearchStringFromLog: 0
+            logTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 08291a90-003e-4ad7-a975-d67b2b85bb53
+                logType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            columnTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 42c1635c-ced9-4b27-89f0-a1828e38da6b
+                columnType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            sourceCodeList:
+              list: []
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPLOGICON
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+      belongsToStandardFilters:
+      - name: Log
+        isEnabled: 1
+        collapsed: 1
+        itemGUID: 04d924a4-6a02-4bc7-bcbd-d04d4c79aa3b
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 1
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: 1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list:
+          - name: 
+            isEnabled: 1
+            collapsed: 0
+            itemGUID: 59fe93aa-9d96-4c8d-b9a8-e6a62d42f739
+            searchString: <Any>
+            searchType: 1
+            removeSearchStringFromLog: 0
+            logTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 08291a90-003e-4ad7-a975-d67b2b85bb53
+                logType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            columnTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 42c1635c-ced9-4b27-89f0-a1828e38da6b
+                columnType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            sourceCodeList:
+              list: []
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPLOGICON
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+      assignedTempFilter:
+        name: 
+        isEnabled: 1
+        collapsed: 0
+        itemGUID: 
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 0
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: -1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list: []
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+    - logType: 1
+      ignore: 0
+      processed: 1
+      tempFilterProcessed: 1
+      remoteEndPoint: Local
+      logPanelVisible: 1
+      logPanelIndex: 2
+      logOutputHeight: -1
+      listIndex: 2
+      nativeIndex: 2
+      nativeIdentifier: 0
+      originalLog: Destroyed FooMonoBehaviourUnderSceneContext3
+      originalStackTrace: 'Destroyed FooMonoBehaviourUnderSceneContext3
+
+        UnityEngine.Debug:Log
+        (object)
+
+        Zenject.Tests.TestDestructionOrder.FooMonoBehaviourUnderSceneContext3:OnDestroy
+        () (at Assets/CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs:9)
+
+'
+      nativeFileName: Assets/CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs
+      nativeFileNamePretty: 
+      nativeLineNumber: 9
+      watchName: 
+      logText: Destroyed FooMonoBehaviourUnderSceneContext3
+      logTruncatedText: Destroyed FooMonoBehaviourUnderSceneContext3
+      logColumnText: 
+      fileName: 
+      className: 
+      namespaceName: 
+      lineCount: 1
+      hasSourceCode: 0
+      timeStamp: 21:37:42
+      timeFrame: -1
+      timeStampDateTimeNow: 
+      instanceID: 0
+      collapsedCount: 0
+      cachedHeight: -1
+      cachedHeightLogWidth: 0
+      stackEntries:
+      - fileName: Assets/CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs:9
+        fileNameWithoutPath: FooMonoBehaviourUnderSceneContext3.cs
+        fileNameWithoutPathPlusLineNumber: FooMonoBehaviourUnderSceneContext3.cs:9
+        fileNamePretty: FooMonoBehaviourUnderSceneContext3
+        instanceID: -1
+        className: FooMonoBehaviourUnderSceneContext3
+        methodName: OnDestroy
+        namespaceName: Zenject.Tests.TestDestructionOrder
+        lineNumberString: 9
+        charNumber: 0
+        stackLabel: FooMonoBehaviourUnderSceneContext3.OnDestroy()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs:9'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      ignoredStackEntries: []
+      lastMatchedCount: 1
+      belongsToFilters:
+      - name: Log
+        isEnabled: 1
+        collapsed: 1
+        itemGUID: 04d924a4-6a02-4bc7-bcbd-d04d4c79aa3b
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 1
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: 1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list:
+          - name: 
+            isEnabled: 1
+            collapsed: 0
+            itemGUID: 59fe93aa-9d96-4c8d-b9a8-e6a62d42f739
+            searchString: <Any>
+            searchType: 1
+            removeSearchStringFromLog: 0
+            logTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 08291a90-003e-4ad7-a975-d67b2b85bb53
+                logType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            columnTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 42c1635c-ced9-4b27-89f0-a1828e38da6b
+                columnType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            sourceCodeList:
+              list: []
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPLOGICON
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+      belongsToStandardFilters:
+      - name: Log
+        isEnabled: 1
+        collapsed: 1
+        itemGUID: 04d924a4-6a02-4bc7-bcbd-d04d4c79aa3b
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 1
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: 1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list:
+          - name: 
+            isEnabled: 1
+            collapsed: 0
+            itemGUID: 59fe93aa-9d96-4c8d-b9a8-e6a62d42f739
+            searchString: <Any>
+            searchType: 1
+            removeSearchStringFromLog: 0
+            logTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 08291a90-003e-4ad7-a975-d67b2b85bb53
+                logType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            columnTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 42c1635c-ced9-4b27-89f0-a1828e38da6b
+                columnType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            sourceCodeList:
+              list: []
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPLOGICON
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+      assignedTempFilter:
+        name: 
+        isEnabled: 1
+        collapsed: 0
+        itemGUID: 
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 0
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: -1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list: []
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+    - logType: 2
+      ignore: 0
+      processed: 1
+      tempFilterProcessed: 1
+      remoteEndPoint: Local
+      logPanelVisible: 1
+      logPanelIndex: 3
+      logOutputHeight: -1
+      listIndex: 3
+      nativeIndex: 3
+      nativeIdentifier: 0
+      originalLog: Failed to remove SceneContext from SceneContextRegistry
+      originalStackTrace: 'Failed to remove SceneContext from SceneContextRegistry
+
+        UnityEngine.Debug:LogWarning
+        (object)
+
+        ModestTree.Log:Warn (string,object[]) (at Assets/CoreDomain/Plugins/Zenject/Source/Internal/Log.cs:38)
+
+        Zenject.SceneContextRegistry:Remove
+        (Zenject.SceneContext) (at Assets/CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistry.cs:89)
+
+        Zenject.SceneContextRegistryAdderAndRemover:Dispose
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistryAdderAndRemover.cs:25)
+
+        Zenject.DisposableManager:Dispose
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Runtime/DisposableManager.cs:122)
+
+        Zenject.MonoKernel:OnDestroy
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs:122)
+
+'
+      nativeFileName: Assets/CoreDomain/Plugins/Zenject/Source/Internal/Log.cs
+      nativeFileNamePretty: 
+      nativeLineNumber: 38
+      watchName: 
+      logText: Failed to remove SceneContext from SceneContextRegistry
+      logTruncatedText: Failed to remove SceneContext from SceneContextRegistry
+      logColumnText: 
+      fileName: 
+      className: 
+      namespaceName: 
+      lineCount: 1
+      hasSourceCode: 0
+      timeStamp: 21:37:42
+      timeFrame: -1
+      timeStampDateTimeNow: 
+      instanceID: 0
+      collapsedCount: 0
+      cachedHeight: -1
+      cachedHeightLogWidth: 0
+      stackEntries:
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Internal/Log.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Internal/Log.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Internal/Log.cs:38
+        fileNameWithoutPath: Log.cs
+        fileNameWithoutPathPlusLineNumber: Log.cs:38
+        fileNamePretty: Log
+        instanceID: -1
+        className: Log
+        methodName: Warn
+        namespaceName: ModestTree
+        lineNumberString: 38
+        charNumber: 0
+        stackLabel: Log.Warn()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Internal/Log.cs:38'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistry.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistry.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistry.cs:89
+        fileNameWithoutPath: SceneContextRegistry.cs
+        fileNameWithoutPathPlusLineNumber: SceneContextRegistry.cs:89
+        fileNamePretty: SceneContextRegistry
+        instanceID: -1
+        className: SceneContextRegistry
+        methodName: Remove
+        namespaceName: Zenject
+        lineNumberString: 89
+        charNumber: 0
+        stackLabel: SceneContextRegistry.Remove()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistry.cs:89'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistryAdderAndRemover.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistryAdderAndRemover.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistryAdderAndRemover.cs:25
+        fileNameWithoutPath: SceneContextRegistryAdderAndRemover.cs
+        fileNameWithoutPathPlusLineNumber: SceneContextRegistryAdderAndRemover.cs:25
+        fileNamePretty: SceneContextRegistryAdderAndRemover
+        instanceID: -1
+        className: SceneContextRegistryAdderAndRemover
+        methodName: Dispose
+        namespaceName: Zenject
+        lineNumberString: 25
+        charNumber: 0
+        stackLabel: SceneContextRegistryAdderAndRemover.Dispose()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistryAdderAndRemover.cs:25'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Runtime/DisposableManager.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Runtime/DisposableManager.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Runtime/DisposableManager.cs:122
+        fileNameWithoutPath: DisposableManager.cs
+        fileNameWithoutPathPlusLineNumber: DisposableManager.cs:122
+        fileNamePretty: DisposableManager
+        instanceID: -1
+        className: DisposableManager
+        methodName: Dispose
+        namespaceName: Zenject
+        lineNumberString: 122
+        charNumber: 0
+        stackLabel: DisposableManager.Dispose()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Runtime/DisposableManager.cs:122'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs:122
+        fileNameWithoutPath: MonoKernel.cs
+        fileNameWithoutPathPlusLineNumber: MonoKernel.cs:122
+        fileNamePretty: MonoKernel
+        instanceID: -1
+        className: MonoKernel
+        methodName: OnDestroy
+        namespaceName: Zenject
+        lineNumberString: 122
+        charNumber: 0
+        stackLabel: MonoKernel.OnDestroy()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs:122'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      ignoredStackEntries: []
+      lastMatchedCount: 1
+      belongsToFilters:
+      - name: Warning
+        isEnabled: 1
+        collapsed: 1
+        itemGUID: 50babdeb-1b0a-4142-a22d-a71a12197a35
+        filterName: 
+        mainColor: {r: 1, g: 0.84, b: 0.02, a: 0.7}
+        isStandardFilter: 1
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 1
+        useIconTexture: 0
+        filterFormatVersion: 1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list:
+          - name: 
+            isEnabled: 1
+            collapsed: 0
+            itemGUID: 8bcd6552-b5be-484f-9d8c-1523fda11b03
+            searchString: <Any>
+            searchType: 1
+            removeSearchStringFromLog: 0
+            logTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 32a1a2be-6ca7-4bef-a149-50fa8ef12494
+                logType: 2
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 40ac3fc1-5c5d-48c4-a1e9-32d7a84732bb
+                logType: 5
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            columnTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 50090f48-90f3-4e08-b239-9d09572d2194
+                columnType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            sourceCodeList:
+              list: []
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 3
+          iconType2: 1
+          iconText: '!'
+          useIconTextFirstLetter: 0
+          useIconLogColor: 0
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 2}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 7
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGTRIANGLE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+      belongsToStandardFilters:
+      - name: Warning
+        isEnabled: 1
+        collapsed: 1
+        itemGUID: 50babdeb-1b0a-4142-a22d-a71a12197a35
+        filterName: 
+        mainColor: {r: 1, g: 0.84, b: 0.02, a: 0.7}
+        isStandardFilter: 1
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 1
+        useIconTexture: 0
+        filterFormatVersion: 1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list:
+          - name: 
+            isEnabled: 1
+            collapsed: 0
+            itemGUID: 8bcd6552-b5be-484f-9d8c-1523fda11b03
+            searchString: <Any>
+            searchType: 1
+            removeSearchStringFromLog: 0
+            logTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 32a1a2be-6ca7-4bef-a149-50fa8ef12494
+                logType: 2
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 40ac3fc1-5c5d-48c4-a1e9-32d7a84732bb
+                logType: 5
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            columnTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 50090f48-90f3-4e08-b239-9d09572d2194
+                columnType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            sourceCodeList:
+              list: []
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 3
+          iconType2: 1
+          iconText: '!'
+          useIconTextFirstLetter: 0
+          useIconLogColor: 0
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 2}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 7
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGTRIANGLE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+      assignedTempFilter:
+        name: 
+        isEnabled: 1
+        collapsed: 0
+        itemGUID: 
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 0
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: -1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list: []
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+    newEntries: []
+    resetCompilerErrorEntries: 1
+    compilerErrorEntries: []
+    timeFrames: 
+    _filteredEntries:
+    - logType: 1
+      ignore: 0
+      processed: 1
+      tempFilterProcessed: 1
+      remoteEndPoint: Local
+      logPanelVisible: 1
+      logPanelIndex: 0
+      logOutputHeight: -1
+      listIndex: 0
+      nativeIndex: 0
+      nativeIdentifier: 0
+      originalLog: '[21:37:42:02] InstallBindings'
+      originalStackTrace: '[21:37:42:02] InstallBindings
+
+        UnityEngine.Debug:Log
+        (object)
+
+        Services.Logs.UnityLogger:Log (string) (at Assets/CoreDomain/Scripts/Services/Logger/UnityLogger.cs:17)
+
+        CoreDomain.Services.LogService:Log
+        (string) (at Assets/CoreDomain/Scripts/Services/Logger/Base/LogService.cs:17)
+
+        CoreDomain.GameDomain.GameInstaller:InstallBindings
+        () (at Assets/CoreDomain/GameDomain/Scripts/ZenjectInstallers/GameInstaller.cs:11)
+
+        Zenject.Context:InstallInstallers
+        (System.Collections.Generic.List`1<Zenject.InstallerBase>,System.Collections.Generic.List`1<System.Type>,System.Collections.Generic.List`1<Zenject.ScriptableObjectInstaller>,System.Collections.Generic.List`1<Zenject.MonoInstaller>,System.Collections.Generic.List`1<Zenject.MonoInstaller>)
+        (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs:218)
+
+        Zenject.Context:InstallInstallers
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs:139)
+
+        Zenject.SceneContext:InstallBindings
+        (System.Collections.Generic.List`1<UnityEngine.MonoBehaviour>) (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:346)
+
+        Zenject.SceneContext:Install
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:265)
+
+        Zenject.SceneContext:RunInternal
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:134)
+
+        Zenject.RunnableContext:Run
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:36)
+
+        Zenject.RunnableContext:Initialize
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:22)
+
+        Zenject.SceneContext:Awake
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:113)
+
+'
+      nativeFileName: Assets/CoreDomain/Scripts/Services/Logger/Base/LogService.cs
+      nativeFileNamePretty: 
+      nativeLineNumber: 17
+      watchName: 
+      logText: '[21:37:42:02] InstallBindings'
+      logTruncatedText: '[21:37:42:02] InstallBindings'
+      logColumnText: 
+      fileName: 
+      className: 
+      namespaceName: 
+      lineCount: 1
+      hasSourceCode: 0
+      timeStamp: 21:37:42
+      timeFrame: -1
+      timeStampDateTimeNow: 
+      instanceID: 0
+      collapsedCount: 0
+      cachedHeight: -1
+      cachedHeightLogWidth: 0
+      stackEntries:
+      - fileName: Assets/CoreDomain/Scripts/Services/Logger/UnityLogger.cs
+        fileNameWithoutAssets: CoreDomain/Scripts/Services/Logger/UnityLogger.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Scripts/Services/Logger/UnityLogger.cs:17
+        fileNameWithoutPath: UnityLogger.cs
+        fileNameWithoutPathPlusLineNumber: UnityLogger.cs:17
+        fileNamePretty: UnityLogger
+        instanceID: -1
+        className: UnityLogger
+        methodName: Log
+        namespaceName: Services.Logs
+        lineNumberString: 17
+        charNumber: 0
+        stackLabel: UnityLogger.Log()
+        stackLabel2: ' at /CoreDomain/Scripts/Services/Logger/UnityLogger.cs:17'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Scripts/Services/Logger/Base/LogService.cs
+        fileNameWithoutAssets: CoreDomain/Scripts/Services/Logger/Base/LogService.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Scripts/Services/Logger/Base/LogService.cs:17
+        fileNameWithoutPath: LogService.cs
+        fileNameWithoutPathPlusLineNumber: LogService.cs:17
+        fileNamePretty: LogService
+        instanceID: -1
+        className: LogService
+        methodName: Log
+        namespaceName: CoreDomain.Services
+        lineNumberString: 17
+        charNumber: 0
+        stackLabel: LogService.Log()
+        stackLabel2: ' at /CoreDomain/Scripts/Services/Logger/Base/LogService.cs:17'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/GameDomain/Scripts/ZenjectInstallers/GameInstaller.cs
+        fileNameWithoutAssets: CoreDomain/GameDomain/Scripts/ZenjectInstallers/GameInstaller.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/GameDomain/Scripts/ZenjectInstallers/GameInstaller.cs:11
+        fileNameWithoutPath: GameInstaller.cs
+        fileNameWithoutPathPlusLineNumber: GameInstaller.cs:11
+        fileNamePretty: GameInstaller
+        instanceID: -1
+        className: GameInstaller
+        methodName: InstallBindings
+        namespaceName: CoreDomain.GameDomain
+        lineNumberString: 11
+        charNumber: 0
+        stackLabel: GameInstaller.InstallBindings()
+        stackLabel2: ' at /CoreDomain/GameDomain/Scripts/ZenjectInstallers/GameInstaller.cs:11'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs:218
+        fileNameWithoutPath: Context.cs
+        fileNameWithoutPathPlusLineNumber: Context.cs:218
+        fileNamePretty: Context
+        instanceID: -1
+        className: Context
+        methodName: InstallInstallers
+        namespaceName: Zenject
+        lineNumberString: 218
+        charNumber: 0
+        stackLabel: Context.InstallInstallers()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs:218'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs:139
+        fileNameWithoutPath: Context.cs
+        fileNameWithoutPathPlusLineNumber: Context.cs:139
+        fileNamePretty: Context
+        instanceID: -1
+        className: Context
+        methodName: InstallInstallers
+        namespaceName: Zenject
+        lineNumberString: 139
+        charNumber: 0
+        stackLabel: Context.InstallInstallers()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs:139'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:346
+        fileNameWithoutPath: SceneContext.cs
+        fileNameWithoutPathPlusLineNumber: SceneContext.cs:346
+        fileNamePretty: SceneContext
+        instanceID: -1
+        className: SceneContext
+        methodName: InstallBindings
+        namespaceName: Zenject
+        lineNumberString: 346
+        charNumber: 0
+        stackLabel: SceneContext.InstallBindings()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:346'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:265
+        fileNameWithoutPath: SceneContext.cs
+        fileNameWithoutPathPlusLineNumber: SceneContext.cs:265
+        fileNamePretty: SceneContext
+        instanceID: -1
+        className: SceneContext
+        methodName: Install
+        namespaceName: Zenject
+        lineNumberString: 265
+        charNumber: 0
+        stackLabel: SceneContext.Install()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:265'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:134
+        fileNameWithoutPath: SceneContext.cs
+        fileNameWithoutPathPlusLineNumber: SceneContext.cs:134
+        fileNamePretty: SceneContext
+        instanceID: -1
+        className: SceneContext
+        methodName: RunInternal
+        namespaceName: Zenject
+        lineNumberString: 134
+        charNumber: 0
+        stackLabel: SceneContext.RunInternal()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:134'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:36
+        fileNameWithoutPath: RunnableContext.cs
+        fileNameWithoutPathPlusLineNumber: RunnableContext.cs:36
+        fileNamePretty: RunnableContext
+        instanceID: -1
+        className: RunnableContext
+        methodName: Run
+        namespaceName: Zenject
+        lineNumberString: 36
+        charNumber: 0
+        stackLabel: RunnableContext.Run()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:36'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:22
+        fileNameWithoutPath: RunnableContext.cs
+        fileNameWithoutPathPlusLineNumber: RunnableContext.cs:22
+        fileNamePretty: RunnableContext
+        instanceID: -1
+        className: RunnableContext
+        methodName: Initialize
+        namespaceName: Zenject
+        lineNumberString: 22
+        charNumber: 0
+        stackLabel: RunnableContext.Initialize()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:22'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:113
+        fileNameWithoutPath: SceneContext.cs
+        fileNameWithoutPathPlusLineNumber: SceneContext.cs:113
+        fileNamePretty: SceneContext
+        instanceID: -1
+        className: SceneContext
+        methodName: Awake
+        namespaceName: Zenject
+        lineNumberString: 113
+        charNumber: 0
+        stackLabel: SceneContext.Awake()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:113'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      ignoredStackEntries: []
+      lastMatchedCount: 1
+      belongsToFilters:
+      - name: Log
+        isEnabled: 1
+        collapsed: 1
+        itemGUID: 04d924a4-6a02-4bc7-bcbd-d04d4c79aa3b
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 1
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: 1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list:
+          - name: 
+            isEnabled: 1
+            collapsed: 0
+            itemGUID: 59fe93aa-9d96-4c8d-b9a8-e6a62d42f739
+            searchString: <Any>
+            searchType: 1
+            removeSearchStringFromLog: 0
+            logTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 08291a90-003e-4ad7-a975-d67b2b85bb53
+                logType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            columnTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 42c1635c-ced9-4b27-89f0-a1828e38da6b
+                columnType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            sourceCodeList:
+              list: []
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPLOGICON
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+      belongsToStandardFilters:
+      - name: Log
+        isEnabled: 1
+        collapsed: 1
+        itemGUID: 04d924a4-6a02-4bc7-bcbd-d04d4c79aa3b
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 1
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: 1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list:
+          - name: 
+            isEnabled: 1
+            collapsed: 0
+            itemGUID: 59fe93aa-9d96-4c8d-b9a8-e6a62d42f739
+            searchString: <Any>
+            searchType: 1
+            removeSearchStringFromLog: 0
+            logTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 08291a90-003e-4ad7-a975-d67b2b85bb53
+                logType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            columnTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 42c1635c-ced9-4b27-89f0-a1828e38da6b
+                columnType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            sourceCodeList:
+              list: []
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPLOGICON
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+      assignedTempFilter:
+        name: 
+        isEnabled: 1
+        collapsed: 0
+        itemGUID: 
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 0
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: -1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list: []
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+    - logType: 1
+      ignore: 0
+      processed: 1
+      tempFilterProcessed: 1
+      remoteEndPoint: Local
+      logPanelVisible: 1
+      logPanelIndex: 1
+      logOutputHeight: -1
+      listIndex: 1
+      nativeIndex: 1
+      nativeIdentifier: 0
+      originalLog: '[21:37:42:40] Install lobby'
+      originalStackTrace: '[21:37:42:40] Install lobby
+
+        UnityEngine.Debug:Log
+        (object)
+
+        Services.Logs.UnityLogger:Log (string) (at Assets/CoreDomain/Scripts/Services/Logger/UnityLogger.cs:17)
+
+        CoreDomain.Services.LogService:Log
+        (string) (at Assets/CoreDomain/Scripts/Services/Logger/Base/LogService.cs:17)
+
+        CoreDomain.GameDomain.GameStateDomain.LobbyDomain.LobbyInstaller:InstallBindings
+        () (at Assets/CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/ZenjectInstallers/LobbyInstaller.cs:11)
+
+        Zenject.Context:InstallInstallers
+        (System.Collections.Generic.List`1<Zenject.InstallerBase>,System.Collections.Generic.List`1<System.Type>,System.Collections.Generic.List`1<Zenject.ScriptableObjectInstaller>,System.Collections.Generic.List`1<Zenject.MonoInstaller>,System.Collections.Generic.List`1<Zenject.MonoInstaller>)
+        (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs:218)
+
+        Zenject.Context:InstallInstallers
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs:139)
+
+        Zenject.SceneContext:InstallBindings
+        (System.Collections.Generic.List`1<UnityEngine.MonoBehaviour>) (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:346)
+
+        Zenject.SceneContext:Install
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:265)
+
+        Zenject.SceneContext:RunInternal
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:134)
+
+        Zenject.RunnableContext:Run
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:36)
+
+        Zenject.RunnableContext:Initialize
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:22)
+
+        Zenject.SceneContext:Awake
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:113)
+
+'
+      nativeFileName: Assets/CoreDomain/Scripts/Services/Logger/Base/LogService.cs
+      nativeFileNamePretty: 
+      nativeLineNumber: 17
+      watchName: 
+      logText: '[21:37:42:40] Install lobby'
+      logTruncatedText: '[21:37:42:40] Install lobby'
+      logColumnText: 
+      fileName: 
+      className: 
+      namespaceName: 
+      lineCount: 1
+      hasSourceCode: 0
+      timeStamp: 21:37:42
+      timeFrame: -1
+      timeStampDateTimeNow: 
+      instanceID: 0
+      collapsedCount: 0
+      cachedHeight: -1
+      cachedHeightLogWidth: 0
+      stackEntries:
+      - fileName: Assets/CoreDomain/Scripts/Services/Logger/UnityLogger.cs
+        fileNameWithoutAssets: CoreDomain/Scripts/Services/Logger/UnityLogger.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Scripts/Services/Logger/UnityLogger.cs:17
+        fileNameWithoutPath: UnityLogger.cs
+        fileNameWithoutPathPlusLineNumber: UnityLogger.cs:17
+        fileNamePretty: UnityLogger
+        instanceID: -1
+        className: UnityLogger
+        methodName: Log
+        namespaceName: Services.Logs
+        lineNumberString: 17
+        charNumber: 0
+        stackLabel: UnityLogger.Log()
+        stackLabel2: ' at /CoreDomain/Scripts/Services/Logger/UnityLogger.cs:17'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Scripts/Services/Logger/Base/LogService.cs
+        fileNameWithoutAssets: CoreDomain/Scripts/Services/Logger/Base/LogService.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Scripts/Services/Logger/Base/LogService.cs:17
+        fileNameWithoutPath: LogService.cs
+        fileNameWithoutPathPlusLineNumber: LogService.cs:17
+        fileNamePretty: LogService
+        instanceID: -1
+        className: LogService
+        methodName: Log
+        namespaceName: CoreDomain.Services
+        lineNumberString: 17
+        charNumber: 0
+        stackLabel: LogService.Log()
+        stackLabel2: ' at /CoreDomain/Scripts/Services/Logger/Base/LogService.cs:17'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/ZenjectInstallers/LobbyInstaller.cs
+        fileNameWithoutAssets: CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/ZenjectInstallers/LobbyInstaller.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/ZenjectInstallers/LobbyInstaller.cs:11
+        fileNameWithoutPath: LobbyInstaller.cs
+        fileNameWithoutPathPlusLineNumber: LobbyInstaller.cs:11
+        fileNamePretty: LobbyInstaller
+        instanceID: -1
+        className: LobbyInstaller
+        methodName: InstallBindings
+        namespaceName: CoreDomain.GameDomain.GameStateDomain.LobbyDomain
+        lineNumberString: 11
+        charNumber: 0
+        stackLabel: LobbyInstaller.InstallBindings()
+        stackLabel2: ' at /CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/ZenjectInstallers/LobbyInstaller.cs:11'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs:218
+        fileNameWithoutPath: Context.cs
+        fileNameWithoutPathPlusLineNumber: Context.cs:218
+        fileNamePretty: Context
+        instanceID: -1
+        className: Context
+        methodName: InstallInstallers
+        namespaceName: Zenject
+        lineNumberString: 218
+        charNumber: 0
+        stackLabel: Context.InstallInstallers()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs:218'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs:139
+        fileNameWithoutPath: Context.cs
+        fileNameWithoutPathPlusLineNumber: Context.cs:139
+        fileNamePretty: Context
+        instanceID: -1
+        className: Context
+        methodName: InstallInstallers
+        namespaceName: Zenject
+        lineNumberString: 139
+        charNumber: 0
+        stackLabel: Context.InstallInstallers()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/Context.cs:139'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:346
+        fileNameWithoutPath: SceneContext.cs
+        fileNameWithoutPathPlusLineNumber: SceneContext.cs:346
+        fileNamePretty: SceneContext
+        instanceID: -1
+        className: SceneContext
+        methodName: InstallBindings
+        namespaceName: Zenject
+        lineNumberString: 346
+        charNumber: 0
+        stackLabel: SceneContext.InstallBindings()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:346'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:265
+        fileNameWithoutPath: SceneContext.cs
+        fileNameWithoutPathPlusLineNumber: SceneContext.cs:265
+        fileNamePretty: SceneContext
+        instanceID: -1
+        className: SceneContext
+        methodName: Install
+        namespaceName: Zenject
+        lineNumberString: 265
+        charNumber: 0
+        stackLabel: SceneContext.Install()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:265'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:134
+        fileNameWithoutPath: SceneContext.cs
+        fileNameWithoutPathPlusLineNumber: SceneContext.cs:134
+        fileNamePretty: SceneContext
+        instanceID: -1
+        className: SceneContext
+        methodName: RunInternal
+        namespaceName: Zenject
+        lineNumberString: 134
+        charNumber: 0
+        stackLabel: SceneContext.RunInternal()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:134'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:36
+        fileNameWithoutPath: RunnableContext.cs
+        fileNameWithoutPathPlusLineNumber: RunnableContext.cs:36
+        fileNamePretty: RunnableContext
+        instanceID: -1
+        className: RunnableContext
+        methodName: Run
+        namespaceName: Zenject
+        lineNumberString: 36
+        charNumber: 0
+        stackLabel: RunnableContext.Run()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:36'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:22
+        fileNameWithoutPath: RunnableContext.cs
+        fileNameWithoutPathPlusLineNumber: RunnableContext.cs:22
+        fileNamePretty: RunnableContext
+        instanceID: -1
+        className: RunnableContext
+        methodName: Initialize
+        namespaceName: Zenject
+        lineNumberString: 22
+        charNumber: 0
+        stackLabel: RunnableContext.Initialize()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:22'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:113
+        fileNameWithoutPath: SceneContext.cs
+        fileNameWithoutPathPlusLineNumber: SceneContext.cs:113
+        fileNamePretty: SceneContext
+        instanceID: -1
+        className: SceneContext
+        methodName: Awake
+        namespaceName: Zenject
+        lineNumberString: 113
+        charNumber: 0
+        stackLabel: SceneContext.Awake()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:113'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      ignoredStackEntries: []
+      lastMatchedCount: 1
+      belongsToFilters:
+      - name: Log
+        isEnabled: 1
+        collapsed: 1
+        itemGUID: 04d924a4-6a02-4bc7-bcbd-d04d4c79aa3b
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 1
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: 1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list:
+          - name: 
+            isEnabled: 1
+            collapsed: 0
+            itemGUID: 59fe93aa-9d96-4c8d-b9a8-e6a62d42f739
+            searchString: <Any>
+            searchType: 1
+            removeSearchStringFromLog: 0
+            logTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 08291a90-003e-4ad7-a975-d67b2b85bb53
+                logType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            columnTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 42c1635c-ced9-4b27-89f0-a1828e38da6b
+                columnType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            sourceCodeList:
+              list: []
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPLOGICON
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+      belongsToStandardFilters:
+      - name: Log
+        isEnabled: 1
+        collapsed: 1
+        itemGUID: 04d924a4-6a02-4bc7-bcbd-d04d4c79aa3b
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 1
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: 1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list:
+          - name: 
+            isEnabled: 1
+            collapsed: 0
+            itemGUID: 59fe93aa-9d96-4c8d-b9a8-e6a62d42f739
+            searchString: <Any>
+            searchType: 1
+            removeSearchStringFromLog: 0
+            logTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 08291a90-003e-4ad7-a975-d67b2b85bb53
+                logType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            columnTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 42c1635c-ced9-4b27-89f0-a1828e38da6b
+                columnType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            sourceCodeList:
+              list: []
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPLOGICON
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+      assignedTempFilter:
+        name: 
+        isEnabled: 1
+        collapsed: 0
+        itemGUID: 
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 0
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: -1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list: []
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+    - logType: 1
+      ignore: 0
+      processed: 1
+      tempFilterProcessed: 1
+      remoteEndPoint: Local
+      logPanelVisible: 1
+      logPanelIndex: 2
+      logOutputHeight: -1
+      listIndex: 2
+      nativeIndex: 2
+      nativeIdentifier: 0
+      originalLog: Destroyed FooMonoBehaviourUnderSceneContext3
+      originalStackTrace: 'Destroyed FooMonoBehaviourUnderSceneContext3
+
+        UnityEngine.Debug:Log
+        (object)
+
+        Zenject.Tests.TestDestructionOrder.FooMonoBehaviourUnderSceneContext3:OnDestroy
+        () (at Assets/CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs:9)
+
+'
+      nativeFileName: Assets/CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs
+      nativeFileNamePretty: 
+      nativeLineNumber: 9
+      watchName: 
+      logText: Destroyed FooMonoBehaviourUnderSceneContext3
+      logTruncatedText: Destroyed FooMonoBehaviourUnderSceneContext3
+      logColumnText: 
+      fileName: 
+      className: 
+      namespaceName: 
+      lineCount: 1
+      hasSourceCode: 0
+      timeStamp: 21:37:42
+      timeFrame: -1
+      timeStampDateTimeNow: 
+      instanceID: 0
+      collapsedCount: 0
+      cachedHeight: -1
+      cachedHeightLogWidth: 0
+      stackEntries:
+      - fileName: Assets/CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs:9
+        fileNameWithoutPath: FooMonoBehaviourUnderSceneContext3.cs
+        fileNameWithoutPathPlusLineNumber: FooMonoBehaviourUnderSceneContext3.cs:9
+        fileNamePretty: FooMonoBehaviourUnderSceneContext3
+        instanceID: -1
+        className: FooMonoBehaviourUnderSceneContext3
+        methodName: OnDestroy
+        namespaceName: Zenject.Tests.TestDestructionOrder
+        lineNumberString: 9
+        charNumber: 0
+        stackLabel: FooMonoBehaviourUnderSceneContext3.OnDestroy()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs:9'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      ignoredStackEntries: []
+      lastMatchedCount: 1
+      belongsToFilters:
+      - name: Log
+        isEnabled: 1
+        collapsed: 1
+        itemGUID: 04d924a4-6a02-4bc7-bcbd-d04d4c79aa3b
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 1
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: 1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list:
+          - name: 
+            isEnabled: 1
+            collapsed: 0
+            itemGUID: 59fe93aa-9d96-4c8d-b9a8-e6a62d42f739
+            searchString: <Any>
+            searchType: 1
+            removeSearchStringFromLog: 0
+            logTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 08291a90-003e-4ad7-a975-d67b2b85bb53
+                logType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            columnTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 42c1635c-ced9-4b27-89f0-a1828e38da6b
+                columnType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            sourceCodeList:
+              list: []
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPLOGICON
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+      belongsToStandardFilters:
+      - name: Log
+        isEnabled: 1
+        collapsed: 1
+        itemGUID: 04d924a4-6a02-4bc7-bcbd-d04d4c79aa3b
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 1
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: 1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list:
+          - name: 
+            isEnabled: 1
+            collapsed: 0
+            itemGUID: 59fe93aa-9d96-4c8d-b9a8-e6a62d42f739
+            searchString: <Any>
+            searchType: 1
+            removeSearchStringFromLog: 0
+            logTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 08291a90-003e-4ad7-a975-d67b2b85bb53
+                logType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            columnTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 42c1635c-ced9-4b27-89f0-a1828e38da6b
+                columnType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            sourceCodeList:
+              list: []
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPLOGICON
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+      assignedTempFilter:
+        name: 
+        isEnabled: 1
+        collapsed: 0
+        itemGUID: 
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 0
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: -1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list: []
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+    - logType: 2
+      ignore: 0
+      processed: 1
+      tempFilterProcessed: 1
+      remoteEndPoint: Local
+      logPanelVisible: 1
+      logPanelIndex: 3
+      logOutputHeight: -1
+      listIndex: 3
+      nativeIndex: 3
+      nativeIdentifier: 0
+      originalLog: Failed to remove SceneContext from SceneContextRegistry
+      originalStackTrace: 'Failed to remove SceneContext from SceneContextRegistry
+
+        UnityEngine.Debug:LogWarning
+        (object)
+
+        ModestTree.Log:Warn (string,object[]) (at Assets/CoreDomain/Plugins/Zenject/Source/Internal/Log.cs:38)
+
+        Zenject.SceneContextRegistry:Remove
+        (Zenject.SceneContext) (at Assets/CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistry.cs:89)
+
+        Zenject.SceneContextRegistryAdderAndRemover:Dispose
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistryAdderAndRemover.cs:25)
+
+        Zenject.DisposableManager:Dispose
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Runtime/DisposableManager.cs:122)
+
+        Zenject.MonoKernel:OnDestroy
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs:122)
+
+'
+      nativeFileName: Assets/CoreDomain/Plugins/Zenject/Source/Internal/Log.cs
+      nativeFileNamePretty: 
+      nativeLineNumber: 38
+      watchName: 
+      logText: Failed to remove SceneContext from SceneContextRegistry
+      logTruncatedText: Failed to remove SceneContext from SceneContextRegistry
+      logColumnText: 
+      fileName: 
+      className: 
+      namespaceName: 
+      lineCount: 1
+      hasSourceCode: 0
+      timeStamp: 21:37:42
+      timeFrame: -1
+      timeStampDateTimeNow: 
+      instanceID: 0
+      collapsedCount: 0
+      cachedHeight: -1
+      cachedHeightLogWidth: 0
+      stackEntries:
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Internal/Log.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Internal/Log.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Internal/Log.cs:38
+        fileNameWithoutPath: Log.cs
+        fileNameWithoutPathPlusLineNumber: Log.cs:38
+        fileNamePretty: Log
+        instanceID: -1
+        className: Log
+        methodName: Warn
+        namespaceName: ModestTree
+        lineNumberString: 38
+        charNumber: 0
+        stackLabel: Log.Warn()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Internal/Log.cs:38'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistry.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistry.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistry.cs:89
+        fileNameWithoutPath: SceneContextRegistry.cs
+        fileNameWithoutPathPlusLineNumber: SceneContextRegistry.cs:89
+        fileNamePretty: SceneContextRegistry
+        instanceID: -1
+        className: SceneContextRegistry
+        methodName: Remove
+        namespaceName: Zenject
+        lineNumberString: 89
+        charNumber: 0
+        stackLabel: SceneContextRegistry.Remove()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistry.cs:89'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistryAdderAndRemover.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistryAdderAndRemover.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistryAdderAndRemover.cs:25
+        fileNameWithoutPath: SceneContextRegistryAdderAndRemover.cs
+        fileNameWithoutPathPlusLineNumber: SceneContextRegistryAdderAndRemover.cs:25
+        fileNamePretty: SceneContextRegistryAdderAndRemover
+        instanceID: -1
+        className: SceneContextRegistryAdderAndRemover
+        methodName: Dispose
+        namespaceName: Zenject
+        lineNumberString: 25
+        charNumber: 0
+        stackLabel: SceneContextRegistryAdderAndRemover.Dispose()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistryAdderAndRemover.cs:25'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Runtime/DisposableManager.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Runtime/DisposableManager.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Runtime/DisposableManager.cs:122
+        fileNameWithoutPath: DisposableManager.cs
+        fileNameWithoutPathPlusLineNumber: DisposableManager.cs:122
+        fileNamePretty: DisposableManager
+        instanceID: -1
+        className: DisposableManager
+        methodName: Dispose
+        namespaceName: Zenject
+        lineNumberString: 122
+        charNumber: 0
+        stackLabel: DisposableManager.Dispose()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Runtime/DisposableManager.cs:122'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs:122
+        fileNameWithoutPath: MonoKernel.cs
+        fileNameWithoutPathPlusLineNumber: MonoKernel.cs:122
+        fileNamePretty: MonoKernel
+        instanceID: -1
+        className: MonoKernel
+        methodName: OnDestroy
+        namespaceName: Zenject
+        lineNumberString: 122
+        charNumber: 0
+        stackLabel: MonoKernel.OnDestroy()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs:122'
+        stackLabel1Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 0
+        stackLabel1Height: 0
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 0
+        stackSourceLineHeight: 0
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      ignoredStackEntries: []
+      lastMatchedCount: 1
+      belongsToFilters:
+      - name: Warning
+        isEnabled: 1
+        collapsed: 1
+        itemGUID: 50babdeb-1b0a-4142-a22d-a71a12197a35
+        filterName: 
+        mainColor: {r: 1, g: 0.84, b: 0.02, a: 0.7}
+        isStandardFilter: 1
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 1
+        useIconTexture: 0
+        filterFormatVersion: 1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list:
+          - name: 
+            isEnabled: 1
+            collapsed: 0
+            itemGUID: 8bcd6552-b5be-484f-9d8c-1523fda11b03
+            searchString: <Any>
+            searchType: 1
+            removeSearchStringFromLog: 0
+            logTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 32a1a2be-6ca7-4bef-a149-50fa8ef12494
+                logType: 2
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 40ac3fc1-5c5d-48c4-a1e9-32d7a84732bb
+                logType: 5
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            columnTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 50090f48-90f3-4e08-b239-9d09572d2194
+                columnType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            sourceCodeList:
+              list: []
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 3
+          iconType2: 1
+          iconText: '!'
+          useIconTextFirstLetter: 0
+          useIconLogColor: 0
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 2}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 7
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGTRIANGLE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+      belongsToStandardFilters:
+      - name: Warning
+        isEnabled: 1
+        collapsed: 1
+        itemGUID: 50babdeb-1b0a-4142-a22d-a71a12197a35
+        filterName: 
+        mainColor: {r: 1, g: 0.84, b: 0.02, a: 0.7}
+        isStandardFilter: 1
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 1
+        useIconTexture: 0
+        filterFormatVersion: 1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list:
+          - name: 
+            isEnabled: 1
+            collapsed: 0
+            itemGUID: 8bcd6552-b5be-484f-9d8c-1523fda11b03
+            searchString: <Any>
+            searchType: 1
+            removeSearchStringFromLog: 0
+            logTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 32a1a2be-6ca7-4bef-a149-50fa8ef12494
+                logType: 2
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 40ac3fc1-5c5d-48c4-a1e9-32d7a84732bb
+                logType: 5
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            columnTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 50090f48-90f3-4e08-b239-9d09572d2194
+                columnType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            sourceCodeList:
+              list: []
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 3
+          iconType2: 1
+          iconText: '!'
+          useIconTextFirstLetter: 0
+          useIconLogColor: 0
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 2}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 7
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGTRIANGLE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+      assignedTempFilter:
+        name: 
+        isEnabled: 1
+        collapsed: 0
+        itemGUID: 
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 0
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: -1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list: []
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -292,14 +5527,14 @@ MonoBehaviour:
   m_MaxSize: {x: 10000, y: 10000}
   m_TitleContent:
     m_Text: Project
-    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -2032128904892744680, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1728
-    y: 252
-    width: 1237.5
-    height: 337
+    x: 0
+    y: 635.2
+    width: 989.4
+    height: 148.20001
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -317,22 +5552,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/CoreDomain/GameDomain/Scripts/States/LobbyGameState
+    - Assets/CoreDomain/Scripts/Services/AssetBundleService
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/CoreDomain/GameDomain/Scripts/States/LobbyGameState
+  - Assets/CoreDomain/Scripts/Services/AssetBundleService
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: /Users/razhollander/Documents/Personal/Galaga
+  m_LastProjectPath: C:\Users\Raz\Documents\PF\Raz\Work\Dev\Unity\Galaga
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 224.14343}
-    m_SelectedIDs: 72300100
-    m_LastClickedID: 77938
-    m_ExpandedIDs: 00000000e4bb0000e6bb0000e8bb0000eabb0000640201009004010046060100e6060100660e01000c140100041a0100461e010078210100c62301001a2501005c2701006a27010042280100462801004e280100f0430100f44301001e4b010000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 1119.8}
+    m_SelectedIDs: f8830000
+    m_LastClickedID: 33784
+    m_ExpandedIDs: 000000004e7c0000d2800000d4800000d680000012810000188100001a8100001c8100001e81000050850000648c00003a8e0000389200006c94000072970000909700001c9d00009a9d000078a1000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -360,7 +5595,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e4bb000000ca9a3bffffff7f
+    m_ExpandedIDs: 000000004e7c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -391,15 +5626,15 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: c6230000cc830000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: EnterLobbyGameStateCommand
-      m_OriginalName: EnterLobbyGameStateCommand
+      m_Name: AssetBundleLoaderService
+      m_OriginalName: AssetBundleLoaderService
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 77944
+      m_UserData: 2302
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -416,7 +5651,7 @@ MonoBehaviour:
     m_GridSize: 16
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
---- !u!114 &13
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -432,14 +5667,14 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Hierarchy
-    m_Image: {fileID: -3734745235275155857, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -9000905672528348964, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1728
-    y: -272
-    width: 306.5
-    height: 503
+    x: 0
+    y: 73.6
+    width: 243.8
+    height: 540.6
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -447,9 +5682,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: fe080000
       m_LastClickedID: 0
-      m_ExpandedIDs: be04feff7e2dfeff0c51fefff662feff7263feff846dfeffb474feff527bfefffa82feff8091feffe697feffd6a2feff76a3feff10a4feffa2a4feff6ea7feffde1effff8a1fffffee24ffffd026ffff683cffff6651ffff748affff9a94ffff583c0100
+      m_ExpandedIDs: dcdeffffc8f5ffff1cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -473,7 +5708,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &14
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -489,14 +5724,14 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Scene
-    m_Image: {fileID: 8634526014445323508, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -131512000283675692, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2035.5
-    y: -272
-    width: 929
-    height: 503
+    x: 244.8
+    y: 73.6
+    width: 743.60004
+    height: 540.6
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -755,7 +5990,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: -3820.9453, y: 804.2301, z: -48.546555}
     speed: 2
-    m_Value: {x: 956.6128, y: 942.82684, z: 2.998052}
+    m_Value: {x: -3820.9453, y: 804.2301, z: -48.546555}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -808,7 +6043,7 @@ MonoBehaviour:
   m_Size:
     m_Target: 4864.6357
     speed: 2
-    m_Value: 995.3371
+    m_Value: 4864.6357
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -833,7 +6068,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &15
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -849,14 +6084,14 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Game
-    m_Image: {fileID: 4621777727084837110, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: 257045534191678443, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2035.5
-    y: -272
-    width: 929
-    height: 503
+    x: 244.8
+    y: 73.6
+    width: 743.60004
+    height: 540.6
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -876,16 +6111,16 @@ MonoBehaviour:
   m_VSyncEnabled: 0
   m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 0c000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 09000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -270
-    m_HBaseRangeMax: 270
-    m_VBaseRangeMin: -480
-    m_VBaseRangeMax: 480
+    m_HBaseRangeMin: -432
+    m_HBaseRangeMax: 432
+    m_VBaseRangeMin: -768
+    m_VBaseRangeMax: 768
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -903,56 +6138,28 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 929
-      height: 482
-    m_Scale: {x: 0.50208336, y: 0.50208336}
-    m_Translation: {x: 464.5, y: 240.99998}
+      width: 743.60004
+      height: 519.6
+    m_Scale: {x: 0.33828124, y: 0.33828124}
+    m_Translation: {x: 371.80005, y: 259.8}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -925.1452
-      y: -479.99994
-      width: 1850.2904
-      height: 959.99994
+      x: -1099.0856
+      y: -768
+      width: 2198.1711
+      height: 1536
     m_MinimalGUI: 1
-  m_defaultScale: 0.50208336
-  m_LastWindowPixelSize: {x: 1858, y: 1006}
+  m_defaultScale: 0.33828124
+  m_LastWindowPixelSize: {x: 929.50006, y: 675.75}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &16
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12003, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Console
-    m_Image: {fileID: -4950941429401207979, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 1728
-    y: 252
-    width: 1237.5
-    height: 337
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -969,14 +6176,14 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Inspector
-    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: 8356117983803934776, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2966.5
-    y: -272
-    width: 680.5
-    height: 861
+    x: 990.4
+    y: 73.6
+    width: 544.6
+    height: 709.8
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default

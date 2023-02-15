@@ -1,4 +1,4 @@
-namespace Services.Logs.Base
+namespace CoreDomain.Services
 {
     public enum LogTagType
     {

@@ -16,11 +16,11 @@ namespace CoreDomain.GameDomain.GameStateDomain.LobbyDomain.Modules.LobbyUi
             _viewModule = new LobbyUiViewModule();
         }
 
-        public void CreateLobbyUi()
+        public void CreateLobbyUi(int levels)
         {
             var lobbyUiView = _creator.CreateLobbyUi();
             lobbyUiView.SetCallbacks(SwitchToQuickGameState);
-            _viewModule.SetupLobbyUiView(lobbyUiView);
+            _viewModule.SetupLobbyUiView(lobbyUiView, levels);
         }
 
         public void DestroyLobbyUi()

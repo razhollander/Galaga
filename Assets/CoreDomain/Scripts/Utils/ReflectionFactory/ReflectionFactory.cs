@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using Services.Logs.Base;
+using CoreDomain.Services;
 
 namespace CoreDomain.Scripts.Utils.ReflectionFactory
 {

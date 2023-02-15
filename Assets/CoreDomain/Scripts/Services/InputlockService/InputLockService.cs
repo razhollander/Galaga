@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using CoreDomain.Scripts.Extensions;
 using CoreDomain.Scripts.Services.InputlockService.Lockables;
-using Services.Logs.Base;
+using CoreDomain.Services;
 
 namespace CoreDomain.Scripts.Services.InputlockService
 {

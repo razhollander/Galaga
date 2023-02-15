@@ -1,6 +1,6 @@
 using System;
 using System.IO;
-using Services.Logs.Base;
+using CoreDomain.Services;
 using UnityEngine;
 
 namespace Services.Logs

@@ -1,19 +1,22 @@
 ManifestFileVersion: 0
-CRC: 2874257967
+CRC: 551310130
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
-      Name: winpopup
+      Name: coredomain/gamedomain/levels
       Dependencies: {}
     Info_1:
-      Name: enemy
-      Dependencies: {}
-    Info_2:
       Name: player
       Dependencies: {}
-    Info_3:
+    Info_2:
       Name: defeatpopup
+      Dependencies: {}
+    Info_3:
+      Name: winpopup
       Dependencies: {}
     Info_4:
       Name: coredomain/gamedomain/gamestatedomain/lobbydomain/lobbyui
+      Dependencies: {}
+    Info_5:
+      Name: enemy
       Dependencies: {}

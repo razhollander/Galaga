@@ -1,6 +1,6 @@
 using System;
 using Handlers.Serializers.Serializer;
-using Services.Logs.Base;
+using CoreDomain.Services;
 using UnityEngine;
 
 namespace CoreDomain.Scripts.Services.DataPersistence

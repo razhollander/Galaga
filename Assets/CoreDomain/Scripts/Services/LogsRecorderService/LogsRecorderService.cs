@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using Core.Services;
-using Services.Logs.Base;
+using CoreDomain.Services;
 using UnityEngine;
 using Application = UnityEngine.Device.Application;
 
