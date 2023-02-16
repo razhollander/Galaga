@@ -6,41 +6,40 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerSpa
     public class PlayerSpaceshipViewModule
     {
         private readonly ICameraService _cameraService;
-        private static readonly Vector2 RelativeToScreenSpaceshipStartPosition = new (0.5f, 0.25f);
+        private static readonly Vector2 RelativeToScreenCenterStartPosition = new (0f, -0.5f);
         private PlayerSpaceshipView _playerSpaceshipView;
-        private readonly Vector2Int _screenBounds;
+        private readonly Vector3 _screenBoundsInWorldSpace;
         private float _playerSpaceFromBounds;
 
         public PlayerSpaceshipViewModule(ICameraService cameraService)
         {
             _cameraService = cameraService;
-            _screenBounds = new Vector2Int(Screen.width, Screen.height);
+            _screenBoundsInWorldSpace = _cameraService.ScreenToWorldPoint(GameCameraType.World, new Vector3(Screen.width, Screen.height, 0));
         }
         
         public void Setup(PlayerSpaceshipView playerSpaceshipView)
         {
             _playerSpaceshipView = playerSpaceshipView;
-            var sc = _screenBounds * RelativeToScreenSpaceshipStartPosition;
-            var scV3 = (Vector3) sc;
-            Debug.Log($"sc: {sc}, scV3: {scV3}");
-            _playerSpaceshipView.transform.position = _cameraService.ScreenToWorldPoint(GameCameraType.World, scV3);
+            _playerSpaceFromBounds = _playerSpaceshipView.PlayerSpriteRenderer.bounds.size.x / 2;
+            
+            var startPosition = _screenBoundsInWorldSpace * RelativeToScreenCenterStartPosition;
+            _playerSpaceshipView.transform.position = startPosition;
         }
         
         public void MoveSpaceship(float direction, float speed)
         {
-            var playerMoveDelta = direction * Time.deltaTime * speed;
-            var playerNewXPos = _playerSpaceshipView.transform.position.x + playerMoveDelta;
+           var playerMoveDelta = direction * Time.deltaTime * speed;
+           var playerNewXPos = _playerSpaceshipView.transform.position.x + playerMoveDelta;
 
-            if (IsInScreenHorizontalBounds(playerNewXPos, _playerSpaceFromBounds))
-            {
-                _playerSpaceshipView.transform.Translate(playerMoveDelta, 0, 0);
-            }
+           if (IsInScreenHorizontalBounds(playerNewXPos, _playerSpaceFromBounds))
+           {
+               _playerSpaceshipView.transform.Translate(playerMoveDelta, 0, 0);
+           }
         }
         
         private bool IsInScreenHorizontalBounds(float xValue, float spaceKeptFromBounds)
         {
-            var wordXPoint = _cameraService.WorldToScreenPoint(GameCameraType.World, new Vector3(xValue,0,0)).x;
-            return wordXPoint > -_screenBounds.x + spaceKeptFromBounds && wordXPoint < _screenBounds.x - spaceKeptFromBounds;
+            return -_screenBoundsInWorldSpace.x + spaceKeptFromBounds < xValue && xValue < _screenBoundsInWorldSpace.x - spaceKeptFromBounds;
         }
     }
 }
