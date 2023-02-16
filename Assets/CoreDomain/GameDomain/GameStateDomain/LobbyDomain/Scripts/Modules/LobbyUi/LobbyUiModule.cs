@@ -7,20 +7,22 @@ namespace CoreDomain.GameDomain.GameStateDomain.LobbyDomain.Modules.LobbyUi
     {
         private readonly IStateMachineService _stateMachineService;
         private readonly LobbyUiCreator _creator;
-        private readonly LobbyUiViewModule _viewModule;
+        private readonly LobbyUiViewModule _viewModule; // raz need this view module?
+        private readonly MainGameState.Factory _mainGameStateFactory;
 
-        public LobbyUiModule(IAssetBundleLoaderService assetBundleLoaderService, IStateMachineService stateMachineService)
+        public LobbyUiModule(IAssetBundleLoaderService assetBundleLoaderService, IStateMachineService stateMachineService, MainGameState.Factory mainGameStateFactory)
         {
             _stateMachineService = stateMachineService;
             _creator = new LobbyUiCreator(assetBundleLoaderService);
             _viewModule = new LobbyUiViewModule();
+            _mainGameStateFactory = mainGameStateFactory;
         }
 
         public void CreateLobbyUi(int levels)
         {
             var lobbyUiView = _creator.CreateLobbyUi();
-            lobbyUiView.SetCallbacks(SwitchToQuickGameState);
-            _viewModule.SetupLobbyUiView(lobbyUiView, levels);
+            lobbyUiView.Setup(SwitchToQuickGameState, levels);
+            _viewModule.SetupLobbyUiView(lobbyUiView);
         }
 
         public void DestroyLobbyUi()
@@ -30,7 +32,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.LobbyDomain.Modules.LobbyUi
 
         private void SwitchToQuickGameState()
         {
-            _stateMachineService.SwitchState(new MainGameState(new MainGameStateEnterData(_viewModule.GetPlayerName())));
+            _stateMachineService.SwitchState(_mainGameStateFactory.Create(new MainGameStateEnterData(_viewModule.GetPlayerName(), _viewModule.GetSelectedLevel())));
         }
     }
 }

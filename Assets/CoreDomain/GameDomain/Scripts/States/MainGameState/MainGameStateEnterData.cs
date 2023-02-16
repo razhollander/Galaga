@@ -1,12 +1,17 @@
+using System;
+
 namespace CoreDomain.Services.GameStates
 {
+    [Serializable]
     public class MainGameStateEnterData : IGameStateEnterData
     {
-        public readonly string PlayerName;
+        public string PlayerName;
+        public int Level;
 
-        public MainGameStateEnterData(string playerName)
+        public MainGameStateEnterData(string playerName, int level)
         {
             PlayerName = playerName;
+            Level = level;
         }
     }
 }

@@ -1,0 +1,38 @@
+ManifestFileVersion: 0
+CRC: 2852374102
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: cc791e144178fddfbeeba46527fede5d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 84052865df12d207b00223e7b860a4e5
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 50
+  Script: {instanceID: 0}
+- Class: 61
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: d4e9a230541dd4e73a9074d9d9de33f0, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/PlayerSpaceship/PlayerSpaceship.prefab
+- Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/PlayerSpaceship/PlayerSpaceshipSprite.png
+Dependencies: []

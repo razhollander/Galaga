@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 551310130
+CRC: 3149378976
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -19,4 +19,10 @@ AssetBundleManifest:
       Dependencies: {}
     Info_5:
       Name: enemy
+      Dependencies: {}
+    Info_6:
+      Name: coredomain/gamedomain/gamestatedomain/maingamedomain/maingameui
+      Dependencies: {}
+    Info_7:
+      Name: coredomain/gamedomain/gamestatedomain/maingamedomain/playerspaceship
       Dependencies: {}

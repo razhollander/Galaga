@@ -1,5 +1,7 @@
+using CoreDomain.GameDomain.GameStateDomain.LobbyDomain;
 using CoreDomain.Scripts.Services.SceneService;
 using Cysharp.Threading.Tasks;
+using UnityEngine;
 using Zenject;
 
 namespace CoreDomain.Services.GameStates
@@ -10,24 +12,27 @@ namespace CoreDomain.Services.GameStates
         private DiContainer _container;
         public override GameStateType GameState => GameStateType.Lobby;
 
-        public LobbyGameState(LobbyGameStateEnterData data = null) : base(data)
+        public LobbyGameState(ISceneLoaderService sceneLoaderService, LobbyGameStateEnterData data = null) : base(data)
         {
+            _sceneLoaderService = sceneLoaderService;
         }
 
         public override async UniTask EnterState()
         {
             await _sceneLoaderService.TryLoadScene(SceneName.Lobby);
+            await StartStateInitiator();
         }
 
         public override async UniTask ExitState()
         {
+            Debug.Log("ExitState Lobby1");
             await _sceneLoaderService.TryUnloadScene(SceneName.Lobby);
+            Debug.Log("ExitState Lobby2");
         }
 
-        [Inject]
-        private void Construct(ISceneLoaderService sceneLoaderService)
+        protected async UniTask StartStateInitiator()
         {
-            _sceneLoaderService = sceneLoaderService;
+            await GameObject.FindObjectOfType<LobbyInitiator>().StartState(EnterData);
         }
 
         public class Factory : PlaceholderFactory<LobbyGameState>

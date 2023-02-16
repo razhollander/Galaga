@@ -2,6 +2,7 @@ using CoreDomain.GameDomain;
 using CoreDomain.GameDomain.GameStateDomain.LobbyDomain.Modules.LobbyUi;
 using CoreDomain.Scripts.Utils.Command;
 using Cysharp.Threading.Tasks;
+using UnityEngine;
 
 namespace CoreDomain.Services.GameStates
 {
@@ -20,6 +21,7 @@ namespace CoreDomain.Services.GameStates
 
         public override async UniTask Execute()
         {
+            Debug.Log("CreateLobby");
             var levelsAmount = _levelsService.GetLevelsAmount();
             _lobbyUiModule.CreateLobbyUi(levelsAmount);
         }

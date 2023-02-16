@@ -9,7 +9,7 @@ public abstract class BaseGameState<T> : IGameState where T: IGameStateEnterData
     {
         EnterData = enterData;
     }
-
+    
     public abstract GameStateType GameState { get; }
     public abstract UniTask EnterState();
     public abstract UniTask ExitState();

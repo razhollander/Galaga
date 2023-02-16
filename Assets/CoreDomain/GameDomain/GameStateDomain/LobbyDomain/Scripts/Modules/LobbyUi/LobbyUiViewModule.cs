@@ -6,15 +6,19 @@ namespace CoreDomain.GameDomain.GameStateDomain.LobbyDomain.Modules.LobbyUi
     {
         private LobbyUiView _lobbyUiView;
 
-        public void SetupLobbyUiView(LobbyUiView lobbyUiView, int levels)
+        public void SetupLobbyUiView(LobbyUiView lobbyUiView)
         {
             _lobbyUiView = lobbyUiView;
-            _lobbyUiView.SetLevelsDropBox(levels);
         }
 
         public string GetPlayerName()
         {
             return _lobbyUiView.PlayerNameText;
+        }
+        
+        public int GetSelectedLevel()
+        {
+            return _lobbyUiView.SelectedLevel;
         }
         
         public void DestroyLobbyUiView()

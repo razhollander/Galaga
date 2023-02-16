@@ -35,7 +35,7 @@ namespace CoreDomain.Services
                 LogService.LogError("Camera not subscribed");
             }
         }
-
+        
         public Vector3 WorldToScreenPoint(GameCameraType type, Vector3 worldPoint)
         {
             if (!_cameras.ContainsKey(type))

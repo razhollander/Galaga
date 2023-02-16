@@ -1,36 +1,40 @@
+using CoreDomain.GameDomain.GameStateDomain.MainGameDomain;
+using CoreDomain.Scripts.Services.SceneService;
 using Cysharp.Threading.Tasks;
+using UnityEngine;
+using Zenject;
 
 namespace CoreDomain.Services.GameStates
 {
      public class MainGameState : BaseGameState<MainGameStateEnterData>
      {
-         //private readonly EnemiesController _enemiesController;
-         //private readonly GameLogicController _gameLogicController;
-         //private readonly IClient _client;
-         //private readonly PlayerController _playerController;
-    
+         private ISceneLoaderService _sceneLoaderService;
+
          public override GameStateType GameState => GameStateType.MainGame;
     
-         public MainGameState(MainGameStateEnterData gameStateEnterData) : base(gameStateEnterData)
+         public MainGameState(ISceneLoaderService sceneLoaderService, MainGameStateEnterData gameStateEnterData) : base(gameStateEnterData)
          {
-             //_client = Client.Client.Instance;
-             //_isFromLastSave = isFromLastSave;
-             //_gameLogicController = new GameLogicController(_client);
-             //_playerController = new PlayerController(_client);
-             //_enemiesController = new EnemiesController(_client);
+             _sceneLoaderService = sceneLoaderService;
          }
-         
+
          public override async UniTask EnterState()
          {
-             //_playerController.Setup();
-             //_enemiesController.Setup();
+             await _sceneLoaderService.TryLoadScene(SceneName.MainGame);
+             await StartStateInitiator();
+         }
+         
+         private async UniTask StartStateInitiator()
+         {
+             await GameObject.FindObjectOfType<MainGameInitiator>().StartState(EnterData);
          }
     
          public override async UniTask ExitState()
          {
-             //_gameLogicController.Dispose();
-             //_playerController.Dispose();
-             //_enemiesController.Dispose();
+             await _sceneLoaderService.TryUnloadScene(SceneName.MainGame);
+         }
+         
+         public class Factory : PlaceholderFactory<MainGameStateEnterData, MainGameState>
+         {
          }
     }
 }

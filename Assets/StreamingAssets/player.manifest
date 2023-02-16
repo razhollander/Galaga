@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 3229440852
+CRC: 2458647370
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: f5035d89f102d984352047ec261ae7f4
+    Hash: 117b1271b779150a3211bee82f234547
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 4a3ecb8c646c926fff2c0b85ed6ff335
+    Hash: 049329124f588ded78aa87ac76a5b1b7
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -23,12 +23,8 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 58
   Script: {instanceID: 0}
-- Class: 61
-  Script: {instanceID: 0}
 - Class: 114
   Script: {fileID: 11500000, guid: 8ecae57dcd391470da88933391e12542, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: d4e9a230541dd4e73a9074d9d9de33f0, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 212
@@ -38,5 +34,4 @@ ClassTypes:
 SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/AssetBundles/MainGameState/PlayerBullet.prefab
-- Assets/AssetBundles/MainGameState/PlayerSpaceship.prefab
 Dependencies: []

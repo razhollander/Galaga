@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Resources/LobbyScene.unity
     guid: bbace8f30b74a476badde1c439af2266
+  - enabled: 1
+    path: Assets/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/Resources/MainGameScene.unity
+    guid: b7263984c262d4c1e8e428b378a6b664
   m_configObjects: {}

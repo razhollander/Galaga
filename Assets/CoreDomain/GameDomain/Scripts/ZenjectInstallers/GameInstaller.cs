@@ -9,8 +9,8 @@ namespace CoreDomain.GameDomain
         public override void InstallBindings()
         {
             LogService.Log("InstallBindings");
-            Container.BindFactory<LobbyGameStateEnterData, EnterLobbyGameStateCommand, EnterLobbyGameStateCommand.Factory>();
             Container.BindFactory<LobbyGameState, LobbyGameState.Factory>();
+            Container.BindFactory<MainGameStateEnterData, MainGameState, MainGameState.Factory>();
             Container.BindInterfacesTo<LevelsService>().AsSingle().NonLazy();
         }
     }
