@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 780.8
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Console Pro
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 77
+  controlID: 19
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 82
+  controlID: 24
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,11 +165,11 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 990.4
-    height: 561.6
+    height: 314.4
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 83
+  controlID: 25
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -188,7 +188,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 244.8
-    height: 561.6
+    height: 314.4
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
@@ -214,7 +214,7 @@ MonoBehaviour:
     x: 244.8
     y: 0
     width: 745.60004
-    height: 561.6
+    height: 314.4
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 15}
@@ -233,23 +233,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsolePro3Window
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 561.6
+    y: 314.4
     width: 990.4
-    height: 169.20001
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 13}
+    height: 416.4
+  m_MinSize: {x: 201, y: 141}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 13}
   - {fileID: 12}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -269,8 +269,8 @@ MonoBehaviour:
     y: 0
     width: 545.6
     height: 730.8
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -297,17 +297,17 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 635.2
+    y: 388
     width: 989.4
-    height: 148.20001
+    height: 395.4
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   logPanelScroll: {x: 0, y: 0}
-  logPanelSelectedIndex: -1
-  logPanelAutoScroll: 1
-  currentFrame: 34463
+  logPanelSelectedIndex: 2
+  logPanelAutoScroll: 0
+  currentFrame: 68810
   logs:
     lastGrabbedIndex: 3
     lastGrabbedCount: 4
@@ -323,8 +323,8 @@ MonoBehaviour:
       listIndex: 0
       nativeIndex: 0
       nativeIdentifier: 0
-      originalLog: '[21:37:42:02] InstallBindings'
-      originalStackTrace: '[21:37:42:02] InstallBindings
+      originalLog: '[20:11:15:21] InstallBindings'
+      originalStackTrace: '[20:11:15:21] InstallBindings
 
         UnityEngine.Debug:Log
         (object)
@@ -367,21 +367,21 @@ MonoBehaviour:
       nativeFileNamePretty: 
       nativeLineNumber: 17
       watchName: 
-      logText: '[21:37:42:02] InstallBindings'
-      logTruncatedText: '[21:37:42:02] InstallBindings'
-      logColumnText: 
+      logText: '[20:11:15:21] InstallBindings'
+      logTruncatedText: '[20:11:15:21] InstallBindings'
+      logColumnText: '[20:11:15:21] InstallBindings'
       fileName: 
       className: 
       namespaceName: 
       lineCount: 1
       hasSourceCode: 0
-      timeStamp: 21:37:42
-      timeFrame: -1
-      timeStampDateTimeNow: 
+      timeStamp: 20:11:16.644
+      timeFrame: 5
+      timeStampDateTimeNow: 20:11:16.644
       instanceID: 0
       collapsedCount: 0
-      cachedHeight: -1
-      cachedHeightLogWidth: 0
+      cachedHeight: 19.2
+      cachedHeightLogWidth: 945.4
       stackEntries:
       - fileName: Assets/CoreDomain/Scripts/Services/Logger/UnityLogger.cs
         fileNameWithoutAssets: CoreDomain/Scripts/Services/Logger/UnityLogger.cs
@@ -1102,8 +1102,8 @@ MonoBehaviour:
       listIndex: 1
       nativeIndex: 1
       nativeIdentifier: 0
-      originalLog: '[21:37:42:40] Install lobby'
-      originalStackTrace: '[21:37:42:40] Install lobby
+      originalLog: '[20:11:16:31] Install lobby'
+      originalStackTrace: '[20:11:16:31] Install lobby
 
         UnityEngine.Debug:Log
         (object)
@@ -1114,7 +1114,7 @@ MonoBehaviour:
         (string) (at Assets/CoreDomain/Scripts/Services/Logger/Base/LogService.cs:17)
 
         CoreDomain.GameDomain.GameStateDomain.LobbyDomain.LobbyInstaller:InstallBindings
-        () (at Assets/CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/ZenjectInstallers/LobbyInstaller.cs:11)
+        () (at Assets/CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/ZenjectInstallers/LobbyInstaller.cs:12)
 
         Zenject.Context:InstallInstallers
         (System.Collections.Generic.List`1<Zenject.InstallerBase>,System.Collections.Generic.List`1<System.Type>,System.Collections.Generic.List`1<Zenject.ScriptableObjectInstaller>,System.Collections.Generic.List`1<Zenject.MonoInstaller>,System.Collections.Generic.List`1<Zenject.MonoInstaller>)
@@ -1146,21 +1146,21 @@ MonoBehaviour:
       nativeFileNamePretty: 
       nativeLineNumber: 17
       watchName: 
-      logText: '[21:37:42:40] Install lobby'
-      logTruncatedText: '[21:37:42:40] Install lobby'
-      logColumnText: 
+      logText: '[20:11:16:31] Install lobby'
+      logTruncatedText: '[20:11:16:31] Install lobby'
+      logColumnText: '[20:11:16:31] Install lobby'
       fileName: 
       className: 
       namespaceName: 
       lineCount: 1
       hasSourceCode: 0
-      timeStamp: 21:37:42
-      timeFrame: -1
-      timeStampDateTimeNow: 
+      timeStamp: 20:11:16.644
+      timeFrame: 5
+      timeStampDateTimeNow: 20:11:16.644
       instanceID: 0
       collapsedCount: 0
-      cachedHeight: -1
-      cachedHeightLogWidth: 0
+      cachedHeight: 19.2
+      cachedHeightLogWidth: 945.4
       stackEntries:
       - fileName: Assets/CoreDomain/Scripts/Services/Logger/UnityLogger.cs
         fileNameWithoutAssets: CoreDomain/Scripts/Services/Logger/UnityLogger.cs
@@ -1224,18 +1224,18 @@ MonoBehaviour:
         showSource: 1
       - fileName: Assets/CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/ZenjectInstallers/LobbyInstaller.cs
         fileNameWithoutAssets: CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/ZenjectInstallers/LobbyInstaller.cs
-        fileNameWithoutAssetsPlusLineNumber: CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/ZenjectInstallers/LobbyInstaller.cs:11
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/ZenjectInstallers/LobbyInstaller.cs:12
         fileNameWithoutPath: LobbyInstaller.cs
-        fileNameWithoutPathPlusLineNumber: LobbyInstaller.cs:11
+        fileNameWithoutPathPlusLineNumber: LobbyInstaller.cs:12
         fileNamePretty: LobbyInstaller
         instanceID: -1
         className: LobbyInstaller
         methodName: InstallBindings
         namespaceName: CoreDomain.GameDomain.GameStateDomain.LobbyDomain
-        lineNumberString: 11
+        lineNumberString: 12
         charNumber: 0
         stackLabel: LobbyInstaller.InstallBindings()
-        stackLabel2: ' at /CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/ZenjectInstallers/LobbyInstaller.cs:11'
+        stackLabel2: ' at /CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/ZenjectInstallers/LobbyInstaller.cs:12'
         stackLabel1Content:
           m_Text: 
           m_Image: {fileID: 0}
@@ -1877,69 +1877,673 @@ MonoBehaviour:
       remoteEndPoint: Local
       logPanelVisible: 1
       logPanelIndex: 2
-      logOutputHeight: -1
+      logOutputHeight: 27
       listIndex: 2
       nativeIndex: 2
       nativeIdentifier: 0
-      originalLog: Destroyed FooMonoBehaviourUnderSceneContext3
-      originalStackTrace: 'Destroyed FooMonoBehaviourUnderSceneContext3
+      originalLog: initiator not null
+      originalStackTrace: 'initiator not null
 
-        UnityEngine.Debug:Log
-        (object)
+        UnityEngine.Debug:Log (object)
 
-        Zenject.Tests.TestDestructionOrder.FooMonoBehaviourUnderSceneContext3:OnDestroy
-        () (at Assets/CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs:9)
+        CoreDomain.GameDomain.GameStateDomain.LobbyDomain.LobbyInitiator:Setup
+        (CoreDomain.Scripts.Utils.Command.CommandOneParameter`2/Factory<CoreDomain.Services.GameStates.LobbyGameStateEnterData,
+        CoreDomain.Services.GameStates.EnterLobbyGameStateCommand>,CoreDomain.Services.GameStates.IStateMachineService,Zenject.DiContainer)
+        (at Assets/CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/LobbyInitiator/LobbyInitiator.cs:27)
+
+        System.Reflection.MethodBase:Invoke
+        (object,object[])
+
+        Zenject.Internal.ReflectionInfoTypeInfoConverter/<>c__DisplayClass0_0:<ConvertMethod>b__0
+        (object,object[]) (at Assets/CoreDomain/Plugins/Zenject/Source/Util/ReflectionInfoTypeInfoConverter.cs:25)
+
+        Zenject.DiContainer:CallInjectMethodsTopDown
+        (object,System.Type,Zenject.InjectTypeInfo,System.Collections.Generic.List`1<Zenject.TypeValuePair>,Zenject.InjectContext,object,bool)
+        (at Assets/CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:1526)
+
+        Zenject.DiContainer:InjectExplicitInternal
+        (object,System.Type,System.Collections.Generic.List`1<Zenject.TypeValuePair>,Zenject.InjectContext,object)
+        (at Assets/CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:1638)
+
+        Zenject.DiContainer:InjectExplicit
+        (object,System.Type,System.Collections.Generic.List`1<Zenject.TypeValuePair>,Zenject.InjectContext,object)
+        (at Assets/CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:1466)
+
+        Zenject.DiContainer:InjectExplicit
+        (object,System.Collections.Generic.List`1<Zenject.TypeValuePair>) (at Assets/CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:1418)
+
+        Zenject.DiContainer:Inject
+        (object,System.Collections.Generic.IEnumerable`1<object>) (at Assets/CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:2402)
+
+        Zenject.DiContainer:Inject
+        (object) (at Assets/CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:2394)
+
+        Zenject.LazyInstanceInjector:LazyInject
+        (object) (at Assets/CoreDomain/Plugins/Zenject/Source/Main/LazyInstanceInjector.cs:47)
+
+        Zenject.LazyInstanceInjector:LazyInjectAll
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Main/LazyInstanceInjector.cs:69)
+
+        Zenject.DiContainer:ResolveRoots
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:341)
+
+        Zenject.SceneContext:Resolve
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:299)
+
+        Zenject.SceneContext:RunInternal
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:141)
+
+        Zenject.RunnableContext:Run
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:36)
+
+        Zenject.RunnableContext:Initialize
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:22)
+
+        Zenject.SceneContext:Awake
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:113)
 
 '
-      nativeFileName: Assets/CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs
+      nativeFileName: Assets/CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/LobbyInitiator/LobbyInitiator.cs
       nativeFileNamePretty: 
-      nativeLineNumber: 9
+      nativeLineNumber: 27
       watchName: 
-      logText: Destroyed FooMonoBehaviourUnderSceneContext3
-      logTruncatedText: Destroyed FooMonoBehaviourUnderSceneContext3
-      logColumnText: 
+      logText: initiator not null
+      logTruncatedText: initiator not null
+      logColumnText: initiator not null
       fileName: 
       className: 
       namespaceName: 
       lineCount: 1
-      hasSourceCode: 0
-      timeStamp: 21:37:42
-      timeFrame: -1
-      timeStampDateTimeNow: 
+      hasSourceCode: 1
+      timeStamp: 20:11:16.644
+      timeFrame: 5
+      timeStampDateTimeNow: 20:11:16.644
       instanceID: 0
       collapsedCount: 0
-      cachedHeight: -1
-      cachedHeightLogWidth: 0
+      cachedHeight: 19.2
+      cachedHeightLogWidth: 945.4
       stackEntries:
-      - fileName: Assets/CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs
-        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs
-        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs:9
-        fileNameWithoutPath: FooMonoBehaviourUnderSceneContext3.cs
-        fileNameWithoutPathPlusLineNumber: FooMonoBehaviourUnderSceneContext3.cs:9
-        fileNamePretty: FooMonoBehaviourUnderSceneContext3
+      - fileName: Assets/CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/LobbyInitiator/LobbyInitiator.cs
+        fileNameWithoutAssets: CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/LobbyInitiator/LobbyInitiator.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/LobbyInitiator/LobbyInitiator.cs:27
+        fileNameWithoutPath: LobbyInitiator.cs
+        fileNameWithoutPathPlusLineNumber: LobbyInitiator.cs:27
+        fileNamePretty: LobbyInitiator
         instanceID: -1
-        className: FooMonoBehaviourUnderSceneContext3
-        methodName: OnDestroy
-        namespaceName: Zenject.Tests.TestDestructionOrder
-        lineNumberString: 9
+        className: LobbyInitiator
+        methodName: Setup
+        namespaceName: CoreDomain.GameDomain.GameStateDomain.LobbyDomain
+        lineNumberString: 27
         charNumber: 0
-        stackLabel: FooMonoBehaviourUnderSceneContext3.OnDestroy()
-        stackLabel2: ' at /CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs:9'
+        stackLabel: LobbyInitiator.Setup()
+        stackLabel2: ' at /CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/LobbyInitiator/LobbyInitiator.cs:27'
         stackLabel1Content:
-          m_Text: 
+          m_Text: LobbyInitiator.Setup()
           m_Image: {fileID: 0}
           m_Tooltip: 
-        stackLabel1Width: 0
-        stackLabel1Height: 0
+        stackLabel1Width: 131.2
+        stackLabel1Height: 25.2
+        stackLabel2Content:
+          m_Text: ' at /CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/LobbyInitiator/LobbyInitiator.cs:27'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 642.4
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
+        sourceCode:
+        - '25:       else'
+        - '26:       {'
+        - '27:           Debug.Log("initiator not null");'
+        - '28:       }'
+        - '29:   }'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: None
+        fileNameWithoutAssets: None
+        fileNameWithoutAssetsPlusLineNumber: None
+        fileNameWithoutPath: None
+        fileNameWithoutPathPlusLineNumber: None
+        fileNamePretty: None
+        instanceID: -1
+        className: MethodBase
+        methodName: Invoke
+        namespaceName: System.Reflection
+        lineNumberString: 0
+        charNumber: 0
+        stackLabel: MethodBase.Invoke()
+        stackLabel2: 
+        stackLabel1Content:
+          m_Text: MethodBase.Invoke()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 127.2
+        stackLabel1Height: 25.2
         stackLabel2Content:
           m_Text: 
           m_Image: {fileID: 0}
           m_Tooltip: 
         stackLabel2Width: 0
-        stackLabel2Height: 0
-        stackSourceLineHeight: 0
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
         sourceCode: []
-        sourceCodeUpdated: 0
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Util/ReflectionInfoTypeInfoConverter.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Util/ReflectionInfoTypeInfoConverter.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Util/ReflectionInfoTypeInfoConverter.cs:25
+        fileNameWithoutPath: ReflectionInfoTypeInfoConverter.cs
+        fileNameWithoutPathPlusLineNumber: ReflectionInfoTypeInfoConverter.cs:25
+        fileNamePretty: ReflectionInfoTypeInfoConverter
+        instanceID: -1
+        className: ReflectionInfoTypeInfoConverter/<>c__DisplayClass0_0
+        methodName: <ConvertMethod>b__0
+        namespaceName: Zenject.Internal
+        lineNumberString: 25
+        charNumber: 0
+        stackLabel: ReflectionInfoTypeInfoConverter/<>c__DisplayClass0_0.<ConvertMethod>b__0()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Util/ReflectionInfoTypeInfoConverter.cs:25'
+        stackLabel1Content:
+          m_Text: ReflectionInfoTypeInfoConverter/<>c__DisplayClass0_0.<ConvertMethod>b__0()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 486.4
+        stackLabel1Height: 25.2
+        stackLabel2Content:
+          m_Text: ' at /CoreDomain/Plugins/Zenject/Source/Util/ReflectionInfoTypeInfoConverter.cs:25'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 500.8
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
+        sourceCode:
+        - '23:   if (action == null)'
+        - '24:   {'
+        - '25:       action = (obj, args) => methodInfo.Invoke(obj, args);'
+        - '26:   }'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:1526
+        fileNameWithoutPath: DiContainer.cs
+        fileNameWithoutPathPlusLineNumber: DiContainer.cs:1526
+        fileNamePretty: DiContainer
+        instanceID: -1
+        className: DiContainer
+        methodName: CallInjectMethodsTopDown
+        namespaceName: Zenject
+        lineNumberString: 1526
+        charNumber: 0
+        stackLabel: DiContainer.CallInjectMethodsTopDown()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:1526'
+        stackLabel1Content:
+          m_Text: DiContainer.CallInjectMethodsTopDown()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 247.2
+        stackLabel1Height: 25.2
+        stackLabel2Content:
+          m_Text: ' at /CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:1526'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 399.2
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
+        sourceCode:
+        - '1524:   #endif'
+        - '1525:                           {'
+        - '1526:                               method.Action(injectable, paramValues);'
+        - '1527:                           }'
+        - '1528:                       }'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:1638
+        fileNameWithoutPath: DiContainer.cs
+        fileNameWithoutPathPlusLineNumber: DiContainer.cs:1638
+        fileNamePretty: DiContainer
+        instanceID: -1
+        className: DiContainer
+        methodName: InjectExplicitInternal
+        namespaceName: Zenject
+        lineNumberString: 1638
+        charNumber: 0
+        stackLabel: DiContainer.InjectExplicitInternal()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:1638'
+        stackLabel1Content:
+          m_Text: DiContainer.InjectExplicitInternal()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 204
+        stackLabel1Height: 25.2
+        stackLabel2Content:
+          m_Text: ' at /CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:1638'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 400
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
+        sourceCode:
+        - '1636:       injectable, injectableType, typeInfo, extraArgs, context,
+          concreteIdentifier, isDryRun);'
+        - '1638:   CallInjectMethodsTopDown('
+        - '1639:       injectable, injectableType, typeInfo, extraArgs, context,
+          concreteIdentifier, isDryRun);'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:1466
+        fileNameWithoutPath: DiContainer.cs
+        fileNameWithoutPathPlusLineNumber: DiContainer.cs:1466
+        fileNamePretty: DiContainer
+        instanceID: -1
+        className: DiContainer
+        methodName: InjectExplicit
+        namespaceName: Zenject
+        lineNumberString: 1466
+        charNumber: 0
+        stackLabel: DiContainer.InjectExplicit()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:1466'
+        stackLabel1Content:
+          m_Text: DiContainer.InjectExplicit()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 159.2
+        stackLabel1Height: 25.2
+        stackLabel2Content:
+          m_Text: ' at /CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:1466'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 400
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
+        sourceCode:
+        - '1464:       else'
+        - '1465:       {'
+        - '1466:           InjectExplicitInternal(injectable, injectableType, extraArgs,
+          context, concreteIdentifier);'
+        - '1467:       }'
+        - '1468:   }'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:1418
+        fileNameWithoutPath: DiContainer.cs
+        fileNameWithoutPathPlusLineNumber: DiContainer.cs:1418
+        fileNamePretty: DiContainer
+        instanceID: -1
+        className: DiContainer
+        methodName: InjectExplicit
+        namespaceName: Zenject
+        lineNumberString: 1418
+        charNumber: 0
+        stackLabel: DiContainer.InjectExplicit()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:1418'
+        stackLabel1Content:
+          m_Text: DiContainer.InjectExplicit()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 159.2
+        stackLabel1Height: 25.2
+        stackLabel2Content:
+          m_Text: ' at /CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:1418'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 398.4
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
+        sourceCode:
+        - '1416:   }'
+        - '1418:   InjectExplicit('
+        - '1419:       injectable,'
+        - '1420:       injectableType,'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:2402
+        fileNameWithoutPath: DiContainer.cs
+        fileNameWithoutPathPlusLineNumber: DiContainer.cs:2402
+        fileNamePretty: DiContainer
+        instanceID: -1
+        className: DiContainer
+        methodName: Inject
+        namespaceName: Zenject
+        lineNumberString: 2402
+        charNumber: 0
+        stackLabel: DiContainer.Inject()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:2402'
+        stackLabel1Content:
+          m_Text: DiContainer.Inject()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 115.2
+        stackLabel1Height: 25.2
+        stackLabel2Content:
+          m_Text: ' at /CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:2402'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 400
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
+        sourceCode:
+        - '2400:   public void Inject(object injectable, IEnumerable<object> extraArgs)'
+        - '2401:   {'
+        - '2402:       InjectExplicit('
+        - '2403:           injectable, InjectUtil.CreateArgList(extraArgs));'
+        - '2404:   }'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:2394
+        fileNameWithoutPath: DiContainer.cs
+        fileNameWithoutPathPlusLineNumber: DiContainer.cs:2394
+        fileNamePretty: DiContainer
+        instanceID: -1
+        className: DiContainer
+        methodName: Inject
+        namespaceName: Zenject
+        lineNumberString: 2394
+        charNumber: 0
+        stackLabel: DiContainer.Inject()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:2394'
+        stackLabel1Content:
+          m_Text: DiContainer.Inject()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 115.2
+        stackLabel1Height: 25.2
+        stackLabel2Content:
+          m_Text: ' at /CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:2394'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 400.8
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
+        sourceCode:
+        - '2392:   public void Inject(object injectable)'
+        - '2393:   {'
+        - '2394:       Inject(injectable, new object[0]);'
+        - '2395:   }'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Main/LazyInstanceInjector.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Main/LazyInstanceInjector.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Main/LazyInstanceInjector.cs:47
+        fileNameWithoutPath: LazyInstanceInjector.cs
+        fileNameWithoutPathPlusLineNumber: LazyInstanceInjector.cs:47
+        fileNamePretty: LazyInstanceInjector
+        instanceID: -1
+        className: LazyInstanceInjector
+        methodName: LazyInject
+        namespaceName: Zenject
+        lineNumberString: 47
+        charNumber: 0
+        stackLabel: LazyInstanceInjector.LazyInject()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Main/LazyInstanceInjector.cs:47'
+        stackLabel1Content:
+          m_Text: LazyInstanceInjector.LazyInject()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 199.2
+        stackLabel1Height: 25.2
+        stackLabel2Content:
+          m_Text: ' at /CoreDomain/Plugins/Zenject/Source/Main/LazyInstanceInjector.cs:47'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 440
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
+        sourceCode:
+        - '45:       if (_instancesToInject.Remove(instance))'
+        - '46:       {'
+        - '47:           _container.Inject(instance);'
+        - '48:       }'
+        - '49:   }'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Main/LazyInstanceInjector.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Main/LazyInstanceInjector.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Main/LazyInstanceInjector.cs:69
+        fileNameWithoutPath: LazyInstanceInjector.cs
+        fileNameWithoutPathPlusLineNumber: LazyInstanceInjector.cs:69
+        fileNamePretty: LazyInstanceInjector
+        instanceID: -1
+        className: LazyInstanceInjector
+        methodName: LazyInjectAll
+        namespaceName: Zenject
+        lineNumberString: 69
+        charNumber: 0
+        stackLabel: LazyInstanceInjector.LazyInjectAll()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Main/LazyInstanceInjector.cs:69'
+        stackLabel1Content:
+          m_Text: LazyInstanceInjector.LazyInjectAll()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 214.4
+        stackLabel1Height: 25.2
+        stackLabel2Content:
+          m_Text: ' at /CoreDomain/Plugins/Zenject/Source/Main/LazyInstanceInjector.cs:69'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 440.8
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
+        sourceCode:
+        - '67:           // Because it might have already been lazily injected'
+        - '68:           // as a result of a previous call to inject'
+        - '69:           LazyInject(instance);'
+        - '70:       }'
+        - '71:   }'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:341
+        fileNameWithoutPath: DiContainer.cs
+        fileNameWithoutPathPlusLineNumber: DiContainer.cs:341
+        fileNamePretty: DiContainer
+        instanceID: -1
+        className: DiContainer
+        methodName: ResolveRoots
+        namespaceName: Zenject
+        lineNumberString: 341
+        charNumber: 0
+        stackLabel: DiContainer.ResolveRoots()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:341'
+        stackLabel1Content:
+          m_Text: DiContainer.ResolveRoots()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 164
+        stackLabel1Height: 25.2
+        stackLabel2Content:
+          m_Text: ' at /CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:341'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 392
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
+        sourceCode:
+        - '339:   #endif'
+        - '341:               _lazyInjector.LazyInjectAll();'
+        - '343:               if (IsValidating)'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:299
+        fileNameWithoutPath: SceneContext.cs
+        fileNameWithoutPathPlusLineNumber: SceneContext.cs:299
+        fileNamePretty: SceneContext
+        instanceID: -1
+        className: SceneContext
+        methodName: Resolve
+        namespaceName: Zenject
+        lineNumberString: 299
+        charNumber: 0
+        stackLabel: SceneContext.Resolve()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:299'
+        stackLabel1Content:
+          m_Text: SceneContext.Resolve()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 144
+        stackLabel1Height: 25.2
+        stackLabel2Content:
+          m_Text: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:299'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 473.6
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
+        sourceCode:
+        - '297:   _hasResolved = true;'
+        - '299:   _container.ResolveRoots();'
+        - '301:   if (PostResolve != null)'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:141
+        fileNameWithoutPath: SceneContext.cs
+        fileNameWithoutPathPlusLineNumber: SceneContext.cs:141
+        fileNamePretty: SceneContext
+        instanceID: -1
+        className: SceneContext
+        methodName: RunInternal
+        namespaceName: Zenject
+        lineNumberString: 141
+        charNumber: 0
+        stackLabel: SceneContext.RunInternal()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:141'
+        stackLabel1Content:
+          m_Text: SceneContext.RunInternal()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 164
+        stackLabel1Height: 25.2
+        stackLabel2Content:
+          m_Text: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:141'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 471.2
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
+        sourceCode:
+        - '139:   #endif'
+        - '140:               {'
+        - '141:                   Resolve();'
+        - '142:               }'
+        - '143:           }'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:36
+        fileNameWithoutPath: RunnableContext.cs
+        fileNameWithoutPathPlusLineNumber: RunnableContext.cs:36
+        fileNamePretty: RunnableContext
+        instanceID: -1
+        className: RunnableContext
+        methodName: Run
+        namespaceName: Zenject
+        lineNumberString: 36
+        charNumber: 0
+        stackLabel: RunnableContext.Run()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:36'
+        stackLabel1Content:
+          m_Text: RunnableContext.Run()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 137.6
+        stackLabel1Height: 25.2
+        stackLabel2Content:
+          m_Text: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:36'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 484.8
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
+        sourceCode:
+        - '34:       "The context already has been initialized!");'
+        - '36:   RunInternal();'
+        - '38:   Initialized = true;'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:22
+        fileNameWithoutPath: RunnableContext.cs
+        fileNameWithoutPathPlusLineNumber: RunnableContext.cs:22
+        fileNamePretty: RunnableContext
+        instanceID: -1
+        className: RunnableContext
+        methodName: Initialize
+        namespaceName: Zenject
+        lineNumberString: 22
+        charNumber: 0
+        stackLabel: RunnableContext.Initialize()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:22'
+        stackLabel1Content:
+          m_Text: RunnableContext.Initialize()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 164.8
+        stackLabel1Height: 25.2
+        stackLabel2Content:
+          m_Text: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:22'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 483.2
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
+        sourceCode:
+        - '20:   if (_staticAutoRun && _autoRun)'
+        - '21:   {'
+        - '22:       Run();'
+        - '23:   }'
+        - '24:   else'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:113
+        fileNameWithoutPath: SceneContext.cs
+        fileNameWithoutPathPlusLineNumber: SceneContext.cs:113
+        fileNamePretty: SceneContext
+        instanceID: -1
+        className: SceneContext
+        methodName: Awake
+        namespaceName: Zenject
+        lineNumberString: 113
+        charNumber: 0
+        stackLabel: SceneContext.Awake()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:113'
+        stackLabel1Content:
+          m_Text: SceneContext.Awake()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 137.6
+        stackLabel1Height: 25.2
+        stackLabel2Content:
+          m_Text: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:113'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 471.2
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
+        sourceCode:
+        - '111:   #endif'
+        - '112:               {'
+        - '113:                   Initialize();'
+        - '114:               }'
+        - '115:           }'
+        sourceCodeUpdated: 1
         showSource: 1
       ignoredStackEntries: []
       lastMatchedCount: 1
@@ -2319,217 +2923,86 @@ MonoBehaviour:
         showInToolbar: 1
         hideLabelInToolbar: 0
         hideWhenNoMatches: 0
-    - logType: 2
+    - logType: 1
       ignore: 0
       processed: 1
       tempFilterProcessed: 1
       remoteEndPoint: Local
       logPanelVisible: 1
       logPanelIndex: 3
-      logOutputHeight: -1
+      logOutputHeight: 27
       listIndex: 3
       nativeIndex: 3
       nativeIdentifier: 0
-      originalLog: Failed to remove SceneContext from SceneContextRegistry
-      originalStackTrace: 'Failed to remove SceneContext from SceneContextRegistry
+      originalLog: Destroyed FooMonoBehaviourUnderSceneContext3
+      originalStackTrace: 'Destroyed FooMonoBehaviourUnderSceneContext3
 
-        UnityEngine.Debug:LogWarning
+        UnityEngine.Debug:Log
         (object)
 
-        ModestTree.Log:Warn (string,object[]) (at Assets/CoreDomain/Plugins/Zenject/Source/Internal/Log.cs:38)
-
-        Zenject.SceneContextRegistry:Remove
-        (Zenject.SceneContext) (at Assets/CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistry.cs:89)
-
-        Zenject.SceneContextRegistryAdderAndRemover:Dispose
-        () (at Assets/CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistryAdderAndRemover.cs:25)
-
-        Zenject.DisposableManager:Dispose
-        () (at Assets/CoreDomain/Plugins/Zenject/Source/Runtime/DisposableManager.cs:122)
-
-        Zenject.MonoKernel:OnDestroy
-        () (at Assets/CoreDomain/Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs:122)
+        Zenject.Tests.TestDestructionOrder.FooMonoBehaviourUnderSceneContext3:OnDestroy
+        () (at Assets/CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs:9)
 
 '
-      nativeFileName: Assets/CoreDomain/Plugins/Zenject/Source/Internal/Log.cs
+      nativeFileName: Assets/CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs
       nativeFileNamePretty: 
-      nativeLineNumber: 38
+      nativeLineNumber: 9
       watchName: 
-      logText: Failed to remove SceneContext from SceneContextRegistry
-      logTruncatedText: Failed to remove SceneContext from SceneContextRegistry
-      logColumnText: 
+      logText: Destroyed FooMonoBehaviourUnderSceneContext3
+      logTruncatedText: Destroyed FooMonoBehaviourUnderSceneContext3
+      logColumnText: Destroyed FooMonoBehaviourUnderSceneContext3
       fileName: 
       className: 
       namespaceName: 
       lineCount: 1
       hasSourceCode: 0
-      timeStamp: 21:37:42
+      timeStamp: 20:11:23
       timeFrame: -1
       timeStampDateTimeNow: 
       instanceID: 0
       collapsedCount: 0
-      cachedHeight: -1
-      cachedHeightLogWidth: 0
+      cachedHeight: 19.2
+      cachedHeightLogWidth: 945.4
       stackEntries:
-      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Internal/Log.cs
-        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Internal/Log.cs
-        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Internal/Log.cs:38
-        fileNameWithoutPath: Log.cs
-        fileNameWithoutPathPlusLineNumber: Log.cs:38
-        fileNamePretty: Log
+      - fileName: Assets/CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs:9
+        fileNameWithoutPath: FooMonoBehaviourUnderSceneContext3.cs
+        fileNameWithoutPathPlusLineNumber: FooMonoBehaviourUnderSceneContext3.cs:9
+        fileNamePretty: FooMonoBehaviourUnderSceneContext3
         instanceID: -1
-        className: Log
-        methodName: Warn
-        namespaceName: ModestTree
-        lineNumberString: 38
-        charNumber: 0
-        stackLabel: Log.Warn()
-        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Internal/Log.cs:38'
-        stackLabel1Content:
-          m_Text: 
-          m_Image: {fileID: 0}
-          m_Tooltip: 
-        stackLabel1Width: 0
-        stackLabel1Height: 0
-        stackLabel2Content:
-          m_Text: 
-          m_Image: {fileID: 0}
-          m_Tooltip: 
-        stackLabel2Width: 0
-        stackLabel2Height: 0
-        stackSourceLineHeight: 0
-        sourceCode: []
-        sourceCodeUpdated: 0
-        showSource: 1
-      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistry.cs
-        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistry.cs
-        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistry.cs:89
-        fileNameWithoutPath: SceneContextRegistry.cs
-        fileNameWithoutPathPlusLineNumber: SceneContextRegistry.cs:89
-        fileNamePretty: SceneContextRegistry
-        instanceID: -1
-        className: SceneContextRegistry
-        methodName: Remove
-        namespaceName: Zenject
-        lineNumberString: 89
-        charNumber: 0
-        stackLabel: SceneContextRegistry.Remove()
-        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistry.cs:89'
-        stackLabel1Content:
-          m_Text: 
-          m_Image: {fileID: 0}
-          m_Tooltip: 
-        stackLabel1Width: 0
-        stackLabel1Height: 0
-        stackLabel2Content:
-          m_Text: 
-          m_Image: {fileID: 0}
-          m_Tooltip: 
-        stackLabel2Width: 0
-        stackLabel2Height: 0
-        stackSourceLineHeight: 0
-        sourceCode: []
-        sourceCodeUpdated: 0
-        showSource: 1
-      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistryAdderAndRemover.cs
-        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistryAdderAndRemover.cs
-        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistryAdderAndRemover.cs:25
-        fileNameWithoutPath: SceneContextRegistryAdderAndRemover.cs
-        fileNameWithoutPathPlusLineNumber: SceneContextRegistryAdderAndRemover.cs:25
-        fileNamePretty: SceneContextRegistryAdderAndRemover
-        instanceID: -1
-        className: SceneContextRegistryAdderAndRemover
-        methodName: Dispose
-        namespaceName: Zenject
-        lineNumberString: 25
-        charNumber: 0
-        stackLabel: SceneContextRegistryAdderAndRemover.Dispose()
-        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistryAdderAndRemover.cs:25'
-        stackLabel1Content:
-          m_Text: 
-          m_Image: {fileID: 0}
-          m_Tooltip: 
-        stackLabel1Width: 0
-        stackLabel1Height: 0
-        stackLabel2Content:
-          m_Text: 
-          m_Image: {fileID: 0}
-          m_Tooltip: 
-        stackLabel2Width: 0
-        stackLabel2Height: 0
-        stackSourceLineHeight: 0
-        sourceCode: []
-        sourceCodeUpdated: 0
-        showSource: 1
-      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Runtime/DisposableManager.cs
-        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Runtime/DisposableManager.cs
-        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Runtime/DisposableManager.cs:122
-        fileNameWithoutPath: DisposableManager.cs
-        fileNameWithoutPathPlusLineNumber: DisposableManager.cs:122
-        fileNamePretty: DisposableManager
-        instanceID: -1
-        className: DisposableManager
-        methodName: Dispose
-        namespaceName: Zenject
-        lineNumberString: 122
-        charNumber: 0
-        stackLabel: DisposableManager.Dispose()
-        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Runtime/DisposableManager.cs:122'
-        stackLabel1Content:
-          m_Text: 
-          m_Image: {fileID: 0}
-          m_Tooltip: 
-        stackLabel1Width: 0
-        stackLabel1Height: 0
-        stackLabel2Content:
-          m_Text: 
-          m_Image: {fileID: 0}
-          m_Tooltip: 
-        stackLabel2Width: 0
-        stackLabel2Height: 0
-        stackSourceLineHeight: 0
-        sourceCode: []
-        sourceCodeUpdated: 0
-        showSource: 1
-      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs
-        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs
-        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs:122
-        fileNameWithoutPath: MonoKernel.cs
-        fileNameWithoutPathPlusLineNumber: MonoKernel.cs:122
-        fileNamePretty: MonoKernel
-        instanceID: -1
-        className: MonoKernel
+        className: FooMonoBehaviourUnderSceneContext3
         methodName: OnDestroy
-        namespaceName: Zenject
-        lineNumberString: 122
+        namespaceName: Zenject.Tests.TestDestructionOrder
+        lineNumberString: 9
         charNumber: 0
-        stackLabel: MonoKernel.OnDestroy()
-        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs:122'
+        stackLabel: FooMonoBehaviourUnderSceneContext3.OnDestroy()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs:9'
         stackLabel1Content:
-          m_Text: 
+          m_Text: FooMonoBehaviourUnderSceneContext3.OnDestroy()
           m_Image: {fileID: 0}
           m_Tooltip: 
-        stackLabel1Width: 0
-        stackLabel1Height: 0
+        stackLabel1Width: 317.6
+        stackLabel1Height: 25.2
         stackLabel2Content:
-          m_Text: 
+          m_Text: ' at /CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs:9'
           m_Image: {fileID: 0}
           m_Tooltip: 
-        stackLabel2Width: 0
-        stackLabel2Height: 0
-        stackSourceLineHeight: 0
+        stackLabel2Width: 877.6
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
         sourceCode: []
         sourceCodeUpdated: 0
         showSource: 1
       ignoredStackEntries: []
       lastMatchedCount: 1
       belongsToFilters:
-      - name: Warning
+      - name: Log
         isEnabled: 1
         collapsed: 1
-        itemGUID: 50babdeb-1b0a-4142-a22d-a71a12197a35
+        itemGUID: 04d924a4-6a02-4bc7-bcbd-d04d4c79aa3b
         filterName: 
-        mainColor: {r: 1, g: 0.84, b: 0.02, a: 0.7}
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
         isStandardFilter: 1
         isTempFilter: 0
         filterOnly: 0
@@ -2546,7 +3019,7 @@ MonoBehaviour:
         collapseIconTexture: 0
         useIconBackground: 1
         useIconSymbol: 0
-        useIconLetter: 1
+        useIconLetter: 0
         useIconTexture: 0
         filterFormatVersion: 1
         iconColorize: 0
@@ -2556,7 +3029,7 @@ MonoBehaviour:
           - name: 
             isEnabled: 1
             collapsed: 0
-            itemGUID: 8bcd6552-b5be-484f-9d8c-1523fda11b03
+            itemGUID: 59fe93aa-9d96-4c8d-b9a8-e6a62d42f739
             searchString: <Any>
             searchType: 1
             removeSearchStringFromLog: 0
@@ -2565,13 +3038,8 @@ MonoBehaviour:
               - name: 
                 isEnabled: 1
                 collapsed: 0
-                itemGUID: 32a1a2be-6ca7-4bef-a149-50fa8ef12494
-                logType: 2
-              - name: 
-                isEnabled: 1
-                collapsed: 0
-                itemGUID: 40ac3fc1-5c5d-48c4-a1e9-32d7a84732bb
-                logType: 5
+                itemGUID: 08291a90-003e-4ad7-a975-d67b2b85bb53
+                logType: 1
               selectionList: 0
               collapsable: 1
               collapsed: 0
@@ -2580,7 +3048,7 @@ MonoBehaviour:
               - name: 
                 isEnabled: 1
                 collapsed: 0
-                itemGUID: 50090f48-90f3-4e08-b239-9d09572d2194
+                itemGUID: 42c1635c-ced9-4b27-89f0-a1828e38da6b
                 columnType: 1
               selectionList: 0
               collapsable: 1
@@ -2598,18 +3066,18 @@ MonoBehaviour:
           isEnabled: 1
           collapsed: 0
           itemGUID: 
-          iconType: 3
+          iconType: 1
           iconType2: 1
-          iconText: '!'
-          useIconTextFirstLetter: 0
-          useIconLogColor: 0
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
           iconColor: {r: 1, g: 1, b: 1, a: 1}
           iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
           iconTextureGUID: 
           useIconShadow: 1
-          iconOffset: {x: 0, y: 2}
+          iconOffset: {x: 0, y: 0}
           iconShadowOffset: {x: 0.5, y: 0.5}
-          iconSize: 7
+          iconSize: 13
         iconSymbol:
           name: 
           isEnabled: 1
@@ -2638,7 +3106,7 @@ MonoBehaviour:
           useIconTextFirstLetter: 1
           useIconLogColor: 1
           iconColor: {r: 1, g: 1, b: 1, a: 1}
-          iconBuiltInID: BACKGROUNDS_ECPBGTRIANGLE
+          iconBuiltInID: BACKGROUNDS_ECPLOGICON
           iconTextureGUID: 
           useIconShadow: 1
           iconOffset: {x: 0, y: 0}
@@ -2665,12 +3133,12 @@ MonoBehaviour:
         hideLabelInToolbar: 0
         hideWhenNoMatches: 0
       belongsToStandardFilters:
-      - name: Warning
+      - name: Log
         isEnabled: 1
         collapsed: 1
-        itemGUID: 50babdeb-1b0a-4142-a22d-a71a12197a35
+        itemGUID: 04d924a4-6a02-4bc7-bcbd-d04d4c79aa3b
         filterName: 
-        mainColor: {r: 1, g: 0.84, b: 0.02, a: 0.7}
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
         isStandardFilter: 1
         isTempFilter: 0
         filterOnly: 0
@@ -2687,7 +3155,7 @@ MonoBehaviour:
         collapseIconTexture: 0
         useIconBackground: 1
         useIconSymbol: 0
-        useIconLetter: 1
+        useIconLetter: 0
         useIconTexture: 0
         filterFormatVersion: 1
         iconColorize: 0
@@ -2697,7 +3165,7 @@ MonoBehaviour:
           - name: 
             isEnabled: 1
             collapsed: 0
-            itemGUID: 8bcd6552-b5be-484f-9d8c-1523fda11b03
+            itemGUID: 59fe93aa-9d96-4c8d-b9a8-e6a62d42f739
             searchString: <Any>
             searchType: 1
             removeSearchStringFromLog: 0
@@ -2706,13 +3174,8 @@ MonoBehaviour:
               - name: 
                 isEnabled: 1
                 collapsed: 0
-                itemGUID: 32a1a2be-6ca7-4bef-a149-50fa8ef12494
-                logType: 2
-              - name: 
-                isEnabled: 1
-                collapsed: 0
-                itemGUID: 40ac3fc1-5c5d-48c4-a1e9-32d7a84732bb
-                logType: 5
+                itemGUID: 08291a90-003e-4ad7-a975-d67b2b85bb53
+                logType: 1
               selectionList: 0
               collapsable: 1
               collapsed: 0
@@ -2721,7 +3184,7 @@ MonoBehaviour:
               - name: 
                 isEnabled: 1
                 collapsed: 0
-                itemGUID: 50090f48-90f3-4e08-b239-9d09572d2194
+                itemGUID: 42c1635c-ced9-4b27-89f0-a1828e38da6b
                 columnType: 1
               selectionList: 0
               collapsable: 1
@@ -2739,18 +3202,18 @@ MonoBehaviour:
           isEnabled: 1
           collapsed: 0
           itemGUID: 
-          iconType: 3
+          iconType: 1
           iconType2: 1
-          iconText: '!'
-          useIconTextFirstLetter: 0
-          useIconLogColor: 0
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
           iconColor: {r: 1, g: 1, b: 1, a: 1}
           iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
           iconTextureGUID: 
           useIconShadow: 1
-          iconOffset: {x: 0, y: 2}
+          iconOffset: {x: 0, y: 0}
           iconShadowOffset: {x: 0.5, y: 0.5}
-          iconSize: 7
+          iconSize: 13
         iconSymbol:
           name: 
           isEnabled: 1
@@ -2779,7 +3242,7 @@ MonoBehaviour:
           useIconTextFirstLetter: 1
           useIconLogColor: 1
           iconColor: {r: 1, g: 1, b: 1, a: 1}
-          iconBuiltInID: BACKGROUNDS_ECPBGTRIANGLE
+          iconBuiltInID: BACKGROUNDS_ECPLOGICON
           iconTextureGUID: 
           useIconShadow: 1
           iconOffset: {x: 0, y: 0}
@@ -2925,8 +3388,8 @@ MonoBehaviour:
       listIndex: 0
       nativeIndex: 0
       nativeIdentifier: 0
-      originalLog: '[21:37:42:02] InstallBindings'
-      originalStackTrace: '[21:37:42:02] InstallBindings
+      originalLog: '[20:11:15:21] InstallBindings'
+      originalStackTrace: '[20:11:15:21] InstallBindings
 
         UnityEngine.Debug:Log
         (object)
@@ -2969,21 +3432,21 @@ MonoBehaviour:
       nativeFileNamePretty: 
       nativeLineNumber: 17
       watchName: 
-      logText: '[21:37:42:02] InstallBindings'
-      logTruncatedText: '[21:37:42:02] InstallBindings'
-      logColumnText: 
+      logText: '[20:11:15:21] InstallBindings'
+      logTruncatedText: '[20:11:15:21] InstallBindings'
+      logColumnText: '[20:11:15:21] InstallBindings'
       fileName: 
       className: 
       namespaceName: 
       lineCount: 1
       hasSourceCode: 0
-      timeStamp: 21:37:42
-      timeFrame: -1
-      timeStampDateTimeNow: 
+      timeStamp: 20:11:16.644
+      timeFrame: 5
+      timeStampDateTimeNow: 20:11:16.644
       instanceID: 0
       collapsedCount: 0
-      cachedHeight: -1
-      cachedHeightLogWidth: 0
+      cachedHeight: 19.2
+      cachedHeightLogWidth: 945.4
       stackEntries:
       - fileName: Assets/CoreDomain/Scripts/Services/Logger/UnityLogger.cs
         fileNameWithoutAssets: CoreDomain/Scripts/Services/Logger/UnityLogger.cs
@@ -3704,8 +4167,8 @@ MonoBehaviour:
       listIndex: 1
       nativeIndex: 1
       nativeIdentifier: 0
-      originalLog: '[21:37:42:40] Install lobby'
-      originalStackTrace: '[21:37:42:40] Install lobby
+      originalLog: '[20:11:16:31] Install lobby'
+      originalStackTrace: '[20:11:16:31] Install lobby
 
         UnityEngine.Debug:Log
         (object)
@@ -3716,7 +4179,7 @@ MonoBehaviour:
         (string) (at Assets/CoreDomain/Scripts/Services/Logger/Base/LogService.cs:17)
 
         CoreDomain.GameDomain.GameStateDomain.LobbyDomain.LobbyInstaller:InstallBindings
-        () (at Assets/CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/ZenjectInstallers/LobbyInstaller.cs:11)
+        () (at Assets/CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/ZenjectInstallers/LobbyInstaller.cs:12)
 
         Zenject.Context:InstallInstallers
         (System.Collections.Generic.List`1<Zenject.InstallerBase>,System.Collections.Generic.List`1<System.Type>,System.Collections.Generic.List`1<Zenject.ScriptableObjectInstaller>,System.Collections.Generic.List`1<Zenject.MonoInstaller>,System.Collections.Generic.List`1<Zenject.MonoInstaller>)
@@ -3748,21 +4211,21 @@ MonoBehaviour:
       nativeFileNamePretty: 
       nativeLineNumber: 17
       watchName: 
-      logText: '[21:37:42:40] Install lobby'
-      logTruncatedText: '[21:37:42:40] Install lobby'
-      logColumnText: 
+      logText: '[20:11:16:31] Install lobby'
+      logTruncatedText: '[20:11:16:31] Install lobby'
+      logColumnText: '[20:11:16:31] Install lobby'
       fileName: 
       className: 
       namespaceName: 
       lineCount: 1
       hasSourceCode: 0
-      timeStamp: 21:37:42
-      timeFrame: -1
-      timeStampDateTimeNow: 
+      timeStamp: 20:11:16.644
+      timeFrame: 5
+      timeStampDateTimeNow: 20:11:16.644
       instanceID: 0
       collapsedCount: 0
-      cachedHeight: -1
-      cachedHeightLogWidth: 0
+      cachedHeight: 19.2
+      cachedHeightLogWidth: 945.4
       stackEntries:
       - fileName: Assets/CoreDomain/Scripts/Services/Logger/UnityLogger.cs
         fileNameWithoutAssets: CoreDomain/Scripts/Services/Logger/UnityLogger.cs
@@ -3826,18 +4289,18 @@ MonoBehaviour:
         showSource: 1
       - fileName: Assets/CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/ZenjectInstallers/LobbyInstaller.cs
         fileNameWithoutAssets: CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/ZenjectInstallers/LobbyInstaller.cs
-        fileNameWithoutAssetsPlusLineNumber: CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/ZenjectInstallers/LobbyInstaller.cs:11
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/ZenjectInstallers/LobbyInstaller.cs:12
         fileNameWithoutPath: LobbyInstaller.cs
-        fileNameWithoutPathPlusLineNumber: LobbyInstaller.cs:11
+        fileNameWithoutPathPlusLineNumber: LobbyInstaller.cs:12
         fileNamePretty: LobbyInstaller
         instanceID: -1
         className: LobbyInstaller
         methodName: InstallBindings
         namespaceName: CoreDomain.GameDomain.GameStateDomain.LobbyDomain
-        lineNumberString: 11
+        lineNumberString: 12
         charNumber: 0
         stackLabel: LobbyInstaller.InstallBindings()
-        stackLabel2: ' at /CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/ZenjectInstallers/LobbyInstaller.cs:11'
+        stackLabel2: ' at /CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/ZenjectInstallers/LobbyInstaller.cs:12'
         stackLabel1Content:
           m_Text: 
           m_Image: {fileID: 0}
@@ -4479,69 +4942,673 @@ MonoBehaviour:
       remoteEndPoint: Local
       logPanelVisible: 1
       logPanelIndex: 2
-      logOutputHeight: -1
+      logOutputHeight: 27
       listIndex: 2
       nativeIndex: 2
       nativeIdentifier: 0
-      originalLog: Destroyed FooMonoBehaviourUnderSceneContext3
-      originalStackTrace: 'Destroyed FooMonoBehaviourUnderSceneContext3
+      originalLog: initiator not null
+      originalStackTrace: 'initiator not null
 
-        UnityEngine.Debug:Log
-        (object)
+        UnityEngine.Debug:Log (object)
 
-        Zenject.Tests.TestDestructionOrder.FooMonoBehaviourUnderSceneContext3:OnDestroy
-        () (at Assets/CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs:9)
+        CoreDomain.GameDomain.GameStateDomain.LobbyDomain.LobbyInitiator:Setup
+        (CoreDomain.Scripts.Utils.Command.CommandOneParameter`2/Factory<CoreDomain.Services.GameStates.LobbyGameStateEnterData,
+        CoreDomain.Services.GameStates.EnterLobbyGameStateCommand>,CoreDomain.Services.GameStates.IStateMachineService,Zenject.DiContainer)
+        (at Assets/CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/LobbyInitiator/LobbyInitiator.cs:27)
+
+        System.Reflection.MethodBase:Invoke
+        (object,object[])
+
+        Zenject.Internal.ReflectionInfoTypeInfoConverter/<>c__DisplayClass0_0:<ConvertMethod>b__0
+        (object,object[]) (at Assets/CoreDomain/Plugins/Zenject/Source/Util/ReflectionInfoTypeInfoConverter.cs:25)
+
+        Zenject.DiContainer:CallInjectMethodsTopDown
+        (object,System.Type,Zenject.InjectTypeInfo,System.Collections.Generic.List`1<Zenject.TypeValuePair>,Zenject.InjectContext,object,bool)
+        (at Assets/CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:1526)
+
+        Zenject.DiContainer:InjectExplicitInternal
+        (object,System.Type,System.Collections.Generic.List`1<Zenject.TypeValuePair>,Zenject.InjectContext,object)
+        (at Assets/CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:1638)
+
+        Zenject.DiContainer:InjectExplicit
+        (object,System.Type,System.Collections.Generic.List`1<Zenject.TypeValuePair>,Zenject.InjectContext,object)
+        (at Assets/CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:1466)
+
+        Zenject.DiContainer:InjectExplicit
+        (object,System.Collections.Generic.List`1<Zenject.TypeValuePair>) (at Assets/CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:1418)
+
+        Zenject.DiContainer:Inject
+        (object,System.Collections.Generic.IEnumerable`1<object>) (at Assets/CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:2402)
+
+        Zenject.DiContainer:Inject
+        (object) (at Assets/CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:2394)
+
+        Zenject.LazyInstanceInjector:LazyInject
+        (object) (at Assets/CoreDomain/Plugins/Zenject/Source/Main/LazyInstanceInjector.cs:47)
+
+        Zenject.LazyInstanceInjector:LazyInjectAll
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Main/LazyInstanceInjector.cs:69)
+
+        Zenject.DiContainer:ResolveRoots
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:341)
+
+        Zenject.SceneContext:Resolve
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:299)
+
+        Zenject.SceneContext:RunInternal
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:141)
+
+        Zenject.RunnableContext:Run
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:36)
+
+        Zenject.RunnableContext:Initialize
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:22)
+
+        Zenject.SceneContext:Awake
+        () (at Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:113)
 
 '
-      nativeFileName: Assets/CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs
+      nativeFileName: Assets/CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/LobbyInitiator/LobbyInitiator.cs
       nativeFileNamePretty: 
-      nativeLineNumber: 9
+      nativeLineNumber: 27
       watchName: 
-      logText: Destroyed FooMonoBehaviourUnderSceneContext3
-      logTruncatedText: Destroyed FooMonoBehaviourUnderSceneContext3
-      logColumnText: 
+      logText: initiator not null
+      logTruncatedText: initiator not null
+      logColumnText: initiator not null
       fileName: 
       className: 
       namespaceName: 
       lineCount: 1
-      hasSourceCode: 0
-      timeStamp: 21:37:42
-      timeFrame: -1
-      timeStampDateTimeNow: 
+      hasSourceCode: 1
+      timeStamp: 20:11:16.644
+      timeFrame: 5
+      timeStampDateTimeNow: 20:11:16.644
       instanceID: 0
       collapsedCount: 0
-      cachedHeight: -1
-      cachedHeightLogWidth: 0
+      cachedHeight: 19.2
+      cachedHeightLogWidth: 945.4
       stackEntries:
-      - fileName: Assets/CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs
-        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs
-        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs:9
-        fileNameWithoutPath: FooMonoBehaviourUnderSceneContext3.cs
-        fileNameWithoutPathPlusLineNumber: FooMonoBehaviourUnderSceneContext3.cs:9
-        fileNamePretty: FooMonoBehaviourUnderSceneContext3
+      - fileName: Assets/CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/LobbyInitiator/LobbyInitiator.cs
+        fileNameWithoutAssets: CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/LobbyInitiator/LobbyInitiator.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/LobbyInitiator/LobbyInitiator.cs:27
+        fileNameWithoutPath: LobbyInitiator.cs
+        fileNameWithoutPathPlusLineNumber: LobbyInitiator.cs:27
+        fileNamePretty: LobbyInitiator
         instanceID: -1
-        className: FooMonoBehaviourUnderSceneContext3
-        methodName: OnDestroy
-        namespaceName: Zenject.Tests.TestDestructionOrder
-        lineNumberString: 9
+        className: LobbyInitiator
+        methodName: Setup
+        namespaceName: CoreDomain.GameDomain.GameStateDomain.LobbyDomain
+        lineNumberString: 27
         charNumber: 0
-        stackLabel: FooMonoBehaviourUnderSceneContext3.OnDestroy()
-        stackLabel2: ' at /CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs:9'
+        stackLabel: LobbyInitiator.Setup()
+        stackLabel2: ' at /CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/LobbyInitiator/LobbyInitiator.cs:27'
         stackLabel1Content:
-          m_Text: 
+          m_Text: LobbyInitiator.Setup()
           m_Image: {fileID: 0}
           m_Tooltip: 
-        stackLabel1Width: 0
-        stackLabel1Height: 0
+        stackLabel1Width: 131.2
+        stackLabel1Height: 25.2
+        stackLabel2Content:
+          m_Text: ' at /CoreDomain/GameDomain/GameStateDomain/LobbyDomain/Scripts/LobbyInitiator/LobbyInitiator.cs:27'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 642.4
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
+        sourceCode:
+        - '25:       else'
+        - '26:       {'
+        - '27:           Debug.Log("initiator not null");'
+        - '28:       }'
+        - '29:   }'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: None
+        fileNameWithoutAssets: None
+        fileNameWithoutAssetsPlusLineNumber: None
+        fileNameWithoutPath: None
+        fileNameWithoutPathPlusLineNumber: None
+        fileNamePretty: None
+        instanceID: -1
+        className: MethodBase
+        methodName: Invoke
+        namespaceName: System.Reflection
+        lineNumberString: 0
+        charNumber: 0
+        stackLabel: MethodBase.Invoke()
+        stackLabel2: 
+        stackLabel1Content:
+          m_Text: MethodBase.Invoke()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 127.2
+        stackLabel1Height: 25.2
         stackLabel2Content:
           m_Text: 
           m_Image: {fileID: 0}
           m_Tooltip: 
         stackLabel2Width: 0
-        stackLabel2Height: 0
-        stackSourceLineHeight: 0
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
         sourceCode: []
-        sourceCodeUpdated: 0
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Util/ReflectionInfoTypeInfoConverter.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Util/ReflectionInfoTypeInfoConverter.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Util/ReflectionInfoTypeInfoConverter.cs:25
+        fileNameWithoutPath: ReflectionInfoTypeInfoConverter.cs
+        fileNameWithoutPathPlusLineNumber: ReflectionInfoTypeInfoConverter.cs:25
+        fileNamePretty: ReflectionInfoTypeInfoConverter
+        instanceID: -1
+        className: ReflectionInfoTypeInfoConverter/<>c__DisplayClass0_0
+        methodName: <ConvertMethod>b__0
+        namespaceName: Zenject.Internal
+        lineNumberString: 25
+        charNumber: 0
+        stackLabel: ReflectionInfoTypeInfoConverter/<>c__DisplayClass0_0.<ConvertMethod>b__0()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Util/ReflectionInfoTypeInfoConverter.cs:25'
+        stackLabel1Content:
+          m_Text: ReflectionInfoTypeInfoConverter/<>c__DisplayClass0_0.<ConvertMethod>b__0()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 486.4
+        stackLabel1Height: 25.2
+        stackLabel2Content:
+          m_Text: ' at /CoreDomain/Plugins/Zenject/Source/Util/ReflectionInfoTypeInfoConverter.cs:25'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 500.8
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
+        sourceCode:
+        - '23:   if (action == null)'
+        - '24:   {'
+        - '25:       action = (obj, args) => methodInfo.Invoke(obj, args);'
+        - '26:   }'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:1526
+        fileNameWithoutPath: DiContainer.cs
+        fileNameWithoutPathPlusLineNumber: DiContainer.cs:1526
+        fileNamePretty: DiContainer
+        instanceID: -1
+        className: DiContainer
+        methodName: CallInjectMethodsTopDown
+        namespaceName: Zenject
+        lineNumberString: 1526
+        charNumber: 0
+        stackLabel: DiContainer.CallInjectMethodsTopDown()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:1526'
+        stackLabel1Content:
+          m_Text: DiContainer.CallInjectMethodsTopDown()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 247.2
+        stackLabel1Height: 25.2
+        stackLabel2Content:
+          m_Text: ' at /CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:1526'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 399.2
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
+        sourceCode:
+        - '1524:   #endif'
+        - '1525:                           {'
+        - '1526:                               method.Action(injectable, paramValues);'
+        - '1527:                           }'
+        - '1528:                       }'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:1638
+        fileNameWithoutPath: DiContainer.cs
+        fileNameWithoutPathPlusLineNumber: DiContainer.cs:1638
+        fileNamePretty: DiContainer
+        instanceID: -1
+        className: DiContainer
+        methodName: InjectExplicitInternal
+        namespaceName: Zenject
+        lineNumberString: 1638
+        charNumber: 0
+        stackLabel: DiContainer.InjectExplicitInternal()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:1638'
+        stackLabel1Content:
+          m_Text: DiContainer.InjectExplicitInternal()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 204
+        stackLabel1Height: 25.2
+        stackLabel2Content:
+          m_Text: ' at /CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:1638'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 400
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
+        sourceCode:
+        - '1636:       injectable, injectableType, typeInfo, extraArgs, context,
+          concreteIdentifier, isDryRun);'
+        - '1638:   CallInjectMethodsTopDown('
+        - '1639:       injectable, injectableType, typeInfo, extraArgs, context,
+          concreteIdentifier, isDryRun);'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:1466
+        fileNameWithoutPath: DiContainer.cs
+        fileNameWithoutPathPlusLineNumber: DiContainer.cs:1466
+        fileNamePretty: DiContainer
+        instanceID: -1
+        className: DiContainer
+        methodName: InjectExplicit
+        namespaceName: Zenject
+        lineNumberString: 1466
+        charNumber: 0
+        stackLabel: DiContainer.InjectExplicit()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:1466'
+        stackLabel1Content:
+          m_Text: DiContainer.InjectExplicit()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 159.2
+        stackLabel1Height: 25.2
+        stackLabel2Content:
+          m_Text: ' at /CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:1466'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 400
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
+        sourceCode:
+        - '1464:       else'
+        - '1465:       {'
+        - '1466:           InjectExplicitInternal(injectable, injectableType, extraArgs,
+          context, concreteIdentifier);'
+        - '1467:       }'
+        - '1468:   }'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:1418
+        fileNameWithoutPath: DiContainer.cs
+        fileNameWithoutPathPlusLineNumber: DiContainer.cs:1418
+        fileNamePretty: DiContainer
+        instanceID: -1
+        className: DiContainer
+        methodName: InjectExplicit
+        namespaceName: Zenject
+        lineNumberString: 1418
+        charNumber: 0
+        stackLabel: DiContainer.InjectExplicit()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:1418'
+        stackLabel1Content:
+          m_Text: DiContainer.InjectExplicit()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 159.2
+        stackLabel1Height: 25.2
+        stackLabel2Content:
+          m_Text: ' at /CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:1418'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 398.4
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
+        sourceCode:
+        - '1416:   }'
+        - '1418:   InjectExplicit('
+        - '1419:       injectable,'
+        - '1420:       injectableType,'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:2402
+        fileNameWithoutPath: DiContainer.cs
+        fileNameWithoutPathPlusLineNumber: DiContainer.cs:2402
+        fileNamePretty: DiContainer
+        instanceID: -1
+        className: DiContainer
+        methodName: Inject
+        namespaceName: Zenject
+        lineNumberString: 2402
+        charNumber: 0
+        stackLabel: DiContainer.Inject()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:2402'
+        stackLabel1Content:
+          m_Text: DiContainer.Inject()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 115.2
+        stackLabel1Height: 25.2
+        stackLabel2Content:
+          m_Text: ' at /CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:2402'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 400
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
+        sourceCode:
+        - '2400:   public void Inject(object injectable, IEnumerable<object> extraArgs)'
+        - '2401:   {'
+        - '2402:       InjectExplicit('
+        - '2403:           injectable, InjectUtil.CreateArgList(extraArgs));'
+        - '2404:   }'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:2394
+        fileNameWithoutPath: DiContainer.cs
+        fileNameWithoutPathPlusLineNumber: DiContainer.cs:2394
+        fileNamePretty: DiContainer
+        instanceID: -1
+        className: DiContainer
+        methodName: Inject
+        namespaceName: Zenject
+        lineNumberString: 2394
+        charNumber: 0
+        stackLabel: DiContainer.Inject()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:2394'
+        stackLabel1Content:
+          m_Text: DiContainer.Inject()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 115.2
+        stackLabel1Height: 25.2
+        stackLabel2Content:
+          m_Text: ' at /CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:2394'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 400.8
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
+        sourceCode:
+        - '2392:   public void Inject(object injectable)'
+        - '2393:   {'
+        - '2394:       Inject(injectable, new object[0]);'
+        - '2395:   }'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Main/LazyInstanceInjector.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Main/LazyInstanceInjector.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Main/LazyInstanceInjector.cs:47
+        fileNameWithoutPath: LazyInstanceInjector.cs
+        fileNameWithoutPathPlusLineNumber: LazyInstanceInjector.cs:47
+        fileNamePretty: LazyInstanceInjector
+        instanceID: -1
+        className: LazyInstanceInjector
+        methodName: LazyInject
+        namespaceName: Zenject
+        lineNumberString: 47
+        charNumber: 0
+        stackLabel: LazyInstanceInjector.LazyInject()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Main/LazyInstanceInjector.cs:47'
+        stackLabel1Content:
+          m_Text: LazyInstanceInjector.LazyInject()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 199.2
+        stackLabel1Height: 25.2
+        stackLabel2Content:
+          m_Text: ' at /CoreDomain/Plugins/Zenject/Source/Main/LazyInstanceInjector.cs:47'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 440
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
+        sourceCode:
+        - '45:       if (_instancesToInject.Remove(instance))'
+        - '46:       {'
+        - '47:           _container.Inject(instance);'
+        - '48:       }'
+        - '49:   }'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Main/LazyInstanceInjector.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Main/LazyInstanceInjector.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Main/LazyInstanceInjector.cs:69
+        fileNameWithoutPath: LazyInstanceInjector.cs
+        fileNameWithoutPathPlusLineNumber: LazyInstanceInjector.cs:69
+        fileNamePretty: LazyInstanceInjector
+        instanceID: -1
+        className: LazyInstanceInjector
+        methodName: LazyInjectAll
+        namespaceName: Zenject
+        lineNumberString: 69
+        charNumber: 0
+        stackLabel: LazyInstanceInjector.LazyInjectAll()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Main/LazyInstanceInjector.cs:69'
+        stackLabel1Content:
+          m_Text: LazyInstanceInjector.LazyInjectAll()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 214.4
+        stackLabel1Height: 25.2
+        stackLabel2Content:
+          m_Text: ' at /CoreDomain/Plugins/Zenject/Source/Main/LazyInstanceInjector.cs:69'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 440.8
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
+        sourceCode:
+        - '67:           // Because it might have already been lazily injected'
+        - '68:           // as a result of a previous call to inject'
+        - '69:           LazyInject(instance);'
+        - '70:       }'
+        - '71:   }'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:341
+        fileNameWithoutPath: DiContainer.cs
+        fileNameWithoutPathPlusLineNumber: DiContainer.cs:341
+        fileNamePretty: DiContainer
+        instanceID: -1
+        className: DiContainer
+        methodName: ResolveRoots
+        namespaceName: Zenject
+        lineNumberString: 341
+        charNumber: 0
+        stackLabel: DiContainer.ResolveRoots()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:341'
+        stackLabel1Content:
+          m_Text: DiContainer.ResolveRoots()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 164
+        stackLabel1Height: 25.2
+        stackLabel2Content:
+          m_Text: ' at /CoreDomain/Plugins/Zenject/Source/Main/DiContainer.cs:341'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 392
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
+        sourceCode:
+        - '339:   #endif'
+        - '341:               _lazyInjector.LazyInjectAll();'
+        - '343:               if (IsValidating)'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:299
+        fileNameWithoutPath: SceneContext.cs
+        fileNameWithoutPathPlusLineNumber: SceneContext.cs:299
+        fileNamePretty: SceneContext
+        instanceID: -1
+        className: SceneContext
+        methodName: Resolve
+        namespaceName: Zenject
+        lineNumberString: 299
+        charNumber: 0
+        stackLabel: SceneContext.Resolve()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:299'
+        stackLabel1Content:
+          m_Text: SceneContext.Resolve()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 144
+        stackLabel1Height: 25.2
+        stackLabel2Content:
+          m_Text: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:299'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 473.6
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
+        sourceCode:
+        - '297:   _hasResolved = true;'
+        - '299:   _container.ResolveRoots();'
+        - '301:   if (PostResolve != null)'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:141
+        fileNameWithoutPath: SceneContext.cs
+        fileNameWithoutPathPlusLineNumber: SceneContext.cs:141
+        fileNamePretty: SceneContext
+        instanceID: -1
+        className: SceneContext
+        methodName: RunInternal
+        namespaceName: Zenject
+        lineNumberString: 141
+        charNumber: 0
+        stackLabel: SceneContext.RunInternal()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:141'
+        stackLabel1Content:
+          m_Text: SceneContext.RunInternal()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 164
+        stackLabel1Height: 25.2
+        stackLabel2Content:
+          m_Text: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:141'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 471.2
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
+        sourceCode:
+        - '139:   #endif'
+        - '140:               {'
+        - '141:                   Resolve();'
+        - '142:               }'
+        - '143:           }'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:36
+        fileNameWithoutPath: RunnableContext.cs
+        fileNameWithoutPathPlusLineNumber: RunnableContext.cs:36
+        fileNamePretty: RunnableContext
+        instanceID: -1
+        className: RunnableContext
+        methodName: Run
+        namespaceName: Zenject
+        lineNumberString: 36
+        charNumber: 0
+        stackLabel: RunnableContext.Run()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:36'
+        stackLabel1Content:
+          m_Text: RunnableContext.Run()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 137.6
+        stackLabel1Height: 25.2
+        stackLabel2Content:
+          m_Text: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:36'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 484.8
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
+        sourceCode:
+        - '34:       "The context already has been initialized!");'
+        - '36:   RunInternal();'
+        - '38:   Initialized = true;'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:22
+        fileNameWithoutPath: RunnableContext.cs
+        fileNameWithoutPathPlusLineNumber: RunnableContext.cs:22
+        fileNamePretty: RunnableContext
+        instanceID: -1
+        className: RunnableContext
+        methodName: Initialize
+        namespaceName: Zenject
+        lineNumberString: 22
+        charNumber: 0
+        stackLabel: RunnableContext.Initialize()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:22'
+        stackLabel1Content:
+          m_Text: RunnableContext.Initialize()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 164.8
+        stackLabel1Height: 25.2
+        stackLabel2Content:
+          m_Text: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/RunnableContext.cs:22'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 483.2
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
+        sourceCode:
+        - '20:   if (_staticAutoRun && _autoRun)'
+        - '21:   {'
+        - '22:       Run();'
+        - '23:   }'
+        - '24:   else'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:113
+        fileNameWithoutPath: SceneContext.cs
+        fileNameWithoutPathPlusLineNumber: SceneContext.cs:113
+        fileNamePretty: SceneContext
+        instanceID: -1
+        className: SceneContext
+        methodName: Awake
+        namespaceName: Zenject
+        lineNumberString: 113
+        charNumber: 0
+        stackLabel: SceneContext.Awake()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:113'
+        stackLabel1Content:
+          m_Text: SceneContext.Awake()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 137.6
+        stackLabel1Height: 25.2
+        stackLabel2Content:
+          m_Text: ' at /CoreDomain/Plugins/Zenject/Source/Install/Contexts/SceneContext.cs:113'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 471.2
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
+        sourceCode:
+        - '111:   #endif'
+        - '112:               {'
+        - '113:                   Initialize();'
+        - '114:               }'
+        - '115:           }'
+        sourceCodeUpdated: 1
         showSource: 1
       ignoredStackEntries: []
       lastMatchedCount: 1
@@ -4921,217 +5988,86 @@ MonoBehaviour:
         showInToolbar: 1
         hideLabelInToolbar: 0
         hideWhenNoMatches: 0
-    - logType: 2
+    - logType: 1
       ignore: 0
       processed: 1
       tempFilterProcessed: 1
       remoteEndPoint: Local
       logPanelVisible: 1
       logPanelIndex: 3
-      logOutputHeight: -1
+      logOutputHeight: 27
       listIndex: 3
       nativeIndex: 3
       nativeIdentifier: 0
-      originalLog: Failed to remove SceneContext from SceneContextRegistry
-      originalStackTrace: 'Failed to remove SceneContext from SceneContextRegistry
+      originalLog: Destroyed FooMonoBehaviourUnderSceneContext3
+      originalStackTrace: 'Destroyed FooMonoBehaviourUnderSceneContext3
 
-        UnityEngine.Debug:LogWarning
+        UnityEngine.Debug:Log
         (object)
 
-        ModestTree.Log:Warn (string,object[]) (at Assets/CoreDomain/Plugins/Zenject/Source/Internal/Log.cs:38)
-
-        Zenject.SceneContextRegistry:Remove
-        (Zenject.SceneContext) (at Assets/CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistry.cs:89)
-
-        Zenject.SceneContextRegistryAdderAndRemover:Dispose
-        () (at Assets/CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistryAdderAndRemover.cs:25)
-
-        Zenject.DisposableManager:Dispose
-        () (at Assets/CoreDomain/Plugins/Zenject/Source/Runtime/DisposableManager.cs:122)
-
-        Zenject.MonoKernel:OnDestroy
-        () (at Assets/CoreDomain/Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs:122)
+        Zenject.Tests.TestDestructionOrder.FooMonoBehaviourUnderSceneContext3:OnDestroy
+        () (at Assets/CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs:9)
 
 '
-      nativeFileName: Assets/CoreDomain/Plugins/Zenject/Source/Internal/Log.cs
+      nativeFileName: Assets/CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs
       nativeFileNamePretty: 
-      nativeLineNumber: 38
+      nativeLineNumber: 9
       watchName: 
-      logText: Failed to remove SceneContext from SceneContextRegistry
-      logTruncatedText: Failed to remove SceneContext from SceneContextRegistry
-      logColumnText: 
+      logText: Destroyed FooMonoBehaviourUnderSceneContext3
+      logTruncatedText: Destroyed FooMonoBehaviourUnderSceneContext3
+      logColumnText: Destroyed FooMonoBehaviourUnderSceneContext3
       fileName: 
       className: 
       namespaceName: 
       lineCount: 1
       hasSourceCode: 0
-      timeStamp: 21:37:42
+      timeStamp: 20:11:23
       timeFrame: -1
       timeStampDateTimeNow: 
       instanceID: 0
       collapsedCount: 0
-      cachedHeight: -1
-      cachedHeightLogWidth: 0
+      cachedHeight: 19.2
+      cachedHeightLogWidth: 945.4
       stackEntries:
-      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Internal/Log.cs
-        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Internal/Log.cs
-        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Internal/Log.cs:38
-        fileNameWithoutPath: Log.cs
-        fileNameWithoutPathPlusLineNumber: Log.cs:38
-        fileNamePretty: Log
+      - fileName: Assets/CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs
+        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs
+        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs:9
+        fileNameWithoutPath: FooMonoBehaviourUnderSceneContext3.cs
+        fileNameWithoutPathPlusLineNumber: FooMonoBehaviourUnderSceneContext3.cs:9
+        fileNamePretty: FooMonoBehaviourUnderSceneContext3
         instanceID: -1
-        className: Log
-        methodName: Warn
-        namespaceName: ModestTree
-        lineNumberString: 38
-        charNumber: 0
-        stackLabel: Log.Warn()
-        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Internal/Log.cs:38'
-        stackLabel1Content:
-          m_Text: 
-          m_Image: {fileID: 0}
-          m_Tooltip: 
-        stackLabel1Width: 0
-        stackLabel1Height: 0
-        stackLabel2Content:
-          m_Text: 
-          m_Image: {fileID: 0}
-          m_Tooltip: 
-        stackLabel2Width: 0
-        stackLabel2Height: 0
-        stackSourceLineHeight: 0
-        sourceCode: []
-        sourceCodeUpdated: 0
-        showSource: 1
-      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistry.cs
-        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistry.cs
-        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistry.cs:89
-        fileNameWithoutPath: SceneContextRegistry.cs
-        fileNameWithoutPathPlusLineNumber: SceneContextRegistry.cs:89
-        fileNamePretty: SceneContextRegistry
-        instanceID: -1
-        className: SceneContextRegistry
-        methodName: Remove
-        namespaceName: Zenject
-        lineNumberString: 89
-        charNumber: 0
-        stackLabel: SceneContextRegistry.Remove()
-        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistry.cs:89'
-        stackLabel1Content:
-          m_Text: 
-          m_Image: {fileID: 0}
-          m_Tooltip: 
-        stackLabel1Width: 0
-        stackLabel1Height: 0
-        stackLabel2Content:
-          m_Text: 
-          m_Image: {fileID: 0}
-          m_Tooltip: 
-        stackLabel2Width: 0
-        stackLabel2Height: 0
-        stackSourceLineHeight: 0
-        sourceCode: []
-        sourceCodeUpdated: 0
-        showSource: 1
-      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistryAdderAndRemover.cs
-        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistryAdderAndRemover.cs
-        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistryAdderAndRemover.cs:25
-        fileNameWithoutPath: SceneContextRegistryAdderAndRemover.cs
-        fileNameWithoutPathPlusLineNumber: SceneContextRegistryAdderAndRemover.cs:25
-        fileNamePretty: SceneContextRegistryAdderAndRemover
-        instanceID: -1
-        className: SceneContextRegistryAdderAndRemover
-        methodName: Dispose
-        namespaceName: Zenject
-        lineNumberString: 25
-        charNumber: 0
-        stackLabel: SceneContextRegistryAdderAndRemover.Dispose()
-        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Runtime/SceneContextRegistryAdderAndRemover.cs:25'
-        stackLabel1Content:
-          m_Text: 
-          m_Image: {fileID: 0}
-          m_Tooltip: 
-        stackLabel1Width: 0
-        stackLabel1Height: 0
-        stackLabel2Content:
-          m_Text: 
-          m_Image: {fileID: 0}
-          m_Tooltip: 
-        stackLabel2Width: 0
-        stackLabel2Height: 0
-        stackSourceLineHeight: 0
-        sourceCode: []
-        sourceCodeUpdated: 0
-        showSource: 1
-      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Runtime/DisposableManager.cs
-        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Runtime/DisposableManager.cs
-        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Runtime/DisposableManager.cs:122
-        fileNameWithoutPath: DisposableManager.cs
-        fileNameWithoutPathPlusLineNumber: DisposableManager.cs:122
-        fileNamePretty: DisposableManager
-        instanceID: -1
-        className: DisposableManager
-        methodName: Dispose
-        namespaceName: Zenject
-        lineNumberString: 122
-        charNumber: 0
-        stackLabel: DisposableManager.Dispose()
-        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Runtime/DisposableManager.cs:122'
-        stackLabel1Content:
-          m_Text: 
-          m_Image: {fileID: 0}
-          m_Tooltip: 
-        stackLabel1Width: 0
-        stackLabel1Height: 0
-        stackLabel2Content:
-          m_Text: 
-          m_Image: {fileID: 0}
-          m_Tooltip: 
-        stackLabel2Width: 0
-        stackLabel2Height: 0
-        stackSourceLineHeight: 0
-        sourceCode: []
-        sourceCodeUpdated: 0
-        showSource: 1
-      - fileName: Assets/CoreDomain/Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs
-        fileNameWithoutAssets: CoreDomain/Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs
-        fileNameWithoutAssetsPlusLineNumber: CoreDomain/Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs:122
-        fileNameWithoutPath: MonoKernel.cs
-        fileNameWithoutPathPlusLineNumber: MonoKernel.cs:122
-        fileNamePretty: MonoKernel
-        instanceID: -1
-        className: MonoKernel
+        className: FooMonoBehaviourUnderSceneContext3
         methodName: OnDestroy
-        namespaceName: Zenject
-        lineNumberString: 122
+        namespaceName: Zenject.Tests.TestDestructionOrder
+        lineNumberString: 9
         charNumber: 0
-        stackLabel: MonoKernel.OnDestroy()
-        stackLabel2: ' at /CoreDomain/Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs:122'
+        stackLabel: FooMonoBehaviourUnderSceneContext3.OnDestroy()
+        stackLabel2: ' at /CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs:9'
         stackLabel1Content:
-          m_Text: 
+          m_Text: FooMonoBehaviourUnderSceneContext3.OnDestroy()
           m_Image: {fileID: 0}
           m_Tooltip: 
-        stackLabel1Width: 0
-        stackLabel1Height: 0
+        stackLabel1Width: 317.6
+        stackLabel1Height: 25.2
         stackLabel2Content:
-          m_Text: 
+          m_Text: ' at /CoreDomain/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/FooMonoBehaviourUnderSceneContext3.cs:9'
           m_Image: {fileID: 0}
           m_Tooltip: 
-        stackLabel2Width: 0
-        stackLabel2Height: 0
-        stackSourceLineHeight: 0
+        stackLabel2Width: 877.6
+        stackLabel2Height: 25.2
+        stackSourceLineHeight: 17.2
         sourceCode: []
         sourceCodeUpdated: 0
         showSource: 1
       ignoredStackEntries: []
       lastMatchedCount: 1
       belongsToFilters:
-      - name: Warning
+      - name: Log
         isEnabled: 1
         collapsed: 1
-        itemGUID: 50babdeb-1b0a-4142-a22d-a71a12197a35
+        itemGUID: 04d924a4-6a02-4bc7-bcbd-d04d4c79aa3b
         filterName: 
-        mainColor: {r: 1, g: 0.84, b: 0.02, a: 0.7}
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
         isStandardFilter: 1
         isTempFilter: 0
         filterOnly: 0
@@ -5148,7 +6084,7 @@ MonoBehaviour:
         collapseIconTexture: 0
         useIconBackground: 1
         useIconSymbol: 0
-        useIconLetter: 1
+        useIconLetter: 0
         useIconTexture: 0
         filterFormatVersion: 1
         iconColorize: 0
@@ -5158,7 +6094,7 @@ MonoBehaviour:
           - name: 
             isEnabled: 1
             collapsed: 0
-            itemGUID: 8bcd6552-b5be-484f-9d8c-1523fda11b03
+            itemGUID: 59fe93aa-9d96-4c8d-b9a8-e6a62d42f739
             searchString: <Any>
             searchType: 1
             removeSearchStringFromLog: 0
@@ -5167,13 +6103,8 @@ MonoBehaviour:
               - name: 
                 isEnabled: 1
                 collapsed: 0
-                itemGUID: 32a1a2be-6ca7-4bef-a149-50fa8ef12494
-                logType: 2
-              - name: 
-                isEnabled: 1
-                collapsed: 0
-                itemGUID: 40ac3fc1-5c5d-48c4-a1e9-32d7a84732bb
-                logType: 5
+                itemGUID: 08291a90-003e-4ad7-a975-d67b2b85bb53
+                logType: 1
               selectionList: 0
               collapsable: 1
               collapsed: 0
@@ -5182,7 +6113,7 @@ MonoBehaviour:
               - name: 
                 isEnabled: 1
                 collapsed: 0
-                itemGUID: 50090f48-90f3-4e08-b239-9d09572d2194
+                itemGUID: 42c1635c-ced9-4b27-89f0-a1828e38da6b
                 columnType: 1
               selectionList: 0
               collapsable: 1
@@ -5200,18 +6131,18 @@ MonoBehaviour:
           isEnabled: 1
           collapsed: 0
           itemGUID: 
-          iconType: 3
+          iconType: 1
           iconType2: 1
-          iconText: '!'
-          useIconTextFirstLetter: 0
-          useIconLogColor: 0
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
           iconColor: {r: 1, g: 1, b: 1, a: 1}
           iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
           iconTextureGUID: 
           useIconShadow: 1
-          iconOffset: {x: 0, y: 2}
+          iconOffset: {x: 0, y: 0}
           iconShadowOffset: {x: 0.5, y: 0.5}
-          iconSize: 7
+          iconSize: 13
         iconSymbol:
           name: 
           isEnabled: 1
@@ -5240,7 +6171,7 @@ MonoBehaviour:
           useIconTextFirstLetter: 1
           useIconLogColor: 1
           iconColor: {r: 1, g: 1, b: 1, a: 1}
-          iconBuiltInID: BACKGROUNDS_ECPBGTRIANGLE
+          iconBuiltInID: BACKGROUNDS_ECPLOGICON
           iconTextureGUID: 
           useIconShadow: 1
           iconOffset: {x: 0, y: 0}
@@ -5267,12 +6198,12 @@ MonoBehaviour:
         hideLabelInToolbar: 0
         hideWhenNoMatches: 0
       belongsToStandardFilters:
-      - name: Warning
+      - name: Log
         isEnabled: 1
         collapsed: 1
-        itemGUID: 50babdeb-1b0a-4142-a22d-a71a12197a35
+        itemGUID: 04d924a4-6a02-4bc7-bcbd-d04d4c79aa3b
         filterName: 
-        mainColor: {r: 1, g: 0.84, b: 0.02, a: 0.7}
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
         isStandardFilter: 1
         isTempFilter: 0
         filterOnly: 0
@@ -5289,7 +6220,7 @@ MonoBehaviour:
         collapseIconTexture: 0
         useIconBackground: 1
         useIconSymbol: 0
-        useIconLetter: 1
+        useIconLetter: 0
         useIconTexture: 0
         filterFormatVersion: 1
         iconColorize: 0
@@ -5299,7 +6230,7 @@ MonoBehaviour:
           - name: 
             isEnabled: 1
             collapsed: 0
-            itemGUID: 8bcd6552-b5be-484f-9d8c-1523fda11b03
+            itemGUID: 59fe93aa-9d96-4c8d-b9a8-e6a62d42f739
             searchString: <Any>
             searchType: 1
             removeSearchStringFromLog: 0
@@ -5308,13 +6239,8 @@ MonoBehaviour:
               - name: 
                 isEnabled: 1
                 collapsed: 0
-                itemGUID: 32a1a2be-6ca7-4bef-a149-50fa8ef12494
-                logType: 2
-              - name: 
-                isEnabled: 1
-                collapsed: 0
-                itemGUID: 40ac3fc1-5c5d-48c4-a1e9-32d7a84732bb
-                logType: 5
+                itemGUID: 08291a90-003e-4ad7-a975-d67b2b85bb53
+                logType: 1
               selectionList: 0
               collapsable: 1
               collapsed: 0
@@ -5323,7 +6249,7 @@ MonoBehaviour:
               - name: 
                 isEnabled: 1
                 collapsed: 0
-                itemGUID: 50090f48-90f3-4e08-b239-9d09572d2194
+                itemGUID: 42c1635c-ced9-4b27-89f0-a1828e38da6b
                 columnType: 1
               selectionList: 0
               collapsable: 1
@@ -5341,18 +6267,18 @@ MonoBehaviour:
           isEnabled: 1
           collapsed: 0
           itemGUID: 
-          iconType: 3
+          iconType: 1
           iconType2: 1
-          iconText: '!'
-          useIconTextFirstLetter: 0
-          useIconLogColor: 0
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
           iconColor: {r: 1, g: 1, b: 1, a: 1}
           iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
           iconTextureGUID: 
           useIconShadow: 1
-          iconOffset: {x: 0, y: 2}
+          iconOffset: {x: 0, y: 0}
           iconShadowOffset: {x: 0.5, y: 0.5}
-          iconSize: 7
+          iconSize: 13
         iconSymbol:
           name: 
           isEnabled: 1
@@ -5381,7 +6307,7 @@ MonoBehaviour:
           useIconTextFirstLetter: 1
           useIconLogColor: 1
           iconColor: {r: 1, g: 1, b: 1, a: 1}
-          iconBuiltInID: BACKGROUNDS_ECPBGTRIANGLE
+          iconBuiltInID: BACKGROUNDS_ECPLOGICON
           iconTextureGUID: 
           useIconShadow: 1
           iconOffset: {x: 0, y: 0}
@@ -5527,20 +6453,20 @@ MonoBehaviour:
   m_MaxSize: {x: 10000, y: 10000}
   m_TitleContent:
     m_Text: Project
-    m_Image: {fileID: -2032128904892744680, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 635.2
+    y: 388
     width: 989.4
-    height: 148.20001
+    height: 395.4
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_SearchFilter:
-    m_NameFilter: 
+    m_NameFilter: cores
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -5552,22 +6478,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/CoreDomain/Scripts/Services/AssetBundleService
+    - Assets/CoreDomain/Resources/Zenject
     m_Globs: []
-    m_OriginalText: 
+    m_OriginalText: cores
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/CoreDomain/Scripts/Services/AssetBundleService
+  - Assets/CoreDomain/Resources/Zenject
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Raz\Documents\PF\Raz\Work\Dev\Unity\Galaga
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 1119.8}
-    m_SelectedIDs: f8830000
-    m_LastClickedID: 33784
-    m_ExpandedIDs: 000000004e7c0000d2800000d4800000d680000012810000188100001a8100001c8100001e81000050850000648c00003a8e0000389200006c94000072970000909700001c9d00009a9d000078a1000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: bc850000
+    m_LastClickedID: 34236
+    m_ExpandedIDs: 00000000007e0000967e0000d67e0000d87e0000da7e0000de7e0000fc8400002692000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -5595,7 +6521,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000004e7c0000
+    m_ExpandedIDs: 00000000007e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -5620,24 +6546,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 20a70000
+    m_LastClickedInstanceID: 42784
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000cc830000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: AssetBundleLoaderService
-      m_OriginalName: AssetBundleLoaderService
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 2302
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
@@ -5667,14 +6593,14 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Hierarchy
-    m_Image: {fileID: -9000905672528348964, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -3734745235275155857, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
     x: 0
     y: 73.6
     width: 243.8
-    height: 540.6
+    height: 293.4
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -5682,9 +6608,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: fe080000
-      m_LastClickedID: 0
-      m_ExpandedIDs: dcdeffffc8f5ffff1cfbffff
+      m_SelectedIDs: 20a70000
+      m_LastClickedID: 42784
+      m_ExpandedIDs: 8caeffff90beffff64c9ffffc6cbffff2ad0fffff8d0ffffe4d1ffff7ed2ffff30d3ffffcad3ffff64d4fffff6d4ffff92d5ffff38dbffff28deffff58e3ffff14e4ffff1cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -5724,14 +6650,14 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Scene
-    m_Image: {fileID: -131512000283675692, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: 8634526014445323508, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
     x: 244.8
     y: 73.6
     width: 743.60004
-    height: 540.6
+    height: 293.4
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -5988,9 +6914,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -3820.9453, y: 804.2301, z: -48.546555}
+    m_Target: {x: -3834.5337, y: 809.8487, z: -48.400932}
     speed: 2
-    m_Value: {x: -3820.9453, y: 804.2301, z: -48.546555}
+    m_Value: {x: -3834.5337, y: 809.8487, z: -48.400932}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -6041,9 +6967,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 4864.6357
+    m_Target: 10
     speed: 2
-    m_Value: 4864.6357
+    m_Value: 10
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -6084,14 +7010,14 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Game
-    m_Image: {fileID: 257045534191678443, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: 4621777727084837110, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
     x: 244.8
     y: 73.6
     width: 743.60004
-    height: 540.6
+    height: 293.4
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -6139,22 +7065,22 @@ MonoBehaviour:
       x: 0
       y: 21
       width: 743.60004
-      height: 519.6
-    m_Scale: {x: 0.33828124, y: 0.33828124}
-    m_Translation: {x: 371.80005, y: 259.8}
+      height: 272.4
+    m_Scale: {x: 0.17734374, y: 0.17734374}
+    m_Translation: {x: 371.80002, y: 136.2}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -1099.0856
+      x: -2096.4937
       y: -768
-      width: 2198.1711
+      width: 4192.9873
       height: 1536
     m_MinimalGUI: 1
-  m_defaultScale: 0.33828124
-  m_LastWindowPixelSize: {x: 929.50006, y: 675.75}
+  m_defaultScale: 0.17734374
+  m_LastWindowPixelSize: {x: 929.50006, y: 366.75}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -6176,7 +7102,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Inspector
-    m_Image: {fileID: 8356117983803934776, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
@@ -6195,7 +7121,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 140.79999
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
