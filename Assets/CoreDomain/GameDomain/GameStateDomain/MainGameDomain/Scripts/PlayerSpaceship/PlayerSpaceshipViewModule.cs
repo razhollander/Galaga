@@ -5,22 +5,21 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerSpa
 {
     public class PlayerSpaceshipViewModule
     {
-        private readonly ICameraService _cameraService;
         private static readonly Vector2 RelativeToScreenCenterStartPosition = new (0f, -0.5f);
+        
         private PlayerSpaceshipView _playerSpaceshipView;
         private readonly Vector3 _screenBoundsInWorldSpace;
         private float _playerSpaceFromBounds;
 
         public PlayerSpaceshipViewModule(ICameraService cameraService)
         {
-            _cameraService = cameraService;
-            _screenBoundsInWorldSpace = _cameraService.ScreenToWorldPoint(GameCameraType.World, new Vector3(Screen.width, Screen.height, 0));
+            _screenBoundsInWorldSpace = cameraService.ScreenToWorldPoint(GameCameraType.World, new Vector3(Screen.width, Screen.height, 0));
         }
         
         public void Setup(PlayerSpaceshipView playerSpaceshipView)
         {
             _playerSpaceshipView = playerSpaceshipView;
-            _playerSpaceFromBounds = _playerSpaceshipView.PlayerSpriteRenderer.bounds.size.x / 2;
+            _playerSpaceFromBounds = _playerSpaceshipView.PlayerSpriteRenderer.bounds.size.x * 0.5f;
             
             var startPosition = _screenBoundsInWorldSpace * RelativeToScreenCenterStartPosition;
             _playerSpaceshipView.transform.position = startPosition;

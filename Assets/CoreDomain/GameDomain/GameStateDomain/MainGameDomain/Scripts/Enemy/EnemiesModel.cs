@@ -9,15 +9,8 @@ namespace Features.MainGameScreen.Enemy
 {
     public class EnemiesModel : IDisposable, ISavableObject
     {
-        #region --- Constants ---
-
         private const float START_POSITION_OF_SCREEN_RATIO = 5f / 8;
         private const string ENEMIES_SAVE_KAY = "EnemiesSave";
-
-        #endregion
-
-
-        #region --- Members ---
 
         public readonly float EnemiesHorizontalSpeed = 2f;
         public readonly float EnemiesVerticalSpeed = 2f;
@@ -37,17 +30,8 @@ namespace Features.MainGameScreen.Enemy
         private readonly IClient _client;
         private int _numOfEnemiesAlive;
 
-        #endregion
-
-
-        #region --- Properties ---
 
         public bool AreEnemiesEnabled { get; private set; }
-
-        #endregion
-
-
-        #region --- Construction ---
 
         public EnemiesModel(IClient client)
         {
@@ -70,11 +54,6 @@ namespace Features.MainGameScreen.Enemy
 
             AddListeners();
         }
-
-        #endregion
-
-
-        #region --- Public Methods ---
 
         public void Dispose()
         {
@@ -124,11 +103,6 @@ namespace Features.MainGameScreen.Enemy
             CheckForPlayerWin();
         }
 
-        #endregion
-
-
-        #region --- Private Methods ---
-
         private void AddListeners()
         {
             _client.GameSaverService.RegisterSavedObject(this);
@@ -156,11 +130,6 @@ namespace Features.MainGameScreen.Enemy
             AreEnemiesEnabled = false;
         }
 
-        #endregion
-
-
-        #region --- Event Handler ---
-
         private void OnPlayerLose(PlayerLoseEvent obj)
         {
             SetEnemiesDisabled();
@@ -171,23 +140,11 @@ namespace Features.MainGameScreen.Enemy
             SetEnemiesDisabled();
         }
 
-        #endregion
-
-
-        #region --- Inner Classes ---
-
         private class EnemiesData
         {
-            #region --- Members ---
-
             public readonly int MoveDir;
             public readonly bool[,] EnemiesAlive;
             public readonly float[] EnemiesParentPosition; // acts like Vector 2
-
-            #endregion
-
-
-            #region --- Construction ---
 
             public EnemiesData(float[] enemiesParentPosition, bool[,] enemiesAlive, int moveDir)
             {
@@ -195,10 +152,6 @@ namespace Features.MainGameScreen.Enemy
                 EnemiesParentPosition = enemiesParentPosition;
                 EnemiesAlive = enemiesAlive;
             }
-
-            #endregion
         }
-
-        #endregion
     }
 }
