@@ -10,25 +10,23 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
     public class EnemyView : MonoBehaviour
     {
         private const float RotateAnglesInASecond = 180f;
-        private Action<EnemyView> _onHit;
+        //private Action<EnemyView> _onHit;
         [SerializeField] private float _moveSpeed;
         [SerializeField] private bool _isRotationLocked;
 
-        public int ColumnIndex { get; private set; }
-        public int RowIndex { get; private set; }
+        public int ScoreWorth;
 
+        // public void HitByBullet()
+        // {
+        //     _onHit(this);
+        // }
 
-        public void HitByBullet()
-        {
-            _onHit(this);
-        }
-
-        public void Setup(int rowIndex, int columnIndex, Action<EnemyView> onHit)
-        {
-            _onHit = onHit;
-            RowIndex = rowIndex;
-            ColumnIndex = columnIndex;
-        }
+        // public void Setup(int rowIndex, int columnIndex, Action<EnemyView> onHit)
+        // {
+        //     _onHit = onHit;
+        //     RowIndex = rowIndex;
+        //     ColumnIndex = columnIndex;
+        // }
 
         public async UniTask RotateTowardsDirection(Vector3 direction)
         {

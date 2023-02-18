@@ -28,11 +28,6 @@ namespace CoreDomain.Services
             return asset;
         }
 
-        public bool A()
-        {
-            return true;
-        }
-
         public bool TryInstantiateAssetFromBundle<T>(string bundlePathName, string assetName, out T asset) where T : Object
         {
             if (TryLoadGameObjectAssetFromBundle(bundlePathName, assetName, out var gameObject))
@@ -95,7 +90,7 @@ namespace CoreDomain.Services
             return true;
         }
 
-        private AssetBundle LoadAssetBundle(string assetBundlePathName)
+        public AssetBundle LoadAssetBundle(string assetBundlePathName)
         {
             var assetBundle =  AssetBundle.LoadFromFile(Path.Combine(Application.streamingAssetsPath, assetBundlePathName));
 
@@ -107,7 +102,7 @@ namespace CoreDomain.Services
             return assetBundle;
         }
 
-        private T LoadAssetFromBundle<T>(AssetBundle assetbundle, string assetName) where T : Object
+        public T LoadAssetFromBundle<T>(AssetBundle assetbundle, string assetName) where T : Object
         {
             var asset = assetbundle.LoadAsset<T>(assetName);
 
@@ -119,7 +114,7 @@ namespace CoreDomain.Services
             return asset;
         }
 
-        private void UnloadAssetBundle(AssetBundle assetBundle)
+        public void UnloadAssetBundle(AssetBundle assetBundle)
         {
             assetBundle.Unload(false);
         }

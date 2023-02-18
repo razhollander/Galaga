@@ -18,6 +18,11 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.MainGameU
             _viewModule = new MainGameUiViewModule();
         }
 
+        public void UpdateScore(int newScore)
+        {
+            _viewModule.UpdateScore(newScore);
+        }
+
         public void CreateMainGameUi()
         {
             var mainGameUiView = _creator.CreateMainGameUi();

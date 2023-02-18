@@ -9,7 +9,6 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerSpa
         private const string BULLET_ASSET_NAME = "PlayerBullet";
         private const string PLAYER_ASSET_NAME = "PlayerSpaceship";
         private const string PLAYER_BUNDLE_PATH = "MainGameState/Player";
-        private readonly BulletController _bulletController;
 
         private readonly int ENEMY_LAYER = LayerMask.NameToLayer("Enemy");
         private readonly PlayerSpaceshipCreator _createPlayerSpaceship;
@@ -84,11 +83,5 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerSpa
         //
         //     _client.Broadcaster.Broadcast(new PlayerLoseEvent());
         // }
-    }
-
-    public interface IPlayerSpaceshipModule
-    {
-        void CreatePlayerSpaceship(string name);
-        void MoveSpaceship(float direction);
     }
 }

@@ -11,14 +11,14 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.MainGameU
             _mainGameUiView = mainGameUiView;
         }
 
-        // public string GetPlayerName()
-        // {
-        //     return _mainGameUiView.PlayerNameText;
-        // }
-        
         public void DestroyMainGameUiView()
         {
             Object.Destroy(_mainGameUiView.gameObject);
+        }
+
+        public void UpdateScore(int newScore)
+        {
+            _mainGameUiView.UpdateScore(newScore);
         }
     }
 }

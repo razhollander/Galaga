@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace CoreDomain.GameDomain.GameStateDomain.GamePlayDomain.Scripts.Bullet
 {
-    public class BulletView : MonoBehaviour, IUpdatable
+    public class PlayerBulletView : MonoBehaviour, IUpdatable
     {
         private Action _onOutOfScreen;
         private Action<Collider2D> _onHitEnemy;

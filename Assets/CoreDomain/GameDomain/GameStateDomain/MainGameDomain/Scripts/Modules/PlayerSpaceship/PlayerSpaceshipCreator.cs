@@ -4,8 +4,8 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerSpa
 {
     public class PlayerSpaceshipCreator
     {
-        private const string MainGameUiAssetName = "PlayerSpaceship";
-        private const string MainGameUiAssetBundlePath = "coredomain/gamedomain/gamestatedomain/maingamedomain/playerspaceship";
+        private const string PlayerSpaceshipAssetName = "PlayerSpaceship";
+        private const string PlayerSpaceshipAssetBundlePath = "coredomain/gamedomain/gamestatedomain/maingamedomain/playerspaceship";
         private readonly IAssetBundleLoaderService _assetBundleLoaderService;
 
         public PlayerSpaceshipCreator(IAssetBundleLoaderService assetBundleLoaderService)
@@ -15,7 +15,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerSpa
 
         public PlayerSpaceshipView CreatePlayerSpaceship()
         {
-            return _assetBundleLoaderService.InstantiateAssetFromBundle<PlayerSpaceshipView>(MainGameUiAssetBundlePath, MainGameUiAssetName);
+            return _assetBundleLoaderService.InstantiateAssetFromBundle<PlayerSpaceshipView>(PlayerSpaceshipAssetBundlePath, PlayerSpaceshipAssetName);
         }
     }
 }

@@ -11,5 +11,8 @@ namespace CoreDomain.Services
         T InstantiateAssetFromBundle<T>(string bundlePathName, string assetName) where T : Object;
         GameObject LoadGameObjectAssetFromBundle(string bundlePathName, string assetName);
         T LoadScriptableObjectAssetFromBundle<T>(string bundlePathName, string assetName) where T : ScriptableObject;
+        AssetBundle LoadAssetBundle(string assetBundlePathName);
+        T LoadAssetFromBundle<T>(AssetBundle assetbundle, string assetName) where T : Object;
+        void UnloadAssetBundle(AssetBundle assetBundle);
     }
 }

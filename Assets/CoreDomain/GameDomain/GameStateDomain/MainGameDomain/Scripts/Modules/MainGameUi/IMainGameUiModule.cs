@@ -2,6 +2,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.MainGameU
 {
     public interface IMainGameUiModule
     {
+        void UpdateScore(int newScore);
         void CreateMainGameUi();
         void DestroyMainGameUi();
     }

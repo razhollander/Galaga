@@ -1,7 +1,5 @@
 using System;
 using Sirenix.OdinInspector;
-using Sirenix.Utilities;
-
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -58,12 +56,11 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
             EditorGUI.LabelField(secondsBeforeEnterRect, "Seconds Before Enter:");
             var secondsInIdleRect = new Rect(rect.x, rect.y+rect.height * 2/ 3, rect.width * 0.8f, rect.height / 3); 
             EditorGUI.LabelField(secondsInIdleRect, "Seconds In Idle:");
-
         }
         
         private static EnemySequenceData GetAndDrawInputs(Rect rect, EnemySequenceData enemySequenceData)
         {
-            var objRect = new Rect(rect.x+rect.width*0.5f, rect.y, rect.width*0.5f, rect.height / 3);
+            var objRect = new Rect(rect.x + rect.width * 0.5f, rect.y, rect.width * 0.5f, rect.height / 3);
             var enemyPathsDataObject = EditorGUI.ObjectField(objRect, enemySequenceData.EnemyPathsData, typeof(EnemyPathsData));
 
             if (enemyPathsDataObject != null)
