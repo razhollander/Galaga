@@ -15,7 +15,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.LobbyDomain.Modules.LobbyUi
 
         private Action _quickGameButtonClickedCallback;
         public string PlayerNameText => _playerNameInputField.text;
-        public int SelectedLevel => int.Parse(_levelsDropdown.options[_levelsDropdown.value].text)-1;
+        public int SelectedLevel => int.Parse(_levelsDropdown.options[_levelsDropdown.value].text);
 
         private void Awake()
         {

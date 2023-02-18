@@ -1,23 +1,62 @@
 ManifestFileVersion: 0
-CRC: 2172564641
+CRC: 1699350119
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 0eaacbeb5508d4578e4d68d47d46018c
+    Hash: 26bb60a20e37f7ab3fe391ca99820786
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 91591903883211fa08043aaf545e365c
+    Hash: 28a2a142a0704edf8cfd7ca6bb3a1544
 HashAppended: 0
 ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 61
+  Script: {instanceID: 0}
 - Class: 114
   Script: {fileID: 11500000, guid: 30cccab2f0c8c44c491045fb4cf14b1e, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: f18db1941066b4ce2b5cb1f62c2810d6, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: d22e565311d5f4927abcfe440ffe0f6e, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: aed42f7b4fba3bc4abe89fe94928eacd, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: eec704ce703691343af3eff8e1e8fe30, type: 3}
 - Class: 115
   Script: {instanceID: 0}
-SerializeReferenceClassIdentifiers: []
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers:
+- AssemblyName: PathCreator
+  ClassName: PathCreation.BezierPath
+- AssemblyName: PathCreator
+  ClassName: PathCreation.PathCreatorData
+- AssemblyName: Sirenix.Serialization
+  ClassName: Sirenix.Serialization.SerializationData
 Assets:
+- Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/Enemies/EnemiesWaveSequence1.asset
+- Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/Enemies/EnemiesWaveSequenceSmall.asset
+- Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/Enemies/EnemyBeeSpaceship.prefab
 - Assets/AssetBundles/CoreDomain/GameDomain/Levels/LevelsSettings.asset
+- Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/Enemies/MovePaths/LoopEnterPath.prefab
+- Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/Enemies/EnemyGuardSpaceship.prefab
 - Assets/AssetBundles/CoreDomain/GameDomain/Levels/Level2.asset
+- Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/Enemies/EnemyBeePaths.asset
+- Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/Sprites/EnemySpaceship.png
+- Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/Enemies/MovePaths/LoopExitPath.prefab
 - Assets/AssetBundles/CoreDomain/GameDomain/Levels/Level1.asset
+- Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/Sprites/EnemyBeeSprite.png
 Dependencies: []

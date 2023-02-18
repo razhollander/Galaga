@@ -8,10 +8,10 @@ namespace CoreDomain.GameDomain
     {
         private IStateMachineService _stateMachine;
         private LobbyGameState.Factory _lobbyGameStateFactory;
-        private ILevelsModule _levelsService;
+        private ILevelsService _levelsService;
 
         [Inject]
-        private void Setup(IStateMachineService stateMachine, LobbyGameState.Factory lobbyGameStateFactory, ILevelsModule levelsService)
+        private void Setup(IStateMachineService stateMachine, LobbyGameState.Factory lobbyGameStateFactory, ILevelsService levelsService)
         {
             _stateMachine = stateMachine;
             _lobbyGameStateFactory = lobbyGameStateFactory;

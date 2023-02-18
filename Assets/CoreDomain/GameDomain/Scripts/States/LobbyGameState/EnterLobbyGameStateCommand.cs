@@ -10,9 +10,9 @@ namespace CoreDomain.Services.GameStates
     {
         private readonly ILobbyUiModule _lobbyUiModule;
         private readonly LobbyGameStateEnterData _lobbyGameStateEnterData;
-        private ILevelsModule _levelsService;
+        private ILevelsService _levelsService;
 
-        public EnterLobbyGameStateCommand(LobbyGameStateEnterData lobbyGameStateEnterData, ILobbyUiModule lobbyUiModule, ILevelsModule levelsService)
+        public EnterLobbyGameStateCommand(LobbyGameStateEnterData lobbyGameStateEnterData, ILobbyUiModule lobbyUiModule, ILevelsService levelsService)
         {
             _lobbyGameStateEnterData = lobbyGameStateEnterData;
             _lobbyUiModule = lobbyUiModule;

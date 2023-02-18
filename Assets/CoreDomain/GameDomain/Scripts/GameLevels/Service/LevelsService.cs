@@ -2,13 +2,13 @@ using CoreDomain.Services;
 
 namespace CoreDomain.GameDomain
 {
-    public class LevelsService : ILevelsModule
+    public class LevelsService : ILevelsService
     {
         private const string LevelsAssetBundlePath = "coredomain/gamedomain/levels";
         private const string LevelsSettingsAssetName = "LevelsSettings";
 
         private readonly IAssetBundleLoaderService _assetBundleLoaderService;
-        private LevelsScriptableObject _levelsSettings;
+        private LevelsData _levelsData;
 
         public LevelsService(IAssetBundleLoaderService assetBundleLoaderService)
         {
@@ -17,12 +17,17 @@ namespace CoreDomain.GameDomain
 
         public void LoadLevels()
         {
-            _levelsSettings = _assetBundleLoaderService.LoadScriptableObjectAssetFromBundle<LevelsScriptableObject>(LevelsAssetBundlePath, LevelsSettingsAssetName);
+            _levelsData = _assetBundleLoaderService.LoadScriptableObjectAssetFromBundle<LevelsData>(LevelsAssetBundlePath, LevelsSettingsAssetName);
         }
 
         public int GetLevelsAmount()
         {
-            return _levelsSettings.LevelsByOrder.Count;
+            return _levelsData.LevelsByOrder.Length;
+        }
+
+        public LevelData GetLevel(int levelNumber)
+        {
+            return _levelsData.LevelsByOrder[levelNumber - 1];
         }
     }
 }

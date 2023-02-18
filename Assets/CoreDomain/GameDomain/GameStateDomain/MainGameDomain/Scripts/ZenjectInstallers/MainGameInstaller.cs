@@ -1,4 +1,5 @@
 using CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Commands;
+using CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies;
 using CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.MainGameUi;
 using CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerSpaceship;
 using CoreDomain.Services;
@@ -13,6 +14,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain
             LogService.Log("Install main game");
             Container.BindInterfacesTo<MainGameUiModule>().AsSingle().NonLazy();
             Container.BindInterfacesTo<PlayerSpaceshipModule>().AsSingle().NonLazy();
+            Container.BindInterfacesTo<EnemiesModule>().AsSingle().NonLazy();
             Container.BindFactory<float, JoystickDraggedCommand, JoystickDraggedCommand.Factory>().AsSingle().NonLazy();
         }
     }

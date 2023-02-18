@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 3149378976
+CRC: 3030944794
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -18,11 +18,8 @@ AssetBundleManifest:
       Name: coredomain/gamedomain/gamestatedomain/lobbydomain/lobbyui
       Dependencies: {}
     Info_5:
-      Name: enemy
-      Dependencies: {}
-    Info_6:
       Name: coredomain/gamedomain/gamestatedomain/maingamedomain/maingameui
       Dependencies: {}
-    Info_7:
+    Info_6:
       Name: coredomain/gamedomain/gamestatedomain/maingamedomain/playerspaceship
       Dependencies: {}
