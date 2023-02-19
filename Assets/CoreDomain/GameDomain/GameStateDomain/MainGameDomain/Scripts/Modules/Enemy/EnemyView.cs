@@ -14,8 +14,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
         [SerializeField] private float _moveSpeed;
         [SerializeField] private bool _isRotationLocked;
 
-        public int ScoreWorth;
-
+        public string Id { get; private set; }
         // public void HitByBullet()
         // {
         //     _onHit(this);
@@ -53,6 +52,11 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
             }
             
             transform.position = path.GetPoint(path.NumPoints-1);
+        }
+
+        public void Setup(string enemyId)
+        {
+            Id = enemyId;
         }
     }
 }

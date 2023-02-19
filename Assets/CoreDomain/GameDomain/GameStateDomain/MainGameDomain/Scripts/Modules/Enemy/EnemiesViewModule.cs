@@ -12,12 +12,16 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
 {
     public class EnemiesViewModule
     {
+        private const string EnemyWaveParentName = "EnemiesWaveParent";
+        private static readonly Vector2 RelativeToScreenCenterStartPosition = new(0.2f, 0.9f);
+        private readonly Vector2 _enemiesGroupStartPosition;
+
         public EnemiesViewModule(IDeviceScreenService deviceScreenService)
         {
             _enemiesGroupStartPosition = deviceScreenService.ScreenBoundsInWorldSpace * RelativeToScreenCenterStartPosition + deviceScreenService.ScreenCenterPointInWorldSpace;
         }
 
-        private async UniTask DoEnemiesWaveSequence(EnemiesWaveSequenceData enemiesWave)
+        public async UniTask DoEnemiesWaveSequence(EnemyView[,] enemyViews, EnemiesWaveSequenceData enemiesWave)
         {
             List<UniTask> enemiesTasks = new List<UniTask>();
 
@@ -26,19 +30,19 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
 
             var enemiesGrid = enemiesWave.EnemiesGrid;
             var enemyParent = enemiesWaveParent.transform;
-            var numberOfRows = enemiesGrid.GetLength(0);
-            var numberOfColumns = enemiesGrid.GetLength(1);
+            var enemiesRows = enemiesGrid.GetLength(0);
+            var enemiesColumns = enemiesGrid.GetLength(1);
 
-            var startX = -(numberOfColumns - 1) * (enemiesWave.CellSize + enemiesWave.SpaceBetweenColumns) * 0.5f; // so we create enemies from horizontal center
+            var startX = -(enemiesColumns - 1) * (enemiesWave.CellSize + enemiesWave.SpaceBetweenColumns) * 0.5f; // so we create enemies from horizontal center
             var startY = _enemiesGroupStartPosition.y;
 
-            for (int i = 0; i < numberOfRows; i++)
+            for (int i = 0; i < enemiesRows; i++)
             {
-                for (int j = 0; j < numberOfColumns; j++)
+                for (int j = 0; j < enemiesColumns; j++)
                 {
-                    var cellPosition =
-                        new Vector2(startX + enemiesWave.CellSize * j + enemiesWave.SpaceBetweenColumns * j,
-                            startY - enemiesWave.CellSize * i - enemiesWave.SpaceBetweenRows * i);
+                    var cellX = startX + enemiesWave.CellSize * j + enemiesWave.SpaceBetweenColumns * j;
+                    var cellY = startY - enemiesWave.CellSize * i - enemiesWave.SpaceBetweenRows * i;
+                    var cellPosition = new Vector2(cellX, cellY);
 
                     enemiesTasks.Add(DoEnemySequence(enemiesGrid[i, j], enemyParent, cellPosition));
                 }

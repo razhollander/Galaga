@@ -3,9 +3,9 @@
     public class EnemyData
     {
         public readonly string Id;
-        public readonly string Score;
+        public readonly int Score;
 
-        public EnemyData(string id, string score)
+        public EnemyData(string id, int score)
         {
             Id = id;
             Score = score;

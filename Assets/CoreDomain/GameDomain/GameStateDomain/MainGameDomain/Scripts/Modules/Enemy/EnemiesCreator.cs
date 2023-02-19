@@ -20,11 +20,24 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
             return _assetBundleLoaderService.InstantiateAssetFromBundle<EnemyView>(MainGameUiAssetBundlePath, enemyAssetName);
         }
         
-        public EnemyView CreateEnemies(List<string> enemiesAssetNames)
+        public EnemyView[,] CreateEnemiesWave(string[,] enemiesAssetNames)
         {
             var enemiesBundle = _assetBundleLoaderService.LoadAssetBundle(MainGameUiAssetBundlePath);
-            _assetBundleLoaderService.lo
-            return _assetBundleLoaderService.InstantiateAssetFromBundle<EnemyView>(MainGameUiAssetBundlePath, enemyAssetName);
+            var enemiesRows = enemiesAssetNames.GetLength(0);
+            var enemiesColumns = enemiesAssetNames.GetLength(1);
+            var enemyViews = new EnemyView[enemiesRows,enemiesColumns];
+
+            for (int i = 0; i < enemiesRows; i++)
+            {
+                for (int j = 0; j < enemiesColumns; j++)
+                {
+                    enemyViews[i,j] = GameObject.Instantiate(_assetBundleLoaderService.LoadAssetFromBundle<GameObject>(enemiesBundle, enemiesAssetNames[i,j])).GetComponent<EnemyView>();
+                }                
+            }
+
+            _assetBundleLoaderService.UnloadAssetBundle(enemiesBundle);
+            
+            return enemyViews;
         }
     }
 }

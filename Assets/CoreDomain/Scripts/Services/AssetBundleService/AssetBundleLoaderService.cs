@@ -9,10 +9,21 @@ namespace CoreDomain.Services
         {
             return GameObject.Instantiate(LoadGameObjectAssetFromBundle(bundlePathName, assetName)).GetComponent<T>();
         }
+        
+        public T InstantiateAssetFromBundle<T>(AssetBundle assetBundle, string assetName) where T : Object
+        {
+            return GameObject.Instantiate(LoadGameObjectAssetFromBundle(assetBundle, assetName)).GetComponent<T>();
+        }
 
         public GameObject LoadGameObjectAssetFromBundle(string bundlePathName, string assetName)
         {
             var assetBundle = LoadAssetBundle(bundlePathName);
+
+            return LoadGameObjectAssetFromBundle(assetBundle, assetName);
+        }
+        
+        public GameObject LoadGameObjectAssetFromBundle(AssetBundle assetBundle, string assetName)
+        {
             var asset = LoadAssetFromBundle<GameObject>(assetBundle, assetName);
             
             UnloadAssetBundle(assetBundle);
