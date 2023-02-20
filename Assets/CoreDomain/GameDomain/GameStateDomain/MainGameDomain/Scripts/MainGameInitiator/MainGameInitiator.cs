@@ -1,6 +1,7 @@
 using CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies;
 using CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.MainGameUi;
 using CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerSpaceship;
+using CoreDomain.Scripts.Services.Audio;
 using CoreDomain.Services.GameStates;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
@@ -10,20 +11,24 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain
 {
     public class MainGameInitiator : MonoBehaviour
     {
+        private const string ThemeSongName = "GalagaThemeSong";
+        
         [SerializeField] private MainGameStateEnterData _defaultLobbyGameStateEnterData;
 
         private IMainGameUiModule _mainGameUiModule;
         private IPlayerSpaceshipModule _playerSpaceshipModule;
         private ILevelsService _levelsService;
         private IEnemiesModule _enemiesModule;
+        private IAudioService _audioService;
 
         [Inject]
-        private void Setup(IMainGameUiModule mainGameUiModule, IPlayerSpaceshipModule playerSpaceshipModule, ILevelsService levelsService, IEnemiesModule enemiesModule)
+        private void Setup(IMainGameUiModule mainGameUiModule, IPlayerSpaceshipModule playerSpaceshipModule, ILevelsService levelsService, IEnemiesModule enemiesModule, IAudioService audioService)
         {
             _mainGameUiModule = mainGameUiModule;
             _playerSpaceshipModule = playerSpaceshipModule;
             _levelsService = levelsService;
             _enemiesModule = enemiesModule;
+            _audioService = audioService;
         }
 
         public async UniTask StartState(MainGameStateEnterData mainGameStateEnterData)
@@ -33,6 +38,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain
             _playerSpaceshipModule.CreatePlayerSpaceship(enterData.PlayerName);
             var levelData = _levelsService.GetLevel(enterData.Level);
             _enemiesModule.DoEnemiesWavesSequence(levelData.EnemiesWaveSequenceData);
+            _audioService.PlayAudio(ThemeSongName, AudioChannelType.Master, AudioPlayType.Loop);
         }
     }
 }

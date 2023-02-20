@@ -330,6 +330,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioClipsScriptableObject: {fileID: 11400000, guid: 90d53e838bd8d704b9e7bf16bb54ca88, type: 2}
   _audioMixer: {fileID: 24100000, guid: 99cff6d8406804b05b127ec120f31efc, type: 2}
+  _masterAudioSource: {fileID: 4740416513877799748}
+  _FxAudioSource: {fileID: 2770330285618684217}
+  _MusicAudioSource: {fileID: 8260988201299078203}
 --- !u!4 &1251148518
 Transform:
   m_ObjectHideFlags: 0
@@ -471,6 +474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _updateSubscriptionService: {fileID: 874522569}
+  _audioService: {fileID: 1251148517}
 --- !u!1 &2079734857
 GameObject:
   m_ObjectHideFlags: 0

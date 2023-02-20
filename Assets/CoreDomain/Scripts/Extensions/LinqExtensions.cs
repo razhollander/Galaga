@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace MonkeyCore.Scripts.Systems.Extensions
+namespace CoreDomain.Scripts.Extensions
 {
     /// <summary>Various LinQ extensions.</summary>
     /// <footer><a href="https://www.google.com/search?q=Sirenix.Utilities.LinqExtensions">`LinqExtensions` on google.com</a></footer>
