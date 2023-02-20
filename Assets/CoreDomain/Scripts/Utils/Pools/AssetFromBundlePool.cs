@@ -1,16 +1,16 @@
 using System.Collections.Generic;
-using CoreDomain.Scripts.Utils.Pools;
 using CoreDomain.Services;
 using UnityEngine;
 using Zenject;
-using IPoolable = CoreDomain.Scripts.Utils.Pools.IPoolable;
 
-public abstract class AssetFromBundlePool<T, TV> : BasePool<T, TV> where T : MonoBehaviour, IPoolable
+namespace CoreDomain.Scripts.Utils.Pools
 {
+    public abstract class AssetFromBundlePool<TPoolable, TV> : BasePool<TPoolable, TV>,  IAssetFromBundlePool<TPoolable> where TPoolable : MonoBehaviour, IPoolable
+    {
     private DiContainer _diContainer;
     private IAssetBundleLoaderService _assetBundleLoaderService;
-    protected abstract string AssetBundlePathName { get; } 
-    protected abstract string AssetName { get; }
+    protected abstract string AssetBundlePathName { get; }
+    public abstract string AssetName { get; }
     protected abstract string ParentGameObjectName { get; }
     private Transform _parentGameObject;
 
@@ -33,9 +33,9 @@ public abstract class AssetFromBundlePool<T, TV> : BasePool<T, TV> where T : Mon
         base.InitPool();
     }
 
-    protected override List<T> CreatePoolableInstances(int instancesAmount)
+    protected override List<TPoolable> CreatePoolableInstances(int instancesAmount)
     {
-        var poolables = new List<T>();
+        var poolables = new List<TPoolable>();
         var bundle = _assetBundleLoaderService.LoadAssetBundle(AssetBundlePathName);
 
         for (int i = 0; i < instancesAmount; i++)
@@ -43,11 +43,12 @@ public abstract class AssetFromBundlePool<T, TV> : BasePool<T, TV> where T : Mon
             var poolable = _diContainer.InstantiatePrefab(_assetBundleLoaderService.LoadAssetFromBundle<GameObject>(bundle, AssetName));
             poolable.SetActive(false);
             poolable.transform.SetParent(_parentGameObject);
-            poolables.Add(poolable.GetComponent<T>());
+            poolables.Add(poolable.GetComponent<TPoolable>());
         }
-        
+
         _assetBundleLoaderService.UnloadAssetBundle(bundle);
 
         return poolables;
+    }
     }
 }

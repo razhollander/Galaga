@@ -5,10 +5,10 @@ using Zenject;
 
 namespace CoreDomain.Scripts.Utils.Pools
 {
-    public abstract class BasePool<T, TV> : IPool<T> where T : IPoolable
+    public abstract class BasePool<TPoolable, TV> : IPool<TPoolable> where TPoolable : IPoolable
     {
         private readonly int _increaseStepAmount;
-        private Queue<T> _pool;
+        private Queue<TPoolable> _pool;
         private readonly int _initialAmount;
 
         [Inject]
@@ -36,11 +36,11 @@ namespace CoreDomain.Scripts.Utils.Pools
             poolableInstances.ForEach(poolable => _pool.Enqueue(poolable));
         }
         
-        protected abstract List<T> CreatePoolableInstances(int instancesAmount);
+        protected abstract List<TPoolable> CreatePoolableInstances(int instancesAmount);
         
-        public T Spawn()
+        public TPoolable Spawn()
         {
-            T obj;
+            TPoolable obj;
 
             if (_pool.Count <= 0)
             {
@@ -53,12 +53,17 @@ namespace CoreDomain.Scripts.Utils.Pools
             return obj;
         }
 
-        public void Despawn(T obj)
+        public void Despawn(TPoolable obj)
         {
             obj.ResetPoolable();
             _pool.Enqueue(obj);
         }
         
+        public void Despawn(TPoolable obj)
+        {
+            obj.ResetPoolable();
+            _pool.Enqueue(obj);
+        }
         public class Factory: PlaceholderFactory<PoolData, TV>
         {
         

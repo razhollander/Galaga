@@ -18,7 +18,6 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerBul
         public void FireBullet(PlayerBulletView bulletView, Vector3 bulletStartPosition)
         {
             _bulletViews.Add(bulletView);
-            bulletView.gameObject.SetActive(true);
             bulletView.StartMoving(bulletStartPosition);
         }
 
@@ -26,7 +25,6 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerBul
         {
             var bulletView = _bulletViews.Find(x => x.Id == bulletId);
             _bulletViews.Remove(bulletView);
-            bulletView.gameObject.SetActive(false);
             _onDestroyBullet(bulletView);
         }
     }

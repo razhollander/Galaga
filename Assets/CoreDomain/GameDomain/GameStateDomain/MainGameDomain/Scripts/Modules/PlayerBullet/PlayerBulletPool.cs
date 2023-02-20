@@ -14,7 +14,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerBul
         }
 
         protected override string AssetBundlePathName => "coredomain/gamedomain/gamestatedomain/maingamedomain/playerbullet";
-        protected override string AssetName => "PlayerBullet";
+        public override string AssetName => "PlayerBullet";
         protected override string ParentGameObjectName => "PlayerBullets";
     }
 }

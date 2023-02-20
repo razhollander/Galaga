@@ -1,5 +1,6 @@
 using System;
 using System.Threading.Tasks;
+using CoreDomain.Scripts.Utils.Pools;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using PathCreation;
@@ -7,7 +8,7 @@ using UnityEngine;
 
 namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
 {
-    public class EnemyView : MonoBehaviour
+    public class EnemyView : MonoBehaviour, IPoolable
     {
         private const float RotateAnglesInASecond = 180f;
         [SerializeField] private float _moveSpeed;
@@ -55,6 +56,17 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
         public void Setup(string enemyId)
         {
             Id = enemyId;
+        }
+
+        public void InitializePoolable()
+        {
+            gameObject.SetActive(true);
+        }
+
+        public void ResetPoolable()
+        {
+            Id = null;
+            gameObject.SetActive(false);
         }
     }
 }

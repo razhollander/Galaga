@@ -13,10 +13,10 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
         private readonly EnemiesCreator _enemiesCreator;
         private Dictionary<string, EnemyData> _enemiesData = new ();
         
-        public EnemiesModule(IDeviceScreenService deviceScreenService, IAssetBundleLoaderService assetBundleLoaderService)
+        public EnemiesModule(IDeviceScreenService deviceScreenService, BeeEnemiesPool.Factory beeEnemiesPoolFactory, GuardEnemiesPool.Factory guardEnemiesPoolFactory)
         {
             _enemiesViewModule = new EnemiesViewModule(deviceScreenService);
-            _enemiesCreator = new EnemiesCreator(assetBundleLoaderService);
+            _enemiesCreator = new EnemiesCreator(beeEnemiesPoolFactory, guardEnemiesPoolFactory);
         }
 
         public int GetEnemyScore(string enemyId)

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using CoreDomain.Scripts.Utils.Pools;
 using CoreDomain.Services;
 using UnityEngine;
 
@@ -6,22 +7,33 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
 {
     public class EnemiesCreator
     {
-        private const string EnemiesAssetBundlePath = "coredomain/gamedomain/gamestatedomain/maingamedomain/enemies";
-        private readonly IAssetBundleLoaderService _assetBundleLoaderService;
-
-        public EnemiesCreator(IAssetBundleLoaderService assetBundleLoaderService)
+        private readonly BeeEnemiesPool _beeEnemiesPool;
+        private readonly GuardEnemiesPool _guardEnemiesPool;
+        private readonly List<IAssetFromBundlePool<EnemyView>> _enemiesPools = new();
+        
+        public EnemiesCreator(BeeEnemiesPool.Factory beeEnemiesPoolFactory, GuardEnemiesPool.Factory guardEnemiesPoolFactory)
         {
-            _assetBundleLoaderService = assetBundleLoaderService;
+            _enemiesPools.Add(beeEnemiesPoolFactory.Create(new PoolData(10, 5)));
+            _enemiesPools.Add(guardEnemiesPoolFactory.Create(new PoolData(20, 5)));
+
+            foreach (var enemiesPool in _enemiesPools)
+            {
+                enemiesPool.InitPool();
+            }
         }
 
-        public EnemyView CreateSingleEnemy(string enemyAssetName)
+        public EnemyView CreateEnemy(string enemyAssetName)
         {
-            return _assetBundleLoaderService.InstantiateAssetFromBundle<EnemyView>(EnemiesAssetBundlePath, enemyAssetName);
+            return _enemiesPools.Find(x => x.AssetName == enemyAssetName).Spawn();
+        }
+        
+        public void DestroyBullet(PlayerBulletView playerBulletView)
+        {
+            _playerBulletPool.Despawn(playerBulletView);
         }
         
         public EnemyView[,] CreateEnemiesWave(string[,] enemiesAssetNames)
         {
-            var enemiesBundle = _assetBundleLoaderService.LoadAssetBundle(EnemiesAssetBundlePath);
             var enemiesRows = enemiesAssetNames.GetLength(0);
             var enemiesColumns = enemiesAssetNames.GetLength(1);
             var enemyViews = new EnemyView[enemiesRows,enemiesColumns];
@@ -30,12 +42,10 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
             {
                 for (int j = 0; j < enemiesColumns; j++)
                 {
-                    enemyViews[i,j] = GameObject.Instantiate(_assetBundleLoaderService.LoadAssetFromBundle<GameObject>(enemiesBundle, enemiesAssetNames[i,j])).GetComponent<EnemyView>();
+                    enemyViews[i,j] = CreateEnemy(enemiesAssetNames[i,j]);
                 }                
             }
 
-            _assetBundleLoaderService.UnloadAssetBundle(enemiesBundle);
-            
             return enemyViews;
         }
     }

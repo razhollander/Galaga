@@ -69,11 +69,13 @@ namespace CoreDomain.GameDomain.GameStateDomain.GamePlayDomain.Scripts.Bullet
 
         public void InitializePoolable()
         {
-            
+            gameObject.SetActive(true);
         }
 
         public void ResetPoolable()
         {
+            Id = null;
+            gameObject.SetActive(false);
             _updateSubscriptionService.UnregisterUpdatable(this);
         }
     }

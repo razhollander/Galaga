@@ -8,13 +8,11 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerBul
 {
     public class PlayerBulletCreator
     {
-        private readonly PlayerBulletPool.Factory _playerBulletPoolFactory;
         private readonly PlayerBulletPool _playerBulletPool;
 
         public PlayerBulletCreator(PlayerBulletPool.Factory playerBulletPoolFactory)
         {
-            _playerBulletPoolFactory = playerBulletPoolFactory;
-            _playerBulletPool = _playerBulletPoolFactory.Create(new PoolData(15, 5));
+            _playerBulletPool = playerBulletPoolFactory.Create(new PoolData(15, 5));
             _playerBulletPool.InitPool();
         }
 
