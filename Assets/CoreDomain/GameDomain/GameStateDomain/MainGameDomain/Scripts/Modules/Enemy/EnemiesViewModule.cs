@@ -13,20 +13,20 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
 {
     public class EnemiesViewModule
     {
+        private readonly Func<EnemyDataScriptableObject, EnemyView> _createEnemyFunction;
         private const string EnemyWaveParentName = "EnemiesWaveParent";
         private static readonly Vector2 RelativeToScreenCenterStartPosition = new(0.2f, 0.9f);
         private readonly Vector2 _enemiesGroupStartPosition;
         private List<EnemyView> _enemyViews = new();
         
-        public EnemiesViewModule(IDeviceScreenService deviceScreenService)
+        public EnemiesViewModule(IDeviceScreenService deviceScreenService, Func<EnemyDataScriptableObject, EnemyView> createEnemyFunction)
         {
+            _createEnemyFunction = createEnemyFunction;
             _enemiesGroupStartPosition = deviceScreenService.ScreenBoundsInWorldSpace * RelativeToScreenCenterStartPosition + deviceScreenService.ScreenCenterPointInWorldSpace;
         }
 
-        public async UniTask DoEnemiesWaveSequence(EnemyView[,] enemyViews, EnemiesWaveSequenceData enemiesWave)
+        public async UniTask DoEnemiesWaveSequence(EnemiesWaveSequenceData enemiesWave)
         {
-            _enemyViews.AddRange(enemyViews.Cast<EnemyView>().ToList());
-            
             List<UniTask> enemiesTasks = new List<UniTask>();
 
             GameObject enemiesWaveParent = new GameObject(EnemyWaveParentName);
@@ -48,7 +48,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
                     var cellY = startY - enemiesWave.CellSize * i - enemiesWave.SpaceBetweenRows * i;
                     var cellPosition = new Vector2(cellX, cellY);
 
-                    enemiesTasks.Add(DoEnemySequence(enemyViews[i,j], enemiesGrid[i, j], enemyParent, cellPosition));
+                    enemiesTasks.Add(DoEnemySequence(enemiesGrid[i, j], enemyParent, cellPosition));
                 }
             }
 
@@ -60,14 +60,21 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
             GameObject.Destroy(enemiesWaveParent.gameObject);
         }
 
+        public void KillEnemy(string enemyId)
+        {
+            var enemyToKill = _enemyViews.Find(x => x.Id == enemyId);
+            KillEnemy(enemyToKill);
+        }
+        
         private void KillAllEnemies()
         {
             _enemyViews.ForEach(KillEnemy);
         }
 
-        private async UniTask DoEnemySequence(EnemyView enemyView, EnemySequenceData enemySequenceData, Transform enemyParent, Vector2 cellPosition)
+        private async UniTask DoEnemySequence(EnemySequenceData enemySequenceData, Transform enemyParent, Vector2 cellPosition)
         {
             await UniTask.Delay(TimeSpan.FromSeconds(enemySequenceData.SecondsBeforeEnter), ignoreTimeScale: false);
+            var enemyView = CreateEnemy(enemySequenceData);
             enemyView.gameObject.SetActive(true);
             var enemyPathsData = enemySequenceData.EnemyPathsData;
             enemyView.transform.SetParent(enemyParent, true);
@@ -100,12 +107,14 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
             pathCreator.transform.position += (Vector3) pathDeltaFromCellPosition;
         }
 
-        public void KillEnemy(string enemyId)
+        private EnemyView CreateEnemy(EnemySequenceData enemySequenceData)
         {
-            var enemyToKill = _enemyViews.Find(x => x.Id == enemyId);
-            KillEnemy(enemyToKill);
-        }
+            var enemyView = _createEnemyFunction(enemySequenceData.EnemyPathsData.Enemy);
+            _enemyViews.Add(enemyView);
 
+            return enemyView;
+        }
+        
         private void KillEnemy(EnemyView enemyView)
         {
             _enemyViews.Remove(enemyView); 

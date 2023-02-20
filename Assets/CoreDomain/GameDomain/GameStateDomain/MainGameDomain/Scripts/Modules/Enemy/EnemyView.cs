@@ -61,7 +61,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
         
         public void OnSpawned()
         {
-            gameObject.SetActive(true);
+            
         }
 
         public void OnDespawned()

@@ -15,7 +15,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
         
         public EnemiesModule(IDeviceScreenService deviceScreenService, BeeEnemiesPool.Factory beeEnemiesPoolFactory, GuardEnemiesPool.Factory guardEnemiesPoolFactory)
         {
-            _enemiesViewModule = new EnemiesViewModule(deviceScreenService);
+            _enemiesViewModule = new EnemiesViewModule(deviceScreenService, CreateEnemy);
             _enemiesCreator = new EnemiesCreator(beeEnemiesPoolFactory, guardEnemiesPoolFactory);
         }
 
@@ -28,63 +28,19 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
         {
             foreach (var waveSequenceData in enemiesWaveSequenceData)
             {
-                var enemiesView = CreateEnemies(waveSequenceData);
-                await _enemiesViewModule.DoEnemiesWaveSequence(enemiesView, waveSequenceData);
+                await _enemiesViewModule.DoEnemiesWaveSequence(waveSequenceData);
             }
         }
-
-        private EnemyView[,] CreateEnemies(EnemiesWaveSequenceData enemiesWave)
-        {
-            var enemyViews = CreateEnemiesViews(enemiesWave);
-            CreateEnemiesData(enemiesWave.EnemiesGrid, enemyViews);
-            return enemyViews;
-        }
-
-        private void CreateEnemiesData(EnemySequenceData[,] waveEnemiesGrid, EnemyView[,] enemyViews)
-        {
-            var enemiesRows = waveEnemiesGrid.GetLength(0);
-            var enemiesColumns = waveEnemiesGrid.GetLength(1);
-
-            for (int i = 0; i < enemiesRows; i++)
-            {
-                for (int j = 0; j < enemiesColumns; j++)
-                {
-                    CreateEnemyData(waveEnemiesGrid[i, j], enemyViews[i, j]);
-                }
-            }
-        }
-
-        private void CreateEnemyData(EnemySequenceData enemiesWave, EnemyView enemyView)
+        
+        private EnemyView CreateEnemy(EnemyDataScriptableObject enemyScriptableObject)
         {
             var enemyId = Guid.NewGuid().ToString();
-            var enemyData = new EnemyData(enemyId, enemiesWave.EnemyPathsData.Enemy.Score);
+            var enemyData = new EnemyData(enemyId, enemyScriptableObject.Score);
             _enemiesData.Add(enemyId, enemyData);
+            
+            var enemyView = _enemiesCreator.CreateEnemy(enemyScriptableObject.EnemyAssetName);
             enemyView.Setup(enemyId);
-        }
-
-        private EnemyView[,] CreateEnemiesViews(EnemiesWaveSequenceData enemiesWave)
-        {
-            var enemiesAssetNames = GetEnemiesAssetNamesFromSequence(enemiesWave);
-            var enemyViews = _enemiesCreator.CreateEnemiesWave(enemiesAssetNames);
-
-            return enemyViews;
-        }
-
-        private static string[,] GetEnemiesAssetNamesFromSequence(EnemiesWaveSequenceData enemiesWave)
-        {
-            var enemiesRows = enemiesWave.EnemiesGrid.GetLength(0);
-            var enemiesColumns = enemiesWave.EnemiesGrid.GetLength(1);
-            var enemiesAssetNames = new string [enemiesRows, enemiesColumns];
-
-            for (int i = 0; i < enemiesRows; i++)
-            {
-                for (int j = 0; j < enemiesColumns; j++)
-                {
-                    enemiesAssetNames[i, j] = enemiesWave.EnemiesGrid[i, j].EnemyPathsData.Enemy.EnemyAssetName;
-                }
-            }
-
-            return enemiesAssetNames;
+            return enemyView;
         }
 
         public void KillEnemy(string enemyHitId)
