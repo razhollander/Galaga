@@ -29,8 +29,10 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
             await _transform.DORotate(directionAngles, RotateAnglesInASecond).SetSpeedBased(true).WithCancellation(_whileAliveCancellationToken.Token);
         }
 
-        public async UniTask FollowPath(VertexPath path)
+        public async UniTask FollowPath(VertexPath path, Func<Vector3> GetAddedDeltaToPath)
         {
+            Vector3 wherePathLastPointShouldBe = Vector3.back;
+            Vector3 deltaFromPathLastPointToWhereItShouldBe = wherePathLastPointShouldBe - path.GetPoint(path.NumPoints - 1);
             var distanceAlongPath = 0f;
             var pathLength = path.length;
             
@@ -41,8 +43,8 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
                     Debug.Log("Transform null");
                 }
 
-                _transform.position = path.GetPointAtDistance(distanceAlongPath);
-
+                _transform.position = path.GetPointAtDistance(distanceAlongPath)+GetAddedDeltaToPath();
+                
                 if (!_isRotationLocked)
                 {
                     _transform.rotation = Quaternion.LookRotation(Vector3.forward, path.GetDirectionAtDistance(distanceAlongPath));
@@ -52,7 +54,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
                 distanceAlongPath += _moveSpeed * Time.deltaTime;
             }
             
-            _transform.position = path.GetPoint(path.NumPoints-1);
+            _transform.position = path.GetPoint(path.NumPoints-1)+GetAddedDeltaToPath();
         }
 
         public void Setup(string enemyId)
