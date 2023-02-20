@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
@@ -9,9 +10,9 @@ using CoreDomain.Scripts.Extensions;
 using CoreDomain.Services;
 using Systems;
 
-namespace CoreDomain.Scripts.Services.AudioService
+namespace CoreDomain.Scripts.Services.Audio
 {
-    public class AudioService : IAudioService
+    public class AudioService : MonoBehaviour, IAudioService
     {
         private const int MaxDecibelLevel = 0;
         private const int MinDecibelLevel = -80;
@@ -23,21 +24,20 @@ namespace CoreDomain.Scripts.Services.AudioService
         private const string FXSource = "audioSource_FX";
         private const string MusicSource = "audioSource_music";
         private const string Mixer = "Mixer";
-        private static readonly List<string> _allMusicTracks = new()
+        
+        private static readonly List<string> _audioClipsAssetNames = new()
         {
-            
+            "GalagaThemeSong",
+            "GalagaLevelStartSoundEffect",
+            "GalagaFiringSoundEffect",
+            "GalagaCoinSoundEffect"
         };
-        private static readonly List<string> _allSoundFXs = new()
-        {
-            
-        };
-        private AudioMixer _audioMixer;
-
-        private float _gameAnimationSpeed = 1.3f;
 
         private Dictionary<AudioChannelType, AudioSource> _channelsByType = new();
         private Dictionary<string, AudioClip> _audioClipsByName = new();
-
+        [SerializeField] private AudioClipsScriptableObject _audioClipsScriptableObject;
+        [SerializeField] private AudioMixer _audioMixer;
+        
         private IAssetBundleLoaderService _assetsService;
         public AudioService(IAssetBundleLoaderService assetsService)
         {
@@ -59,23 +59,14 @@ namespace CoreDomain.Scripts.Services.AudioService
             // for clear order, set parent all GameObjects (masterSource, fxSource, musicSource) under rootGameObject
             var tracksToLoad = new List<Task>();
 
-            foreach (var musicTrack in _allMusicTracks)
+            foreach (var audioClipAssetName in _audioClipsAssetNames)
             {
-                tracksToLoad.Add(AddAudioClip(musicTrack));
+                AddAudioClip(audioClipAssetName);
             }
 
-            foreach (var fxClip in _allSoundFXs)
-            {
-                tracksToLoad.Add(AddAudioClip(fxClip));
-            }
-
-            await Task.WhenAll(tracksToLoad);
-            
             _channelsByType.Add(AudioChannelType.Master, masterSource);
             _channelsByType.Add(AudioChannelType.Fx, fxSource);
             _channelsByType.Add(AudioChannelType.Music, musicSource);
-            
-            SetChannelSpeed(AudioChannelType.Fx, _gameAnimationSpeed);
         }
         
         public async UniTask PlayAudio(string audioClipName, AudioChannelType audioChannel, AudioPlayType audioPlayType = AudioPlayType.OneShot)
@@ -169,10 +160,10 @@ namespace CoreDomain.Scripts.Services.AudioService
             }
         }
         
-        private async Task AddAudioClip(string name)
+        private void AddAudioClip(string assetName)
         {
-            var clip = _assetsService.InstantiateAssetFromBundle<AudioClip>(name, FXSource);
-            _audioClipsByName.Add(name.ToLower(), clip);
+            var clip = _assetsService.InstantiateAssetFromBundle<AudioClip>(assetName, FXSource);
+            _audioClipsByName.Add(clip.name, clip);
         }
 
         private static float NormalizedVolumeToDecibel(float volume)

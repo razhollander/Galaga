@@ -1,6 +1,6 @@
 using Cysharp.Threading.Tasks;
 
-namespace CoreDomain.Scripts.Services.AudioService
+namespace CoreDomain.Scripts.Services.Audio
 {
     public interface IAudioService
     {

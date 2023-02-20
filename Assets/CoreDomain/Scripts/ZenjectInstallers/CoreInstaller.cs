@@ -1,11 +1,8 @@
-using CoreDomain;
+using CoreDomain.Scripts.Services.Audio;
 using CoreDomain.Scripts.Services.SceneService;
-using CoreDomain.Scripts.Utils.Pools;
 using CoreDomain.Services;
 using CoreDomain.Services.GameStates;
 using Services.Logs;
-using CoreDomain.Services;
-using Systems;
 using UnityEngine;
 using Zenject;
 
@@ -23,8 +20,8 @@ namespace CoreDomain
             Container.BindInterfacesTo<AssetBundleLoaderService>().AsSingle().NonLazy();
             Container.BindInterfacesTo<StateMachineService>().AsSingle().NonLazy();
             Container.BindInterfacesTo<UnityLogger>().AsSingle().NonLazy();
+            Container.BindInterfacesTo<AudioService>().AsSingle().NonLazy();
             Container.BindInterfacesTo<UpdateSubscriptionService>().FromInstance(_updateSubscriptionService).AsSingle().NonLazy();
-            //Container.BindFactory<BasePool, BasePool.Factory>().AsSingle().NonLazy();
 
             Container.Bind<GameInputActions>().AsSingle().NonLazy();
         }
