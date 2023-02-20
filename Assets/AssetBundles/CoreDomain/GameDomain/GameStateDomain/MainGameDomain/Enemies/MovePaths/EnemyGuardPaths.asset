@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eec704ce703691343af3eff8e1e8fe30, type: 3}
+  m_Name: EnemyGuardPaths
+  m_EditorClassIdentifier: 
+  Enemy: {fileID: 11400000, guid: edf98a2b6b988e342bb1b92435dd0f83, type: 2}
+  EnterPath: {fileID: 5649048679381724221, guid: e29aee66c03e1fa43ba22bb3d3d89626, type: 3}
+  ExitPath: {fileID: 5649048679381724221, guid: e2d516f539fff8148a60d4b1ff47994a, type: 3}

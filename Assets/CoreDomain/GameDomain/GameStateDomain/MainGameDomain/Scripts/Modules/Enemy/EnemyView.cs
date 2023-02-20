@@ -25,6 +25,11 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
 
         public async UniTask RotateTowardsDirection(Vector3 direction)
         {
+            if (_isRotationLocked)
+            {
+                return;
+            }
+            
             var directionAngles= Quaternion.LookRotation(Vector3.forward, direction).eulerAngles;
             await _transform.DORotate(directionAngles, RotateAnglesInASecond).SetSpeedBased(true).WithCancellation(_whileAliveCancellationToken.Token);
         }

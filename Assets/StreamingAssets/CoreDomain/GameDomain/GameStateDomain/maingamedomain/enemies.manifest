@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 683093875
+CRC: 2206712700
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: fdf2de17e0a8a159e2999178d20787a1
+    Hash: 281baa69799c9e5cc0c80e04f736ebd9
   TypeTreeHash:
     serializedVersion: 2
     Hash: d3a11af35f6c3c24a1fbc877f2174d82
@@ -31,8 +31,8 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/Enemies/EnemyBeeSpaceship.prefab
-- Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/Enemies/EnemyGuardSpaceship.prefab
+- Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/Enemies/Prefabs/EnemyBeeSpaceship.prefab
+- Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/Enemies/Prefabs/EnemyGuardSpaceship.prefab
 - Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/Enemies/Sprites/EnemySpaceship.png
 - Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/Enemies/Sprites/EnemyBeeSprite.png
 Dependencies: []

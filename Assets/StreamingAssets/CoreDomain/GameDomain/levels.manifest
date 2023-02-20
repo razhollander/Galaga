@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 361823653
+CRC: 941813280
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 175ea63ae55fb38cc29abe26a457243e
+    Hash: 65774a248770963a507456ef5b3201fa
   TypeTreeHash:
     serializedVersion: 2
     Hash: d647de095be600c1a8dab4ebe50ccf96
@@ -35,13 +35,18 @@ SerializeReferenceClassIdentifiers:
 - AssemblyName: Sirenix.Serialization
   ClassName: Sirenix.Serialization.SerializationData
 Assets:
-- Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/Enemies/EnemyBee.asset
-- Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/Enemies/EnemiesWaveSequence1.asset
-- Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/Enemies/EnemiesWaveSequenceSmall.asset
+- Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/Enemies/EnemyData/EnemyBee.asset
+- Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/Enemies/Waves/3x5_EnemiesWaveSequence.asset
 - Assets/AssetBundles/CoreDomain/GameDomain/Levels/LevelsSettings.asset
 - Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/Enemies/MovePaths/LoopEnterPath.prefab
 - Assets/AssetBundles/CoreDomain/GameDomain/Levels/Level2.asset
-- Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/Enemies/EnemyBeePaths.asset
+- Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/Enemies/MovePaths/ZigZagEnterPath.prefab
+- Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/Enemies/MovePaths/EnemyGuardPaths.asset
+- Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/Enemies/Waves/3x3_GuardWaveSequence.asset
 - Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/Enemies/MovePaths/LoopExitPath.prefab
+- Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/Enemies/MovePaths/ZigZagExitPath.prefab
 - Assets/AssetBundles/CoreDomain/GameDomain/Levels/Level1.asset
+- Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/Enemies/Waves/3x3_BeeWaveSequence.asset
+- Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/Enemies/EnemyData/EnemyGuard.asset
+- Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/Enemies/MovePaths/EnemyBeePaths.asset
 Dependencies: []
