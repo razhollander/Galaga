@@ -34,8 +34,8 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
 
             var enemiesGrid = enemiesWave.EnemiesGrid;
             var enemyParent = enemiesWaveParent.transform;
-            var enemiesRows = enemiesGrid.GetLength(0);
-            var enemiesColumns = enemiesGrid.GetLength(1);
+            var enemiesColumns = enemiesGrid.GetLength(0);
+            var enemiesRows = enemiesGrid.GetLength(1);
             var centerScreenX = 0;
             var widthOfGrid = (enemiesColumns - 1) * (enemiesWave.CellSize + enemiesWave.SpaceBetweenColumns);
             var startX = centerScreenX-widthOfGrid * 0.5f;
@@ -48,11 +48,12 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
                     var cellX = startX + enemiesWave.CellSize * j + enemiesWave.SpaceBetweenColumns * j;
                     var cellY = startY - enemiesWave.CellSize * i - enemiesWave.SpaceBetweenRows * i;
                     var cellPosition = new Vector2(cellX, cellY);
-
-                    enemiesTasks.Add(DoEnemySequence(enemiesGrid[i, j], enemyParent, cellPosition));
+                    var cellLocalToParentPosition = enemyParent.transform.InverseTransformPoint(cellPosition);
+                    enemiesTasks.Add(DoEnemySequence(enemiesGrid[j, i], enemyParent, cellLocalToParentPosition));
                 }
             }
 
+            
             var enemyParentPosition = enemyParent.transform.position;
             var moveEnemyParentTask = enemyParent.DOMove(enemyParentPosition - Vector3.right * enemyParentPosition.x, 3).SetLoops(-1, LoopType.Yoyo);
             await enemiesTasks;
@@ -66,7 +67,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
             KillEnemy(enemyToKill);
         }
 
-        private async UniTask DoEnemySequence(EnemySequenceData enemySequenceData, Transform enemyParent, Vector2 cellPosition)
+        private async UniTask DoEnemySequence(EnemySequenceData enemySequenceData, Transform enemyParent, Vector2 cellLocalToParentPosition)
         {
             await UniTask.Delay(TimeSpan.FromSeconds(enemySequenceData.SecondsBeforeEnter), ignoreTimeScale: false);
             var enemyView = CreateEnemy(enemySequenceData);
@@ -74,7 +75,8 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
             var enemyPathsData = enemySequenceData.EnemyPathsData;
             enemyView.transform.SetParent(enemyParent, true);
             var enterPath = GameObject.Instantiate(enemyPathsData.EnterPath, enemyParent, true); // check if can not instatiate this, and just use its prefab
-            MovePathEndPointToCellPosition(cellPosition, enterPath);
+            var cellLocalToWorldPosition = enemyParent.TransformPoint(cellLocalToParentPosition);
+            MovePathEndPointToCellPosition(cellLocalToWorldPosition, enterPath);
 
             await enemyView.FollowPath(enterPath.path);
             await enemyView.RotateTowardsDirection(Vector3.up);
