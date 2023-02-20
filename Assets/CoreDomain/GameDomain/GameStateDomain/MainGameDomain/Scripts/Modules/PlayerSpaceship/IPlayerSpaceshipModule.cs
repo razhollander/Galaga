@@ -5,7 +5,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerSpa
     public interface IPlayerSpaceshipModule
     {
         void CreatePlayerSpaceship(string name);
-        void MoveSpaceship(float direction);
+        void MoveSpaceship(float xDirection);
         Vector3 SpaceShipShootPosition { get; }
     }
 }

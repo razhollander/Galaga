@@ -66,7 +66,6 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
 
         public void OnDespawned()
         {
-            Id = null;
             gameObject.SetActive(false);
         }
     }

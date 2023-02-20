@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using CoreDomain.Services;
 using Cysharp.Threading.Tasks;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace CoreDomain.Scripts.Services.SceneService
@@ -128,6 +129,7 @@ namespace CoreDomain.Scripts.Services.SceneService
 
         private async Task UnloadScene(string sceneName)
         {
+            Debug.Log("UnloadScene "+sceneName);
             await SceneManager.UnloadSceneAsync(sceneName);
             _loadedScenes.Remove(sceneName);
         }

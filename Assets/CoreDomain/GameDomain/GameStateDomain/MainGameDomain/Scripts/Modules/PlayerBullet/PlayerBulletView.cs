@@ -75,7 +75,6 @@ namespace CoreDomain.GameDomain.GameStateDomain.GamePlayDomain.Scripts.Bullet
 
         public void OnDespawned()
         {
-            Id = null;
             gameObject.SetActive(false);
             _updateSubscriptionService.UnregisterUpdatable(this);
         }

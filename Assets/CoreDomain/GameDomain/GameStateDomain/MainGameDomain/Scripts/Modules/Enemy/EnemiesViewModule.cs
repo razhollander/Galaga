@@ -36,8 +36,9 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
             var enemyParent = enemiesWaveParent.transform;
             var enemiesRows = enemiesGrid.GetLength(0);
             var enemiesColumns = enemiesGrid.GetLength(1);
-
-            var startX = -(enemiesColumns - 1) * (enemiesWave.CellSize + enemiesWave.SpaceBetweenColumns) * 0.5f; // so we create enemies from horizontal center
+            var centerScreenX = 0;
+            var widthOfGrid = (enemiesColumns - 1) * (enemiesWave.CellSize + enemiesWave.SpaceBetweenColumns);
+            var startX = centerScreenX-widthOfGrid * 0.5f;
             var startY = _enemiesGroupStartPosition.y;
 
             for (int i = 0; i < enemiesRows; i++)
@@ -56,7 +57,6 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
             var moveEnemyParentTask = enemyParent.DOMove(enemyParentPosition - Vector3.right * enemyParentPosition.x, 3).SetLoops(-1, LoopType.Yoyo);
             await enemiesTasks;
             moveEnemyParentTask.Kill();
-            KillAllEnemies();
             GameObject.Destroy(enemiesWaveParent.gameObject);
         }
 
@@ -64,11 +64,6 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
         {
             var enemyToKill = _enemyViews.Find(x => x.Id == enemyId);
             KillEnemy(enemyToKill);
-        }
-        
-        private void KillAllEnemies()
-        {
-            _enemyViews.ForEach(KillEnemy);
         }
 
         private async UniTask DoEnemySequence(EnemySequenceData enemySequenceData, Transform enemyParent, Vector2 cellPosition)

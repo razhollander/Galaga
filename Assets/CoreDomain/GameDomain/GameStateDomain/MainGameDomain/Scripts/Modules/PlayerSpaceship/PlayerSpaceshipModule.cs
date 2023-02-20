@@ -22,11 +22,12 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerSpa
             _playerSpaceshipData = new PlayerSpaceshipData(name);
             var playerSpaceshipView = _createPlayerSpaceship.CreatePlayerSpaceship();
             _playerSpaceshipViewModule.Setup(playerSpaceshipView);
+            _playerSpaceshipViewModule.SetSpaceShipName(_playerSpaceshipData.Name);
         }
 
-        public void MoveSpaceship(float direction)
+        public void MoveSpaceship(float xDirection)
         {
-            _playerSpaceshipViewModule.MoveSpaceship(direction, _playerSpaceshipData.Speed);
+            _playerSpaceshipViewModule.MoveSpaceship(xDirection);
         }
     }
 }

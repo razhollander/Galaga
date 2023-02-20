@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1848272554
+CRC: 1974820529
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 08045faa47381821fde62ea3d641fd81
+    Hash: a5722d257a99e9fc58f1830d1414356c
   TypeTreeHash:
     serializedVersion: 2
     Hash: 20ea36466c4407d094ff77d416a20531
@@ -97,11 +97,7 @@ SerializeReferenceClassIdentifiers:
 - AssemblyName: Unity.TextMeshPro
   ClassName: TMPro.VertexGradient
 - AssemblyName: UnityEngine.CoreModule
-  ClassName: UnityEngine.Events.ArgumentCache
-- AssemblyName: UnityEngine.CoreModule
   ClassName: UnityEngine.Events.PersistentCallGroup
-- AssemblyName: UnityEngine.CoreModule
-  ClassName: UnityEngine.Events.PersistentListenerMode
 - AssemblyName: UnityEngine.CoreModule
   ClassName: UnityEngine.RectOffset
 - AssemblyName: UnityEngine.TextCoreFontEngineModule

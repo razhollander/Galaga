@@ -34,7 +34,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Commands
             
             _scoreModule.AddScore(_enemiesModule.GetEnemyScore(enemyViewHit.Id));
             _mainGameUiModule.UpdateScore(_scoreModule.PlayerScore);
-            _enemiesModule.KillEnemy(enemyViewHit.Id);
+            _enemiesModule.TryKillEnemy(enemyViewHit.Id);
             _playerBulletModule.DestroyBullet(_commandData.HitPlayerBulletView.Id);
         }
     }

@@ -15,9 +15,10 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
         public float SpaceBetweenColumns;
         public float SpaceBetweenRows;
         public float CellSize;
-     
+
+#if UNITY_EDITOR
         [Button]
-        public void ResizeEnemiesGrid(int x, int y)
+        private void ResizeEnemiesGrid(int x, int y)
         {
             var newEnemiesGrid = new EnemySequenceData[x, y];
             var previousX = EnemiesGrid.GetLength(0);
@@ -41,7 +42,6 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
             EnemiesGrid = newEnemiesGrid;
         }
 
-#if UNITY_EDITOR
         public static EnemySequenceData DrawElement(Rect rect, EnemySequenceData enemySequenceData)
         {
             DrawLabels(rect);

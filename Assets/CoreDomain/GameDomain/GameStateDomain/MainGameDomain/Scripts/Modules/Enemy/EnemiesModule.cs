@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using CoreDomain.Services;
 using Cysharp.Threading.Tasks;
+using MonkeyCore.Scripts.Systems.Extensions;
 using UnityEngine;
 
 namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
@@ -29,9 +30,15 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
             foreach (var waveSequenceData in enemiesWaveSequenceData)
             {
                 await _enemiesViewModule.DoEnemiesWaveSequence(waveSequenceData);
+                KillAllEnemies();
             }
         }
-        
+
+        private void KillAllEnemies()
+        {
+            _enemiesData.ForEach(x => KillEnemy(x.Key));
+        }
+
         private EnemyView CreateEnemy(EnemyDataScriptableObject enemyScriptableObject)
         {
             var enemyId = Guid.NewGuid().ToString();
@@ -43,13 +50,18 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
             return enemyView;
         }
 
-        public void KillEnemy(string enemyHitId)
+        public void TryKillEnemy(string enemyHitId)
         {
             if (!_enemiesData.ContainsKey(enemyHitId))
             {
                 return;
             }
 
+            KillEnemy(enemyHitId);
+        }
+
+        private void KillEnemy(string enemyHitId)
+        {
             _enemiesData.Remove(enemyHitId);
             _enemiesViewModule.KillEnemy(enemyHitId);
         }
