@@ -5,6 +5,6 @@ namespace CoreDomain.GameDomain
     {
         void LoadLevels();
         int GetLevelsAmount();
-        LevelData GetLevel(int levelNumber);
+        LevelData GetLevelData(int levelNumber);
     }
 }

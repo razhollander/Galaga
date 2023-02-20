@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemiesWaveSequenceData:
   - {fileID: 11400000, guid: f047cb92ebc22024a83721e55c9e79ca, type: 2}
+  - {fileID: 11400000, guid: db635cd71b71d574dabc047de35e0223, type: 2}
+  - {fileID: 11400000, guid: f047cb92ebc22024a83721e55c9e79ca, type: 2}

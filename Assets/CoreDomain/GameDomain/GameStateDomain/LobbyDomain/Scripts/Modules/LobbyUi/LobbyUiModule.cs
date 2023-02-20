@@ -18,10 +18,10 @@ namespace CoreDomain.GameDomain.GameStateDomain.LobbyDomain.Modules.LobbyUi
             _mainGameStateFactory = mainGameStateFactory;
         }
 
-        public void CreateLobbyUi(int levels)
+        public void CreateLobbyUi(int levelsAmount)
         {
             var lobbyUiView = _creator.CreateLobbyUi();
-            lobbyUiView.Setup(SwitchToQuickGameState, levels);
+            lobbyUiView.Setup(SwitchToQuickGameState, levelsAmount);
             _viewModule.SetupLobbyUiView(lobbyUiView);
         }
 

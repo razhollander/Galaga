@@ -31,8 +31,6 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
 
         public async UniTask FollowPath(VertexPath path, Func<Vector3> GetAddedDeltaToPath)
         {
-            Vector3 wherePathLastPointShouldBe = Vector3.back;
-            Vector3 deltaFromPathLastPointToWhereItShouldBe = wherePathLastPointShouldBe - path.GetPoint(path.NumPoints - 1);
             var distanceAlongPath = 0f;
             var pathLength = path.length;
             

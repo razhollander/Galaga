@@ -21,10 +21,10 @@ namespace CoreDomain.GameDomain.GameStateDomain.LobbyDomain.Modules.LobbyUi
             AddListeners();
         }
 
-        public void Setup(Action quickGameButtonClickedCallback, int levels)
+        public void Setup(Action quickGameButtonClickedCallback, int levelsAmount)
         {
             _quickGameButtonClickedCallback = quickGameButtonClickedCallback;
-            SetLevelsDropdown(levels);
+            SetLevelsDropdown(levelsAmount);
         }
 
         private void OnDestroy()
@@ -47,9 +47,9 @@ namespace CoreDomain.GameDomain.GameStateDomain.LobbyDomain.Modules.LobbyUi
             _quickGameButtonClickedCallback?.Invoke();
         }
 
-        private void SetLevelsDropdown(int levels)
+        private void SetLevelsDropdown(int levelsAmount)
         {
-            var numberList = Enumerable.Range(1, levels+1).Select(x => x.ToString()).ToList();
+            var numberList = Enumerable.Range(1, levelsAmount).Select(x => x.ToString()).ToList();
             _levelsDropdown.AddOptions(numberList);
         }
     }

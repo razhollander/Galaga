@@ -25,7 +25,7 @@ namespace CoreDomain.GameDomain
             return _levelsData.LevelsByOrder.Length;
         }
 
-        public LevelData GetLevel(int levelNumber)
+        public LevelData GetLevelData(int levelNumber)
         {
             return _levelsData.LevelsByOrder[levelNumber - 1];
         }

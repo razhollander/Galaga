@@ -25,11 +25,11 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
             _createEnemyFunction = createEnemyFunction;
             _enemiesGroupStartPosition = deviceScreenService.ScreenBoundsInWorldSpace * RelativeToScreenCenterStartPosition + deviceScreenService.ScreenCenterPointInWorldSpace;
             _enemiesWaveParent = new GameObject(EnemyWaveParentName).transform;
-            _enemiesWaveParent.position = _enemiesGroupStartPosition;
         }
 
         public async UniTask DoEnemiesWaveSequence(EnemiesWaveSequenceData enemiesWave)
         {
+            _enemiesWaveParent.position = _enemiesGroupStartPosition;
             List<UniTask> enemiesTasks = new List<UniTask>();
             var enemiesGrid = enemiesWave.EnemiesGrid;
             var enemiesColumns = enemiesGrid.GetLength(0);
@@ -47,13 +47,13 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
                     var cellY = startY - enemiesWave.CellSize * i - enemiesWave.SpaceBetweenRows * i;
                     var cellPosition = new Vector2(cellX, cellY);
                     var cellLocalToParentPosition = _enemiesWaveParent.InverseTransformPoint(cellPosition);
-                    enemiesTasks.Add(DoEnemyFullSequence(enemiesGrid[j, i], cellLocalToParentPosition));
+                    enemiesTasks.Add(DoEnemyFullSequence(enemiesGrid[j, i], cellLocalToParentPosition).SuppressCancellationThrow());
                 }
             }
 
             var enemyParentPosition = _enemiesWaveParent.position;
             var moveEnemyParentTask = _enemiesWaveParent.DOMove(enemyParentPosition - Vector3.right * enemyParentPosition.x, 3).SetLoops(-1, LoopType.Yoyo);
-            await enemiesTasks;
+            await UniTask.WhenAll(enemiesTasks);
             moveEnemyParentTask.Kill();
         }
 

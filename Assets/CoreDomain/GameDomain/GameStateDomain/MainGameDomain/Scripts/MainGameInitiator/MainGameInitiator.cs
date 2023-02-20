@@ -36,7 +36,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain
             var enterData = mainGameStateEnterData ?? _defaultLobbyGameStateEnterData;
             _mainGameUiModule.CreateMainGameUi();
             _playerSpaceshipModule.CreatePlayerSpaceship(enterData.PlayerName);
-            var levelData = _levelsService.GetLevel(enterData.Level);
+            var levelData = _levelsService.GetLevelData(enterData.Level);
             _enemiesModule.DoEnemiesWavesSequence(levelData.EnemiesWaveSequenceData);
             _audioService.PlayAudio(ThemeSongName, AudioChannelType.Master, AudioPlayType.Loop);
         }
