@@ -7,5 +7,6 @@ namespace CoreDomain.Services
         Vector2 ScreenBoundsInWorldSpace { get; }
         Vector2 ScreenCenterPointInWorldSpace { get; }
         Vector2 ScreenSize { get; }
+        bool IsInScreenVerticalBounds(float yValue);
     }
 }

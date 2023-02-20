@@ -1,10 +1,9 @@
 using CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerSpaceship;
 using CoreDomain.Scripts.Utils.Command;
-using Cysharp.Threading.Tasks;
 
 namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Commands
 {
-    public class JoystickDraggedCommand : CommandOneParameter<float, JoystickDraggedCommand>
+    public class JoystickDraggedCommand : CommandSyncOneParameter<float, JoystickDraggedCommand>
     {
         private readonly float _dragValue;
         private readonly IPlayerSpaceshipModule _playerSpaceshipModule;
@@ -15,7 +14,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Commands
             _playerSpaceshipModule = playerSpaceshipModule;
         }
 
-        public override async UniTask Execute()
+        public override void Execute()
         {
             _playerSpaceshipModule.MoveSpaceship(_dragValue);
         }

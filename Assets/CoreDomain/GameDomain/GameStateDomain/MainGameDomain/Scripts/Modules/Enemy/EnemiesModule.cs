@@ -19,6 +19,11 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
             _enemiesCreator = new EnemiesCreator(assetBundleLoaderService);
         }
 
+        public int GetEnemyScore(string enemyId)
+        {
+            return _enemiesData[enemyId].Score;
+        }
+        
         public async UniTaskVoid DoEnemiesWavesSequence(EnemiesWaveSequenceData[] enemiesWaveSequenceData)
         {
             foreach (var waveSequenceData in enemiesWaveSequenceData)
@@ -82,8 +87,13 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
             return enemiesAssetNames;
         }
 
-        public void EnemyHit(string enemyHitId)
+        public void KillEnemy(string enemyHitId)
         {
+            if (!_enemiesData.ContainsKey(enemyHitId))
+            {
+                return;
+            }
+
             _enemiesData.Remove(enemyHitId);
             _enemiesViewModule.KillEnemy(enemyHitId);
         }

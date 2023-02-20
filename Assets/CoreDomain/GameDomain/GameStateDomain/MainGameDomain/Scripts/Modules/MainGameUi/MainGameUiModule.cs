@@ -8,12 +8,14 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.MainGameU
     public class MainGameUiModule : IMainGameUiModule
     {
         private readonly JoystickDraggedCommand.Factory _joystickDraggedCommandFactory;
+        private readonly CommandSync<ShootButtonClickedCommand>.Factory _shootButtonClickedCommandFactory;
         private readonly MainGameUiCreator _creator;
         private readonly MainGameUiViewModule _viewModule;
 
-        public MainGameUiModule(IAssetBundleLoaderService assetBundleLoaderService, JoystickDraggedCommand.Factory joystickDraggedCommandFactory)
+        public MainGameUiModule(IAssetBundleLoaderService assetBundleLoaderService, JoystickDraggedCommand.Factory joystickDraggedCommandFactory, ShootButtonClickedCommand.Factory shootButtonClickedCommandFactory)
         {
             _joystickDraggedCommandFactory = joystickDraggedCommandFactory;
+            _shootButtonClickedCommandFactory = shootButtonClickedCommandFactory;
             _creator = new MainGameUiCreator(assetBundleLoaderService);
             _viewModule = new MainGameUiViewModule();
         }
@@ -32,12 +34,12 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.MainGameU
 
         private void OnJoystickInputChanged(float dragValue)
         {
-            _joystickDraggedCommandFactory.Create(dragValue).Execute().Forget();
+            _joystickDraggedCommandFactory.Create(dragValue).Execute();
         }
 
         private void OnShootButtonClicked()
         {
-            
+            _shootButtonClickedCommandFactory.Create().Execute();
         }
 
         public void DestroyMainGameUi()

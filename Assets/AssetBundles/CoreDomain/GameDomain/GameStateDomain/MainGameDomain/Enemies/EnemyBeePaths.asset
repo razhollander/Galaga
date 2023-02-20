@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec704ce703691343af3eff8e1e8fe30, type: 3}
   m_Name: EnemyBeePaths
   m_EditorClassIdentifier: 
-  Enemy: {fileID: 3187036701222394129, guid: c63b260c6b216974299221365ae9526a, type: 3}
+  Enemy: {fileID: 11400000, guid: bc03dd533d5d8794199b5fc5b15b87ba, type: 2}
   EnterPath: {fileID: 5649048679381724221, guid: 9abff9a8c20a59d49a28808f711cc420, type: 3}
   ExitPath: {fileID: 5649048679381724221, guid: 51ea2fbfe927edd4587f6570fd629b3a, type: 3}

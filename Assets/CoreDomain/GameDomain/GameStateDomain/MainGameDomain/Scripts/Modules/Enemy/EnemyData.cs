@@ -1,6 +1,6 @@
 ﻿namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
 {
-    public class EnemyData
+    public struct EnemyData
     {
         public readonly string Id;
         public readonly int Score;

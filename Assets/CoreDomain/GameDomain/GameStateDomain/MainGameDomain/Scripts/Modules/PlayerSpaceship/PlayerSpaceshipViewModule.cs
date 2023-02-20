@@ -17,7 +17,9 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerSpa
             _deviceScreenService = deviceScreenService;
             _screenBoundsInWorldSpace = deviceScreenService.ScreenBoundsInWorldSpace;
         }
-        
+
+        public Vector3 SpaceshipShootPosition => _playerSpaceshipView.ShootPosition;
+
         public void Setup(PlayerSpaceshipView playerSpaceshipView)
         {
             _playerSpaceshipView = playerSpaceshipView;

@@ -1,5 +1,4 @@
 using CoreDomain.GameDomain.GameStateDomain.LobbyDomain.Modules.LobbyUi;
-using CoreDomain.Services;
 using CoreDomain.Services.GameStates;
 using Zenject;
 
@@ -9,7 +8,6 @@ namespace CoreDomain.GameDomain.GameStateDomain.LobbyDomain
     {
         public override void InstallBindings()
         {
-            LogService.Log("Install lobby");
             Container.BindInterfacesTo<LobbyUiModule>().AsSingle().NonLazy();
             Container.BindFactory<LobbyGameStateEnterData, EnterLobbyGameStateCommand, EnterLobbyGameStateCommand.Factory>();
         }

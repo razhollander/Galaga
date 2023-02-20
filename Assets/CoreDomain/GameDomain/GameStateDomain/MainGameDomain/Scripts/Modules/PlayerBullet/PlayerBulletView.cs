@@ -1,24 +1,28 @@
 using System;
-using Client;
-using Features.MainGameScreen.Bullet;
-using CoreDomain;
+using CoreDomain.Services;
 using UnityEngine;
+using Zenject;
+using IPoolable = CoreDomain.Scripts.Utils.Pools.IPoolable;
 
 namespace CoreDomain.GameDomain.GameStateDomain.GamePlayDomain.Scripts.Bullet
 {
-    public class PlayerBulletView : MonoBehaviour, IUpdatable
+    public class PlayerBulletView : MonoBehaviour, IUpdatable, IPoolable
     {
-        private Action _onOutOfScreen;
+        [SerializeField] private float _speed;
+        
+        private Action<PlayerBulletView> _onOutOfScreen;
         private Action<Collider2D> _onHitEnemy;
-        private bool _didAlreadyHitEnemy; // used when at the same frame the bullet hit multiple enemies
-        private BulletModel _model;
-        private float _speed;
-        private IClient _client;
         private Transform _transform;
+        private Action<PlayerBulletView, Collider2D> _onHitWithCollider2D;
+        private IDeviceScreenService _deviceScreenService;
+        private IUpdateSubscriptionService _updateSubscriptionService;
+        public string Id { get; private set; }
 
-        public void OnDestroy()
+        [Inject]
+        private void Inject(IUpdateSubscriptionService updateSubscriptionService, IDeviceScreenService deviceScreenService)
         {
-            RemoveListeners();
+            _updateSubscriptionService = updateSubscriptionService;
+            _deviceScreenService = deviceScreenService;
         }
 
         private void Awake()
@@ -28,59 +32,49 @@ namespace CoreDomain.GameDomain.GameStateDomain.GamePlayDomain.Scripts.Bullet
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (_didAlreadyHitEnemy)
-            {
-                return;
-            }
+            _onHitWithCollider2D?.Invoke(this, other);
+        }
 
-            _onHitEnemy(other);
+        private void MoveUp()
+        {
+            var isAboveTopScreenBound = _deviceScreenService.ScreenBoundsInWorldSpace.y < _transform.position.y;
+            
+            if (isAboveTopScreenBound)
+            {
+                _onOutOfScreen?.Invoke(this);
+            }
+            else
+            {
+                _transform.Translate(0, _speed * Time.deltaTime, 0);
+            }
+        }
+
+        public void Setup(string bulletId, Action<PlayerBulletView,Collider2D> onHitWithCollider2D, Action<PlayerBulletView> onOutOfScreen)
+        {
+            Id = bulletId;
+            _onOutOfScreen = onOutOfScreen;
+            _onHitWithCollider2D = onHitWithCollider2D;
         }
 
         public void ManagedUpdate()
         {
-            if (!_model.IsBulletEnabled)
-            {
-                return;
-            }
-
-            _transform.Translate(0, _speed * Time.deltaTime, 0);
-
-            if (!_client.CameraManager.IsInScreenVerticalBounds(_transform.position.y))
-            {
-                _onOutOfScreen();
-            }
+            MoveUp();
+        }
+        
+        public void StartMoving(Vector3 bulletStartPosition)
+        {
+            transform.position = bulletStartPosition;
+            _updateSubscriptionService.RegisterUpdatable(this);
         }
 
-        public void Setup(IClient client, BulletModel model, Action<Collider2D> onHitEnemy, Action onOutOfScreen,
-            float speed)
+        public void InitializePoolable()
         {
-            _client = client;
-            _onHitEnemy = onHitEnemy;
-            _onOutOfScreen = onOutOfScreen;
-            _speed = speed;
-            _model = model;
+            
         }
 
-        public void StartMoving()
+        public void ResetPoolable()
         {
-            _didAlreadyHitEnemy = false;
-            AddListeners();
-        }
-
-        public void StopMoving()
-        {
-            _didAlreadyHitEnemy = true;
-            RemoveListeners();
-        }
-
-        private void AddListeners()
-        {
-            _client.UpdateSubscriptionService.RegisterUpdatable(this);
-        }
-
-        private void RemoveListeners()
-        {
-            _client.UpdateSubscriptionService.UnregisterUpdatable(this);
+            _updateSubscriptionService.UnregisterUpdatable(this);
         }
     }
 }

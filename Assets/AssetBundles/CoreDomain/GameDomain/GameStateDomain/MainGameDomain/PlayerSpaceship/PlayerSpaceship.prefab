@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerSpriteRenderer: {fileID: 3145742520203638468}
-  ShootPosition: {fileID: 1114959875240217909}
+  shootPositionTransform: {fileID: 1114959875240217909}
 --- !u!61 &8694512027894198608
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -191,7 +191,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1114959875240217909}
   m_Layer: 7
-  m_Name: ShootPos
+  m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

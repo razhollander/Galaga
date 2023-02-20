@@ -11,7 +11,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.LobbyDomain
     {
         [SerializeField] private LobbyGameStateEnterData _defaultLobbyGameStateEnterData;
         
-        private CommandOneParameter<LobbyGameStateEnterData, EnterLobbyGameStateCommand>.Factory _enterLobbyGameStateCommand;
+        private EnterLobbyGameStateCommand.Factory _enterLobbyGameStateCommand;
         
         [Inject]
         private void Setup(EnterLobbyGameStateCommand.Factory enterLobbyGameStateCommand)
@@ -22,7 +22,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.LobbyDomain
         public async UniTask StartState(LobbyGameStateEnterData lobbyGameStateEnterData = null)
         {
             var enterData = lobbyGameStateEnterData ?? _defaultLobbyGameStateEnterData;
-            await _enterLobbyGameStateCommand.Create(enterData).Execute();
+            _enterLobbyGameStateCommand.Create(enterData).Execute();
         }
     }
 }

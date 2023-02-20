@@ -1,0 +1,38 @@
+ManifestFileVersion: 0
+CRC: 2811558390
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: b3f0d477f76b648198fe131a9c132ecd
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5f5982e5cf449593d8d21d1fe7694eb0
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 50
+  Script: {instanceID: 0}
+- Class: 58
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8ecae57dcd391470da88933391e12542, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/PlayerBullet/PlayerBulletSprite.png
+- Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/PlayerBullet/PlayerBullet.prefab
+Dependencies: []

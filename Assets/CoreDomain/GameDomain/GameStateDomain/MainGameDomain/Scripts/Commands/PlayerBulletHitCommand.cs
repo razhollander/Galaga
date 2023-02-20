@@ -1,16 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies;
 using CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.MainGameUi;
 using CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerBullet;
 using CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Score;
 using CoreDomain.Scripts.Utils.Command;
-using Cysharp.Threading.Tasks;
-using UnityEngine;
 
 namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Commands
 {
-    public class PlayerBulletHitCommand : CommandOneParameter<PlayerBulletHitCommandData, PlayerBulletHitCommand>
+    public class PlayerBulletHitCommand : CommandSyncOneParameter<PlayerBulletHitCommandData, PlayerBulletHitCommand>
     {
         private readonly PlayerBulletHitCommandData _commandData;
         private readonly IEnemiesModule _enemiesModule;
@@ -27,7 +23,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Commands
             _playerBulletModule = playerBulletModule;
         }
 
-        public override async UniTask Execute()
+        public override void Execute()
         {
             var enemyViewHit = _commandData.HitCollider2D.gameObject.GetComponent<EnemyView>();
             
@@ -36,10 +32,10 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Commands
                 return;
             }
             
-            _scoreModule.AddScore(_enemyViewHit.);
+            _scoreModule.AddScore(_enemiesModule.GetEnemyScore(enemyViewHit.Id));
             _mainGameUiModule.UpdateScore(_scoreModule.PlayerScore);
-            _enemiesModule.EnemyHit(enemyViewHit.Id);
-            _playerBulletModule.BulletHit(_commandData.HitPlayerBulletView);
+            _enemiesModule.KillEnemy(enemyViewHit.Id);
+            _playerBulletModule.DestroyBullet(_commandData.HitPlayerBulletView.Id);
         }
     }
 }

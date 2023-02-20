@@ -6,8 +6,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
 {
     public class EnemiesCreator
     {
-        private const string MainGameUiAssetName = "PlayerBullet";
-        private const string MainGameUiAssetBundlePath = "coredomain/gamedomain/gamestatedomain/maingamedomain/enemies";
+        private const string EnemiesAssetBundlePath = "coredomain/gamedomain/gamestatedomain/maingamedomain/enemies";
         private readonly IAssetBundleLoaderService _assetBundleLoaderService;
 
         public EnemiesCreator(IAssetBundleLoaderService assetBundleLoaderService)
@@ -15,14 +14,14 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
             _assetBundleLoaderService = assetBundleLoaderService;
         }
 
-        public EnemyView CreateEnemy(string enemyAssetName)
+        public EnemyView CreateSingleEnemy(string enemyAssetName)
         {
-            return _assetBundleLoaderService.InstantiateAssetFromBundle<EnemyView>(MainGameUiAssetBundlePath, enemyAssetName);
+            return _assetBundleLoaderService.InstantiateAssetFromBundle<EnemyView>(EnemiesAssetBundlePath, enemyAssetName);
         }
         
         public EnemyView[,] CreateEnemiesWave(string[,] enemiesAssetNames)
         {
-            var enemiesBundle = _assetBundleLoaderService.LoadAssetBundle(MainGameUiAssetBundlePath);
+            var enemiesBundle = _assetBundleLoaderService.LoadAssetBundle(EnemiesAssetBundlePath);
             var enemiesRows = enemiesAssetNames.GetLength(0);
             var enemiesColumns = enemiesAssetNames.GetLength(1);
             var enemyViews = new EnemyView[enemiesRows,enemiesColumns];

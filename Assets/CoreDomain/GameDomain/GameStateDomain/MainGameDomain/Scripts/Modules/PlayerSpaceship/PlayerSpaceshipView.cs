@@ -10,8 +10,9 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerSpa
         private const float PLAYER_DIE_ANIMATION_STEPS = 9;
         
         [SerializeField] public SpriteRenderer PlayerSpriteRenderer;
-        [SerializeField] public Transform ShootPosition;
-        
+        [SerializeField] private Transform shootPositionTransform;
+
+        public Vector3 ShootPosition => shootPositionTransform.position;
         private Action _onDieAnimationEnd;
 
         private Action<Collider2D> _onCollision;
