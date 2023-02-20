@@ -5,7 +5,6 @@ using System.Linq;
 using CoreDomain.Services;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
-using Extensions;
 using PathCreation;
 using UnityEngine;
 
@@ -48,7 +47,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
                     var cellY = startY - enemiesWave.CellSize * i - enemiesWave.SpaceBetweenRows * i;
                     var cellPosition = new Vector2(cellX, cellY);
                     var cellLocalToParentPosition = _enemiesWaveParent.InverseTransformPoint(cellPosition);
-                    enemiesTasks.Add(DoEnemySequence(enemiesGrid[j, i], cellLocalToParentPosition));
+                    enemiesTasks.Add(DoEnemyFullSequence(enemiesGrid[j, i], cellLocalToParentPosition));
                 }
             }
 
@@ -64,7 +63,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
             KillEnemy(enemyToKill);
         }
 
-        private async UniTask DoEnemySequence(EnemySequenceData enemySequenceData, Vector2 cellLocalToParentPosition)
+        private async UniTask DoEnemyFullSequence(EnemySequenceData enemySequenceData, Vector2 cellLocalToParentPosition)
         {
             await UniTask.Delay(TimeSpan.FromSeconds(enemySequenceData.SecondsBeforeEnter), ignoreTimeScale: false);
             
