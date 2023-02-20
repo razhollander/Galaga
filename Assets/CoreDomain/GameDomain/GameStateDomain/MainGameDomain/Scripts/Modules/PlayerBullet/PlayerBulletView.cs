@@ -17,6 +17,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.GamePlayDomain.Scripts.Bullet
         private IDeviceScreenService _deviceScreenService;
         private IUpdateSubscriptionService _updateSubscriptionService;
         public string Id { get; private set; }
+        public Action Despawn { get; set; }
 
         [Inject]
         private void Inject(IUpdateSubscriptionService updateSubscriptionService, IDeviceScreenService deviceScreenService)
@@ -66,13 +67,13 @@ namespace CoreDomain.GameDomain.GameStateDomain.GamePlayDomain.Scripts.Bullet
             transform.position = bulletStartPosition;
             _updateSubscriptionService.RegisterUpdatable(this);
         }
-
-        public void InitializePoolable()
+        
+        public void OnSpawned()
         {
             gameObject.SetActive(true);
         }
 
-        public void ResetPoolable()
+        public void OnDespawned()
         {
             Id = null;
             gameObject.SetActive(false);

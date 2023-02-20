@@ -48,22 +48,18 @@ namespace CoreDomain.Scripts.Utils.Pools
             }
             
             obj = _pool.Dequeue();
-            obj.InitializePoolable();
+            obj.Despawn = () => Despawn(obj);
+            obj.OnSpawned();
 
             return obj;
         }
 
-        public void Despawn(TPoolable obj)
+        protected virtual void Despawn(TPoolable obj)
         {
-            obj.ResetPoolable();
+            obj.OnDespawned();
             _pool.Enqueue(obj);
         }
         
-        public void Despawn(TPoolable obj)
-        {
-            obj.ResetPoolable();
-            _pool.Enqueue(obj);
-        }
         public class Factory: PlaceholderFactory<PoolData, TV>
         {
         

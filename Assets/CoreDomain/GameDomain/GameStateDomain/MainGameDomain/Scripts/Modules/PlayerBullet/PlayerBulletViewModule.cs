@@ -10,11 +10,6 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerBul
         private readonly Action<PlayerBulletView> _onDestroyBullet;
         private List<PlayerBulletView> _bulletViews = new ();
 
-        public PlayerBulletViewModule(Action<PlayerBulletView> onDestroyBullet)
-        {
-            _onDestroyBullet = onDestroyBullet;
-        }
-
         public void FireBullet(PlayerBulletView bulletView, Vector3 bulletStartPosition)
         {
             _bulletViews.Add(bulletView);
@@ -25,7 +20,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerBul
         {
             var bulletView = _bulletViews.Find(x => x.Id == bulletId);
             _bulletViews.Remove(bulletView);
-            _onDestroyBullet(bulletView);
+            bulletView.Despawn();
         }
     }
 }

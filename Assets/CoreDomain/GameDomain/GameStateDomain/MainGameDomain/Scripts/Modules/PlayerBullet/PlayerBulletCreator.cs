@@ -20,11 +20,6 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerBul
         {
             return _playerBulletPool.Spawn();
         }
-        
-        public void DestroyBullet(PlayerBulletView playerBulletView)
-        {
-            _playerBulletPool.Despawn(playerBulletView);
-        }
 
         // private const string PlayerBulletAssetName = "PlayerBullet";
         // private const string PlayerBulletAssetBundlePath = "coredomain/gamedomain/gamestatedomain/maingamedomain/playerbullet";

@@ -1,5 +1,4 @@
 using System;
-using System.Threading.Tasks;
 using CoreDomain.Scripts.Utils.Pools;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
@@ -14,6 +13,8 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
         [SerializeField] private float _moveSpeed;
         [SerializeField] private bool _isRotationLocked;
         private Transform _transform;
+        
+        public Action Despawn { get; set; }
 
         private void Awake()
         {
@@ -57,13 +58,13 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
         {
             Id = enemyId;
         }
-
-        public void InitializePoolable()
+        
+        public void OnSpawned()
         {
             gameObject.SetActive(true);
         }
 
-        public void ResetPoolable()
+        public void OnDespawned()
         {
             Id = null;
             gameObject.SetActive(false);

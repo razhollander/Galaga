@@ -26,12 +26,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
         {
             return _enemiesPools.Find(x => x.AssetName == enemyAssetName).Spawn();
         }
-        
-        public void DestroyBullet(PlayerBulletView playerBulletView)
-        {
-            _playerBulletPool.Despawn(playerBulletView);
-        }
-        
+
         public EnemyView[,] CreateEnemiesWave(string[,] enemiesAssetNames)
         {
             var enemiesRows = enemiesAssetNames.GetLength(0);

@@ -20,7 +20,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerBul
         {
             _playerBulletHitCommandFactory = playerBulletHitCommandFactory;
             _playerBulletCreator = new PlayerBulletCreator(playerBulletPoolFactory);
-            _playerBulletViewModule = new PlayerBulletViewModule(_playerBulletCreator.DestroyBullet);
+            _playerBulletViewModule = new PlayerBulletViewModule();
         }
 
         public void FireBullet(Vector3 startPosition)

@@ -4,6 +4,5 @@ namespace CoreDomain.Scripts.Utils.Pools
     {
         void InitPool();
         T Spawn();
-        void Despawn(T obj);
     }
 }

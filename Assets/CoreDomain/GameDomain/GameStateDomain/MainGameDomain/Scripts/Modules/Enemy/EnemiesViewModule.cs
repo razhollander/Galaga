@@ -56,12 +56,17 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
             var moveEnemyParentTask = enemyParent.DOMove(enemyParentPosition - Vector3.right * enemyParentPosition.x, 3).SetLoops(-1, LoopType.Yoyo);
             await enemiesTasks;
             moveEnemyParentTask.Kill();
+            KillAllEnemies();
             GameObject.Destroy(enemiesWaveParent.gameObject);
+        }
+
+        private void KillAllEnemies()
+        {
+            _enemyViews.ForEach(KillEnemy);
         }
 
         private async UniTask DoEnemySequence(EnemyView enemyView, EnemySequenceData enemySequenceData, Transform enemyParent, Vector2 cellPosition)
         {
-            enemyView.gameObject.SetActive(false);
             await UniTask.Delay(TimeSpan.FromSeconds(enemySequenceData.SecondsBeforeEnter), ignoreTimeScale: false);
             enemyView.gameObject.SetActive(true);
             var enemyPathsData = enemySequenceData.EnemyPathsData;
@@ -80,7 +85,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
             MovePathStartPointToCellPosition(enemyView.transform.position, exitPath);
             await enemyView.FollowPath(exitPath.path);
             GameObject.Destroy(exitPath.gameObject);
-            enemyView.gameObject.SetActive(false);
+            KillEnemy(enemyView.Id);
         }
 
         private void MovePathEndPointToCellPosition(Vector2 cellPosition, PathCreator pathCreator)
@@ -98,8 +103,13 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
         public void KillEnemy(string enemyId)
         {
             var enemyToKill = _enemyViews.Find(x => x.Id == enemyId);
-            _enemyViews.Remove(enemyToKill);
-            GameObject.Destroy(enemyToKill.gameObject);
+            KillEnemy(enemyToKill);
+        }
+
+        private void KillEnemy(EnemyView enemyView)
+        {
+            _enemyViews.Remove(enemyView); 
+            enemyView.Despawn();
         }
     }
 }
