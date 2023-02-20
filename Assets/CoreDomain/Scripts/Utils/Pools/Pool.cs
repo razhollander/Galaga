@@ -1,6 +1,4 @@
 using System.Collections.Generic;
-using CoreDomain.Services;
-using UnityEngine;
 using Zenject;
 
 namespace CoreDomain.Scripts.Utils.Pools
@@ -11,15 +9,8 @@ namespace CoreDomain.Scripts.Utils.Pools
         private Queue<TPoolable> _pool;
         private readonly int _initialAmount;
 
-        [Inject]
-        public void Inject(ICameraService cameraService)
-        {
-            Debug.Log("BasePool Inject");
-        }
-        
         public BasePool(PoolData poolData)
         {
-            Debug.Log("BasePool");
             _increaseStepAmount = poolData.IncreaseStepAmount;
             _initialAmount = poolData.InitialAmount;
         }

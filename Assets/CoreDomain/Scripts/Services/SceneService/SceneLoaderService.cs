@@ -129,7 +129,6 @@ namespace CoreDomain.Scripts.Services.SceneService
 
         private async Task UnloadScene(string sceneName)
         {
-            Debug.Log("UnloadScene "+sceneName);
             await SceneManager.UnloadSceneAsync(sceneName);
             _loadedScenes.Remove(sceneName);
         }

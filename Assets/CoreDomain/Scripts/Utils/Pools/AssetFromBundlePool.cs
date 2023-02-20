@@ -14,15 +14,8 @@ namespace CoreDomain.Scripts.Utils.Pools
         protected abstract string ParentGameObjectName { get; }
         private Transform _parentGameObject;
 
-        [Inject]
-        private void Inject(DiContainer diContainer, IAssetBundleLoaderService assetBundleLoaderService)
-        {
-            Debug.Log("AssetFromBundlePool Inject");
-        }
-
         public AssetFromBundlePool(PoolData poolData, DiContainer diContainer, IAssetBundleLoaderService assetBundleLoaderService) : base(poolData)
         {
-            Debug.Log("AssetFromBundlePool");
             _diContainer = diContainer;
             _assetBundleLoaderService = assetBundleLoaderService;
         }

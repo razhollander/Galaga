@@ -25,9 +25,7 @@ namespace CoreDomain.Services.GameStates
 
         public override async UniTask ExitState()
         {
-            Debug.Log("ExitState Lobby1");
             await _sceneLoaderService.TryUnloadScene(SceneName.Lobby);
-            Debug.Log("ExitState Lobby2");
         }
 
         protected async UniTask StartStateInitiator()

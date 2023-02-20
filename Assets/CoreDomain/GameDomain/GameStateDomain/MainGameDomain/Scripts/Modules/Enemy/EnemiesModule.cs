@@ -36,7 +36,8 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
 
         private void KillAllEnemies()
         {
-            _enemiesData.ForEach(x => KillEnemy(x.Key));
+            _enemiesData.ForEach(x => _enemiesViewModule.KillEnemy(x.Key));
+            _enemiesData.Clear();
         }
 
         private EnemyView CreateEnemy(EnemyDataScriptableObject enemyScriptableObject)
@@ -57,11 +58,6 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
                 return;
             }
 
-            KillEnemy(enemyHitId);
-        }
-
-        private void KillEnemy(string enemyHitId)
-        {
             _enemiesData.Remove(enemyHitId);
             _enemiesViewModule.KillEnemy(enemyHitId);
         }

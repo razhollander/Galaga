@@ -16,24 +16,24 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
         private readonly Func<EnemyDataScriptableObject, EnemyView> _createEnemyFunction;
         private const string EnemyWaveParentName = "EnemiesWaveParent";
         private static readonly Vector2 RelativeToScreenCenterStartPosition = new(0.2f, 0.9f);
+        
         private readonly Vector2 _enemiesGroupStartPosition;
         private List<EnemyView> _enemyViews = new();
-        
+        private readonly GameObject _enemiesWaveParent;
+
         public EnemiesViewModule(IDeviceScreenService deviceScreenService, Func<EnemyDataScriptableObject, EnemyView> createEnemyFunction)
         {
             _createEnemyFunction = createEnemyFunction;
             _enemiesGroupStartPosition = deviceScreenService.ScreenBoundsInWorldSpace * RelativeToScreenCenterStartPosition + deviceScreenService.ScreenCenterPointInWorldSpace;
+            _enemiesWaveParent = new GameObject(EnemyWaveParentName);
+            _enemiesWaveParent.transform.position = _enemiesGroupStartPosition;
         }
 
         public async UniTask DoEnemiesWaveSequence(EnemiesWaveSequenceData enemiesWave)
         {
             List<UniTask> enemiesTasks = new List<UniTask>();
-
-            GameObject enemiesWaveParent = new GameObject(EnemyWaveParentName);
-            enemiesWaveParent.transform.position = _enemiesGroupStartPosition;
-
             var enemiesGrid = enemiesWave.EnemiesGrid;
-            var enemyParent = enemiesWaveParent.transform;
+            var enemyParent = _enemiesWaveParent.transform;
             var enemiesColumns = enemiesGrid.GetLength(0);
             var enemiesRows = enemiesGrid.GetLength(1);
             var centerScreenX = 0;
@@ -53,12 +53,10 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
                 }
             }
 
-            
             var enemyParentPosition = enemyParent.transform.position;
             var moveEnemyParentTask = enemyParent.DOMove(enemyParentPosition - Vector3.right * enemyParentPosition.x, 3).SetLoops(-1, LoopType.Yoyo);
             await enemiesTasks;
             moveEnemyParentTask.Kill();
-            GameObject.Destroy(enemiesWaveParent.gameObject);
         }
 
         public void KillEnemy(string enemyId)
@@ -89,7 +87,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
             MovePathStartPointToCellPosition(enemyView.transform.position, exitPath);
             await enemyView.FollowPath(exitPath.path);
             GameObject.Destroy(exitPath.gameObject);
-            KillEnemy(enemyView.Id);
+            enemyView.gameObject.SetActive(false);
         }
 
         private void MovePathEndPointToCellPosition(Vector2 cellPosition, PathCreator pathCreator)

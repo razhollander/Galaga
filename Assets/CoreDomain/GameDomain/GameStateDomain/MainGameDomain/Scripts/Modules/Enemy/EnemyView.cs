@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using CoreDomain.Scripts.Utils.Pools;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
@@ -13,7 +14,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
         [SerializeField] private float _moveSpeed;
         [SerializeField] private bool _isRotationLocked;
         private Transform _transform;
-        
+        private CancellationTokenSource _whileAliveCancellationToken;
         public Action Despawn { get; set; }
 
         private void Awake()
@@ -25,7 +26,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
         public async UniTask RotateTowardsDirection(Vector3 direction)
         {
             var directionAngles= Quaternion.LookRotation(Vector3.forward, direction).eulerAngles;
-            await _transform.DORotate(directionAngles, RotateAnglesInASecond).SetSpeedBased(true);
+            await _transform.DORotate(directionAngles, RotateAnglesInASecond).SetSpeedBased(true).WithCancellation(_whileAliveCancellationToken.Token);
         }
 
         public async UniTask FollowPath(VertexPath path)
@@ -47,7 +48,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
                     _transform.rotation = Quaternion.LookRotation(Vector3.forward, path.GetDirectionAtDistance(distanceAlongPath));
                 }
                 
-                await UniTask.Yield();
+                await UniTask.Yield(_whileAliveCancellationToken.Token);
                 distanceAlongPath += _moveSpeed * Time.deltaTime;
             }
             
@@ -61,11 +62,12 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
         
         public void OnSpawned()
         {
-            
+            _whileAliveCancellationToken = new CancellationTokenSource();
         }
 
         public void OnDespawned()
         {
+            _whileAliveCancellationToken.Cancel();
             gameObject.SetActive(false);
         }
     }
