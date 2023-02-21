@@ -37,9 +37,7 @@ namespace CoreDomain.GameDomain
 
         private void UpdateApplicationSettings()
         {
-            Application.targetFrameRate = Screen.currentResolution.refreshRate;
             Screen.sleepTimeout = SleepTimeout.NeverSleep;
-            QualitySettings.vSyncCount = 0;
             Application.targetFrameRate = 60;
         }
     }
