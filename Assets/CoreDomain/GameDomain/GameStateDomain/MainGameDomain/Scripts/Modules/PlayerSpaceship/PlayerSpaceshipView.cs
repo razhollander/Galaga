@@ -20,7 +20,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerSpa
             _transform = transform;
         }
 
-        public void SetPlayerName(string playerName)
+        public void SetName(string playerName)
         {
             _playerNameText.text = playerName;
         }

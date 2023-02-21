@@ -1,8 +1,5 @@
 using CoreDomain.GameDomain.GameStateDomain.GamePlayDomain.Scripts.Bullet;
 using CoreDomain.Utils.Pools;
-using CoreDomain.Services;
-using UnityEngine;
-using Zenject;
 
 namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerBullet
 {
@@ -20,22 +17,5 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerBul
         {
             return _playerBulletPool.Spawn();
         }
-
-        // private const string PlayerBulletAssetName = "PlayerBullet";
-        // private const string PlayerBulletAssetBundlePath = "coredomain/gamedomain/gamestatedomain/maingamedomain/playerbullet";
-        // private readonly IAssetBundleLoaderService _assetBundleLoaderService;
-        // private readonly DiContainer _diContainer;
-        //
-        // public PlayerBulletCreator(IAssetBundleLoaderService assetBundleLoaderService, DiContainer diContainer)
-        // {
-        //     _assetBundleLoaderService = assetBundleLoaderService;
-        //     _diContainer = diContainer;
-        // }
-        //
-        // public PlayerBulletView CreateBullet()
-        // {
-        //     var playerBulletView = _assetBundleLoaderService.LoadGameObjectAssetFromBundle(PlayerBulletAssetBundlePath, PlayerBulletAssetName);
-        //     return _diContainer.InstantiatePrefab(playerBulletView).GetComponent<PlayerBulletView>();
-        // }
     }
 }

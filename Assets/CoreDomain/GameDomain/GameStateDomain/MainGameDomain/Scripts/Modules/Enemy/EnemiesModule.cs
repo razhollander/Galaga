@@ -9,8 +9,6 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
 {
     public class EnemiesModule : IEnemiesModule
     {
-        private const string LevelStartMusicName = "GalagaLevelStartSoundEffect";
-
         private readonly IAudioService _audioService;
         private Transform _enemiesParentTransform;
         private readonly EnemiesViewModule _enemiesViewModule;
@@ -24,6 +22,11 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
             _enemiesCreator = new EnemiesCreator(beeEnemiesPoolFactory, guardEnemiesPoolFactory);
         }
 
+        public bool IsEnemyExist(string enemyHitId)
+        {
+            return _enemiesData.ContainsKey(enemyHitId);
+        }
+
         public int GetEnemyScore(string enemyId)
         {
             return _enemiesData[enemyId].Score;
@@ -33,7 +36,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
         {
             foreach (var waveSequenceData in enemiesWaveSequenceData)
             {
-                _audioService.PlayAudio(LevelStartMusicName, AudioChannelType.Music, AudioPlayType.OneShot);
+                _audioService.PlayAudio(AudioClipName.LevelStartMusicName, AudioChannelType.Music, AudioPlayType.OneShot);
                 await _enemiesViewModule.DoEnemiesWaveSequence(waveSequenceData);
 
                 KillAllEnemies();
@@ -57,16 +60,10 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
             return enemyView;
         }
 
-        public bool TryKillEnemy(string enemyHitId)
+        public void KillEnemy(string enemyHitId)
         {
-            if (!_enemiesData.ContainsKey(enemyHitId))
-            {
-                return false;
-            }
-
             _enemiesData.Remove(enemyHitId);
             _enemiesViewModule.KillEnemy(enemyHitId);
-            return true;
         }
     }
 }

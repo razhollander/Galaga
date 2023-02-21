@@ -1,7 +1,6 @@
 using CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Commands;
 using CoreDomain.Scripts.Utils.Command;
 using CoreDomain.Services;
-using Cysharp.Threading.Tasks;
 
 namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.MainGameUi
 {

@@ -11,8 +11,6 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain
 {
     public class MainGameInitiator : MonoBehaviour
     {
-        private const string ThemeSongName = "GalagaThemeSong";
-        
         [SerializeField] private MainGameStateEnterData _defaultLobbyGameStateEnterData;
 
         private IMainGameUiModule _mainGameUiModule;
@@ -38,7 +36,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain
             _playerSpaceshipModule.CreatePlayerSpaceship(enterData.PlayerName);
             var levelData = _levelsService.GetLevelData(enterData.Level);
             _enemiesModule.DoEnemiesWavesSequence(levelData.EnemiesWaveSequenceData);
-            _audioService.PlayAudio(ThemeSongName, AudioChannelType.Master, AudioPlayType.Loop);
+            _audioService.PlayAudio(AudioClipName.ThemeSongName, AudioChannelType.Master, AudioPlayType.Loop);
         }
     }
 }

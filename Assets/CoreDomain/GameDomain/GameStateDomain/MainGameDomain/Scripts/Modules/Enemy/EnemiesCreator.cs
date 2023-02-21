@@ -1,7 +1,5 @@
 using System.Collections.Generic;
 using CoreDomain.Utils.Pools;
-using CoreDomain.Services;
-using UnityEngine;
 
 namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
 {
@@ -25,23 +23,6 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
         public EnemyView CreateEnemy(string enemyAssetName)
         {
             return _enemiesPools.Find(x => x.AssetName == enemyAssetName).Spawn();
-        }
-
-        public EnemyView[,] CreateEnemiesWave(string[,] enemiesAssetNames)
-        {
-            var enemiesRows = enemiesAssetNames.GetLength(0);
-            var enemiesColumns = enemiesAssetNames.GetLength(1);
-            var enemyViews = new EnemyView[enemiesRows,enemiesColumns];
-
-            for (int i = 0; i < enemiesRows; i++)
-            {
-                for (int j = 0; j < enemiesColumns; j++)
-                {
-                    enemyViews[i,j] = CreateEnemy(enemiesAssetNames[i,j]);
-                }                
-            }
-
-            return enemyViews;
         }
     }
 }

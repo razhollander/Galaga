@@ -9,8 +9,6 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Commands
 {
     public class PlayerBulletHitCommand : CommandSyncOneParameter<PlayerBulletHitCommandData, PlayerBulletHitCommand>
     {
-        private const string HitSoundFXName = "GalagaHitSoundEffect";
-
         private readonly PlayerBulletHitCommandData _commandData;
         private readonly IEnemiesModule _enemiesModule;
         private readonly IScoreModule _scoreModule;
@@ -32,18 +30,24 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Commands
         {
             var enemyViewHit = _commandData.HitCollider2D.gameObject.GetComponent<EnemyView>();
             
-            if (enemyViewHit == null)
+            if (enemyViewHit == null || _commandData.HitPlayerBulletView == null)
             {
                 return;
             }
             
-            _scoreModule.AddScore(_enemiesModule.GetEnemyScore(enemyViewHit.Id));
-            _mainGameUiModule.UpdateScore(_scoreModule.PlayerScore);
-            _playerBulletModule.DestroyBullet(_commandData.HitPlayerBulletView.Id);
-
-            if (_enemiesModule.TryKillEnemy(enemyViewHit.Id))
+            var enemyHitId = enemyViewHit.Id;
+            var bulletId = _commandData.HitPlayerBulletView.Id;
+           
+            // in unity physics, the same bullet can hit multiple enemies at the same moment, so need to check that the hit didn't happen already
+            var isFirstTimeHitHappens = _enemiesModule.IsEnemyExist(enemyHitId) && _playerBulletModule.IsBulletExist(bulletId);
+            
+            if (isFirstTimeHitHappens)
             {
-                _audioService.PlayAudio(HitSoundFXName, AudioChannelType.Fx, AudioPlayType.OneShot);
+                _scoreModule.AddScore(_enemiesModule.GetEnemyScore(enemyHitId));
+                _mainGameUiModule.UpdateScore(_scoreModule.PlayerScore);
+                _enemiesModule.KillEnemy(enemyHitId);
+                _playerBulletModule.DestroyBullet(bulletId);
+                _audioService.PlayAudio(AudioClipName.HitSoundFXName, AudioChannelType.Fx, AudioPlayType.OneShot);
             }
         }
     }

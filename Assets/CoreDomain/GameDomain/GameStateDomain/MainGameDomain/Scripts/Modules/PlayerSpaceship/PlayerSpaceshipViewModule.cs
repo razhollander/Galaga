@@ -40,14 +40,14 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerSpa
            }
         }
         
+        public void SetSpaceShipName(string name)
+        {
+            _playerSpaceshipView.SetName(name);
+        }
+        
         private bool IsInScreenHorizontalBounds(float xValue, float spaceKeptFromBounds)
         {
             return -_screenBoundsInWorldSpace.x + spaceKeptFromBounds < xValue && xValue < _screenBoundsInWorldSpace.x - spaceKeptFromBounds;
-        }
-
-        public void SetSpaceShipName(string name)
-        {
-            _playerSpaceshipView.SetPlayerName(name);
         }
     }
 }

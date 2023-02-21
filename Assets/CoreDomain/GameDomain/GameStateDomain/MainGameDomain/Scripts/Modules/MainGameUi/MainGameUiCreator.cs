@@ -17,7 +17,5 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.MainGameU
         {
             return _assetBundleLoaderService.InstantiateAssetFromBundle<MainGameUiView>(MainGameUiAssetBundlePath, MainGameUiAssetName);
         }
-        
-        
     }
 }
