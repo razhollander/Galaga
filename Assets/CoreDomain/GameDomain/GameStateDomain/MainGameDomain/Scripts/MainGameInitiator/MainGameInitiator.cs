@@ -1,7 +1,7 @@
 using CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies;
 using CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.MainGameUi;
 using CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerSpaceship;
-using CoreDomain.Scripts.Services.Audio;
+using CoreDomain.Services;
 using CoreDomain.Services.GameStates;
 using Cysharp.Threading.Tasks;
 using UnityEngine;

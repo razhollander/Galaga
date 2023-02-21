@@ -1,4 +1,4 @@
-using Extensions;
+using CoreDomain.Scripts.Extensions;
 using UnityEngine;
 
 namespace CoreDomain.Services

@@ -2,7 +2,7 @@ using CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies;
 using CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.MainGameUi;
 using CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerBullet;
 using CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Score;
-using CoreDomain.Scripts.Services.Audio;
+using CoreDomain.Services;
 using CoreDomain.Scripts.Utils.Command;
 
 namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Commands

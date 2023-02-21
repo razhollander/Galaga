@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public static class ConstsHandler
+namespace CoreDomain.Consts
 {
-    #region --- Constants ---
-
-    public static readonly Vector3 VECTOR3_ONE = Vector3.one;
-
-    #endregion
+    public static class ConstsHandler
+    {
+        public static readonly Vector3 Vector3One = Vector3.one;
+        public static readonly Vector3 Vector3Up = Vector3.up;
+    }
 }

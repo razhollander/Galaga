@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using CoreDomain.Consts;
 using CoreDomain.Services;
 using Cysharp.Threading.Tasks;
 using PathCreation;
@@ -89,7 +90,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
         {
             var pathLastPoint = enterPath.path.GetPoint(enterPath.path.NumPoints - 1);
             await enemyView.FollowPath(enterPath.path, () => GetDeltaFromPathToCellWorldPosition(pathLastPoint, cellLocalToParentPosition));
-            await enemyView.RotateTowardsDirection(Vector3.up);
+            await enemyView.RotateTowardsDirection(ConstsHandler.Vector3Up);
         }
         
         private async UniTask DoEnemyExitPathSequence(PathCreator exitPath, Vector2 cellLocalToParentPosition, EnemyView enemyView)
