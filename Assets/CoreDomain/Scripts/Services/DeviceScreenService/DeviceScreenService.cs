@@ -8,8 +8,8 @@ namespace CoreDomain.Services
         private readonly ICameraService _cameraService;
 
         public Vector2 ScreenCenterPointInWorldSpace => _cameraService.GetCameraPosition(GameCameraType.World).ToVector2XY();
-        public Vector2 ScreenBoundsInWorldSpace => _cameraService.ScreenToWorldPoint(GameCameraType.World, new Vector3(ScreenSize.x, ScreenSize.y, 0)).ToVector2XY();
-        public Vector2 ScreenSize { get; }
+        public Vector2 ScreenBoundsInWorldSpace => _cameraService.ScreenToWorldPoint(GameCameraType.World, new Vector3(ScreenSizeInScreenSpace.x, ScreenSizeInScreenSpace.y, 0)).ToVector2XY();
+        public Vector2 ScreenSizeInScreenSpace => new (Screen.width, Screen.height); // in a normal mobile game i will cache this, because it can't change
         public bool IsInScreenVerticalBounds(float yValue)
         {
             var screenBounds = ScreenBoundsInWorldSpace;
@@ -18,7 +18,6 @@ namespace CoreDomain.Services
         public DeviceScreenService(ICameraService cameraService)
         {
             _cameraService = cameraService;
-            ScreenSize = new Vector2(Screen.width, Screen.height);
         }
     }
 }

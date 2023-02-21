@@ -67,6 +67,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
         
         public void OnSpawned()
         {
+            _whileAliveCancellationToken?.Dispose();
             _whileAliveCancellationToken = new CancellationTokenSource();
         }
 

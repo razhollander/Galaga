@@ -155,6 +155,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
+    Android: com.DefaultCompany.Template
     Standalone: com.DefaultCompany.Template
   buildNumber:
     Standalone: 0
@@ -633,6 +634,7 @@ PlayerSettings:
   webGLDecompressionFallback: 0
   webGLPowerPreference: 2
   scriptingDefineSymbols:
+    Android: UNITASK_DOTWEEN_SUPPORT
     Standalone: ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;UNITASK_DOTWEEN_SUPPORT
   additionalCompilerArguments: {}
   platformArchitecture: {}

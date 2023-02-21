@@ -1,5 +1,6 @@
 using System;
 using CoreDomain.Scripts.Services.SceneService;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using Zenject;
 
@@ -32,6 +33,7 @@ namespace CoreDomain.GameInitiator
         private void InitializeServices()
         {
             _gameInputActions.Enable();
+            UniTask.SwitchToMainThread();
         }
     }
 }
