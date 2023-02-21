@@ -24,4 +24,4 @@ MonoBehaviour:
     SerializationNodes: []
   SpaceBetweenColumns: 0.4
   SpaceBetweenRows: 0.4
-  CellSize: 1.5
+  CellSize: 1
