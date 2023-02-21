@@ -4,7 +4,7 @@ using CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.MainGameUi;
 using CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerBullet;
 using CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerSpaceship;
 using CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Score;
-using CoreDomain.Scripts.Utils.Pools;
+using CoreDomain.Utils.Pools;
 using Zenject;
 
 namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain

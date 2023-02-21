@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Zenject;
 
-namespace CoreDomain.Scripts.Utils.Pools
+namespace CoreDomain.Utils.Pools
 {
     public abstract class BasePool<TPoolable, TV> : IPool<TPoolable> where TPoolable : IPoolable
     {

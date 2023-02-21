@@ -1,6 +1,6 @@
 using System;
 using System.Threading;
-using CoreDomain.Scripts.Utils.Pools;
+using CoreDomain.Utils.Pools;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using PathCreation;

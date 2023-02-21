@@ -1,11 +1,10 @@
-
 using System;
 
-namespace CoreDomain.Scripts.Utils.Pools
+namespace CoreDomain.Utils.Pools
 {
     public interface IPoolable
     {
-        Action Despawn { set; get; }
+        Action Despawn { set; }
         void OnSpawned();
         void OnDespawned();
     }

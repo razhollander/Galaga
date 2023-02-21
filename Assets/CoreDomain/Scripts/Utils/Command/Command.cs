@@ -87,44 +87,4 @@ namespace CoreDomain.Scripts.Utils.Command
         {
         }
     }
-
-    /// <summary>
-    /// One Parameter (TV) command that return TU
-    /// </summary>
-    /// <typeparam name="TU"></typeparam>
-    /// <typeparam name="TV"></typeparam>
-    /// <typeparam name="T"></typeparam>
-    public abstract class CommandOneParameter<TU, TV, T> : CommandBase<TU>
-    {
-        public class Factory : PlaceholderFactory<TV, T>
-        {
-        }
-    }
-
-    public abstract class CommandSyncOneParameter<TU, TV, T> : CommandSyncBase<TU>
-    {
-        public class Factory : PlaceholderFactory<TV, T>
-        {
-        }
-    }
-
-    public abstract class CommandSync<TU, T> : CommandSyncBase<TU>
-    {
-        public class Factory : PlaceholderFactory<T>
-        {
-        }
-    }
-
-    /// <summary>
-    /// Two Parameter (TU,TV) command that receives TV and returns TU
-    /// </summary>
-    /// <typeparam name="TU"></typeparam>
-    /// <typeparam name="TV"></typeparam>
-    /// <typeparam name="T"></typeparam>
-    public abstract class CommandTwoParameter<TU, TV, T> : CommandBase
-    {
-        public class Factory : PlaceholderFactory<TU, TV, T>
-        {
-        }
-    }
 }

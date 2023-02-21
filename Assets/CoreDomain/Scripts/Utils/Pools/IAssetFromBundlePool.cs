@@ -1,4 +1,4 @@
-﻿namespace CoreDomain.Scripts.Utils.Pools
+﻿namespace CoreDomain.Utils.Pools
 {
     public interface IAssetFromBundlePool<T> : IPool<T> where T : IPoolable
     {

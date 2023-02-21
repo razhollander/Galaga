@@ -1,4 +1,4 @@
-using CoreDomain.Scripts.Utils.Pools;
+using CoreDomain.Utils.Pools;
 using CoreDomain.Services;
 using Zenject;
 

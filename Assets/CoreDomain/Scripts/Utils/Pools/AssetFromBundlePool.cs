@@ -3,7 +3,7 @@ using CoreDomain.Services;
 using UnityEngine;
 using Zenject;
 
-namespace CoreDomain.Scripts.Utils.Pools
+namespace CoreDomain.Utils.Pools
 {
     public abstract class AssetFromBundlePool<TPoolable, TV> : BasePool<TPoolable, TV>, IAssetFromBundlePool<TPoolable> where TPoolable : MonoBehaviour, IPoolable
     {
