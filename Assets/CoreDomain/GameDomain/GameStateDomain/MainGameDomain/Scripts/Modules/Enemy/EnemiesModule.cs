@@ -34,10 +34,8 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
         {
             foreach (var waveSequenceData in enemiesWaveSequenceData)
             {
-                Debug.Log("Wave!");
                 _audioService.PlayAudio(LevelStartMusicName, AudioChannelType.Music, AudioPlayType.OneShot);
                 await _enemiesViewModule.DoEnemiesWaveSequence(waveSequenceData);
-                Debug.Log("End Wave!");
 
                 KillAllEnemies();
             }
