@@ -39,6 +39,7 @@ namespace CoreDomain.GameDomain
         {
             Screen.sleepTimeout = SleepTimeout.NeverSleep;
             Application.targetFrameRate = 60;
+            Screen.fullScreen = true;
         }
     }
 }
