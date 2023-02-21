@@ -1,4 +1,4 @@
-using CoreDomain.Scripts.Services.SceneService;
+using CoreDomain.Services;
 using UnityEngine;
 using Zenject;
 

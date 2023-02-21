@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using CoreDomain.Services;
 using Cysharp.Threading.Tasks;
-using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace CoreDomain.Scripts.Services.SceneService
+namespace CoreDomain.Services
 {
     public class SceneLoaderService : ISceneLoaderService
     {
-        private readonly HashSet<string> _loadedScenes = new HashSet<string>();
-        private readonly HashSet<string> _loadingScenes = new HashSet<string>();
+        private readonly HashSet<string> _loadedScenes = new ();
+        private readonly HashSet<string> _loadingScenes = new ();
 
         public SceneLoaderService()
         {
@@ -61,24 +58,7 @@ namespace CoreDomain.Scripts.Services.SceneService
             await UnloadScene(sceneName);
             return true;
         }
-
-        public async UniTask<bool> TryReloadScene(string sceneName)
-        {
-            return await TryUnloadScene(sceneName) &&
-                   await TryLoadScene(sceneName);
-        }
-
-        [Obsolete]
-        public async UniTask<bool> TryReloadScenes(string[] scenesNames)
-        {
-            return await TryUnloadScenes(scenesNames) && await TryLoadScenes(scenesNames);
-        }
-
-        public async UniTask<bool> TrySwitchScenes(string unloadSceneName, string loadSceneName)
-        {
-            return await TryUnloadScene(unloadSceneName) && await TryLoadScene(loadSceneName);
-        }
-
+        
         public async UniTask<bool> TryLoadScenes(string[] scenesNames)
         {
             var didLoadAllScenes = true;

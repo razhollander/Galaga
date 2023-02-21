@@ -1,16 +1,18 @@
-using CoreDomain.Services.GameStates;
 using Cysharp.Threading.Tasks;
 
-public abstract class BaseGameState<T> : IGameState where T: IGameStateEnterData
+namespace CoreDomain.Services.GameStates
 {
-    public T EnterData { get; }
-    
-    protected BaseGameState(T enterData)
+    public abstract class BaseGameState<T> : IGameState where T : IGameStateEnterData
     {
-        EnterData = enterData;
+        public T EnterData { get; }
+
+        protected BaseGameState(T enterData)
+        {
+            EnterData = enterData;
+        }
+
+        public abstract GameStateType GameState { get; }
+        public abstract UniTask EnterState();
+        public abstract UniTask ExitState();
     }
-    
-    public abstract GameStateType GameState { get; }
-    public abstract UniTask EnterState();
-    public abstract UniTask ExitState();
 }

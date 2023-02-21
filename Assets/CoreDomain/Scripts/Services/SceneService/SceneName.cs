@@ -1,4 +1,4 @@
-﻿namespace CoreDomain.Scripts.Services.SceneService
+﻿namespace CoreDomain.Services
 {
     public static class SceneName
     {

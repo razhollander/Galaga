@@ -1,5 +1,5 @@
 using CoreDomain.GameDomain.GameStateDomain.LobbyDomain;
-using CoreDomain.Scripts.Services.SceneService;
+using CoreDomain.Services;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using Zenject;
