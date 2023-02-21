@@ -1,8 +1,8 @@
-using CoreDomain.GameDomain;
 using CoreDomain.GameDomain.GameStateDomain.LobbyDomain.Modules.LobbyUi;
 using CoreDomain.Scripts.Utils.Command;
+using CoreDomain.Services.GameStates;
 
-namespace CoreDomain.Services.GameStates
+namespace CoreDomain.GameDomain.GameStateDomain.LobbyDomain
 {
     public class EnterLobbyGameStateCommand : CommandSyncOneParameter<LobbyGameStateEnterData, EnterLobbyGameStateCommand>
     {
