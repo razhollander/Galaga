@@ -20,6 +20,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain
             Container.BindInterfacesTo<ScoreModule>().AsSingle().NonLazy();
             Container.BindFactory<float, JoystickDraggedCommand, JoystickDraggedCommand.Factory>().AsSingle().NonLazy();
             Container.BindFactory<ShootButtonClickedCommand, ShootButtonClickedCommand.Factory>().AsSingle().NonLazy();
+            Container.BindFactory<BackButtonClickedCommand, BackButtonClickedCommand.Factory>().AsSingle().NonLazy();
             Container.BindFactory<PlayerBulletHitCommandData, PlayerBulletHitCommand, PlayerBulletHitCommand.Factory>().AsSingle().NonLazy();
             Container.BindFactory<PoolData, PlayerBulletPool, PlayerBulletPool.Factory>().AsSingle().NonLazy();
             Container.BindFactory<PoolData, BeeEnemiesPool, BeeEnemiesPool.Factory>().AsSingle().NonLazy();

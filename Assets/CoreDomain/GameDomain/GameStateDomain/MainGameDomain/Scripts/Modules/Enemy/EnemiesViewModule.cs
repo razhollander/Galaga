@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Threading;
 using CoreDomain.Consts;
 using CoreDomain.Services;
 using Cysharp.Threading.Tasks;
@@ -19,6 +20,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
         private readonly List<EnemyView> _enemyViews = new();
         private Transform _enemiesWaveParentTransform;
         private EnemiesWaveParent _enemiesWaveParent;
+        private CancellationTokenSource _waveCancellationToken = new ();
 
         public EnemiesViewModule(IDeviceScreenService deviceScreenService, Func<EnemyDataScriptableObject, EnemyView> createEnemyFunction)
         {
@@ -26,7 +28,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
             _enemiesGroupStartPosition = deviceScreenService.ScreenBoundsInWorldSpace * RelativeToScreenCenterStartPosition + deviceScreenService.ScreenCenterPointInWorldSpace;
         }
 
-        public async UniTask DoEnemiesWaveSequence(EnemiesWaveSequenceData enemiesWave)
+        public async UniTask StartEnemiesWaveSequence(EnemiesWaveSequenceData enemiesWave)
         {
             if (_enemiesWaveParentTransform == null)
             {
@@ -51,7 +53,12 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
                 }
             }
             
-            await UniTask.WhenAll(enemiesTasks);
+            await UniTask.WhenAll(enemiesTasks).AttachExternalCancellation(_waveCancellationToken.Token);
+        }
+
+        public void StopEnemiesWaveSequence()
+        {
+            _waveCancellationToken.Cancel();
         }
 
         private Vector2 CalculateGridTopRightCorner(EnemiesWaveSequenceData enemiesWave)

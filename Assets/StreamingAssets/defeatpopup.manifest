@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 597359211
+CRC: 4183823013
 Hashes:
   AssetFileHash:
     serializedVersion: 2
@@ -91,5 +91,5 @@ SerializeReferenceClassIdentifiers:
 - AssemblyName: UnityEngine.UI
   ClassName: UnityEngine.UI.SpriteState
 Assets:
-- Assets/AssetBundles/Popups/DefeatPopup.prefab
+- Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/Popups/DefeatPopup.prefab
 Dependencies: []

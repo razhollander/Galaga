@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 3122425491
+CRC: 1993401532
 Hashes:
   AssetFileHash:
     serializedVersion: 2
@@ -91,5 +91,5 @@ SerializeReferenceClassIdentifiers:
 - AssemblyName: UnityEngine.UI
   ClassName: UnityEngine.UI.SpriteState
 Assets:
-- Assets/AssetBundles/Popups/WinPopup.prefab
+- Assets/AssetBundles/CoreDomain/GameDomain/GameStateDomain/MainGameDomain/Popups/WinPopup.prefab
 Dependencies: []

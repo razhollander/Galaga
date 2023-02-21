@@ -12,7 +12,7 @@ namespace CoreDomain.Services
         [SerializeField] private AudioSource _FxAudioSource;
         [SerializeField] private AudioSource _MusicAudioSource;
         
-        private Dictionary<AudioChannelType, AudioSource> _channelsByType = new();
+        private Dictionary<AudioChannelType, AudioSource> _audioSourceByChannel = new();
         private Dictionary<string, AudioClip> _audioClipsByName = new();
         
         private void Awake()
@@ -22,9 +22,9 @@ namespace CoreDomain.Services
                 _audioClipsByName.Add(clip.name, clip);
             }
 
-            _channelsByType.Add(AudioChannelType.Master, _masterAudioSource);
-            _channelsByType.Add(AudioChannelType.Fx, _FxAudioSource);
-            _channelsByType.Add(AudioChannelType.Music, _MusicAudioSource);
+            _audioSourceByChannel.Add(AudioChannelType.Master, _masterAudioSource);
+            _audioSourceByChannel.Add(AudioChannelType.Fx, _FxAudioSource);
+            _audioSourceByChannel.Add(AudioChannelType.Music, _MusicAudioSource);
         }
         
         public async UniTask PlayAudio(string audioClipName, AudioChannelType audioChannel, AudioPlayType audioPlayType = AudioPlayType.OneShot)
@@ -41,7 +41,7 @@ namespace CoreDomain.Services
                 return;
             }
 
-            if (!_channelsByType.TryGetValue(audioChannel, out var audioSource))
+            if (!_audioSourceByChannel.TryGetValue(audioChannel, out var audioSource))
             {
                 LogService.LogError($"No audioChannel of name {audioChannel} found");
 
@@ -66,6 +66,14 @@ namespace CoreDomain.Services
                     audioSource.loop = true;
                     audioSource.Play();
                     break;
+            }
+        }
+
+        public void StopAllSounds()
+        {
+            foreach (var keyValuePair in _audioSourceByChannel)
+            {
+                keyValuePair.Value.Stop();
             }
         }
     }

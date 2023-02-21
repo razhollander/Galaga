@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using CoreDomain.GameDomain.GameStateDomain.GamePlayDomain.Scripts.Bullet;
 using CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Commands;
+using CoreDomain.Scripts.Extensions;
 using CoreDomain.Services;
 using UnityEngine;
 
@@ -49,6 +50,17 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerBul
         public bool IsBulletExist(string bulletId)
         {
             return _playerBulletsData.ContainsKey(bulletId);
+        }
+
+        public void Dispose()
+        {
+            DestroyAllBullets();
+        }
+
+        private void DestroyAllBullets()
+        {
+            _playerBulletsData.ForEach(x => _playerBulletViewModule.DestroyBullet(x.Key));
+            _playerBulletsData.Clear();
         }
 
         private void OnBulletHit(PlayerBulletView playerBulletView, Collider2D hitWithCollider2D)

@@ -49,5 +49,10 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerSpa
         {
             return -_screenBoundsInWorldSpace.x + spaceKeptFromBounds < xValue && xValue < _screenBoundsInWorldSpace.x - spaceKeptFromBounds;
         }
+
+        public void DestroySpaceSip()
+        {
+            GameObject.Destroy(_playerSpaceshipView.gameObject);
+        }
     }
 }

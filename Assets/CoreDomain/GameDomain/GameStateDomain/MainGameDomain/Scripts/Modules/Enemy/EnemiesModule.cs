@@ -32,15 +32,21 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
             return _enemiesData[enemyId].Score;
         }
         
-        public async UniTaskVoid DoEnemiesWavesSequence(EnemiesWaveSequenceData[] enemiesWaveSequenceData)
+        public async UniTaskVoid StartEnemiesWavesSequence(EnemiesWaveSequenceData[] enemiesWaveSequenceData)
         {
             foreach (var waveSequenceData in enemiesWaveSequenceData)
             {
                 _audioService.PlayAudio(AudioClipName.LevelStartMusicName, AudioChannelType.Music, AudioPlayType.OneShot);
-                await _enemiesViewModule.DoEnemiesWaveSequence(waveSequenceData);
+                await _enemiesViewModule.StartEnemiesWaveSequence(waveSequenceData);
 
                 KillAllEnemies();
             }
+        }
+
+        public void Dispose()
+        {
+            _enemiesViewModule.StopEnemiesWaveSequence();
+            KillAllEnemies();
         }
 
         private void KillAllEnemies()

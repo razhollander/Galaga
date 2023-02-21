@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using CoreDomain.GameDomain.GameStateDomain.MainGameDomain;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
@@ -29,9 +30,15 @@ namespace CoreDomain.Services.GameStates
     
          public override async UniTask ExitState()
          {
+             await DisposeStateInitiator();
              await _sceneLoaderService.TryUnloadScene(SceneName.MainGame);
          }
-         
+
+         private async Task DisposeStateInitiator()
+         {
+             await GameObject.FindObjectOfType<MainGameInitiator>().DisposeState(EnterData);
+         }
+
          public class Factory : PlaceholderFactory<MainGameStateEnterData, MainGameState>
          {
          }
