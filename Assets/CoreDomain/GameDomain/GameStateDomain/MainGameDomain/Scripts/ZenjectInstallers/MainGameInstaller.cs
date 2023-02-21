@@ -4,6 +4,7 @@ using CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.MainGameUi;
 using CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerBullet;
 using CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerSpaceship;
 using CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Score;
+using CoreDomain.Services.GameStates;
 using CoreDomain.Utils.Pools;
 using Zenject;
 
@@ -25,6 +26,8 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain
             Container.BindFactory<PoolData, PlayerBulletPool, PlayerBulletPool.Factory>().AsSingle().NonLazy();
             Container.BindFactory<PoolData, BeeEnemiesPool, BeeEnemiesPool.Factory>().AsSingle().NonLazy();
             Container.BindFactory<PoolData, GuardEnemiesPool, GuardEnemiesPool.Factory>().AsSingle().NonLazy();
+            Container.BindFactory<MainGameStateEnterData, EnterMainGameStateCommand, EnterMainGameStateCommand.Factory>().AsSingle().NonLazy();
+            Container.BindFactory<ExitMainGameStateCommand, ExitMainGameStateCommand.Factory>().AsSingle().NonLazy();
         }
     }
 }

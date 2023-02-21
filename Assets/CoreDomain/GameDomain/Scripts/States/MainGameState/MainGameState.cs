@@ -20,23 +20,13 @@ namespace CoreDomain.Services.GameStates
          public override async UniTask EnterState()
          {
              await _sceneLoaderService.TryLoadScene(SceneName.MainGame);
-             await StartStateInitiator();
-         }
-         
-         private async UniTask StartStateInitiator()
-         {
-             await GameObject.FindObjectOfType<MainGameInitiator>().StartState(EnterData);
-         }
-    
-         public override async UniTask ExitState()
-         {
-             await DisposeStateInitiator();
-             await _sceneLoaderService.TryUnloadScene(SceneName.MainGame);
+             await GameObject.FindObjectOfType<MainGameInitiator>().EnterState(EnterData);
          }
 
-         private async Task DisposeStateInitiator()
+         public override async UniTask ExitState()
          {
-             await GameObject.FindObjectOfType<MainGameInitiator>().DisposeState(EnterData);
+             await GameObject.FindObjectOfType<MainGameInitiator>().ExitState();
+             await _sceneLoaderService.TryUnloadScene(SceneName.MainGame);
          }
 
          public class Factory : PlaceholderFactory<MainGameStateEnterData, MainGameState>

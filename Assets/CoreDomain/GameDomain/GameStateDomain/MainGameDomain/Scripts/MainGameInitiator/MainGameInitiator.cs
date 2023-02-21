@@ -1,8 +1,4 @@
-using CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies;
-using CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.MainGameUi;
-using CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerBullet;
-using CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerSpaceship;
-using CoreDomain.Services;
+using CoreDomain.GameDomain.GameStateDomain.LobbyDomain;
 using CoreDomain.Services.GameStates;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
@@ -10,45 +6,29 @@ using Zenject;
 
 namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain
 {
-    public class MainGameInitiator : MonoBehaviour
+    public class MainGameInitiator : MonoBehaviour, IStateInitiator<MainGameStateEnterData>
     {
         [SerializeField] private MainGameStateEnterData _defaultLobbyGameStateEnterData;
 
-        private IMainGameUiModule _mainGameUiModule;
-        private IPlayerSpaceshipModule _playerSpaceshipModule;
-        private ILevelsService _levelsService;
-        private IEnemiesModule _enemiesModule;
-        private IAudioService _audioService;
-        private IPlayerBulletModule _playerBulletModule;
+        private EnterMainGameStateCommand.Factory _mainGameStateCommandFactory;
+        private ExitMainGameStateCommand.Factory _exitMainGameStateCommandFactory;
 
         [Inject]
-        private void Setup(IMainGameUiModule mainGameUiModule, IPlayerSpaceshipModule playerSpaceshipModule, ILevelsService levelsService, IEnemiesModule enemiesModule, IAudioService audioService, IPlayerBulletModule playerBulletModule)
+        private void Setup(EnterMainGameStateCommand.Factory mainGameStateCommandFactory, ExitMainGameStateCommand.Factory exitMainGameStateCommandFactory)
         {
-            _mainGameUiModule = mainGameUiModule;
-            _playerSpaceshipModule = playerSpaceshipModule;
-            _levelsService = levelsService;
-            _enemiesModule = enemiesModule;
-            _audioService = audioService;
-            _playerBulletModule = playerBulletModule;
-        }
-
-        public async UniTask StartState(MainGameStateEnterData mainGameStateEnterData)
-        {
-            var enterData = mainGameStateEnterData ?? _defaultLobbyGameStateEnterData;
-            _mainGameUiModule.CreateMainGameUi();
-            _playerSpaceshipModule.CreatePlayerSpaceship(enterData.PlayerName);
-            var levelData = _levelsService.GetLevelData(enterData.Level);
-            _enemiesModule.StartEnemiesWavesSequence(levelData.EnemiesWaveSequenceData);
-            _audioService.PlayAudio(AudioClipName.ThemeSongName, AudioChannelType.Master, AudioPlayType.Loop);
+            _mainGameStateCommandFactory = mainGameStateCommandFactory;
+            _exitMainGameStateCommandFactory = exitMainGameStateCommandFactory;
         }
         
-        public async UniTask DisposeState(MainGameStateEnterData mainGameStateEnterData)
+        public async UniTask EnterState(MainGameStateEnterData stateEnterData = null)
         {
-            _mainGameUiModule.Dispose();
-            _playerSpaceshipModule.Dispose();
-            _enemiesModule.Dispose();
-            _playerBulletModule.Dispose();
-            _audioService.StopAllSounds();
+            var enterData = stateEnterData ?? _defaultLobbyGameStateEnterData;
+            await _mainGameStateCommandFactory.Create(enterData).Execute();
+        }
+
+        public async UniTask ExitState()
+        {
+            await _exitMainGameStateCommandFactory.Create().Execute();
         }
     }
 }
