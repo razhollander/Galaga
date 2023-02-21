@@ -46,6 +46,11 @@ namespace CoreDomain.Scripts.Utils.Pools
 
         protected override void Despawn(TPoolable obj)
         {
+            if (obj == null)
+            {
+                return;
+            }
+            
             obj.transform.SetParent(_parentGameObject);
             base.Despawn(obj);
         }
