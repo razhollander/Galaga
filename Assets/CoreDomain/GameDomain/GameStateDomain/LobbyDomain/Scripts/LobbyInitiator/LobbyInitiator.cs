@@ -29,5 +29,10 @@ namespace CoreDomain.GameDomain.GameStateDomain.LobbyDomain
         {
             _exitLobbyGameStateCommandFactory.Create().Execute();
         }
+        
+        private void OnApplicationQuit()
+        {
+            ExitState().Forget();
+        }
     }
 }
