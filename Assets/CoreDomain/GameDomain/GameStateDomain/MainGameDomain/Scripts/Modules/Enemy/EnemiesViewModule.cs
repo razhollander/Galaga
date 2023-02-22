@@ -86,13 +86,13 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
 
         private async UniTask DoEnemyFullSequence(EnemySequenceData enemySequenceData, Vector2 cellLocalToParentPosition)
         {
-            await UniTask.Delay(TimeSpan.FromSeconds(enemySequenceData.SecondsBeforeEnter), ignoreTimeScale: false).AttachExternalCancellation(_waveCancellationToken.Token);
+            await UniTask.Delay(TimeSpan.FromSeconds(enemySequenceData.SecondsBeforeEnter), ignoreTimeScale: false);
             
             var enemyView = CreateEnemy(enemySequenceData.EnemyPathsData.Enemy);
 
-            await DoEnemyEnterPathSequence(enemySequenceData.EnemyPathsData.EnterPath, cellLocalToParentPosition, enemyView).AttachExternalCancellation(_waveCancellationToken.Token);
-            await UniTask.Delay(TimeSpan.FromSeconds(enemySequenceData.SecondsInIdle), ignoreTimeScale: false).AttachExternalCancellation(_waveCancellationToken.Token);
-            await DoEnemyExitPathSequence(enemySequenceData.EnemyPathsData.ExitPath, cellLocalToParentPosition, enemyView).AttachExternalCancellation(_waveCancellationToken.Token);
+            await DoEnemyEnterPathSequence(enemySequenceData.EnemyPathsData.EnterPath, cellLocalToParentPosition, enemyView);
+            await UniTask.Delay(TimeSpan.FromSeconds(enemySequenceData.SecondsInIdle), ignoreTimeScale: false);
+            await DoEnemyExitPathSequence(enemySequenceData.EnemyPathsData.ExitPath, cellLocalToParentPosition, enemyView);
             
             enemyView.gameObject.SetActive(false);
         }
