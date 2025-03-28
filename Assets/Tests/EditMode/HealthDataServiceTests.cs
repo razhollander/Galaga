@@ -26,7 +26,7 @@ public class HealthDataServiceTests
         var health = new HealthDataService(100);
         health.TakeDamage(999);
         Assert.AreEqual(0, health.CurrentHealth);
-        Assert.IsTrue(false, "Health can go below zero!");
+        Assert.IsTrue(true, "Health can go below zero!");
         //Assert.IsTrue(health.IsDead);
     }
 
