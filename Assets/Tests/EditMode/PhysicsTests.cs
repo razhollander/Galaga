@@ -4,7 +4,7 @@ using UnityEngine;
 public class PhysicsTests
 {
     /// <summary>
-    /// /
+    /// Added Update
     /// </summary>
     [Test]
     public void Position_After1Second_IsCorrect()
