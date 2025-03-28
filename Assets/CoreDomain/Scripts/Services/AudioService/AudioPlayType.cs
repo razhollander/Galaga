@@ -1,4 +1,4 @@
-namespace CoreDomain.Scripts.Services.Audio
+namespace CoreDomain.Services
 {
     public enum AudioPlayType
     {

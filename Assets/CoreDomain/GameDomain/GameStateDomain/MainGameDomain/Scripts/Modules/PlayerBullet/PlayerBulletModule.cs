@@ -2,18 +2,14 @@ using System;
 using System.Collections.Generic;
 using CoreDomain.GameDomain.GameStateDomain.GamePlayDomain.Scripts.Bullet;
 using CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Commands;
-using CoreDomain.Scripts.Services.Audio;
+using CoreDomain.Scripts.Extensions;
 using CoreDomain.Services;
-using Cysharp.Threading.Tasks;
 using UnityEngine;
-using Zenject;
 
 namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerBullet
 {
     public class PlayerBulletModule : IPlayerBulletModule
     {
-        private const string FireSoundFXName = "GalagaFiringSoundEffect";
-
         private readonly PlayerBulletHitCommand.Factory _playerBulletHitCommandFactory;
         private readonly IAudioService _audioService;
         private PlayerBulletViewModule _playerBulletViewModule;
@@ -30,24 +26,41 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerBul
 
         public void FireBullet(Vector3 startPosition)
         {
-            var bulletId = Guid.NewGuid().ToString();
+            var bulletView = CreateBullet();
+            _playerBulletViewModule.FireBullet(bulletView, startPosition);
+            _audioService.PlayAudio(AudioClipName.FireSoundFXName, AudioChannelType.Fx, AudioPlayType.OneShot);
+        }
 
+        private PlayerBulletView CreateBullet()
+        {
+            var bulletId = Guid.NewGuid().ToString();
             _playerBulletsData.Add(bulletId, new PlayerBulletData(bulletId));
             var bulletView = _playerBulletCreator.CreateBullet();
             bulletView.Setup(bulletId, OnBulletHit, OnBulletOutOfScreen);
-            _playerBulletViewModule.FireBullet(bulletView, startPosition);
-            _audioService.PlayAudio(FireSoundFXName, AudioChannelType.Fx, AudioPlayType.OneShot);
+
+            return bulletView;
         }
 
         public void DestroyBullet(string bulletId)
         {
-            if (!_playerBulletsData.ContainsKey(bulletId))
-            {
-                return;
-            }
-
-            _playerBulletsData.Remove(bulletId);
+             _playerBulletsData.Remove(bulletId);
             _playerBulletViewModule.DestroyBullet(bulletId);
+        }
+
+        public bool IsBulletExist(string bulletId)
+        {
+            return _playerBulletsData.ContainsKey(bulletId);
+        }
+
+        public void Dispose()
+        {
+            DestroyAllBullets();
+        }
+
+        private void DestroyAllBullets()
+        {
+            _playerBulletsData.ForEach(x => _playerBulletViewModule.DestroyBullet(x.Key));
+            _playerBulletsData.Clear();
         }
 
         private void OnBulletHit(PlayerBulletView playerBulletView, Collider2D hitWithCollider2D)
@@ -57,8 +70,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerBul
         
         private void OnBulletOutOfScreen(PlayerBulletView playerBulletView)
         {
-            _playerBulletsData.Remove(playerBulletView.Id);
-            _playerBulletViewModule.DestroyBullet(playerBulletView.Id);
+            DestroyBullet(playerBulletView.Id);
         }
     }
 }

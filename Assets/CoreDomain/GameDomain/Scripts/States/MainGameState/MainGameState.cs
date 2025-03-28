@@ -1,5 +1,5 @@
+using System.Threading.Tasks;
 using CoreDomain.GameDomain.GameStateDomain.MainGameDomain;
-using CoreDomain.Scripts.Services.SceneService;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using Zenject;
@@ -20,19 +20,15 @@ namespace CoreDomain.Services.GameStates
          public override async UniTask EnterState()
          {
              await _sceneLoaderService.TryLoadScene(SceneName.MainGame);
-             await StartStateInitiator();
+             await GameObject.FindObjectOfType<MainGameInitiator>().EnterState(EnterData);
          }
-         
-         private async UniTask StartStateInitiator()
-         {
-             await GameObject.FindObjectOfType<MainGameInitiator>().StartState(EnterData);
-         }
-    
+
          public override async UniTask ExitState()
          {
+             await GameObject.FindObjectOfType<MainGameInitiator>().ExitState();
              await _sceneLoaderService.TryUnloadScene(SceneName.MainGame);
          }
-         
+
          public class Factory : PlaceholderFactory<MainGameStateEnterData, MainGameState>
          {
          }

@@ -13,15 +13,175 @@ MonoBehaviour:
   m_Name: 3x3_GuardWaveSequence
   m_EditorClassIdentifier: 
   serializationData:
-    SerializedFormat: 0
-    SerializedBytes: 01010b00000045006e0065006d0069006500730047007200690064002f00000000016a00000043006f007200650044006f006d00610069006e002e00470061006d00650044006f006d00610069006e002e00470061006d0065005300740061007400650044006f006d00610069006e002e004d00610069006e00470061006d00650044006f006d00610069006e002e004d006f00640075006c00650073002e0045006e0065006d006900650073002e0045006e0065006d007900530065007100750065006e006300650044006100740061005b002c005d002c00200041007300730065006d0062006c0079002d0043005300680061007200700000000000060900000000000000270105000000720061006e006b007300010300000033007c003300022f01000000016700000043006f007200650044006f006d00610069006e002e00470061006d00650044006f006d00610069006e002e00470061006d0065005300740061007400650044006f006d00610069006e002e004d00610069006e00470061006d00650044006f006d00610069006e002e004d006f00640075006c00650073002e0045006e0065006d006900650073002e0045006e0065006d007900530065007100750065006e006300650044006100740061002c00200041007300730065006d0062006c0079002d00430053006800610072007000010000000b010e00000045006e0065006d007900500061007400680073004400610074006100000000001f01120000005300650063006f006e00640073004200650066006f007200650045006e00740065007200000000001f010d0000005300650063006f006e006400730049006e00490064006c0065000000804005023001000000020000000b010e00000045006e0065006d007900500061007400680073004400610074006100000000001f01120000005300650063006f006e00640073004200650066006f007200650045006e007400650072000000003f1f010d0000005300650063006f006e006400730049006e00490064006c0065009a99594005023001000000030000000b010e00000045006e0065006d007900500061007400680073004400610074006100000000001f01120000005300650063006f006e00640073004200650066006f007200650045006e007400650072000000803f1f010d0000005300650063006f006e006400730049006e00490064006c0065000000404005023001000000040000000b010e00000045006e0065006d007900500061007400680073004400610074006100000000001f01120000005300650063006f006e00640073004200650066006f007200650045006e007400650072000000c03f1f010d0000005300650063006f006e006400730049006e00490064006c0065000000204005023001000000050000000b010e00000045006e0065006d007900500061007400680073004400610074006100000000001f01120000005300650063006f006e00640073004200650066006f007200650045006e00740065007200000000401f010d0000005300650063006f006e006400730049006e00490064006c0065000000004005023001000000060000000b010e00000045006e0065006d007900500061007400680073004400610074006100000000001f01120000005300650063006f006e00640073004200650066006f007200650045006e00740065007200000020401f010d0000005300650063006f006e006400730049006e00490064006c0065000000c03f05023001000000070000000b010e00000045006e0065006d007900500061007400680073004400610074006100000000001f01120000005300650063006f006e00640073004200650066006f007200650045006e00740065007200000040401f010d0000005300650063006f006e006400730049006e00490064006c0065000000803f05023001000000080000000b010e00000045006e0065006d007900500061007400680073004400610074006100000000001f01120000005300650063006f006e00640073004200650066006f007200650045006e00740065007200000060401f010d0000005300650063006f006e006400730049006e00490064006c0065000000003f05023001000000090000000b010e00000045006e0065006d007900500061007400680073004400610074006100000000001f01120000005300650063006f006e00640073004200650066006f007200650045006e00740065007200000080401f010d0000005300650063006f006e006400730049006e00490064006c00650000000000050705
+    SerializedFormat: 2
+    SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 11400000, guid: 8c555829b0355d842851c828cf6d9163, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
+    SerializationNodes:
+    - Name: EnemiesGrid
+      Entry: 7
+      Data: 0|CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies.EnemySequenceData[,],
+        Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 9
+    - Name: ranks
+      Entry: 1
+      Data: 3|3
+    - Name: 
+      Entry: 7
+      Data: 1|CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies.EnemySequenceData,
+        Assembly-CSharp
+    - Name: EnemyPathsData
+      Entry: 10
+      Data: 0
+    - Name: SecondsBeforeEnter
+      Entry: 4
+      Data: 0
+    - Name: SecondsInIdle
+      Entry: 4
+      Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies.EnemySequenceData,
+        Assembly-CSharp
+    - Name: EnemyPathsData
+      Entry: 10
+      Data: 0
+    - Name: SecondsBeforeEnter
+      Entry: 4
+      Data: 0.5
+    - Name: SecondsInIdle
+      Entry: 4
+      Data: 3.4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies.EnemySequenceData,
+        Assembly-CSharp
+    - Name: EnemyPathsData
+      Entry: 10
+      Data: 0
+    - Name: SecondsBeforeEnter
+      Entry: 4
+      Data: 1
+    - Name: SecondsInIdle
+      Entry: 4
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies.EnemySequenceData,
+        Assembly-CSharp
+    - Name: EnemyPathsData
+      Entry: 10
+      Data: 0
+    - Name: SecondsBeforeEnter
+      Entry: 4
+      Data: 1.5
+    - Name: SecondsInIdle
+      Entry: 4
+      Data: 2.5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 5|CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies.EnemySequenceData,
+        Assembly-CSharp
+    - Name: EnemyPathsData
+      Entry: 10
+      Data: 0
+    - Name: SecondsBeforeEnter
+      Entry: 4
+      Data: 2
+    - Name: SecondsInIdle
+      Entry: 4
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 6|CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies.EnemySequenceData,
+        Assembly-CSharp
+    - Name: EnemyPathsData
+      Entry: 10
+      Data: 0
+    - Name: SecondsBeforeEnter
+      Entry: 4
+      Data: 2.5
+    - Name: SecondsInIdle
+      Entry: 4
+      Data: 1.5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 7|CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies.EnemySequenceData,
+        Assembly-CSharp
+    - Name: EnemyPathsData
+      Entry: 10
+      Data: 0
+    - Name: SecondsBeforeEnter
+      Entry: 4
+      Data: 3
+    - Name: SecondsInIdle
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 8|CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies.EnemySequenceData,
+        Assembly-CSharp
+    - Name: EnemyPathsData
+      Entry: 10
+      Data: 0
+    - Name: SecondsBeforeEnter
+      Entry: 4
+      Data: 3.5
+    - Name: SecondsInIdle
+      Entry: 4
+      Data: 0.5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 9|CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies.EnemySequenceData,
+        Assembly-CSharp
+    - Name: EnemyPathsData
+      Entry: 10
+      Data: 0
+    - Name: SecondsBeforeEnter
+      Entry: 4
+      Data: 4
+    - Name: SecondsInIdle
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   SpaceBetweenColumns: 0.4
   SpaceBetweenRows: 0.4
-  CellSize: 1.5
+  CellSize: 0.5

@@ -1,5 +1,4 @@
 using CoreDomain.GameDomain.GameStateDomain.LobbyDomain;
-using CoreDomain.Scripts.Services.SceneService;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using Zenject;
@@ -20,17 +19,13 @@ namespace CoreDomain.Services.GameStates
         public override async UniTask EnterState()
         {
             await _sceneLoaderService.TryLoadScene(SceneName.Lobby);
-            await StartStateInitiator();
+            await GameObject.FindObjectOfType<LobbyInitiator>().EnterState(EnterData);
         }
 
         public override async UniTask ExitState()
         {
+            await GameObject.FindObjectOfType<LobbyInitiator>().ExitState();
             await _sceneLoaderService.TryUnloadScene(SceneName.Lobby);
-        }
-
-        protected async UniTask StartStateInitiator()
-        {
-            await GameObject.FindObjectOfType<LobbyInitiator>().StartState(EnterData);
         }
 
         public class Factory : PlaceholderFactory<LobbyGameState>

@@ -10,14 +10,17 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.MainGameU
         [SerializeField] private Button _shootButton;
         [SerializeField] private FixedJoystick _joystick;
         [SerializeField] private Countable _scoreCountable;
+        [SerializeField] private Button _backButton;
 
         private Action _shootButtonClickedCallback;
         private Action<float> _onJoystickDraggedCallback;
+        private Action _onBackButtonClicked;
 
-        public void Setup(Action shootButtonClicked, Action<float> onJoystickDragged)
+        public void Setup(Action shootButtonClicked, Action<float> onJoystickDragged, Action onBackButtonClicked)
         {
             _shootButtonClickedCallback = shootButtonClicked;
             _onJoystickDraggedCallback = onJoystickDragged;
+            _onBackButtonClicked = onBackButtonClicked;
         }
 
         public void UpdateScore(int newScore)
@@ -39,6 +42,12 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.MainGameU
         {
             _shootButton.onClick.AddListener(OnShootButtonClicked);
             _joystick.DraggedEvent += OnJoystickDrag;
+            _backButton.onClick.AddListener(OnBackButtonClicked);
+        }
+
+        private void OnBackButtonClicked()
+        {
+            _onBackButtonClicked?.Invoke();
         }
 
         private void OnJoystickDrag(Vector2 direction)
@@ -50,6 +59,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.MainGameU
         {
             _shootButton.onClick.RemoveListener(OnShootButtonClicked);
             _joystick.DraggedEvent -= OnJoystickDrag;
+            _backButton.onClick.RemoveListener(OnBackButtonClicked);
         }
 
         private void OnShootButtonClicked()

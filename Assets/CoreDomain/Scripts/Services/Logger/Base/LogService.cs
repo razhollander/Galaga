@@ -32,7 +32,7 @@ namespace CoreDomain.Services
             _logger.LogException(exception);
         }
 
-        public static void LogTag(string message, LogTagType logTagType = global::CoreDomain.Services.LogTagType.Temp, [CallerFilePath] string callerFilePath = "", [CallerMemberName] string callerMemberName ="")
+        public static void LogTag(string message, LogTagType logTagType = LogTagType.Temp, [CallerFilePath] string callerFilePath = "", [CallerMemberName] string callerMemberName ="")
         {
             _logger.LogTag(message, logTagType, callerFilePath, callerMemberName);
         }

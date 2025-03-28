@@ -2,7 +2,7 @@ using System;
 using CoreDomain.Services;
 using UnityEngine;
 using Zenject;
-using IPoolable = CoreDomain.Scripts.Utils.Pools.IPoolable;
+using IPoolable = CoreDomain.Utils.Pools.IPoolable;
 
 namespace CoreDomain.GameDomain.GameStateDomain.GamePlayDomain.Scripts.Bullet
 {

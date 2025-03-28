@@ -10,6 +10,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.LobbyDomain
         {
             Container.BindInterfacesTo<LobbyUiModule>().AsSingle().NonLazy();
             Container.BindFactory<LobbyGameStateEnterData, EnterLobbyGameStateCommand, EnterLobbyGameStateCommand.Factory>();
+            Container.BindFactory<ExitLobbyGameStateCommand, ExitLobbyGameStateCommand.Factory>();
         }
     }
 }

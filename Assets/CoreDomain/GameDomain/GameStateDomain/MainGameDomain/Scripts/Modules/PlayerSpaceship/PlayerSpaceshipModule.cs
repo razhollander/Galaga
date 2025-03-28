@@ -25,6 +25,11 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.PlayerSpa
             _playerSpaceshipViewModule.SetSpaceShipName(_playerSpaceshipData.Name);
         }
 
+        public void Dispose()
+        {
+            _playerSpaceshipViewModule.DestroySpaceSip();
+        }
+
         public void MoveSpaceship(float xDirection)
         {
             _playerSpaceshipViewModule.MoveSpaceship(xDirection);

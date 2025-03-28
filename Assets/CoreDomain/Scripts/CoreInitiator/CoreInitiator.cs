@@ -1,5 +1,4 @@
-using CoreDomain.Scripts.Services.SceneService;
-using Cysharp.Threading.Tasks;
+using CoreDomain.Services;
 using UnityEngine;
 using Zenject;
 

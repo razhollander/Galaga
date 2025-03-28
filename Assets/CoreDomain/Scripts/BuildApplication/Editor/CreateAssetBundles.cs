@@ -2,30 +2,24 @@ using System.IO;
 using UnityEditor;
 using UnityEngine;
 
-public class CreateAssetBundles
+namespace CoreDomain.BuildApplication
 {
-    #region --- Constants ---
-
-    private const string streamingAssetsDirectory = "Assets/StreamingAssets";
-
-    #endregion
-
-
-    #region --- Private Methods ---
-
-    [MenuItem("Assets/Build AssetBundles")]
-    private static void BuildAllAssetBundles()
+    public class CreateAssetBundles
     {
-        if (!Directory.Exists(Application.streamingAssetsPath))
+        private const string StreamingAssetsDirectory = "Assets/StreamingAssets";
+
+        [MenuItem("Assets/Build AssetBundles")]
+        private static void BuildAllAssetBundles()
         {
-            Directory.CreateDirectory(streamingAssetsDirectory);
+            if (!Directory.Exists(Application.streamingAssetsPath))
+            {
+                Directory.CreateDirectory(StreamingAssetsDirectory);
+            }
+
+            BuildPipeline.BuildAssetBundles(StreamingAssetsDirectory, BuildAssetBundleOptions.None,
+                EditorUserBuildSettings.activeBuildTarget);
+
+            AssetDatabase.Refresh();
         }
-
-        BuildPipeline.BuildAssetBundles(streamingAssetsDirectory, BuildAssetBundleOptions.None,
-            EditorUserBuildSettings.activeBuildTarget);
-
-        AssetDatabase.Refresh();
     }
-
-    #endregion
 }

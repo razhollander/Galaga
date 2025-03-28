@@ -1,6 +1,6 @@
 using System;
 using System.Threading;
-using CoreDomain.Scripts.Utils.Pools;
+using CoreDomain.Utils.Pools;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using PathCreation;
@@ -11,8 +11,10 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
     public class EnemyView : MonoBehaviour, IPoolable
     {
         private const float RotateAnglesInASecond = 180f;
+        
         [SerializeField] private float _moveSpeed;
         [SerializeField] private bool _isRotationLocked;
+        
         private Transform _transform;
         private CancellationTokenSource _whileAliveCancellationToken;
         public Action Despawn { get; set; }
@@ -38,15 +40,10 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
         {
             var distanceAlongPath = 0f;
             var pathLength = path.length;
-            
-            while (distanceAlongPath<pathLength)
-            {
-                if (_transform == null)
-                {
-                    Debug.Log("Transform null");
-                }
 
-                _transform.position = path.GetPointAtDistance(distanceAlongPath)+GetAddedDeltaToPath();
+            while (distanceAlongPath < pathLength)
+            {
+                _transform.position = path.GetPointAtDistance(distanceAlongPath) + GetAddedDeltaToPath();
                 
                 if (!_isRotationLocked)
                 {
@@ -56,8 +53,8 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
                 await UniTask.Yield(_whileAliveCancellationToken.Token);
                 distanceAlongPath += _moveSpeed * Time.deltaTime;
             }
-            
-            _transform.position = path.GetPoint(path.NumPoints-1)+GetAddedDeltaToPath();
+
+            _transform.position = path.GetPoint(path.NumPoints - 1) + GetAddedDeltaToPath();
         }
 
         public void Setup(string enemyId)

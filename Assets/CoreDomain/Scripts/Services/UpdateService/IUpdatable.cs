@@ -1,4 +1,4 @@
-namespace CoreDomain
+namespace CoreDomain.Services
 {
     public interface IUpdatable
     {

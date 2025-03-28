@@ -7,7 +7,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.LobbyDomain.Modules.LobbyUi
     {
         private readonly IStateMachineService _stateMachineService;
         private readonly LobbyUiCreator _creator;
-        private readonly LobbyUiViewModule _viewModule; // raz need this view module?
+        private readonly LobbyUiViewModule _viewModule;
         private readonly MainGameState.Factory _mainGameStateFactory;
 
         public LobbyUiModule(IAssetBundleLoaderService assetBundleLoaderService, IStateMachineService stateMachineService, MainGameState.Factory mainGameStateFactory)

@@ -8,6 +8,6 @@ namespace CoreDomain.Services
         void LogWarning(string message);
         void LogError(string message);
         void LogException(Exception exception);
-        void LogTag(string message, LogTagType logTagType = global::CoreDomain.Services.LogTagType.Temp, string callerFilePath = "", string callerMemberName = "");
+        void LogTag(string message, LogTagType logTagType = LogTagType.Temp, string callerFilePath = "", string callerMemberName = "");
     }
 }

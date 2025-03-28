@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class ScoreData
+namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Score
 {
-    public int PlayerScore;
+    public class ScoreData
+    {
+        public int PlayerScore;
+    }
 }

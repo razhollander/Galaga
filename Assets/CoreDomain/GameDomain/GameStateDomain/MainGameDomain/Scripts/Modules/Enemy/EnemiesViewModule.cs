@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Threading;
+using CoreDomain.Consts;
 using CoreDomain.Services;
 using Cysharp.Threading.Tasks;
 using PathCreation;
@@ -10,14 +12,15 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
 {
     public class EnemiesViewModule
     {
-        private readonly Func<EnemyDataScriptableObject, EnemyView> _createEnemyFunction;
         private const string EnemyWaveParentName = "EnemiesWaveParent";
         private static readonly Vector2 RelativeToScreenCenterStartPosition = new(0.2f, 0.9f);
         
+        private readonly Func<EnemyDataScriptableObject, EnemyView> _createEnemyFunction;
         private readonly Vector2 _enemiesGroupStartPosition;
-        private List<EnemyView> _enemyViews = new();
+        private readonly List<EnemyView> _enemyViews = new();
         private Transform _enemiesWaveParentTransform;
         private EnemiesWaveParent _enemiesWaveParent;
+        private CancellationTokenSource _waveCancellationToken = new ();
 
         public EnemiesViewModule(IDeviceScreenService deviceScreenService, Func<EnemyDataScriptableObject, EnemyView> createEnemyFunction)
         {
@@ -25,35 +28,46 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
             _enemiesGroupStartPosition = deviceScreenService.ScreenBoundsInWorldSpace * RelativeToScreenCenterStartPosition + deviceScreenService.ScreenCenterPointInWorldSpace;
         }
 
-        public async UniTask DoEnemiesWaveSequence(EnemiesWaveSequenceData enemiesWave)
+        public async UniTask StartEnemiesWaveSequence(EnemiesWaveSequenceData enemiesWave)
         {
             if (_enemiesWaveParentTransform == null)
             {
                 SetupWaveParent();
             }
 
-            List<UniTask> enemiesTasks = new List<UniTask>();
             var enemiesGrid = enemiesWave.EnemiesGrid;
             var enemiesColumns = enemiesGrid.GetLength(0);
             var enemiesRows = enemiesGrid.GetLength(1);
-            var centerScreenX = 0;
-            var widthOfGrid = (enemiesColumns - 1) * (enemiesWave.CellSize + enemiesWave.SpaceBetweenColumns);
-            var startX = centerScreenX-widthOfGrid * 0.5f;
-            var startY = _enemiesGroupStartPosition.y;
-
+            var gridTopRightCorner = CalculateGridTopRightCorner(enemiesWave);
+            var enemiesTasks = new List<UniTask>();
+            
             for (int i = 0; i < enemiesRows; i++)
             {
                 for (int j = 0; j < enemiesColumns; j++)
                 {
-                    var cellX = startX + enemiesWave.CellSize * j + enemiesWave.SpaceBetweenColumns * j;
-                    var cellY = startY - enemiesWave.CellSize * i - enemiesWave.SpaceBetweenRows * i;
+                    var cellX = gridTopRightCorner.x + enemiesWave.CellSize * j + enemiesWave.SpaceBetweenColumns * j;
+                    var cellY = gridTopRightCorner.y - enemiesWave.CellSize * i - enemiesWave.SpaceBetweenRows * i;
                     var cellPosition = new Vector2(cellX, cellY);
                     var cellLocalToParentPosition = _enemiesWaveParentTransform.InverseTransformPoint(cellPosition);
                     enemiesTasks.Add(DoEnemyFullSequence(enemiesGrid[j, i], cellLocalToParentPosition).SuppressCancellationThrow());
                 }
             }
             
-            await UniTask.WhenAll(enemiesTasks);
+            await UniTask.WhenAll(enemiesTasks).AttachExternalCancellation(_waveCancellationToken.Token);
+        }
+
+        public void StopEnemiesWaveSequence()
+        {
+            _waveCancellationToken.Cancel();
+        }
+
+        private Vector2 CalculateGridTopRightCorner(EnemiesWaveSequenceData enemiesWave)
+        {
+            var centerScreenX = 0;
+            var gridWidth = (enemiesWave.EnemiesGrid.GetLength(0) - 1) * (enemiesWave.CellSize + enemiesWave.SpaceBetweenColumns);
+            var gridTopRightCorner = new Vector2(centerScreenX - gridWidth * 0.5f, _enemiesGroupStartPosition.y);
+
+            return gridTopRightCorner;
         }
 
         private void SetupWaveParent()
@@ -75,9 +89,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
             await UniTask.Delay(TimeSpan.FromSeconds(enemySequenceData.SecondsBeforeEnter), ignoreTimeScale: false);
             
             var enemyView = CreateEnemy(enemySequenceData.EnemyPathsData.Enemy);
-            enemyView.gameObject.SetActive(true);
-            enemyView.transform.SetParent(_enemiesWaveParentTransform, true);
-            
+
             await DoEnemyEnterPathSequence(enemySequenceData.EnemyPathsData.EnterPath, cellLocalToParentPosition, enemyView);
             await UniTask.Delay(TimeSpan.FromSeconds(enemySequenceData.SecondsInIdle), ignoreTimeScale: false);
             await DoEnemyExitPathSequence(enemySequenceData.EnemyPathsData.ExitPath, cellLocalToParentPosition, enemyView);
@@ -89,7 +101,7 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
         {
             var pathLastPoint = enterPath.path.GetPoint(enterPath.path.NumPoints - 1);
             await enemyView.FollowPath(enterPath.path, () => GetDeltaFromPathToCellWorldPosition(pathLastPoint, cellLocalToParentPosition));
-            await enemyView.RotateTowardsDirection(Vector3.up);
+            await enemyView.RotateTowardsDirection(ConstsHandler.Vector3Up);
         }
         
         private async UniTask DoEnemyExitPathSequence(PathCreator exitPath, Vector2 cellLocalToParentPosition, EnemyView enemyView)
@@ -109,8 +121,9 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
         private EnemyView CreateEnemy(EnemyDataScriptableObject enemyScriptableObject)
         {
             var enemyView = _createEnemyFunction(enemyScriptableObject);
+            enemyView.gameObject.SetActive(true);
+            enemyView.transform.SetParent(_enemiesWaveParentTransform, true);
             _enemyViews.Add(enemyView);
-
             return enemyView;
         }
         

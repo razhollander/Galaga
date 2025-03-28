@@ -19,6 +19,12 @@ namespace CoreDomain.Services.GameStates
 
         public async UniTask SwitchState(IGameState newState)
         {
+            if (_currentGameState == null)
+            {
+                LogService.LogError("No state to switch from, need to initialize a game state first!");
+                return;
+            }
+            
             await _currentGameState.ExitState();
             _currentGameState = newState;
             await _currentGameState.EnterState();

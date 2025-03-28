@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using CoreDomain.Scripts.Extensions;
-using CoreDomain.Scripts.Services.Audio;
 using CoreDomain.Services;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
@@ -10,8 +9,6 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
 {
     public class EnemiesModule : IEnemiesModule
     {
-        private const string LevelStartMusicName = "GalagaLevelStartSoundEffect";
-
         private readonly IAudioService _audioService;
         private Transform _enemiesParentTransform;
         private readonly EnemiesViewModule _enemiesViewModule;
@@ -25,20 +22,31 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
             _enemiesCreator = new EnemiesCreator(beeEnemiesPoolFactory, guardEnemiesPoolFactory);
         }
 
+        public bool IsEnemyExist(string enemyHitId)
+        {
+            return _enemiesData.ContainsKey(enemyHitId);
+        }
+
         public int GetEnemyScore(string enemyId)
         {
             return _enemiesData[enemyId].Score;
         }
         
-        public async UniTaskVoid DoEnemiesWavesSequence(EnemiesWaveSequenceData[] enemiesWaveSequenceData)
+        public async UniTaskVoid StartEnemiesWavesSequence(EnemiesWaveSequenceData[] enemiesWaveSequenceData)
         {
             foreach (var waveSequenceData in enemiesWaveSequenceData)
             {
-                _audioService.PlayAudio(LevelStartMusicName, AudioChannelType.Music, AudioPlayType.OneShot);
-                await _enemiesViewModule.DoEnemiesWaveSequence(waveSequenceData);
+                _audioService.PlayAudio(AudioClipName.LevelStartMusicName, AudioChannelType.Music, AudioPlayType.OneShot);
+                await _enemiesViewModule.StartEnemiesWaveSequence(waveSequenceData);
 
                 KillAllEnemies();
             }
+        }
+
+        public void Dispose()
+        {
+            _enemiesViewModule.StopEnemiesWaveSequence();
+            KillAllEnemies();
         }
 
         private void KillAllEnemies()
@@ -58,16 +66,10 @@ namespace CoreDomain.GameDomain.GameStateDomain.MainGameDomain.Modules.Enemies
             return enemyView;
         }
 
-        public bool TryKillEnemy(string enemyHitId)
+        public void KillEnemy(string enemyHitId)
         {
-            if (!_enemiesData.ContainsKey(enemyHitId))
-            {
-                return false;
-            }
-
             _enemiesData.Remove(enemyHitId);
             _enemiesViewModule.KillEnemy(enemyHitId);
-            return true;
         }
     }
 }
