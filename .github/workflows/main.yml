@@ -33,4 +33,6 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           testMode: editmode
+          unityVersion: 2022.2.7f1
           githubToken: ${{ secrets.GITHUB_TOKEN }}
+          customParameters: "-batchmode -nographics -memory=8000"
